@@ -1,0 +1,41 @@
+# README.us_usgs
+
+The files in this section result from the conversion of datasets originating
+from USGS
+
+TODO: Aren't they coming from NOAA instead ?
+
+## Included grids
+
+### USA: NAD27 -> NAD83
+
+*Source*: USGS  
+*Format*: GeoTIFF converted from CTable2  
+*License*: Public Domain
+
+* alaska.tif - Alaska
+* conus.tif - Conterminous U.S.
+* hawaii.tif - Hawaii
+* prvi.tif - Puerto Rico, Virgin Is.
+* stgeorge.tif - St. George Is, Alaska
+* stlrnc.tif - St. Lawrence Is., Alaska
+* stpaul.tif - St. Paul Is., Alaska
+
+### USA: NAD83 -> NAD83 (HARN/HPGN)
+
+*Source*: USGS
+*Format*: GeoTIFF converted from CTable2
+*License*: Public Domain
+
+Grid data for high precision conversion of geographic coordinates from
+the original NAD83 (1986) (EPSG:4269) to NAD83 High Precision Geodetic Networks
+(HPGNs) (EPSG:4152), also referred to as High Accuracy Reference Networks (HARNs).
+NAD 83 coordinates based on the HPGN/HARN surveys changed approximately 0.2
+to 1.0 meter relative to the original NAD 83 (1986) adjustment.
+
+* FL.tif - Florida
+* MD.tif - Maryland
+* TN.tif - Tennessee
+* WI.tif - Wisconsin
+* WO.tif - Washington, Oregon, N. California
+

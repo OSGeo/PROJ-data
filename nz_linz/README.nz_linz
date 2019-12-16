@@ -1,0 +1,17 @@
+# README.nz_linz
+
+The files in this section result from the conversion of datasets originating
+from [LINZ](https://www.linz.govt.nz)
+
+## Included grids
+
+### New Zealand: NZGD49 -> NZGD2000
+
+*Source*: [LINZ](https://www.linz.govt.nz/data/geodetic-system/download-geodetic-software/gd2000it-download)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Creative Commons Attribution 3.0 New Zealand](https://creativecommons.org/licenses/by/3.0/nz/)
+
+This grid file was computed by Land Information New Zealand at approximately
+a 20 km interval for the conversion between NZGD49 and NZGD2000.
+
+* nzgd2kgrid0005.tif

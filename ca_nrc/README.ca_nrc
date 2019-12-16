@@ -1,0 +1,296 @@
+# README.ca_nrc
+
+The files in this section result from the conversion of datasets originating
+from  [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod)
+
+## Included grids
+
+### Canada: NAD27 -> NAD83
+
+*Source*: [Natural Resources Canada](https://open.canada.ca/data/en/dataset/b3534942-31ea-59cf-bcc3-f8dc4875081a)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)
+
+Transform between NAD27 and NAD83 in Canada.
+
+* ntv2_0.gsb
+
+### Canada: Alberta: NAD83(Original) --> NAD83(CSRS) 2002
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=ABCSRSV4)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4269 (NAD83)  
+*Target CRS*: EPSG:8246 (NAD83(CSRS)v4)  
+*Used by*: [EPSG:9244 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9244)
+
+* ABCSRSV4.tif
+
+### Canada: British Columbia (CRD): NAD27 --> NAD83(CSRS) 1997
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=CRD27_00)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4267 (NAD27)  
+*Target CRS*: EPSG:8240 (NAD83(CSRS)v3)  
+*Used by*: [EPSG:9113 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9113)
+
+* CRD27_00.tif
+
+### Canada: British Columbia (CRD): NAD83(Original) --> NAD83(CSRS) 1997
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=CRD93_00)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4269 (NAD83)  
+*Target CRS*: EPSG:8240 (NAD83(CSRS)v3)  
+*Used by*: [EPSG:9117 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9117)
+
+* CRD93_00.tif
+
+### Canada: British Columbia (Vancouver Island): NAD83(Original) --> NAD83(CSRS) 1997
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=NVI93_05)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4269 (NAD83)  
+*Target CRS*: EPSG:8240 (NAD83(CSRS)v3)  
+*Used by*: [EPSG:9118 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9118)  
+
+* NVI93_05.tif
+
+### Canada: British Columbia (CRD): NAD27 --> NAD83(CSRS) 2002
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=BC_27_05)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4267 (NAD27)  
+*Target CRS*: EPSG:8246 (NAD83(CSRS)v4)  
+*Used by*: [EPSG:9115 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9115)
+
+* BC_27_05.tif
+
+### Canada: British Columbia (CRD): NAD83(Original) --> NAD83(CSRS) 2002
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=BC_93_05)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4269 (NAD83)  
+*Target CRS*: EPSG:8246 (NAD83(CSRS)v4)  
+*Used by*: [EPSG:9119 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9119)
+
+* BC_93_05.tif
+
+### Canada: New Brunswick: ATS77 --> NAD83(CSRS) 1997
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=NB7783v2)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4122 (ATS77)  
+*Target CRS*: EPSG:8237 (NAD83(CSRS)v2)  
+*Used by*: [EPSG:9237 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9237)
+
+* NB7783v2.tif
+
+### Canada: New Brunswick: NAD27 --> NAD83(CSRS) 1997
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=NB2783v2)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4267 (NAD27)  
+*Target CRS*: EPSG:8237 (NAD83(CSRS)v2)  
+*Used by*: [EPSG:9238 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9238)
+
+* NB2783v2.tif
+
+### Canada: Nova Scotia: ATS77 --> NAD83(Original)
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=GS7783)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4122 (ATS77)  
+*Target CRS*: EPSG:4269 (NAD83)  
+*Used by*: [EPSG:9105 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9105)
+
+* GS7783.tif
+
+### Canada: Nova Scotia: ATS77 --> NAD83(CSRS) 2010
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=NS778302)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4122 (ATS77)  
+*Target CRS*: EPSG:8252 (NAD83(CSRS)v6)  
+*Used by*: [EPSG:9106 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9106)
+
+* NS778302.tif
+
+### Canada: Ontario: NAD27 --> NAD83(CSRS) 1997
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=ON27CSv1)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4267 (NAD27)  
+*Target CRS*: EPSG:8240 (NAD83(CSRS)v3)  
+*Used by*: [EPSG:9107 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9107)
+
+* ON27CSv1.tif
+
+### Canada: Ontario: NAD27(MAY76) --> NAD83(CSRS) 1997
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=ON76CSv1)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4608 (NAD27(76))  
+*Target CRS*: EPSG:8240 (NAD83(CSRS)v3)  
+*Used by*: [EPSG:9109 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9109)
+
+* ON76CSv1.tif
+
+### Canada: Ontario: NAD83(Original) --> NAD83(CSRS) 1997
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=ON83CSv1)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4269 (NAD83)  
+*Target CRS*: EPSG:8240 (NAD83(CSRS)v3)  
+*Used by*: [EPSG:9110 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9110)
+
+* ON83CSv1.tif
+
+### Canada: Ontario (Toronto): NAD27 --> NAD83(CSRS) 1997
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=TO27CSv1)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4267 (NAD27)  
+*Target CRS*: EPSG:8240 (NAD83(CSRS)v3)  
+*Used by*: No EPSG transformation code at the time of writing
+
+* TO27CSv1.tif
+
+### Canada: Prince Edward Island: ATS77 --> NAD83(CSRS) 1997
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=PE7783V2)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4122 (ATS77)  
+*Target CRS*: EPSG:8237 (NAD83(CSRS)v2)  
+*Used by*: [EPSG:9236 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9236)
+
+* PE7783V2.tif
+
+### Canada: Quebec: NAD27 --> NAD83(CSRS) 1997
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=NA27SCRS)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4267 (NAD27)  
+*Target CRS*: EPSG:8237 (NAD83(CSRS)v2)  
+*Used by*: [EPSG:9239 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9239)  
+*Used by*: [EPSG:1692 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::1692) for NAD27 -> WGS84
+
+* NA27SCRS.tif (also known as QUE27-98.gsb by EPSG for NAD27 -> WGS84)
+
+### Canada: Quebec: NAD27(CGQ77) --> NAD83(CSRS) 1997
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=CQ77SCRS)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4609 (NAD27(CGQ77))  
+*Target CRS*: EPSG:8237 (NAD83(CSRS)v2)  
+*Used by*: [EPSG:1575 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::1575)  
+*Used by*: [EPSG:1691 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::1691) for NAD27(CGQ77) -> WGS84
+
+* CQ77SCRS.tif (also known as CQ77NA83.GSB by EPSG)
+
+### Canada: Quebec: NAD83(Original) --> NAD83(CSRS) 1997
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=NA83SCRS)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4269 (NAD83)  
+*Target CRS*: EPSG:8237 (NAD83(CSRS)v2)  
+*Used by*: [EPSG:9241 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9241)  
+*Used by*: [EPSG:1696 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::1696) for NAD83 -> WGS84
+
+* NA83SCRS.tif (also known as NAD83-98.gsb by EPSG for NAD83 -> WGS84)
+
+### Canada: Saskatchewan: NAD27 --> NAD83(CSRS) 1997
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=SK27-98)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4267 (NAD27)  
+*Target CRS*: EPSG:8240 (NAD83(CSRS)v3)  
+*Used by*: [EPSG:9242 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9242)  
+*Used by*: [EPSG:1703 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::1703) for NAD27 -> WGS84
+
+* SK27-98.tif
+
+### Canada: Saskatchewan: NAD83(Original) --> NAD83(CSRS) 1997
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=SK83-98)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4269 (NAD83)  
+*Target CRS*: EPSG:8240 (NAD83(CSRS)v3)  
+*Used by*: [EPSG:9243 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9243)  
+*Used by*: [EPSG:1697 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::1697) for NAD83 -> WGS84
+
+* SK83-98.tif
+
+### Canada: CGVD28 height --> NAD83(CSRS)
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=HT2_2010)  
+*Format*: GeoTIFF converted from GTX  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:4955 (NAD83(CSRS))  
+*Target CRS*: EPSG:5713 (CGVD28 height)  
+*Used by*: [EPSG:9123 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9123)
+
+* HT2_2010v70.tif
+
+### Canada: CGVD2013(CGG2013a) height --> NAD83(CSRS)
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=CGG2013n83a)  
+*Format*: GeoTIFF converted from GTX  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:8251 (NAD83(CSRS)v6)  
+*Target CRS*: EPSG:9245 (CGVD2013(CGG2013a) height)  
+*Used by*: [EPSG:9247 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9247)
+
+* CGG2013an83.tif
+
+### Canada: CGVD2013(CGG2013a) height --> ITRF2008
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=CGG2013i08a)  
+*Format*: GeoTIFF converted from GTX  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:7911 (ITRF2008)  
+*Target CRS*: EPSG:9245 (CGVD2013(CGG2013a) height)  
+*Used by*: [EPSG:9125 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9125)
+
+* CGG2013ai08.tif
+
+### Canada: CGVD2013(CGG2013) height --> NAD83(CSRS) (superseded by CGVD2013(CGG2013a) height --> NAD83(CSRS))
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=CGG2013n83)  
+*Format*: GeoTIFF converted from GTX  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:8251 (NAD83(CSRS)v6)  
+*Target CRS*: EPSG:6647 (CGVD2013(CGG2013) height)  
+*Used by*: [EPSG:9246 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9246)
+
+* CGG2013n83.tif
+
+### Canada: CGVD2013(CGG2013) height --> ITRF2008 (superseded by CGVD2013(CGG2013a) height --> ITRF2008)
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=CGG2013i08)  
+*Format*: GeoTIFF converted from GTX  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:7911 (ITRF2008)  
+*Target CRS*: EPSG:6647 (CGVD2013(CGG2013) height)  
+*Used by*: [EPSG:9124 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9124)
+
+* CGG2013i08.tif
