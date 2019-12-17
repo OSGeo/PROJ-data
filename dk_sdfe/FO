@@ -1,0 +1,42 @@
+#------------------------------------------------------------------------------
+#
+#    PROJ implementations of current and legacy Faroese coordinate systems
+#
+#------------------------------------------------------------------------------
+#
+#  This file is Work-In-Progress, and should not be used without great testing care. It is
+#  currently provided for informational and testing purposes, but will in due course become
+#  the official definition and implementation of transformations to and from Faroese systems.
+#
+#  Revision history:
+#  -----------------
+#
+#  2017-10-03  Initial setup.
+#              Kristian Evers <kreve@sdfe.dk>
+#
+#  2018-02-19  Added FVR09.
+#              Kristian Evers <kreve@sdfe.dk>
+#
+#  2018-08-29  Added FK89
+#              Kristian Evers <kreve@sdfe.dk>,Thomas Knudsen <thokn@sdfe.dk>
+#
+<FVR09> +proj=vgridshift +grids=fvr09.gtx
+
+<UTM29N> +proj=utm +zone=29 +ellps=GRS80 +units=m +no_defs
+<UTM29N_FVR09> +proj=pipeline +step +init=FO:FVR09 +step +init=FO:UTM29N
+
+<FOTM> +proj=etmerc +lat_0=0 +lon_0=-7 +k=0.999997 +x_0=200000 +y_0=-6000000 +ellps=GRS80 +units=m +no_defs
+<FOTM_FVR09> +proj=pipeline +step +init=FO:FVR09 +step +init=FO:FOTM
+
+<FD54> +proj=utm +zone=29 +ellps=intl +units=m +no_defs
+
+<FK89>  proj=pipeline
+    step proj=utm ellps=GRS80 zone=29
+    step init=FO_fk89.pol:UTM29_FK89
+
+<gie>
+operation   init=FO:FK89
+tolerance   50 mm
+accept      -7  62 0 0
+expect      594919.9029294271  701535.25742737006  0.0  0.0
+</gie>

@@ -1,0 +1,586 @@
+#------------------------------------------------------------------------------------------------------
+#
+#      PROJ implementations of current and legacy Danish coordinate systems
+#
+#------------------------------------------------------------------------------------------------------
+#
+#  This file is Work-In-Progress, and should not be used without great testing care. It is
+#  currently provided for informational and testing purposes, but will in due course become
+#  the official definition and implementation of transformations to and from Danish systems.
+#
+#  Revision history:
+#  -----------------
+#
+#  2017-09-??  Initial setup.
+#              Kristian Evers <kreve@sdfe.dk>
+#
+#  2017-11-03  Formal definitions of legacy systems,
+#              New datum naming structure
+#              Check up on all polynomial transformations.
+#              Karsten Engsager, Thomas Knudsen <thokn@sdfe.dk>
+#
+#  2017-11-08  Clean up, introduce _TC32_TD32, add descriptions
+#              Thomas Knudsen <thokn@sdfe.dk>
+#
+#  2017-12-08  Introduce the Femerbelt system, the Storstrom
+#              projection, and a number of seldom-used legacy
+#              systems.
+#              Karsten Engsager, Thomas Knudsen <thokn@sdfe.dk>
+#
+#  2018-02-21  Check-up, streamline built-in self-tests, add a
+#              number of comments and descriptions, preparing
+#              for PROJ 5.0.0 release.
+#              Thomas Knudsen <thokn@sdfe.dk>
+#
+#------------------------------------------------------------------------------------------------------
+
+
+<metadata> +version=1.0.0 +origin=SDFE +lastupdate=2018-02-26
+
+
+#------------------------------------------------------------------------------------------------------
+#  Vertical datums
+#------------------------------------------------------------------------------------------------------
+<DVR90> proj=vgridshift grids=dvr90.gtx            # current
+<DNN>   proj=vgridshift grids=dnn.gtx              # historical
+#------------------------------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------------------------------
+#  UTM ETRS89:  The primary system for mapping
+#------------------------------------------------------------------------------------------------------
+<UTM32N> proj=utm zone=32 ellps=GRS80 units=m no_defs
+<UTM33N> proj=utm zone=33 ellps=GRS80 units=m no_defs
+
+<UTM32N_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:UTM32N
+<UTM33N_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:UTM33N
+
+<UTM32N_DNN> proj=pipeline step init=DK:DNN step init=DK:UTM32N
+<UTM33N_DNN> proj=pipeline step init=DK:DNN step init=DK:UTM33N
+#------------------------------------------------------------------------------------------------------
+<gie>
+operation   init=DK:UTM32N
+tolerance   0.1 mm
+accept      12 55
+expect      691875.6321 6098907.8250
+</gie>
+#------------------------------------------------------------------------------------------------------
+
+
+#------------------------------------------------------------------------------------------------------
+#  DKTM ETRS89:  Used for construction tasks, where a scale factor close to unity is important
+#------------------------------------------------------------------------------------------------------
+<DKTM1> proj=etmerc lat_0=0 lon_0=9     k=0.99998 x_0=200000 y_0=-5000000 ellps=GRS80 units=m no_defs
+<DKTM2> proj=etmerc lat_0=0 lon_0=10    k=0.99998 x_0=400000 y_0=-5000000 ellps=GRS80 units=m no_defs
+<DKTM3> proj=etmerc lat_0=0 lon_0=11.75 k=0.99998 x_0=600000 y_0=-5000000 ellps=GRS80 units=m no_defs
+<DKTM4> proj=etmerc lat_0=0 lon_0=15    k=1       x_0=800000 y_0=-5000000 ellps=GRS80 units=m no_defs
+
+<DKTM1_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:DKTM1
+<DKTM2_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:DKTM2
+<DKTM3_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:DKTM3
+<DKTM4_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:DKTM4
+
+<DKTM1_DNN> proj=pipeline step init=DK:DNN step init=DK:DKTM1
+<DKTM2_DNN> proj=pipeline step init=DK:DNN step init=DK:DKTM2
+<DKTM3_DNN> proj=pipeline step init=DK:DNN step init=DK:DKTM3
+<DKTM4_DNN> proj=pipeline step init=DK:DNN step init=DK:DKTM4
+
+#------------------------------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------------------------------
+#  Kp2000 ETRS89:  A predecessor to DKTM (see above). Kp2000 was never in widespread use.
+#------------------------------------------------------------------------------------------------------
+<KP2000B> proj=etmerc lat_0=0 lon_0=15  k=1       x_0=900000 y_0=0 ellps=GRS80 units=m no_defs
+<KP2000J> proj=etmerc lat_0=0 lon_0=9.5 k=0.99995 x_0=200000 y_0=0 ellps=GRS80 units=m no_defs
+<KP2000S> proj=etmerc lat_0=0 lon_0=12  k=0.99995 x_0=500000 y_0=0 ellps=GRS80 units=m no_defs
+
+<KP2000B_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:KP2000B
+<KP2000J_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:KP2000J
+<KP2000S_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:KP2000S
+
+<KP2000B_DNN> proj=pipeline step init=DK:DNN step init=DK:KP2000B
+<KP2000J_DNN> proj=pipeline step init=DK:DNN step init=DK:KP2000J
+<KP2000S_DNN> proj=pipeline step init=DK:DNN step init=DK:KP2000S
+
+#------------------------------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------------------------------
+# Storstrom Bridge Map Projection: lon_0=1152nt
+#------------------------------------------------------------------------------------------------------
+<SSBKP> proj=etmerc  ellps=GRS80
+        lat_0=0      lon_0=11.86666666666666666667
+        x_0=40000    y_0=-6013000
+        k=1          units=m        no_defs
+#------------------------------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------------------------------
+# Danish Mercator ETRS89 lat_0=56 x_0=500000 -> y_0=-3716499.0435458627
+#------------------------------------------------------------------------------------------------------
+<DM> proj=merc lat_ts=56 lon_0=9 x_0=500000 y_0=-3716499.0435458627 ellps=GRS80 no_defs
+<DMRC> DK:DM
+#------------------------------------------------------------------------------------------------------
+<gie>
+operation   init=DK:DM
+tolerance   0.1 mm
+accept      12 55
+expect      687178.31448147167  390074.81929540867
+</gie>
+#------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+#------------------------------------------------------------------------------------------------------
+#  Danish legacy systems - formal definitions
+#------------------------------------------------------------------------------------------------------
+#  These formal definitions are for illumination - not for computation.
+#  Valid only for observations already measured in the relevant (legacy)
+#  reference frame.
+#
+#  See below for the much more involved setups needed to go to and from
+#  the legacy frames.
+#------------------------------------------------------------------------------------------------------
+# UTM ED50
+<_UTM32_ED50_FORMAL> proj=utm zone=32 ellps=intl units=m no_defs
+<_UTM33_ED50_FORMAL> proj=utm zone=33 ellps=intl units=m no_defs
+
+# System Storebaelt (lon_0= 10 58 nt)
+<_SB_FORMAL> proj=etmerc
+            lat_0=0 lon_0=10.96666666666666667 k=0.999999
+            x_0=500000 y_0=0 ellps=intl
+            units=m  no_defs
+
+# Denmark Sweden Bridge Project System Oeresund (ED50) (lon_0 = 12 48 nt)
+<_DKS_FORMAL> proj=etmerc
+             lat_0=0  lon_0=12.8  k=0.999999
+             x_0=119000  y_0=-5895000 ellps=intl
+             units=m no_defs
+
+# Danish Mercator ED50
+<_DM_FORMAL> proj=merc ellps=intl lat_ts=56 lon_0=9
+            x_0=500000                              y_0=-3716499.0435879501
+            overfitted_x_0=499919.274212 overfitted_y_0=-3716691.9921
+            units=m no_defs
+
+# Generalstabens lcc Jutland and Zealand (lon_0 = 2 12 nt, W positive)
+<_GS_FORMAL>  proj=lcc lat_ts=56 lat_0=55 lon_0=2.2
+             x_0=0    y_0=0   ellps=GS
+
+# Generalstabens konform-koniske for Bornholm (lon_0 = -2 21 nt, W positive)
+<_GSB_FORMAL> proj=lcc lat_1=56 lat_0=55 lon_0=-2.35 # lat_ts=56
+             x_0=18831.460 y_0=5614.621 ellps=GS
+
+# Koebenhavns Kommune
+# <_KK_FORMAL>  proj=localcrd ellps=danish units=m no_defs
+#------------------------------------------------------------------------------------------------------
+
+
+
+
+#------------------------------------------------------------------------------------------------------
+#  Legacy systems - actual transformations
+#------------------------------------------------------------------------------------------------------
+#
+#  Technical implementation
+#  -------------------------
+#  Most of the transformations to and from the Danish legacy systems are based on a
+#  7-parameter Helmert transformation, followed by a bivariate polynomial adjustment.
+#
+#  The Helmert transformation takes us from the current system (ETRS89) to a system that
+#  is sufficiently close to the older systems to allow us to take the final steps using
+#  the polynomial ("Horner") way.
+#
+#  In most cases, the intermediate system is formally ED50: The parameters produce the
+#  least squares optimum route from ETRS89 to ED50. But due to the much more stable scale
+#  factor of ETRS89, the ED50 coordinates computed using the Helmert step alone reveals
+#  the large tensions in the ED50 net:  The Helmert transformed coordinates can be thought
+#  of as "ED50 if ED50 had as good a scale factor as ETRS89".
+#
+#  To discern, we refer to the Helmert transformed datum as "Technical Datum 32",
+#  TD32 - a 2D datum for computational use only. A TD32 coordinate transformed
+#  to UTM zone 32, is referred to the "Technical Coordinate System 32, on the
+#  TD32 datum", _TC32_TD32.
+#
+#  _TC32_TD32 is the step stone from which the bivariate Horner polynomials takes us the
+#  final steps to the target system.
+#
+#  Naming convention
+#  ------------------
+#  The transformations to and from Danish legacy systems are named such that to go
+#
+#  FROM the current system (i.e. for the time being, GEO_ETRS89),
+#  TO system X,
+#  use the FORWARD method of the transformation accessed as +init=DK:X
+#
+#  and conversely, to go
+#
+#  FROM system X
+#  TO the current system,
+#  use the INVERSE method of the transformation accessed as +init=DK:X
+#
+#
+#  Numerical example
+#  ------------------
+#  For example, one may transform data from GEO_ETRS89 to System 45 Bornholm
+#  using the syntax
+#
+#      echo 15 55 0 0 | cct +init=DK:S45B
+#
+#  which will respond with
+#
+#      42915.059286989766000  37569.188021636372000   -33.327159059233963     0.000000000000000
+#
+#  And a forward-inverse roundtrip test can be implemented as:
+#
+#      echo 15 55 0 0 | cct +init=DK:S45B | cct -I +init=DK:S45B
+#
+#  Which results in this near perfect roundtrip:
+#
+#      14.999999999998458    55.000000000290619    -0.000000000931323     0.000000000000000
+#
+#  (the test point 15E, 55N is situated close to the south shore of Bornholm,
+#   a few km south of the Pedersker village)
+#
+#------------------------------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------------------------------
+#  The primary step stone:  _TC32_TD32
+#------------------------------------------------------------------------------------------------------
+<_TC32_TD32>
+    proj=pipeline no_defs
+    step proj=cart ellps=GRS80
+    step proj=helmert inv
+         x = -81.0703   rx = -0.48488
+         y = -89.3603   ry = -0.02436
+         z =-115.7526   rz = -0.41321   s = -0.540645
+         convention = coordinate_frame
+    step proj=cart ellps=intl  inv      # Now: GEO_TD32
+    step proj=utm  ellps=intl  zone=32  # And now: TC32_TD32 (UTM32 if ED50 was "perfect")
+#------------------------------------------------------------------------------------------------------
+<gie>
+operation   init=DK:_TC32_TD32
+tolerance   0.1 mm
+accept      9.5 57 0 0
+expect      530454.9998 6317704.6255
+
+operation   init=DK:_TC32_TD32
+tolerance   0.1 mm
+accept      15 55 0 0
+expect      883653.4932  6111473.4226
+</gie>
+#------------------------------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------------------------------
+# ETRS89 (Geodetic) -> UTM32_ED50, valid for Denmark except Bornholm (i.e. west of 13E)
+#------------------------------------------------------------------------------------------------------
+<UTM32_ED50_L>
+    proj=pipeline
+    step init=DK:_TC32_TD32
+    step init=DK_general.pol:TC32_L inv
+#------------------------------------------------------------------------------------------------------
+<gie>
+operation   init=DK:UTM32_ED50_L
+tolerance   40 mm
+accept      9.5 57 0 0
+expect      530455.2023  6317704.6465
+</gie>
+
+
+
+#------------------------------------------------------------------------------------------------------
+# GEO_ETRS89 -> GEO_ED50, valid for Denmark except Bornholm
+#------------------------------------------------------------------------------------------------------
+<GEO_ED50_L>  proj=pipeline
+              step init=DK:UTM32_ED50_L
+              step proj=utm zone=32 ellps=intl units=m no_defs inv
+#------------------------------------------------------------------------------------------------------
+<gie>
+operation   init=DK:GEO_ED50_L
+tolerance   40 mm
+accept      9.5 57 0 0
+expect      9.501323491951883   57.000587965055587
+accept      12 55  0 0
+expect      12.001173940  55.000628676      # Authoritative value, obtained from KMSTrans2
+</gie>
+#------------------------------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------------------------------
+# ETRS89 (Geodetic) -> UTM32_ED50, Bornholm
+#------------------------------------------------------------------------------------------------------
+<UTM32_ED50_B> proj=pipeline  ellps=GRS80
+     step init=DK:_TC32_TD32
+     step init=DK_bornholm.pol:UTM32_ED50_B     # no inv here, due to polynomial swap in DK_bornholm.pol
+#------------------------------------------------------------------------------------------------------
+<gie>
+operation   init=DK:UTM32_ED50_B
+tolerance   30 mm
+accept      15 55 0 0
+expect      883654.5767  6111474.6515    # Authoritative value, obtained from KMSTrans2
+</gie>
+#------------------------------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------------------------------
+# ETRS89 (Geodetic) -> UTM33_ED50, Bornholm
+#------------------------------------------------------------------------------------------------------
+<UTM33_ED50_B> proj=pipeline  ellps=GRS80
+     step init=DK:UTM32_ED50_B
+     step proj=utm zone=32 ellps=intl units=m no_defs inv
+     step proj=utm zone=33 ellps=intl units=m no_defs
+#------------------------------------------------------------------------------------------------------
+<gie>
+operation   init=DK:UTM33_ED50_B
+tolerance   30 mm
+accept      15 55 0 0
+expect      500071.1125   6094991.2120    # Authoritative value, obtained from KMSTrans2
+</gie>
+#------------------------------------------------------------------------------------------------------
+
+
+#------------------------------------------------------------------------------------------------------
+# ETRS89 (Geodetic) -> GEO_ED50, Bornholm
+<GEO_ED50_B>  proj=pipeline  ellps=GRS80
+    step init=DK:UTM32_ED50_B
+    step proj=utm zone=32 ellps=intl units=m no_defs inv
+<ED50_B>  init=DK:GEO_ED50_B
+#------------------------------------------------------------------------------------------------------
+<gie>
+operation   init=DK:GEO_ED50_B
+tolerance   30 mm
+accept      15 55 0 0
+expect      15.001111641   55.000603892    # Authoritative value, obtained from KMSTrans2
+</gie>
+#------------------------------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------------------------------
+# ETRS89 (Geodetic) -> System45
+#------------------------------------------------------------------------------------------------------
+<S45B>  proj=pipeline no_defs
+        step   init=DK:_TC32_TD32
+        step   init=DK_bornholm.pol:TC32_B inv
+#------------------------------------------------------------------------------------------------------
+<gie>
+operation   init=DK:S45B
+tolerance   40 mm
+accept      15 55 0 0
+expect      42915.0596  37569.1876    # Authoritative value, obtained from KMSTrans2
+</gie>
+#------------------------------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------------------------------
+# ETRS89 (Geodetic) -> System 34 Jutland
+#------------------------------------------------------------------------------------------------------
+<S34J>  proj=pipeline  ellps=GRS80
+        step   init=DK:_TC32_TD32
+        step   init=DK_jutland.pol:TC32_L inv
+#------------------------------------------------------------------------------------------------------
+<gie>
+operation   init=DK:S34J
+tolerance   40 mm
+accept      9.5 57 0 0
+expect      263190.2497  286078.3847
+</gie>
+#------------------------------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------------------------------
+# ETRS89 (Geodetic) -> System 34 Zealand
+#------------------------------------------------------------------------------------------------------
+<S34S>  proj=pipeline  ellps=GRS80
+        step   init=DK:_TC32_TD32
+        step   init=DK_zealand.pol:TC32_L inv
+#------------------------------------------------------------------------------------------------------
+<gie>
+operation   init=DK:S34S
+tolerance   40 mm
+accept      12.5 55.7 0 0
+expect      76425.6474  143042.0038
+</gie>
+#------------------------------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------------------------------
+# System Storebaelt (Great Belt system)
+#------------------------------------------------------------------------------------------------------
+# ETRS89 (Geodetic) -> System Storebaelt (The Great Belt System)
+#------------------------------------------------------------------------------------------------------
+<SB> proj=pipeline  no_defs
+        step init=DK:UTM32_ED50_L
+        step init=DK_bridges.pol:UTM32_ED50_L inv   # tol = 0.5 mm
+#------------------------------------------------------------------------------------------------------
+<gie>
+operation   init=DK:SB
+tolerance   30 mm
+accept      11 55.3 0 0
+expect      502194.1051  6130826.4745
+accept      10.891109758 55.319726643 0 0
+expect      495280.2216  6133024.6786
+
+direction   inverse
+accept      502194.1051  6130826.4745 0 0
+expect      11 55.3
+accept      495280.2216  6133024.6786 0 0
+expect      10.891109758 55.319726643
+</gie>
+#------------------------------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------------------------------
+# Denmark Sweden Bridge Project System Oeresund (ED50) (lon_0 = 12 48 nt)
+#------------------------------------------------------------------------------------------------------
+# ETRS89 (Geodetic) -> Denmark Sweden Bridge Project System (ED50)
+#------------------------------------------------------------------------------------------------------
+<DKS>  proj=pipeline  no_defs
+       step   init=DK:S34S
+       step   init=DK_bridges.pol:S34S inv
+#------------------------------------------------------------------------------------------------------
+<gie>
+operation   init=DK:DKS
+tolerance   30 mm
+accept      12.7  55.66 0 0
+expect      112779.7960  275908.0748   # Authoritative value, obtained from KMSTrans2
+</gie>
+#------------------------------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------------------------------
+# ETRS89 (Geodetic) -> Generalstabens System, except Bornholm
+#------------------------------------------------------------------------------------------------------
+<GS>  proj=pipeline  ellps=GRS80
+    step   init=DK:UTM32_ED50_L
+    step   init=DK_general.pol:GS
+#------------------------------------------------------------------------------------------------------
+<GEO_GS> proj=pipeline  ellps=GRS80
+    step   init=DK:GS
+    step   init=DK:GS_FORMAL inv
+#------------------------------------------------------------------------------------------------------
+<gie>
+operation   init=DK:GS
+tolerance   30 mm
+accept      8.998706228455516 55.999371897298793  0  0
+expect      85938.0998  112123.5083
+accept      10  57 0 0
+expect      22859.7375 222752.8941
+direction   inverse
+accept      22859.7375 222752.8941 0 0
+expect      10  57
+</gie>
+#------------------------------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------------------------------
+# ETRS89 (Geodetic) -> Generalstabens System Bornholm
+#------------------------------------------------------------------------------------------------------
+# Implemented as a 4th order complex polynomium going from UTM33_ED50
+# to System GS Bornholm. The datum shift from ETRS89 to ED50 is done
+# in the UTM33_ED50_B step.
+#
+# The complex polynomium partially implements a further datum shift,
+# to System GS Bornholm, partially carries out the conformal mapping
+# from UTM to the Lambert Conformal Conic, which is the formal basis
+# of the GS systems.
+#------------------------------------------------------------------------------------------------------
+<GSB>  proj=pipeline  ellps=GRS80
+    step   init=DK:UTM33_ED50_B
+    step   init=DK_bornholm.pol:GSB
+#------------------------------------------------------------------------------------------------------
+<GEO_GSB> proj=pipeline  ellps=GRS80       #
+    step   init=DK:GSB
+    step   init=DK:_GSB_FORMAL inv
+#------------------------------------------------------------------------------------------------------
+<gie>
+operation   init=DK:GSB
+tolerance   30 mm
+accept      15  55 0 0
+expect      14063.5412  5598.3811
+direction inverse
+accept      14063.5412  5598.3811 0 0
+expect      15  55
+</gie>
+#------------------------------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------------------------------
+# Koebenhavns Kommune Koordinatsystem
+#------------------------------------------------------------------------------------------------------
+# ETRS89 (Geodetic) -> System Koebenhavns Kommune
+#------------------------------------------------------------------------------------------------------
+<KK>  proj=pipeline no_defs
+      step   init=DK:S34S
+      step   init=DK_zealand.pol:KK
+#------------------------------------------------------------------------------------------------------
+<gie>
+operation   init=DK:KK
+tolerance   30 mm
+accept      12.5  55.7 0 0
+expect     -133514.7527  79977.9650   # Authoritative value, obtained from KMSTrans2
+direction  inverse
+accept     -133514.7527  79977.9650  0 0
+expect      12.5  55.7
+</gie>
+#------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+#------------------------------------------------------------------------------------------------------
+# System Ostenfeld (South Jutland, Part of Germany before 1920)
+#
+# NOT READY YET
+#------------------------------------------------------------------------------------------------------
+# <OS_FORMAL> proj=localcrd ellps=bessel units=m no_defs
+#------------------------------------------------------------------------------------------------------
+# ETRS89 (Geodetic) -> System Ostenfeld
+#------------------------------------------------------------------------------------------------------
+<OS>  proj=pipeline ellps=GRS80
+    step   init=DK:S34J
+    step   init=DK_jutland.pol:OS
+    step   proj=axisswap order=2,1
+#------------------------------------------------------------------------------------------------------
+<gie>
+operation   init=DK:OS
+tolerance   30 mm
+accept      9  55 0 0
+expect      59184.3614  -14910.8690  # KMSTrans2
+direction   inverse
+accept      59184.3614  -14910.8690  0 0
+expect      9  55
+</gie>
+#------------------------------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------------------------------
+# Missing: Danske Mercator ED50 & Vertical reference frame transformations
+#------------------------------------------------------------------------------------------------------
+
