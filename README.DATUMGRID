@@ -43,7 +43,7 @@ Each file is in a subdirectory whose name follows {country_code}_{agency_name}.
 For example us_noaa for files originating from US NOAA.
 
 * [at_bev: Austria BEV](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/at_bev/)
-* [au_geoau: Australia Geosciences Australia](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/au_geoau/)
+* [au_ga: Australia Geosciences Australia](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/au_ga/)
 * [au_icsm: Australia ICSM](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/au_icsm/)
 * [be_ign: Belgium IGN](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/be_ign/)
 * [ca_nrc: Canada NRC](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/ca_nrc/)
