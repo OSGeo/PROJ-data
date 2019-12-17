@@ -50,7 +50,7 @@ For example us_noaa for files originating from US NOAA.
 * [ch_swisstopo: Switzerland Swissstopo](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/ch_swisstopo/)
 * [de_bkg: Germany BKG](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/de_bkg/)
 * [de_geogsn: Germany GeoSN](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/de_geogsn/)
-* [de_lgl: Germany LGL](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/de_lgl/)
+* [de_lgl_bw: Germany LGL Baden-Württemberg](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/de_lgl_bw/)
 * [dk_sdfe: Denmark SDFE](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/dk_sdfe/)
 * [fr_ign: France IGN](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/fr_ign/)
 * [nz_linz: New Zealand LINZ](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/nz_linz/)
