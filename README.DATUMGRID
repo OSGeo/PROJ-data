@@ -55,6 +55,7 @@ For example us_noaa for files originating from US NOAA.
 * [dk_sdfe: Denmark SDFE](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/dk_sdfe/)
 * [es_cat_icgc: Spain Catalonia ICGC](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/es_cat_icgc/)
 * [fr_ign: France IGN](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/fr_ign/)
+* [is_lmi: Iceland LMI](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/is_lmi/)
 * [nz_linz: New Zealand LINZ](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/nz_linz/)
 * [pt_dgt: Portugal DGT](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/pt_dgt/)
 * [se_lantmateriet: Sweden Lantmateriet](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/se_lantmateriet/)

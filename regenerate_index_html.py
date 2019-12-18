@@ -13,6 +13,8 @@ for dirname in glob.glob('*'):
 total_size = 0
 set_files = set()
 for dirname in sorted(dirnames):
+    if '_' not in dirname:
+        continue
     filenames = []
     readme_filename = None
     for f in glob.glob(dirname + '/*'):
