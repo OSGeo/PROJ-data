@@ -7,9 +7,9 @@ from [Swisstopo](ttps://www.swisstopo.admin.ch)
 
 ### Switzerland: LV03 (system CH1903) -> LV95 (system CH1903+)
 
-*Source*: [swisstopo](https://www.swisstopo.admin.ch/en/knowledge-facts/surveying-geodesy/reference-frames/transformations-position.html)
-*Format*: GeoTIFF converted from NTv2.0 (.gsb)
-*License*: [Creative Commons CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode)
+*Source*: [swisstopo](https://www.swisstopo.admin.ch/en/knowledge-facts/surveying-geodesy/reference-frames/transformations-position.html)  
+*Format*: GeoTIFF converted from NTv2.0 (.gsb)  
+*License*: [Creative Commons CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode)  
 *Credit*: (c) 2007 swisstopo
 
 Recommended to transform from Swiss reference frame LV03 (system CH1903, EPSG:21781) to Swiss reference frame LV95 (system CH1903+, EPSG:2056).
