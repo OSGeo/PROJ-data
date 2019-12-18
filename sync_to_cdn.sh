@@ -2,7 +2,7 @@
 
 TARGET=s3://cdn.proj.org/
 
-for i in `ls -d */`; do
+for i in `ls -d *_*/`; do
     echo "Synchronizing $i ..."
     aws s3 sync $i "$TARGET" --exclude ".github/*" --profile projcdn
 done
