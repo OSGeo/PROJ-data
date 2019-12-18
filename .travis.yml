@@ -1,0 +1,23 @@
+# This is the config file for Travis-ci.org
+
+sudo: required
+
+# Avoid consuming our GitHub LFS quota
+git:
+  lfs_skip_smudge: true
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install cmake make zip unzip
+
+install:
+# Travis build directory includes /build/, which is a pattern we exclude
+# in our 'make dist' target...
+    - (cd ..; mv proj-datumgrid-geotiff /tmp)
+    - (cd /tmp/proj-datumgrid-geotiff && ./travis/test.sh)
+
+script:
+  - echo "done"
+
+after_success:
+  - echo "done"
