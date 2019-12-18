@@ -49,7 +49,7 @@ For example us_noaa for files originating from US NOAA.
 * [ca_nrc: Canada NRC](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/ca_nrc/)
 * [ch_swisstopo: Switzerland Swissstopo](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/ch_swisstopo/)
 * [de_bkg: Germany BKG](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/de_bkg/)
-* [de_geogsn: Germany GeoSN](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/de_geogsn/)
+* [de_geosn: Germany GeoSN](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/de_geosn/)
 * [de_lgl_bw: Germany LGL Baden-Württemberg](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/de_lgl_bw/)
 * [de_lgvl_saarland: Germany LGVL Saarland](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/de_lgvl_saarland/)
 * [dk_sdfe: Denmark SDFE](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/dk_sdfe/)
