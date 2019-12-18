@@ -13,7 +13,21 @@ from  [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod)
 
 Transform between NAD27 and NAD83 in Canada.
 
-* ntv2_0.gsb
+* ntv2_0.tif
+
+### Canada: NAD27(76) -> NAD83
+
+*Source*: [Natural Resources Canada](https://www.sse.gov.on.ca/sites/MNR-PublicDocs/EN/CMID/NTv2NationalPkg.zip)  
+*Format*: GeoTIFF converted from NTv2  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Copyright*: Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada,
+*Source CRS*: EPSG:4608 (NAD27(76))  
+*Target CRS*: EPSG:4269 (NAD83)  
+*Used by*: [EPSG:1463 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::1463)
+
+Transform between NAD27(76) and NAD83 in Canada.
+
+* MAY76V20.tif
 
 ### Canada: Alberta: NAD83(Original) --> NAD83(CSRS) 2002
 
