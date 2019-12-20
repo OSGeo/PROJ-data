@@ -31,6 +31,7 @@ conus.tif
 CQ77SCRS.tif
 CRD27_00.tif
 CRD93_00.tif
+cshpgn.tif
 D73_ETRS89_geo.tif
 DK
 DK_bornholm.pol
@@ -46,6 +47,7 @@ dvr90.tif
 egm08_25.tif
 egm96_15.tif
 emhpgn.tif
+eshpgn.tif
 ethpgn.tif
 flhpgn.tif
 FL.tif
@@ -143,6 +145,7 @@ inhpgn.tif
 ISL
 ISN2004_ISN2016.tif
 ISN93_ISN2016.tif
+kshpgn.tif
 kyhpgn.tif
 lahpgn.tif
 lyttht1937-nzvd2016.tif
@@ -154,6 +157,7 @@ mihpgn.tif
 mnhpgn.tif
 mohpgn.tif
 motuht1953-nzvd2016.tif
+mshpgn.tif
 NA27SCRS.tif
 NA83SCRS.tif
 napiht1962-nzvd2016.tif
@@ -250,6 +254,7 @@ WI.tif
 wmhpgn.tif
 wohpgn.tif
 WO.tif
+wshpgn.tif
 wthpgn.tif
 wvhpgn.tif
 wyhpgn.tif
