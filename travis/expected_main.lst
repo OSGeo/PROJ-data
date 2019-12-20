@@ -5,6 +5,7 @@ alaska.tif
 alhpgn.tif
 arhpgn.tif
 AT_GIS_GRID.tif
+auckht1946-nzvd2016.tif
 AUSGeoid09_V1.01.tif
 AUSGeoid2020_20180201.tif
 AUSGeoid98.tif
@@ -13,6 +14,7 @@ BC_27_05.tif
 BC_93_05.tif
 bd72lb72_etrs89lb08.tif
 BETA2007.tif
+blufht1955-nzvd2016.tif
 BWTA2017.tif
 c1hpgn.tif
 c2hpgn.tif
@@ -38,6 +40,8 @@ DK_jutland.pol
 DK_zealand.pol
 DLx_ETRS89_geo.tif
 dnn.tif
+dublht1960-nzvd2016.tif
+duneht1958-nzvd2016.tif
 dvr90.tif
 egm08_25.tif
 egm96_15.tif
@@ -121,6 +125,7 @@ ggpf08-Tubuai.tif
 ggpf10-Moorea.tif
 ggpf10-Tahiti.tif
 ggspm06v1.tif
+gisbht1926-nzvd2016.tif
 gr3df97a.tif
 GS7783.tif
 guhpgn.tif
@@ -140,6 +145,7 @@ ISN2004_ISN2016.tif
 ISN93_ISN2016.tif
 kyhpgn.tif
 lahpgn.tif
+lyttht1937-nzvd2016.tif
 MAY76V20.tif
 mdhpgn.tif
 MD.tif
@@ -147,8 +153,10 @@ mehpgn.tif
 mihpgn.tif
 mnhpgn.tif
 mohpgn.tif
+motuht1953-nzvd2016.tif
 NA27SCRS.tif
 NA83SCRS.tif
+napiht1962-nzvd2016.tif
 National_84_02_07_01.tif
 NB2783v2.tif
 NB7783v2.tif
@@ -156,6 +164,7 @@ nbhpgn.tif
 nchpgn.tif
 ndhpgn.tif
 nehpgn.tif
+nelsht1955-nzvd2016.tif
 njhpgn.tif
 NKG
 nmhpgn.tif
@@ -168,11 +177,14 @@ nvhpgn.tif
 NVI93_05.tif
 nyhpgn.tif
 nzgd2kgrid0005.tif
+nzgeoid2009.tif
+nzgeoid2016.tif
 ohhpgn.tif
 okhpgn.tif
 ON27CSv1.tif
 ON76CSv1.tif
 ON83CSv1.tif
+ontpht1964-nzvd2016.tif
 OSGM15_Belfast.tif
 OSGM15_Malin.tif
 OSTN15_NTv2_OSGBtoETRS.tif
@@ -219,9 +231,11 @@ SeTa2016.tif
 SK27-98.tif
 SK83-98.tif
 stgeorge.tif
+stisht1977-nzvd2016.tif
 stlrnc.tif
 stpaul.tif
 SWEN17_RH2000.tif
+taraht1970-nzvd2016.tif
 tnhpgn.tif
 TN.tif
 TO27CSv1.tif
@@ -230,6 +244,7 @@ vahpgn.tif
 vertconc.tif
 vertcone.tif
 vertconw.tif
+wellht1953-nzvd2016.tif
 wihpgn.tif
 WI.tif
 wmhpgn.tif
