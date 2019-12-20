@@ -47,6 +47,7 @@ For example us_noaa for files originating from US NOAA.
 * [au_icsm: Australia ICSM](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/au_icsm/)
 * [be_ign: Belgium IGN](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/be_ign/)
 * [ca_nrc: Canada NRC](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/ca_nrc/)
+* [ca_que_mern: Canada Quebec MERN](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/ca_que_mern/)
 * [ch_swisstopo: Switzerland Swissstopo](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/ch_swisstopo/)
 * [de_bkg: Germany BKG](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/de_bkg/)
 * [de_geosn: Germany GeoSN](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/de_geosn/)

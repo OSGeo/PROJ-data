@@ -28,6 +28,7 @@ CHENyx06_ETRS.tif
 cnhpgn.tif
 cohpgn.tif
 conus.tif
+cq77na83.tif
 CQ77SCRS.tif
 CRD27_00.tif
 CRD93_00.tif
@@ -158,6 +159,7 @@ mnhpgn.tif
 mohpgn.tif
 motuht1953-nzvd2016.tif
 mshpgn.tif
+na27na83.tif
 NA27SCRS.tif
 NA83SCRS.tif
 napiht1962-nzvd2016.tif
@@ -212,6 +214,7 @@ README.au_ga
 README.au_icsm
 README.be_ign
 README.ca_nrc
+README.ca_que_mern
 README.ch_swisstopo
 README.DATUMGRID
 README.de_bkg

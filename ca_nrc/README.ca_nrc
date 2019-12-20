@@ -213,10 +213,9 @@ Transform between NAD27(76) and NAD83 in Canada.
 *License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
 *Source CRS*: EPSG:4609 (NAD27(CGQ77))  
 *Target CRS*: EPSG:8237 (NAD83(CSRS)v2)  
-*Used by*: [EPSG:1575 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::1575)  
-*Used by*: [EPSG:1691 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::1691) for NAD27(CGQ77) -> WGS84
+*Used by*: [EPSG:9240 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9240)  
 
-* CQ77SCRS.tif (also known as CQ77NA83.GSB by EPSG)
+* CQ77SCRS.tif (also known as CGQ77-98.gsb by EPSG)
 
 ### Canada: Quebec: NAD83(Original) --> NAD83(CSRS) 1997
 
