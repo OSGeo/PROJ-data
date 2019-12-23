@@ -4,20 +4,41 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-<title>PROJ datumgrids</title>
+<title>PROJ Datumgrid CDN</title>
 </head>
 
 <body>
+
+<h1>PROJ.org Datumgrid CDN</h1>
 <p>
-This cdn.proj.org bucket, hosted by the
-<a href="https://aws.amazon.com/opendata/public-datasets/">Amazon Public Datasets</a> program,
-contains the datasets of
-<a href="https://github.com/OSGeo/proj-datumgrid-geotiff/">https://github.com/OSGeo/proj-datumgrid-geotiff/</a>.
+The s3://cdn.proj.org bucket is hosted by the
+<a href="https://aws.amazon.com/opendata/public-datasets/">Amazon Public Datasets</a> program, and it
+can be accessed via HTTP/S at <a href="https://cdn.proj.org"</a>cdn.proj.org</a>. CDN services are
+provided by the AWS Public Dataset team via <a href="https://aws.amazon.com/cloudfront/">CloudFront</a>.
 </p>
 <p>
-Those files are designed to be mainly used by <a href="https://proj.org">PROJ</a> 7 or later.
+The CDN contains <a href="https://www.cogeo.org/">Cloud Optimized GeoTIFF</a> datasets which are mirrored and
+managed by the
+<a href="https://github.com/OSGeo/proj-datumgrid-geotiff/">https://github.com/OSGeo/proj-datumgrid-geotiff/</a>
+GitHub project.  Files in the CDN are designed to be used by <a href="https://proj.org">PROJ</a> 7 or later, but any software
+project wishing to use the CDN for shifting support are encouraged to participate in the project and leverage the CDN.
 </p>
-<p>The bucket contains the following files:</p>
+<h2>Mirroring</h2>
+<p>If you are able, you are encouraged to mirror the grids via AWS S3 command line: </p>
+<pre>aws s3 sync s3://cdn.proj.org .</pre>
+
+<p>If direct S3 access is not possible, you can also use <i>wget</i> to locally mirror
+the data: </p>
+<pre>wget --mirror https://cdn.proj.org/</pre>
+
+<h2>Logs</h2>
+<p>Access logs to this resource are permanently deleted after one day, are not
+mirrored or stored, and are not publicly available. If this policy is not
+sufficient, users are encourage to mirror a local copy of the grid files and
+access them directly.
+</p>
+
+<h2>Content</h2> <p>The bucket contains the following files:</p>
 <ul>
 <li><a href="README.DATUMGRID">README.DATUMGRID</a></li>
 ${LINKS_WILL_BE_ADDED_HERE_BY_REGENERATE_INDEX_HTML}
