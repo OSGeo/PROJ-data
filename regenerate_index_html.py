@@ -35,7 +35,7 @@ for dirname in sorted(dirnames):
     title = '<h3>%s</h3>' % (dirname)
     try:
         agency = agencies[dirname]
-        title = '<h3><a href="%s">%s</h3>' % (agency['url'], agency['agency'])
+        title = '<a href="%s">%s</a>' % (agency['url'], agency['agency'])
     except KeyError:
 
         pass
