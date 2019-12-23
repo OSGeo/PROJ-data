@@ -32,7 +32,7 @@ for dirname in sorted(dirnames):
         else:
             filenames.append(f)
 
-    title = '<h3>%s</h3>' % (dirname)
+    title = '%s' % (dirname)
     try:
         agency = agencies[dirname]
         title = '<a href="%s">%s</a>' % (agency['url'], agency['agency'])
