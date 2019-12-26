@@ -13,7 +13,7 @@
 <p>
 The s3://cdn.proj.org bucket is hosted by the
 <a href="https://aws.amazon.com/opendata/public-datasets/">Amazon Public Datasets</a> program, and it
-can be accessed via HTTP/S at <a href="https://cdn.proj.org"</a>cdn.proj.org</a>. CDN services are
+can be accessed via HTTP/S at <a href="https://cdn.proj.org">cdn.proj.org</a>. CDN services are
 provided by the AWS Public Dataset team via <a href="https://aws.amazon.com/cloudfront/">CloudFront</a>.
 </p>
 <p>

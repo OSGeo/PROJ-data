@@ -1,10 +1,10 @@
 from osgeo import gdal
-import datetime
 import glob
 import os
 import json
+import subprocess
 
-agency_list = json.loads(open('AGENCY.json','rb').read())
+agency_list = json.loads(open('AGENCY.json','rt').read())
 agencies = {}
 for item in agency_list:
     agencies[item['id']] = item
@@ -35,12 +35,12 @@ for dirname in sorted(dirnames):
     title = '%s' % (dirname)
     try:
         agency = agencies[dirname]
-        title = '<a href="%s">%s</a>' % (agency['url'], agency['agency'])
+        title = '<a href="%s">%s</a>' % (agency['url'].replace('&', "&amp;"), agency['agency'])
     except KeyError:
 
         pass
 
-    links.append('</ul><hr/><h3>%s</h3><ul>' % title )
+    links.append('</ul><hr><h3>%s</h3><ul>' % title )
     for f in [readme_filename] + sorted(filenames):
 
         assert f not in set_files
@@ -66,7 +66,8 @@ for dirname in sorted(dirnames):
         if f.startswith('README'):
             last_modified = ''
         else:
-            last_modified = '. Last modified: ' + datetime.datetime.utcfromtimestamp(os.stat(full_filename).st_mtime).strftime("%Y/%m/%d")
+            p = subprocess.run(['git','log','-1','--pretty=format:%cd','--date=short',full_filename], check=True, stdout=subprocess.PIPE)
+            last_modified = '. Last modified: ' + p.stdout.decode('ascii')
 
         links.append('<li><a href="%s">%s</a>%s%s%s</li>' % (f, f, desc, size_str, last_modified))
 
