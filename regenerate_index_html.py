@@ -1,7 +1,14 @@
 from osgeo import gdal
-import datetime
 import glob
 import os
+import json
+import subprocess
+
+agency_list = json.loads(open('AGENCY.json','rt').read())
+agencies = {}
+for item in agency_list:
+    agencies[item['id']] = item
+
 
 dirnames = []
 links = []
@@ -24,7 +31,16 @@ for dirname in sorted(dirnames):
             readme_filename = f
         else:
             filenames.append(f)
-    links.append('</ul><ul>')
+
+    title = '%s' % (dirname)
+    try:
+        agency = agencies[dirname]
+        title = '<a href="%s">%s</a>' % (agency['url'].replace('&', "&amp;"), agency['agency'])
+    except KeyError:
+
+        pass
+
+    links.append('</ul><hr><h3>%s</h3><ul>' % title )
     for f in [readme_filename] + sorted(filenames):
 
         assert f not in set_files
@@ -50,12 +66,13 @@ for dirname in sorted(dirnames):
         if f.startswith('README'):
             last_modified = ''
         else:
-            last_modified = '. Last modified: ' + datetime.datetime.utcfromtimestamp(os.stat(full_filename).st_mtime).strftime("%Y/%m/%d")
+            p = subprocess.run(['git','log','-1','--pretty=format:%cd','--date=short',full_filename], check=True, stdout=subprocess.PIPE)
+            last_modified = '. Last modified: ' + p.stdout.decode('ascii')
 
         links.append('<li><a href="%s">%s</a>%s%s%s</li>' % (f, f, desc, size_str, last_modified))
 
 total_size_str = '%d MB' % (total_size // (1024 * 1024))
 
-content = '<!-- This is a generated file by regenerate_index_html.py. Do not modify !!!! -->\n\n'
+content = '<!-- This is a generated file by regenerate_index_html.py. Do not modify !!!! Modify index.html.in instead if you need to make changes-->\n\n'
 content += open('index.html.in', 'rt').read().replace('${LINKS_WILL_BE_ADDED_HERE_BY_REGENERATE_INDEX_HTML}', '\n'.join(links)).replace('${TOTAL_SIZE}', total_size_str)
 open('index.html', 'wt').write(content)

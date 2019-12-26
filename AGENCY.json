@@ -1,0 +1,117 @@
+[
+    {
+        "id": "at_bev",
+        "agency": "Austria Bundesamt für Eich- und Vermessungswessen",
+        "url": "http://www.bev.gv.at/portal/page?_pageid=713,2157075&_dad=portal&_schema=PORTAL"
+    },
+    {
+        "id": "au_ga",
+        "agency": "Geoscience Australia",
+        "url": "http://www.ga.gov.au"
+    },
+    {
+        "id": "au_icsm",
+        "agency": "Australian Intergovernmental Committee on Surveying and Mapping",
+        "url": "https://github.com/icsm-au/transformation_grids"
+    },
+    {
+        "id": "au_icsm",
+        "agency": "Australian Intergovernmental Committee on Surveying and Mapping",
+        "url": "https://github.com/icsm-au/transformation_grids"
+    },
+    {
+        "id": "be_ign",
+        "agency": "IGN Belgium",
+        "url": "http://www.ngi.be"
+    },
+    {
+        "id": "ca_nrc",
+        "agency": "Natural Resources Canada",
+        "url": "https://webapp.geod.nrcan.gc.ca/geod"
+    },
+    {
+        "id": "ca_que_mern",
+        "agency":"Ministère de l'Énergie et des Ressources naturelles du Québec",
+        "url": "https://mern.gouv.qc.ca/"
+    },
+    {
+        "id": "ch_swisstopo",
+        "agency":"Swisstopo Federal Office of Topography",
+        "url": "https://www.swisstopo.admin.ch/en/knowledge-facts/surveying-geodesy/reference-frames/transformations-position.html"
+    },
+    {
+        "id": "de_bkg",
+        "agency":"Beschreibung der Transformation",
+        "url": "http://crs.bkg.bund.de/crseu/crs/descrtrans/BeTA/de_dhdn2etrs_beta.php"
+    },
+    {
+        "id": "de_geosn",
+        "agency":"Staatsbetrieb Geobasisinformation und Vermessung Sachsen GeoSN",
+        "url": "https://www.landesvermessung.sachsen.de/download-5608.html?_cp=%7B%22accordion-content-4389%22%3A%7B%222%22%3Atrue%7D%2C%22previousOpen%22%3A%7B%22group%22%3A%22accordion-content-4389%22%2C%22idx%22%3A2%7D%7D"
+    },
+    {
+        "id": "de_lgl_bw",
+        "agency":"LGL Baden-Württemberg",
+        "url": "https://www.lgl-bw.de/"
+    },
+    {
+        "id": "de_lgvl_saarland",
+        "agency":"LVGL Saarland",
+        "url": "https://www.saarland.de/"
+    },
+    {
+        "id": "dk_sdfe",
+        "agency":"Danish Agency for Data Supply and Efficiency",
+        "url": "https://github.com/NordicGeodesy/NordicTransformations"
+    },
+    {
+        "id": "es_cat_icgc",
+        "agency":"Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+        "url": "http://www.icgc.cat/"
+    },
+    {
+        "id": "fr_ign",
+        "agency":"IGN France",
+        "url": "http://www.ign.fr/"
+    },
+    {
+        "id": "is_lmi",
+        "agency":"National Land Survey of Iceland",
+        "url": "https://atlas.lmi.is/LmiData/index.php?id=626468364600"
+    },
+    {
+        "id": "nz_linz",
+        "agency":"Land Information New Zealand",
+        "url": "https://www.linz.govt.nz/"
+    },
+    {
+        "id": "pt_dgt",
+        "agency":"DG Territorio",
+        "url": "http://www.dgterritorio.pt/"
+    },
+    {
+        "id": "se_lantmateriet",
+        "agency":"Lantmäteriet",
+        "url": "https://www.lantmateriet.se/"
+    },
+    {
+        "id": "uk_os",
+        "agency":"Ordnance Survey",
+        "url": "https://www.ordnancesurvey.co.uk/"
+    },
+    {
+        "id": "us_noaa",
+        "agency":"US National Oceanographic and Atmospheric Administration (NOAA)",
+        "url": "https://www.ngs.noaa.gov/"
+    },
+    {
+        "id": "us_nga",
+        "agency":"US National Geospatial Intelligence Agency (NGA)",
+        "url": "http://earth-info.nga.mil/"
+    },
+    {
+        "id": "us_usgs",
+        "agency": "US Geological Survey (USGS)",
+        "url": "https://www.usgs.gov/"
+    }
+]

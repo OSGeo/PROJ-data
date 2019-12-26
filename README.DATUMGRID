@@ -27,11 +27,19 @@ is clearly stated and verifiable. Suitable licenses include:
 
 Consult [CONTRIBUTING.md](https://github.com/OSGeo/proj-datumgrid-geotiff/blob/master/CONTRIBUTING.md) to submit a new grid.
 
-## Cloud usage
+## Content Delivery Network
 
 Those grids can be retrieved from cloud storage (AWS Public datasets) as
 described in
-https://github.com/rouault/PROJ/blob/rfc4_remote_and_geotiff_grid/docs/source/community/rfc/rfc-4.rst#network-access-to-grids
+https://github.com/rouault/PROJ/blob/rfc4_remote_and_geotiff_grid/docs/source/community/rfc/rfc-4.rst#network-access-to-grids at
+https://cdn.proj.org
+
+### CDN Access Log Policy
+
+Implicit location sensitivity may happen because of the way PROJ remotely accesses data.
+The PROJ CDN erases all access and activity logs after 24 hours. If this policy is not
+sufficient, users are encourage to mirror a local copy of the grid files and access
+them directly.
 
 ## Content
 
