@@ -1,8 +1,10 @@
-from osgeo import gdal
+from osgeo import gdal, ogr
 import glob
 import os
 import json
 import subprocess
+
+cdn_url = 'https://cdn.proj.org'
 
 agency_list = json.loads(open('AGENCY.json','rt').read())
 agencies = {}
@@ -16,6 +18,16 @@ for dirname in glob.glob('*'):
     if not os.path.isdir(dirname):
         continue
     dirnames.append(dirname)
+
+gj_ds = ogr.GetDriverByName('GeoJSON').CreateDataSource('files.geojson')
+lyr = gj_ds.CreateLayer('files')
+lyr.CreateField(ogr.FieldDefn('url', ogr.OFTString))
+lyr.CreateField(ogr.FieldDefn('name', ogr.OFTString))
+lyr.CreateField(ogr.FieldDefn('type', ogr.OFTString))
+lyr.CreateField(ogr.FieldDefn('source', ogr.OFTString))
+lyr.CreateField(ogr.FieldDefn('source_id', ogr.OFTString))
+lyr.CreateField(ogr.FieldDefn('source_url', ogr.OFTString))
+lyr.CreateField(ogr.FieldDefn('description', ogr.OFTString))
 
 total_size = 0
 set_files = set()
@@ -56,6 +68,33 @@ for dirname in sorted(dirnames):
                 if pos >= 0:
                     imageDesc = imageDesc[0:pos]
                 desc = ': ' + imageDesc
+
+            feat = ogr.Feature(lyr.GetLayerDefn())
+            feat['url'] = cdn_url + '/' + f
+            feat['name'] = f
+            type = ds.GetMetadataItem('TYPE')
+            if type:
+                feat['type'] = type
+            feat['source'] = agency['agency']
+            feat['source_id'] = agency['id']
+            feat['source_url'] = agency['url']
+            if imageDesc:
+                feat['description'] = imageDesc
+            gt = ds.GetGeoTransform()
+            xmin = gt[0] + 0.5 * gt[1]
+            ymax = gt[3] + 0.5 * gt[5]
+            xmax = xmin + gt[1] * (ds.RasterXSize - 1)
+            ymin = ymax + gt[5] * (ds.RasterYSize - 1)
+            geom = ogr.Geometry(ogr.wkbPolygon)
+            ring = ogr.Geometry(ogr.wkbLinearRing)
+            ring.AddPoint_2D(xmin, ymin)
+            ring.AddPoint_2D(xmin, ymax)
+            ring.AddPoint_2D(xmax, ymax)
+            ring.AddPoint_2D(xmax, ymin)
+            ring.AddPoint_2D(xmin, ymin)
+            geom.AddGeometry(ring)
+            feat.SetGeometry(geom)
+            lyr.CreateFeature(feat)
 
         size_str = ''
         size = os.stat(full_filename).st_size

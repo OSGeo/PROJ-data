@@ -7,6 +7,60 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 <title>PROJ Datumgrid CDN</title>
+<!--
+<script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v6.1.1/build/ol.js"></script>
+<link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v6.1.1/css/ol.css">
+-->
+<script src="ol.js"></script>
+<link rel="stylesheet" href="ol.css">
+<style>
+    .map {
+        width: 50%;
+        height: 600px;
+    }
+    .ol-popup {
+        position: absolute;
+        background-color: white;
+        -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+        filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #cccccc;
+        bottom: 12px;
+        left: -50px;
+        min-width: 280px;
+    }
+    .ol-popup:after, .ol-popup:before {
+        top: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        }
+    .ol-popup:after {
+        border-top-color: white;
+        border-width: 10px;
+        left: 48px;
+        margin-left: -10px;
+    }
+    .ol-popup:before {
+        border-top-color: #cccccc;
+        border-width: 11px;
+        left: 48px;
+        margin-left: -11px;
+    }
+    .ol-popup-closer {
+        text-decoration: none;
+        position: absolute;
+        top: 2px;
+        right: 8px;
+    }
+    .ol-popup-closer:after {
+        content: "✖";
+    }
+</style>
 </head>
 
 <body>
@@ -33,14 +87,111 @@ project wishing to use the CDN for shifting support are encouraged to participat
 the data: </p>
 <pre>wget --mirror https://cdn.proj.org/</pre>
 
-<h2>Logs</h2>
-<p>Access logs to this resource are permanently deleted after one day, are not
-mirrored or stored, and are not publicly available. If this policy is not
-sufficient, users are encourage to mirror a local copy of the grid files and
-access them directly.
-</p>
+<h2>Content</h2>
+<div>
+    <div id="map" class="map" style="float: left;"></div>
+    <div id="details"></div>
+    <div style="clear: both;"></div>
+</div>
+<div id="popup" class="ol-popup">
+    <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+    <div id="popup-content"></div>
+</div>
+<script>
+var vectorLayerJSON = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    format: new ol.format.GeoJSON(),
+    url: 'files.geojson'
+    //url: "https://gist.githubusercontent.com/rouault/7c2f687e58b7e1e6a30c48f39d3d879e/raw/644a388afcf556e642cdcb8c38d7321abc5f2091/files.geojson"
+  }),
+  style: new ol.style.Style({
+    stroke : new ol.style.Stroke(
+    {
+        width : 1
+    }),
+    fill : new ol.style.Fill(
+    {
+        color :  'rgba(0, 0, 0, 0.01)'
+    })
+  })
+});
 
-<h2>Content</h2> <p>The bucket contains the following files:</p>
+
+/**
+ * Elements that make up the popup.
+ */
+var container = document.getElementById('popup');
+var content = document.getElementById('popup-content');
+var closer = document.getElementById('popup-closer');
+var details = document.getElementById('details');
+
+/**
+ * Create an overlay to anchor the popup to the map.
+ */
+var overlay = new ol.Overlay({
+  element: container,
+  autoPan: true,
+  autoPanAnimation: {
+    duration: 250
+  }
+});
+
+
+/**
+ * Add a click handler to hide the popup.
+ * @return {boolean} Don't follow the href.
+ */
+closer.onclick = function() {
+  overlay.setPosition(undefined);
+  closer.blur();
+  return false;
+};
+
+
+var map = new ol.Map({
+  layers: [new ol.layer.Tile({source: new ol.source.OSM()}), vectorLayerJSON],
+  renderer: 'canvas',
+  target: 'map',
+  overlays: [overlay],
+  view: new ol.View({
+    center: [0, 0],
+    zoom: 0
+  })
+});
+
+
+// Add an event handler for the map "singleclick" event
+map.on('singleclick', function(evt) {
+    var coordinate = evt.coordinate;
+
+    //content_innerHTML = '';
+    details_innerHTML = '';
+    count = 0;
+    map.forEachFeatureAtPixel(evt.pixel, function(feature, layer) {
+        var props = feature.getProperties();
+        count ++;
+        //content_innerHTML += '<p><a href="' + props.name + '">' + props.name + '</a></p>';
+        details_innerHTML += '<p><a href="' + props.name + '">' + props.name + '</a> (' + props.source;
+        details_innerHTML += ', ' + props.description;
+        details_innerHTML += ')</p>';
+    });
+    details.innerHTML = details_innerHTML;
+/*
+    if( count >= 5 ) {
+        content_innerHTML = '';
+    }
+    content.innerHTML = content_innerHTML;
+    if (content_innerHTML != '') {
+        overlay.setPosition(coordinate);
+    } else {
+        overlay.setPosition(undefined);
+    }
+*/
+});
+
+</script>
+
+<p>The bucket contains the following files:</p>
 <ul>
 <li><a href="README.DATUMGRID">README.DATUMGRID</a></li>
 </ul><hr><h3><a href="http://www.bev.gv.at/portal/page?_pageid=713,2157075&amp;_dad=portal&amp;_schema=PORTAL">Austria Bundesamt für Eich- und Vermessungswessen</a></h3><ul>
@@ -331,6 +482,14 @@ access them directly.
 <p>
 Total size of content: 481 MB
 </p>
+
+<h2>Logs</h2>
+<p>Access logs to this resource are permanently deleted after one day, are not
+mirrored or stored, and are not publicly available. If this policy is not
+sufficient, users are encourage to mirror a local copy of the grid files and
+access them directly.
+</p>
+
 <div style="text-align: center;">
 <a href="https://aws.amazon.com/what-is-cloud-computing">
 <img src="https://d0.awsstatic.com/logos/powered-by-aws.png" style="position: relative; top: 50%; transform: translateY(50%);" alt="Powered by AWS Cloud Computing">
