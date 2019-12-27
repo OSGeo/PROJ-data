@@ -25,6 +25,7 @@ lyr.CreateField(ogr.FieldDefn('url', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('name', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('type', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('source', ogr.OFTString))
+lyr.CreateField(ogr.FieldDefn('source_country', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('source_id', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('source_url', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('description', ogr.OFTString))
@@ -76,6 +77,7 @@ for dirname in sorted(dirnames):
             if type:
                 feat['type'] = type
             feat['source'] = agency['agency']
+            feat['source_country'] = agency['country']
             feat['source_id'] = agency['id']
             feat['source_url'] = agency['url']
             if imageDesc:

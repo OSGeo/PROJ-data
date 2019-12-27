@@ -1,116 +1,133 @@
 [
     {
         "id": "at_bev",
+        "country": "Austria",
         "agency": "Austria Bundesamt für Eich- und Vermessungswessen",
         "url": "http://www.bev.gv.at/portal/page?_pageid=713,2157075&_dad=portal&_schema=PORTAL"
     },
     {
         "id": "au_ga",
+        "country": "Australia",
         "agency": "Geoscience Australia",
         "url": "http://www.ga.gov.au"
     },
     {
         "id": "au_icsm",
-        "agency": "Australian Intergovernmental Committee on Surveying and Mapping",
-        "url": "https://github.com/icsm-au/transformation_grids"
-    },
-    {
-        "id": "au_icsm",
+        "country": "Australia",
         "agency": "Australian Intergovernmental Committee on Surveying and Mapping",
         "url": "https://github.com/icsm-au/transformation_grids"
     },
     {
         "id": "be_ign",
+        "country": "Belgium",
         "agency": "IGN Belgium",
         "url": "http://www.ngi.be"
     },
     {
         "id": "ca_nrc",
+        "country": "Canada",
         "agency": "Natural Resources Canada",
         "url": "https://webapp.geod.nrcan.gc.ca/geod"
     },
     {
         "id": "ca_que_mern",
+        "country": "Canada",
         "agency":"Ministère de l'Énergie et des Ressources naturelles du Québec",
         "url": "https://mern.gouv.qc.ca/"
     },
     {
         "id": "ch_swisstopo",
+        "country": "Switzerland",
         "agency":"Swisstopo Federal Office of Topography",
         "url": "https://www.swisstopo.admin.ch/en/knowledge-facts/surveying-geodesy/reference-frames/transformations-position.html"
     },
     {
         "id": "de_bkg",
+        "country": "Germany",
         "agency":"Beschreibung der Transformation",
         "url": "http://crs.bkg.bund.de/crseu/crs/descrtrans/BeTA/de_dhdn2etrs_beta.php"
     },
     {
         "id": "de_geosn",
+        "country": "Germany",
         "agency":"Staatsbetrieb Geobasisinformation und Vermessung Sachsen GeoSN",
         "url": "https://www.landesvermessung.sachsen.de/download-5608.html?_cp=%7B%22accordion-content-4389%22%3A%7B%222%22%3Atrue%7D%2C%22previousOpen%22%3A%7B%22group%22%3A%22accordion-content-4389%22%2C%22idx%22%3A2%7D%7D"
     },
     {
         "id": "de_lgl_bw",
+        "country": "Germany",
         "agency":"LGL Baden-Württemberg",
         "url": "https://www.lgl-bw.de/"
     },
     {
         "id": "de_lgvl_saarland",
+        "country": "Germany",
         "agency":"LVGL Saarland",
         "url": "https://www.saarland.de/"
     },
     {
         "id": "dk_sdfe",
+        "country": "Denmark",
         "agency":"Danish Agency for Data Supply and Efficiency",
         "url": "https://github.com/NordicGeodesy/NordicTransformations"
     },
     {
         "id": "es_cat_icgc",
+        "country": "Spain",
         "agency":"Institut Cartogràfic i Geològic de Catalunya (ICGC)",
         "url": "http://www.icgc.cat/"
     },
     {
         "id": "fr_ign",
+        "country": "France",
         "agency":"IGN France",
         "url": "http://www.ign.fr/"
     },
     {
         "id": "is_lmi",
+        "country": "Iceland",
         "agency":"National Land Survey of Iceland",
         "url": "https://atlas.lmi.is/LmiData/index.php?id=626468364600"
     },
     {
         "id": "nz_linz",
+        "country": "New Zealand",
         "agency":"Land Information New Zealand",
         "url": "https://www.linz.govt.nz/"
     },
     {
         "id": "pt_dgt",
+        "country": "Portugal",
         "agency":"DG Territorio",
         "url": "http://www.dgterritorio.pt/"
     },
     {
         "id": "se_lantmateriet",
+        "country": "Sweden",
         "agency":"Lantmäteriet",
         "url": "https://www.lantmateriet.se/"
     },
     {
         "id": "uk_os",
+        "country": "United Kingdom",
         "agency":"Ordnance Survey",
         "url": "https://www.ordnancesurvey.co.uk/"
     },
     {
         "id": "us_noaa",
+        "country": "USA",
         "agency":"US National Oceanographic and Atmospheric Administration (NOAA)",
         "url": "https://www.ngs.noaa.gov/"
     },
     {
         "id": "us_nga",
+        "country": "USA",
         "agency":"US National Geospatial Intelligence Agency (NGA)",
         "url": "http://earth-info.nga.mil/"
     },
     {
         "id": "us_usgs",
+        "country": "USA",
         "agency": "US Geological Survey (USGS)",
         "url": "https://www.usgs.gov/"
     }
