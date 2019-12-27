@@ -23,6 +23,7 @@ gj_ds = ogr.GetDriverByName('GeoJSON').CreateDataSource('files.geojson')
 lyr = gj_ds.CreateLayer('files')
 lyr.CreateField(ogr.FieldDefn('url', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('name', ogr.OFTString))
+lyr.CreateField(ogr.FieldDefn('area_of_use', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('type', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('source', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('source_country', ogr.OFTString))
@@ -62,13 +63,14 @@ for dirname in sorted(dirnames):
         full_filename = os.path.join(dirname, f)
         ds = gdal.OpenEx(full_filename)
         desc = ''
+        area_of_use = ''
         if ds:
             imageDesc = ds.GetMetadataItem('TIFFTAG_IMAGEDESCRIPTION')
             if imageDesc:
                 pos = imageDesc.find('. Converted from')
                 if pos >= 0:
                     imageDesc = imageDesc[0:pos]
-                desc = ': ' + imageDesc
+                desc = imageDesc
 
             feat = ogr.Feature(lyr.GetLayerDefn())
             feat['url'] = cdn_url + '/' + f
@@ -76,6 +78,9 @@ for dirname in sorted(dirnames):
             type = ds.GetMetadataItem('TYPE')
             if type:
                 feat['type'] = type
+            area_of_use = ds.GetMetadataItem('area_of_use')
+            if area_of_use:
+                feat['area_of_use'] = area_of_use
             feat['source'] = agency['agency']
             feat['source_country'] = agency['country']
             feat['source_id'] = agency['id']
@@ -87,6 +92,21 @@ for dirname in sorted(dirnames):
             ymax = gt[3] + 0.5 * gt[5]
             xmax = xmin + gt[1] * (ds.RasterXSize - 1)
             ymin = ymax + gt[5] * (ds.RasterYSize - 1)
+
+            subds_list = ds.GetSubDatasets()
+            if subds_list:
+                for subds_name, _ in subds_list:
+                    ds = gdal.Open(subds_name)
+                    gt = ds.GetGeoTransform()
+                    xmin_subds = gt[0] + 0.5 * gt[1]
+                    ymax_subds = gt[3] + 0.5 * gt[5]
+                    xmax_subds = xmin_subds + gt[1] * (ds.RasterXSize - 1)
+                    ymin_subds = ymax_subds + gt[5] * (ds.RasterYSize - 1)
+                    xmin = min(xmin, xmin_subds)
+                    ymin = min(ymin, ymin_subds)
+                    xmax = max(xmax, xmax_subds)
+                    ymax = max(ymax, ymax_subds)
+
             geom = ogr.Geometry(ogr.wkbPolygon)
             ring = ogr.Geometry(ogr.wkbLinearRing)
             ring.AddPoint_2D(xmin, ymin)
@@ -110,7 +130,17 @@ for dirname in sorted(dirnames):
             p = subprocess.run(['git','log','-1','--pretty=format:%cd','--date=short',full_filename], check=True, stdout=subprocess.PIPE)
             last_modified = '. Last modified: ' + p.stdout.decode('ascii')
 
-        links.append('<li><a href="%s">%s</a>%s%s%s</li>' % (f, f, desc, size_str, last_modified))
+        if area_of_use:
+            area_of_use = ' - ' + area_of_use
+        else:
+            area_of_use = ''
+
+        if desc:
+            desc = ' - ' + desc
+        else:
+            desc = ''
+
+        links.append('<li><a href="%s">%s</a>%s%s%s%s</li>' % (f, f, area_of_use, desc, size_str, last_modified))
 
 total_size_str = '%d MB' % (total_size // (1024 * 1024))
 
