@@ -100,7 +100,7 @@ var vectorLayerJSON = new ol.layer.Vector({
   source: new ol.source.Vector({
     format: new ol.format.GeoJSON(),
     url: 'files.geojson'
-    //url: "https://gist.githubusercontent.com/rouault/7c2f687e58b7e1e6a30c48f39d3d879e/raw/644a388afcf556e642cdcb8c38d7321abc5f2091/files.geojson"
+    //url: "https://gist.githubusercontent.com/rouault/7c2f687e58b7e1e6a30c48f39d3d879e/raw/c68c647812ba23bf58e7986a158e65671326f4c3/files.geojson"
   }),
   style: new ol.style.Style({
     stroke : new ol.style.Stroke(
@@ -169,9 +169,13 @@ map.on('singleclick', function(evt) {
         var props = feature.getProperties();
         count ++;
         //content_innerHTML += '<p><a href="' + props.name + '">' + props.name + '</a></p>';
-        details_innerHTML += '<p><a href="' + props.name + '">' + props.name + '</a> (' + props.source;
+        details_innerHTML += '<p><a href="' + props.name + '">' + props.name + '</a>: '
+        if( props.area_of_use ) {
+            details_innerHTML += props.area_of_use + ', ';
+        }
+        details_innerHTML += props.source;
         details_innerHTML += ', ' + props.description;
-        details_innerHTML += ')</p>';
+        details_innerHTML += '</p>';
     });
     details.innerHTML = details_innerHTML;
 /*
