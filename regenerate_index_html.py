@@ -1,4 +1,4 @@
-from osgeo import gdal, ogr
+from osgeo import gdal, ogr, osr
 import glob
 import os
 import json
@@ -6,11 +6,20 @@ import subprocess
 
 cdn_url = 'https://cdn.proj.org'
 
-agency_list = json.loads(open('AGENCY.json','rt').read())
+agency_list = json.loads(open('agency.json','rt').read())
 agencies = {}
 for item in agency_list:
     agencies[item['id']] = item
 
+area_list = json.loads(open('area.json','rt').read())
+area_dict = {}
+for item in area_list:
+    area_dict[item['code']] = item
+
+files_list = json.loads(open('files.json','rt').read())
+files_dict = {}
+for item in files_list:
+    files_dict[item['name']] = item
 
 dirnames = []
 links = []
@@ -25,11 +34,16 @@ lyr.CreateField(ogr.FieldDefn('url', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('name', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('area_of_use', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('type', ogr.OFTString))
+lyr.CreateField(ogr.FieldDefn('source_crs_code', ogr.OFTString))
+lyr.CreateField(ogr.FieldDefn('source_crs_name', ogr.OFTString))
+lyr.CreateField(ogr.FieldDefn('target_crs_code', ogr.OFTString))
+lyr.CreateField(ogr.FieldDefn('target_crs_name', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('source', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('source_country', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('source_id', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('source_url', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('description', ogr.OFTString))
+lyr.CreateField(ogr.FieldDefn('full_bbox', ogr.OFTRealList))
 
 total_size = 0
 set_files = set()
@@ -93,6 +107,38 @@ for dirname in sorted(dirnames):
             xmax = xmin + gt[1] * (ds.RasterXSize - 1)
             ymin = ymax + gt[5] * (ds.RasterYSize - 1)
 
+            source_crs_epsg_code = ds.GetMetadataItem('source_crs_epsg_code')
+            source_crs_wkt = ds.GetMetadataItem('source_crs_wkt')
+            if source_crs_epsg_code:
+                sr = osr.SpatialReference()
+                assert sr.ImportFromEPSG(int(source_crs_epsg_code)) == 0
+                feat['source_crs_code'] = 'EPSG:' + source_crs_epsg_code
+                feat['source_crs_name'] = sr.GetName()
+            elif source_crs_wkt:
+                sr = osr.SpatialReference()
+                assert sr.SetFromUserInput(source_crs_wkt) == 0
+                feat['source_crs_name'] = sr.GetName()
+            else:
+                sr = ds.GetSpatialRef()
+                assert sr
+                if sr.GetAuthorityName(None) == 'EPSG':
+                    feat['source_crs_code'] = 'EPSG:' + sr.GetAuthorityCode(None)
+                feat['source_crs_name'] = sr.GetName()
+
+            target_crs_epsg_code = ds.GetMetadataItem('target_crs_epsg_code')
+            target_crs_wkt = ds.GetMetadataItem('target_crs_wkt')
+            if target_crs_epsg_code:
+                sr = osr.SpatialReference()
+                assert sr.ImportFromEPSG(int(target_crs_epsg_code)) == 0
+                feat['target_crs_code'] = 'EPSG:' + target_crs_epsg_code
+                feat['target_crs_name'] = sr.GetName()
+            elif target_crs_wkt:
+                sr = osr.SpatialReference()
+                assert sr.SetFromUserInput(target_crs_wkt) == 0
+                feat['target_crs_name'] = sr.GetName()
+            else:
+                assert False
+
             subds_list = ds.GetSubDatasets()
             if subds_list:
                 for subds_name, _ in subds_list:
@@ -106,6 +152,27 @@ for dirname in sorted(dirnames):
                     ymin = min(ymin, ymin_subds)
                     xmax = max(xmax, xmax_subds)
                     ymax = max(ymax, ymax_subds)
+
+            # Normalize longitudes
+            if xmin > 180:
+                xmin -= 360
+                xmax -= 360
+            elif xmax < -180:
+                xmin += 360
+                xmax += 360
+
+            # Enforce stricter EPSG based bbox limitation for a few files
+            if f in files_dict:
+                bbox_xmin, bbox_ymin, bbox_xmax, bbox_ymax = area_dict[files_dict[f]['area_code']]['bbox']
+                assert xmin < bbox_xmax
+                assert ymin < bbox_ymax
+                assert xmax > bbox_xmin
+                assert ymax > bbox_ymin
+                feat['full_bbox'] = [xmin, ymin, xmax, ymax]
+                xmin = max(xmin, bbox_xmin)
+                ymin = max(ymin, bbox_ymin)
+                xmax = min(xmax, bbox_xmax)
+                ymax = min(ymax, bbox_ymax)
 
             geom = ogr.Geometry(ogr.wkbPolygon)
             ring = ogr.Geometry(ogr.wkbLinearRing)

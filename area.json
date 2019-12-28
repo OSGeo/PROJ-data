@@ -1,0 +1,5 @@
+[
+    { "code": "EPSG:1061", "name": "Canada", "bbox": [-141.01,40.04,-47.74,86.46] },
+    { "code": "EPSG:2374", "name": "USA - CONUS including EEZ", "bbox": [-129.17,23.81,-65.69,49.38] },
+    { "code": "EPSG:4493", "name": "Australia Christmas and Cocos - onshore", "bbox":[96.76,-43.7,153.69,-9.86] }
+]
