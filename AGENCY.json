@@ -124,11 +124,5 @@
         "country": "USA",
         "agency":"US National Geospatial Intelligence Agency (NGA)",
         "url": "http://earth-info.nga.mil/"
-    },
-    {
-        "id": "us_usgs",
-        "country": "USA",
-        "agency": "US Geological Survey (USGS)",
-        "url": "https://www.usgs.gov/"
     }
 ]
