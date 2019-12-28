@@ -42,10 +42,10 @@
         "url": "https://www.swisstopo.admin.ch/en/knowledge-facts/surveying-geodesy/reference-frames/transformations-position.html"
     },
     {
-        "id": "de_bkg",
+        "id": "de_adv",
         "country": "Germany",
-        "agency":"Beschreibung der Transformation",
-        "url": "http://crs.bkg.bund.de/crseu/crs/descrtrans/BeTA/de_dhdn2etrs_beta.php"
+        "agency":"Arbeitsgemeinschaft der Vermessungsverwaltungender der Länder der Bundesrepublik Deutschland (AdV)",
+        "url": "http://www.adv-online.de/icc/extdeu/nav/9ae/9ae594bb-a094-311a-3b21-718a438ad1b2&sel_uCon=3c10e056-7955-311a-3b21-718a438ad1b2&uTem=73d607d6-b048-65f1-80fa-29f08a07b51a.htm"
     },
     {
         "id": "de_geosn",
