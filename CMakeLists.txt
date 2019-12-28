@@ -37,7 +37,6 @@ set(CPACK_SOURCE_INSTALLED_DIRECTORIES
     "${CMAKE_CURRENT_SOURCE_DIR}/uk_os/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/us_nga/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/us_noaa/" "."
-    "${CMAKE_CURRENT_SOURCE_DIR}/us_usgs/" "."
 )
 
 include(CPack)

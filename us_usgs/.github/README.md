@@ -1,1 +1,0 @@
-../README.us_usgs

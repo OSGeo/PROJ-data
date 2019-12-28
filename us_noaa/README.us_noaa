@@ -5,6 +5,20 @@ from [US NOAA](https://www.ngs.noaa.gov)
 
 ## Included grids
 
+### USA: NAD27 -> NAD83
+
+*Source*: [.los/.las files coming from NOAA](https://www.ngs.noaa.gov/PC_PROD/NADCON/NADCON.zip)  
+*Format*: GeoTIFF converted from CTable2  
+*License*: Public Domain
+
+* alaska.tif - Alaska
+* conus.tif - Conterminous U.S.
+* hawaii.tif - Hawaii
+* prvi.tif - Puerto Rico, Virgin Is.
+* stgeorge.tif - St. George Is, Alaska
+* stlrnc.tif - St. Lawrence Is., Alaska
+* stpaul.tif - St. Paul Is., Alaska
+
 ### USA: NAD83 -> NAD83 (HARN/HPGN)
 
 *Source*: [.los/.las files coming from NOAA](https://www.ngs.noaa.gov/PC_PROD/NADCON/NADCON.zip)  
@@ -21,6 +35,14 @@ Those files have been converted to NTv2 grids with the
 [build_nad83_harn.sh](https://raw.githubusercontent.com/OSGeo/proj-datumgrid/master/north-america/build_nad83_harn.sh) script.
 
 * *hpgn.tif (51 files)
+
+Also include a few files which are duplicate of *hpgn.tif files, for historic reasons:
+
+* FL.tif - Florida
+* MD.tif - Maryland
+* TN.tif - Tennessee
+* WI.tif - Wisconsin
+* WO.tif - Washington, Oregon, N. California
 
 ### Continental USA VERTCON: NGVD (19)29 height to NAVD (19)88 height
 
