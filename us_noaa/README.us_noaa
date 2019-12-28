@@ -5,19 +5,19 @@ from [US NOAA](https://www.ngs.noaa.gov)
 
 ## Included grids
 
-### USA: NAD27 -> NAD83
+### USA: NAD27 and older CRS -> NAD83
 
 *Source*: [.los/.las files coming from NOAA](https://www.ngs.noaa.gov/PC_PROD/NADCON/NADCON.zip)  
 *Format*: GeoTIFF converted from CTable2  
 *License*: Public Domain
 
-* alaska.tif - Alaska
-* conus.tif - Conterminous U.S.
-* hawaii.tif - Hawaii
-* prvi.tif - Puerto Rico, Virgin Is.
-* stgeorge.tif - St. George Is, Alaska
-* stlrnc.tif - St. Lawrence Is., Alaska
-* stpaul.tif - St. Paul Is., Alaska
+* alaska - Alaska
+* conus - Conterminous U.S.
+* hawaii - Hawaii. Old Hawaiian (EPSG:4135) to NAD83
+* prvi - Puerto Rico, Virgin Is. Puerto Rico (EPSG:4139) to NAD83
+* stgeorge - St. George Is, Alaska. St. George Island (EPSG:4138) to NAD83
+* stlrnc - St. Lawrence Is., Alaska. St. Lawrence Island (EPSG:4136) to NAD83
+* stpaul - St. Paul Is., Alaska. St. Paul Island (EPSG:4137) to NAD83
 
 ### USA: NAD83 -> NAD83 (HARN/HPGN)
 
