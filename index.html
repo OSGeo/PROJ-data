@@ -13,6 +13,8 @@
 -->
 <script src="ol.js"></script>
 <link rel="stylesheet" href="ol.css">
+<!-- corresponding to https://github.com/rouault/geotiff.js/pull/new/cumulative_fixes -->
+<script src="geotiff.bundle.min.js"></script>
 <style>
     .map {
         width: 50%;
@@ -90,7 +92,7 @@ the data: </p>
 <h2>Content</h2>
 <div>
     <div id="map" class="map" style="float: left;"></div>
-    <div id="details"></div>
+    <div id="details" style="height: 600px; overflow-y: scroll;"></div>
     <div style="clear: both;"></div>
 </div>
 <div id="popup" class="ol-popup">
@@ -163,6 +165,7 @@ var map = new ol.Map({
 // Add an event handler for the map "singleclick" event
 map.on('singleclick', function(evt) {
     var coordinate = evt.coordinate;
+    const longlat = ol.proj.transform(coordinate, 'EPSG:3857', 'EPSG:4326');
 
     //content_innerHTML = '';
     details_innerHTML = '';
@@ -171,13 +174,93 @@ map.on('singleclick', function(evt) {
         var props = feature.getProperties();
         count ++;
         //content_innerHTML += '<p><a href="' + props.name + '">' + props.name + '</a></p>';
+        if( details_innerHTML != '' ) {
+            details_innerHTML += '<hr>';
+        }
         details_innerHTML += '<p><a href="' + props.name + '">' + props.name + '</a>: '
         if( props.area_of_use ) {
             details_innerHTML += props.area_of_use + ', ';
         }
         details_innerHTML += props.source;
         details_innerHTML += ', ' + props.description;
+        const div_id = 'value_' + count + '_' + coordinate;
+        details_innerHTML += '<div id="' + div_id + '">Loading in progress...</div>';
         details_innerHTML += '</p>';
+
+        (async function(props, count) {
+            //const url = "./" + props.source_id + "/" + props.name;
+            const url = props.url;
+            const tiff = await GeoTIFF.fromUrl(url);
+            let best_image = 0;
+            const imageCount = await tiff.getImageCount();
+            for( let idx_image = 0; idx_image < imageCount; idx_image++ ) {
+                const image = await tiff.getImage(idx_image);
+                const width = image.getWidth();
+                const height = image.getHeight();
+                const origin = image.getOrigin();
+                const resolution = image.getResolution();
+                const origin_lon = origin[0] < -180 ? origin[0] + 360 : origin[0] > 180 ? origin[0] - 360 : origin[0];
+                const origin_lat = origin[1];
+                let left = Math.floor((longlat[0] - origin_lon) / resolution[0]);
+                let top = Math.floor((longlat[1] - origin_lat) / resolution[1]);
+                let right = left + 1;
+                let bottom = top + 1;
+                if( left >= 0 && top >= 0 && right <= width && bottom <= height ) {
+                    best_image = idx_image;
+                }
+            }
+
+            const first_image = await tiff.getImage(0);
+            const md = first_image.getGDALMetadata();
+            const image = await tiff.getImage(best_image);
+            const width = image.getWidth();
+            const height = image.getHeight();
+            const origin = image.getOrigin();
+            const resolution = image.getResolution();
+            const origin_lon = origin[0] < -180 ? origin[0] + 360 : origin[0] > 180 ? origin[0] - 360 : origin[0];
+            const origin_lat = origin[1];
+            let left = Math.floor((longlat[0] - origin_lon) / resolution[0]);
+            let top = Math.floor((longlat[1] - origin_lat) / resolution[1]);
+            let right = left + 1;
+            let bottom = top + 1;
+            if( left >= 0 && top >= 0 && right <= width && bottom <= height ) {
+                const data = await image.readRasters({ window: [left, top, right, bottom] });
+                valueHTML = ''
+                for (let i = 0; i < data.length; ++i) {
+                    const md_band = first_image.getGDALMetadata(i);
+                    const scale = (md_band['SCALE'] != null) ? Number(md_band['SCALE']) : 1.0;
+                    const offset = (md_band['OFFSET'] != null) ? Number(md_band['OFFSET']) : 0.0;
+                    const unscaled_val = data[i][0];
+                    const nodata = image.getGDALNoData();
+                    const band_desc = (md_band['DESCRIPTION'] != null) ? md_band['DESCRIPTION'] : 'Band ' + (i+1);
+
+                    if( nodata != null && unscaled_val == nodata ) {
+                        if( i > 0 ) {
+                            valueHTML += '<br>';
+                        }
+                        valueHTML += band_desc + ': nodata';
+                    } else {
+                        const unit = md_band['UNITTYPE'];
+                        const scaled_val = unscaled_val * scale + offset;
+                        if( (band_desc == 'latitude_offset_accuracy' || band_desc == 'longitude_offset_accuracy') && scaled_val <= 0 ) {
+                            // nothing
+                        }
+                        else {
+                            const precision = (unit && unit == "metre") ? 3 : 6;
+                            if( i > 0 ) {
+                                valueHTML += '<br>';
+                            }
+                            valueHTML += band_desc + ': ' + (scaled_val).toFixed(precision);
+                            if( unit ) {
+                                valueHTML += ' ' + unit;
+                            }
+                        }
+                    }
+                }
+                document.getElementById(div_id).innerHTML = valueHTML;
+            }
+
+        })(props, count);
     });
     details.innerHTML = details_innerHTML;
 /*
