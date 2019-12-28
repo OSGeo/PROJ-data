@@ -194,6 +194,8 @@ for dirname in sorted(dirnames):
         if f.startswith('README'):
             last_modified = ''
         else:
+            p = subprocess.run(['git','status','--porcelain',full_filename], check=True, stdout=subprocess.PIPE)
+            assert not p.stdout, (p.stdout, f)
             p = subprocess.run(['git','log','-1','--pretty=format:%cd','--date=short',full_filename], check=True, stdout=subprocess.PIPE)
             last_modified = '. Last modified: ' + p.stdout.decode('ascii')
 
