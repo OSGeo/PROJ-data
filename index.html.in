@@ -163,18 +163,25 @@ var map = new ol.Map({
 // Add an event handler for the map "singleclick" event
 map.on('singleclick', function(evt) {
     var coordinate = evt.coordinate;
-    const longlat = ol.proj.transform(coordinate, 'EPSG:3857', 'EPSG:4326');
+    let longlat = ol.proj.transform(coordinate, 'EPSG:3857', 'EPSG:4326');
+    while( longlat[0] > 180 ) {
+        longlat[0] -= 360;
+    }
+    while( longlat[0] < -180 ) {
+        longlat[0] += 360;
+    }
 
     //content_innerHTML = '';
-    details_innerHTML = '';
+    details_innerHTML = 'Latitude: ' + (longlat[1]).toFixed(8);
+    details_innerHTML += '. Longitude: ' + (longlat[0]).toFixed(8);
+    details_innerHTML += '.<br>Values displayed in their interpolation CRS, and at the closest node.'
     count = 0;
+    requests = [];
     map.forEachFeatureAtPixel(evt.pixel, function(feature, layer) {
         var props = feature.getProperties();
         count ++;
         //content_innerHTML += '<p><a href="' + props.name + '">' + props.name + '</a></p>';
-        if( details_innerHTML != '' ) {
-            details_innerHTML += '<hr>';
-        }
+        details_innerHTML += '<hr>';
         details_innerHTML += '<p><a href="' + props.name + '">' + props.name + '</a>: '
         if( props.area_of_use ) {
             details_innerHTML += props.area_of_use + ', ';
@@ -182,14 +189,14 @@ map.on('singleclick', function(evt) {
         details_innerHTML += props.source;
         details_innerHTML += ', ' + props.description;
         const div_id = 'value_' + count + '_' + coordinate;
-        details_innerHTML += '<div id="' + div_id + '">Loading in progress...</div>';
+        details_innerHTML += '<div id="' + div_id + '"><p>Loading in progress...</p></div>';
         details_innerHTML += '</p>';
 
-        (async function(props, count) {
+        requests.push([async function(props, count) {
             //const url = "./" + props.source_id + "/" + props.name;
             const url = props.url;
             const tiff = await GeoTIFF.fromUrl(url);
-            let best_image = 0;
+            let best_image = -1;
             const imageCount = await tiff.getImageCount();
             for( let idx_image = 0; idx_image < imageCount; idx_image++ ) {
                 const image = await tiff.getImage(idx_image);
@@ -197,15 +204,24 @@ map.on('singleclick', function(evt) {
                 const height = image.getHeight();
                 const origin = image.getOrigin();
                 const resolution = image.getResolution();
-                const origin_lon = origin[0] < -180 ? origin[0] + 360 : origin[0] > 180 ? origin[0] - 360 : origin[0];
+                let origin_lon = origin[0];
+                if( longlat[0] < origin_lon )
+                    origin_lon -= 360;
+                else if( longlat[0] > origin_lon + (width-1) * resolution[0] )
+                    origin_lon += 360;
                 const origin_lat = origin[1];
-                let left = Math.floor((longlat[0] - origin_lon) / resolution[0]);
-                let top = Math.floor((longlat[1] - origin_lat) / resolution[1]);
+                let left = Math.round((longlat[0] - origin_lon) / resolution[0]);
+                let top = Math.round((longlat[1] - origin_lat) / resolution[1]);
                 let right = left + 1;
                 let bottom = top + 1;
                 if( left >= 0 && top >= 0 && right <= width && bottom <= height ) {
                     best_image = idx_image;
                 }
+            }
+
+            if( best_image < 0 ) {
+                document.getElementById(div_id).innerHTML = '<p>Out of grid</p>';
+                return;
             }
 
             const first_image = await tiff.getImage(0);
@@ -215,10 +231,14 @@ map.on('singleclick', function(evt) {
             const height = image.getHeight();
             const origin = image.getOrigin();
             const resolution = image.getResolution();
-            const origin_lon = origin[0] < -180 ? origin[0] + 360 : origin[0] > 180 ? origin[0] - 360 : origin[0];
+            let origin_lon = origin[0];
+            if( longlat[0] < origin_lon )
+                origin_lon -= 360;
+            else if( longlat[0] > origin_lon + (width-1) * resolution[0] )
+                origin_lon += 360;
             const origin_lat = origin[1];
-            let left = Math.floor((longlat[0] - origin_lon) / resolution[0]);
-            let top = Math.floor((longlat[1] - origin_lat) / resolution[1]);
+            let left = Math.round((longlat[0] - origin_lon) / resolution[0]);
+            let top = Math.round((longlat[1] - origin_lat) / resolution[1]);
             let right = left + 1;
             let bottom = top + 1;
             if( left >= 0 && top >= 0 && right <= width && bottom <= height ) {
@@ -258,9 +278,13 @@ map.on('singleclick', function(evt) {
                 document.getElementById(div_id).innerHTML = valueHTML;
             }
 
-        })(props, count);
+        }, props, count]);
     });
     details.innerHTML = details_innerHTML;
+
+    for( let i = 0; i < requests.length; i++ ) {
+        requests[i][0](requests[i][1], requests[i][2]);
+    }
 /*
     if( count >= 5 ) {
         content_innerHTML = '';
