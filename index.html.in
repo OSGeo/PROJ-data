@@ -90,7 +90,10 @@ the data: </p>
 <h2>Content</h2>
 <div>
     <div id="map" class="map" style="float: left;"></div>
-    <div id="details" style="height: 600px; overflow-y: scroll;"></div>
+    <div id="details" style="height: 600px; overflow-y: scroll;">
+        Click on the map to display the names of the files under the pointer,
+        and get the values of the shift(s).
+    </div>
     <div style="clear: both;"></div>
 </div>
 <div id="popup" class="ol-popup">
