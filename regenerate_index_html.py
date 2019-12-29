@@ -29,7 +29,10 @@ for dirname in glob.glob('*'):
     dirnames.append(dirname)
 
 gj_ds = ogr.GetDriverByName('GeoJSON').CreateDataSource('files.geojson')
-lyr = gj_ds.CreateLayer('files')
+sr = osr.SpatialReference()
+sr.SetAxisMappingStrategy(osr.OAMS_TRADITIONAL_GIS_ORDER)
+sr.ImportFromEPSG(4326)
+lyr = gj_ds.CreateLayer('files', srs = sr, options = ['RFC7946=YES'])
 lyr.CreateField(ogr.FieldDefn('url', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('name', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('area_of_use', ogr.OFTString))
@@ -139,8 +142,33 @@ for dirname in sorted(dirnames):
             else:
                 assert False
 
+            def normalize_lon(xmin, xmax):
+                if xmin > 180:
+                    xmin -= 360
+                    xmax -= 360
+                elif xmax < -180:
+                    xmin += 360
+                    xmax += 360
+                return xmin, xmax
+
+            xmin, xmax = normalize_lon(xmin, xmax)
+
+            def polygon_from_bbox(xmin, ymin, xmax, ymax):
+                geom = ogr.Geometry(ogr.wkbPolygon)
+                ring = ogr.Geometry(ogr.wkbLinearRing)
+                # Add small epsilon to help unioning polygons touching by edge
+                eps = 1e-12
+                ring.AddPoint_2D(xmin-eps, ymin-eps)
+                ring.AddPoint_2D(xmin-eps, ymax+eps)
+                ring.AddPoint_2D(xmax+eps, ymax+eps)
+                ring.AddPoint_2D(xmax+eps, ymin+eps)
+                ring.AddPoint_2D(xmin-eps, ymin-eps)
+                geom.AddGeometry(ring)
+                return geom
+
             subds_list = ds.GetSubDatasets()
             if subds_list:
+                geom = None
                 for subds_name, _ in subds_list:
                     ds = gdal.Open(subds_name)
                     gt = ds.GetGeoTransform()
@@ -148,18 +176,17 @@ for dirname in sorted(dirnames):
                     ymax_subds = gt[3] + 0.5 * gt[5]
                     xmax_subds = xmin_subds + gt[1] * (ds.RasterXSize - 1)
                     ymin_subds = ymax_subds + gt[5] * (ds.RasterYSize - 1)
+                    xmin_subds, xmax_subds = normalize_lon(xmin_subds, xmax_subds)
                     xmin = min(xmin, xmin_subds)
                     ymin = min(ymin, ymin_subds)
                     xmax = max(xmax, xmax_subds)
                     ymax = max(ymax, ymax_subds)
-
-            # Normalize longitudes
-            if xmin > 180:
-                xmin -= 360
-                xmax -= 360
-            elif xmax < -180:
-                xmin += 360
-                xmax += 360
+                    if geom:
+                        geom = geom.Union(polygon_from_bbox(xmin_subds, ymin_subds, xmax_subds, ymax_subds))
+                    else:
+                        geom = polygon_from_bbox(xmin_subds, ymin_subds, xmax_subds, ymax_subds)
+            else:
+                geom = polygon_from_bbox(xmin, ymin, xmax, ymax)
 
             # Enforce stricter EPSG based bbox limitation for a few files
             if f in files_dict:
@@ -169,19 +196,8 @@ for dirname in sorted(dirnames):
                 assert xmax > bbox_xmin
                 assert ymax > bbox_ymin
                 feat['full_bbox'] = [xmin, ymin, xmax, ymax]
-                xmin = max(xmin, bbox_xmin)
-                ymin = max(ymin, bbox_ymin)
-                xmax = min(xmax, bbox_xmax)
-                ymax = min(ymax, bbox_ymax)
+                geom = geom.Intersection(polygon_from_bbox(bbox_xmin, bbox_ymin, bbox_xmax, bbox_ymax))
 
-            geom = ogr.Geometry(ogr.wkbPolygon)
-            ring = ogr.Geometry(ogr.wkbLinearRing)
-            ring.AddPoint_2D(xmin, ymin)
-            ring.AddPoint_2D(xmin, ymax)
-            ring.AddPoint_2D(xmax, ymax)
-            ring.AddPoint_2D(xmax, ymin)
-            ring.AddPoint_2D(xmin, ymin)
-            geom.AddGeometry(ring)
             feat.SetGeometry(geom)
             lyr.CreateFeature(feat)
 
