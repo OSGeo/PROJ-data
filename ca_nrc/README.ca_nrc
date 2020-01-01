@@ -307,3 +307,24 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Used by*: [EPSG:9124 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9124)
 
 * CGG2013i08.tif
+
+### Canada: NAD83(CSRS)v6 velocity grid
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=NAD83v6VG)  
+*Format*: GeoTIFF converted from GVB  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:8251 (NAD83(CSRS)v6)  
+*Target CRS*: EPSG:8251 (NAD83(CSRS)v6)  
+*Used by*: [EPSG:8676 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::8676)
+
+* NAD83v6VG.tif
+
+### Canada: NAD83(CSRS)v7 velocity grid
+
+*Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=NAD83v70VG)  
+*Format*: GeoTIFF converted from GVB  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:8254 (NAD83(CSRS)v7)  
+*Target CRS*: EPSG:8254 (NAD83(CSRS)v7)  
+
+* NAD83v70VG.tif
