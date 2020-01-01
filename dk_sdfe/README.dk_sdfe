@@ -38,20 +38,6 @@ grid coordinates are referenced to ETRS89.
 
 * fvr09.tif
 
-### Nordic+Baltic countries: Deformation model
-
-*Source*: [The Nordic Geodetic Commission](https://github.com/NordicGeodesy/NordicTransformations)  
-*Format*: CTable2 and GTX  
-*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
-
-Deformation model covering the Nordic and Baltic countries. Used in
-transformations between global reference frames and the local realisations
-of ETRS89 in the Nordic and Baltic countries. See the `NKG` init-file for
-examples of use.
-
-* nkgrf03vel_realigned_xy.ct2
-* nkgrf03vel_realigned_z.gtx
-
 ## Included init-files
 
 ### Denmark: System definitions related to ETRS89
@@ -87,20 +73,3 @@ reference frame as a pivot datum. More information can be found in the
 repository.
 
 * FO
-
-### Nordic+Baltic countries: ITRFxx -> Local ETRS89 realizations
-
-*Source*: [The Nordic Geodetic Commission](https://github.com/NordicGeodesy/NordicTransformations)  
-*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
-
-Transformations to and from the common Nordic referenc frame NKG_ETRF00.
-This init-file describes transformations between global reference frames
-and NKG_ETRF00 as well as transformations from NKG_ERTF00 to the local
-realisations of ETRS89 in each of the countries involved with NKG.
-
-All transformations in this init-file uses the common Nordic frame as a
-pivot datum. Exempt from this dogma are transformations with labels
-starting with ``_``. Those transformations are "private" to this file and are
-only used as steps in more complicated transformations.
-
-* NKG
