@@ -78,6 +78,12 @@
         "url": "http://www.icgc.cat/"
     },
     {
+        "id": "eur_nkg",
+        "country": "Europe",
+        "agency":"The Nordic Geodetic Commission",
+        "url": "http://www.nordicgeodeticcommission.com/"
+    },
+    {
         "id": "fr_ign",
         "country": "France",
         "agency":"IGN France",

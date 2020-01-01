@@ -63,13 +63,8 @@ for dirname in sorted(dirnames):
         else:
             filenames.append(f)
 
-    title = '%s' % (dirname)
-    try:
-        agency = agencies[dirname]
-        title = '<a href="%s">%s</a>' % (agency['url'].replace('&', "&amp;"), agency['agency'])
-    except KeyError:
-
-        pass
+    agency = agencies[dirname]
+    title = '<a href="%s">%s</a>' % (agency['url'].replace('&', "&amp;"), agency['agency'])
 
     links.append('</ul><hr><h3>%s</h3><ul>' % title )
     for f in [readme_filename] + sorted(filenames):
