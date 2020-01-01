@@ -139,7 +139,7 @@ for dirname in sorted(dirnames):
                 sr = osr.SpatialReference()
                 assert sr.SetFromUserInput(target_crs_wkt) == 0
                 feat['target_crs_name'] = sr.GetName()
-            else:
+            elif ds.GetMetadataItem('TYPE') != 'VELOCITY':
                 assert False
 
             def normalize_lon(xmin, xmax):
