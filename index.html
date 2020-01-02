@@ -90,6 +90,13 @@ the data: </p>
 <pre>wget --mirror https://cdn.proj.org/</pre>
 
 <h2>Content</h2>
+<div id="type_control" style="height:20px">
+    <label>Types:</label>
+</div>
+<br>
+<div id="agency_control" style="height:80px">
+    <label>Agencies:</label>
+</div>
 <div>
     <div id="map" class="map" style="float: left;"></div>
     <div id="details" style="height: 600px; overflow-y: scroll;">
@@ -103,13 +110,32 @@ the data: </p>
     <div id="popup-content"></div>
 </div>
 <script>
-var vectorLayerJSON = new ol.layer.Vector({
-  source: new ol.source.Vector({
-    format: new ol.format.GeoJSON(),
-    url: 'files.geojson'
-    //url: "https://gist.githubusercontent.com/rouault/7c2f687e58b7e1e6a30c48f39d3d879e/raw/c68c647812ba23bf58e7986a158e65671326f4c3/files.geojson"
-  }),
-  style: new ol.style.Style({
+
+var fullGeoJSON = null;
+
+var featureSource = new ol.source.Vector({
+  format: new ol.format.GeoJSON(),
+  loader: function(extent, resolution, projection) {
+     var url = 'files.geojson';
+     var xhr = new XMLHttpRequest();
+     xhr.open('GET', url);
+     xhr.onError = function() {};
+     xhr.onload = function() {
+       if (xhr.status == 200) {
+        fullGeoJSON = JSON.parse(xhr.responseText);
+        featureSource.addFeatures(
+            featureSource.getFormat().readFeatures(fullGeoJSON,
+        {
+            dataProjection: 'EPSG:4326',
+            featureProjection: projection
+        }));
+       }
+     }
+     xhr.send();
+  }
+});
+
+var style = new ol.style.Style({
     stroke : new ol.style.Stroke(
     {
         width : 1
@@ -118,9 +144,122 @@ var vectorLayerJSON = new ol.layer.Vector({
     {
         color :  'rgba(0, 0, 0, 0.01)'
     })
-  })
 });
 
+var featureLayer = new ol.layer.Vector({
+  source: featureSource,
+  style: style
+});
+
+var types_enabled = {};
+types_enabled['horizontal'] = true;
+types_enabled['geoid'] = true;
+types_enabled['vertical_adjustments'] = true;
+types_enabled['velocity'] = true;
+types_enabled['other'] = true;
+
+var list_agencies = [
+    "at_bev",
+    "au_ga",
+    "au_icsm",
+    "be_ign",
+    "ca_nrc",
+    "ca_que_mern",
+    "ch_swisstopo",
+    "de_adv",
+    "de_geosn",
+    "de_lgl_bw",
+    "de_lgvl_saarland",
+    "dk_sdfe",
+    "es_cat_icgc",
+    "eur_nkg",
+    "fr_ign",
+    "is_lmi",
+    "nz_linz",
+    "pt_dgt",
+    "se_lantmateriet",
+    "uk_os",
+    "us_noaa",
+    "us_nga"
+]
+var agencies_enabled = {}
+list_agencies.forEach(function(x){
+    agencies_enabled[x] = true;
+});
+
+function refresh_source() {
+    featureSource.clear();
+    var filtered = {
+        "type": "FeatureCollection",
+        "features": fullGeoJSON.features.filter(function(feature){
+            var ok_type = false;
+            if( types_enabled['horizontal'] &&
+                feature.properties.type == 'HORIZONTAL_OFFSET') {
+                ok_type = true;
+            }
+            if( types_enabled['geoid'] &&
+                feature.properties.type == 'VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL') {
+                ok_type = true;
+            }
+            if( types_enabled['vertical_adjustments'] &&
+                feature.properties.type == 'VERTICAL_OFFSET_VERTICAL_TO_VERTICAL') {
+                ok_type = true;
+            }
+            if( types_enabled['velocity'] &&
+                feature.properties.type == 'VELOCITY') {
+                ok_type = true;
+            }
+            if( types_enabled['other'] &&
+            feature.properties.type != 'HORIZONTAL_OFFSET' &&
+                feature.properties.type != 'VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL' &&
+                feature.properties.type != 'VERTICAL_OFFSET_VERTICAL_TO_VERTICAL' &&
+                feature.properties.type != 'VELOCITY') {
+                ok_type = true;
+            }
+            var ok_agency = agencies_enabled[feature.properties.source_id];
+            return ok_type && ok_agency;
+        })
+    };
+    featureSource.addFeatures(
+        featureSource.getFormat().readFeatures(filtered,
+        {
+            dataProjection: 'EPSG:4326',
+            featureProjection: 'EPSG:3857'
+        }
+    ));
+}
+
+function create_checkbox(id, label_name, group, map) {
+    var checkbox = document.createElement('input');
+    checkbox.type = "checkbox";
+    id_checkbox = 'id_checkbox_' + id;
+    checkbox.id = id_checkbox;
+    checkbox.checked = true;
+
+    var label = document.createElement('label');
+    label.htmlFor = id_checkbox;
+    label.appendChild(document.createTextNode(label_name));
+
+    group.appendChild(checkbox);
+    group.appendChild(label);
+
+    document.getElementById(id_checkbox).addEventListener('change', function() {
+        map[id] = this.checked;
+        refresh_source();
+    });
+}
+
+var type_control = document.getElementById('type_control');
+create_checkbox('horizontal', 'Horizontal shift grids', type_control, types_enabled);
+create_checkbox('geoid', 'Geoid models', type_control, types_enabled);
+create_checkbox('vertical_adjustments', 'Vertical shifts', type_control, types_enabled);
+create_checkbox('velocity', 'Velocity grids', type_control, types_enabled);
+create_checkbox('other', 'Other grids', type_control, types_enabled);
+
+var agency_control = document.getElementById('agency_control');
+list_agencies.forEach(function(x){
+    create_checkbox(x, x, agency_control, agencies_enabled);
+});
 
 /**
  * Elements that make up the popup.
@@ -154,7 +293,9 @@ closer.onclick = function() {
 
 
 var map = new ol.Map({
-  layers: [new ol.layer.Tile({source: new ol.source.OSM()}), vectorLayerJSON],
+  layers: [
+    new ol.layer.Tile({source: new ol.source.OSM()}),
+    featureLayer],
   renderer: 'canvas',
   target: 'map',
   overlays: [overlay],
