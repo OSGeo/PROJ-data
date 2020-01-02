@@ -112,6 +112,8 @@ the data: </p>
 <script>
 
 var fullGeoJSON = null;
+var agencies_enabled = {}
+var list_agencies = []
 
 var featureSource = new ol.source.Vector({
   format: new ol.format.GeoJSON(),
@@ -123,6 +125,21 @@ var featureSource = new ol.source.Vector({
      xhr.onload = function() {
        if (xhr.status == 200) {
         fullGeoJSON = JSON.parse(xhr.responseText);
+
+        fullGeoJSON.features.forEach(function(f) {
+            if( agencies_enabled[f.properties.source_id] === undefined ) {
+                agencies_enabled[f.properties.source_id] = true;
+                list_agencies.push(f.properties.source_id);
+            }
+        });
+
+        list_agencies.sort();
+        var agency_control = document.getElementById('agency_control');
+        list_agencies.forEach(function(x){
+            create_checkbox(x, x, agency_control, agencies_enabled);
+        });
+
+
         featureSource.addFeatures(
             featureSource.getFormat().readFeatures(fullGeoJSON,
         {
@@ -157,36 +174,6 @@ types_enabled['geoid'] = true;
 types_enabled['vertical_adjustments'] = true;
 types_enabled['velocity'] = true;
 types_enabled['other'] = true;
-
-var list_agencies = [
-    "at_bev",
-    "au_ga",
-    "au_icsm",
-    "be_ign",
-    "ca_nrc",
-    "ca_que_mern",
-    "ch_swisstopo",
-    "de_adv",
-    "de_geosn",
-    "de_lgl_bw",
-    "de_lgvl_saarland",
-    "dk_sdfe",
-    "es_cat_icgc",
-    "eur_nkg",
-    "fr_ign",
-    "is_lmi",
-    "nz_linz",
-    "pt_dgt",
-    "se_lantmateriet",
-    "uk_os",
-    "us_noaa",
-    "us_nga"
-]
-var agencies_enabled = {}
-list_agencies.forEach(function(x){
-    agencies_enabled[x] = true;
-});
-
 function refresh_source() {
     featureSource.clear();
     var filtered = {
@@ -255,11 +242,6 @@ create_checkbox('geoid', 'Geoid models', type_control, types_enabled);
 create_checkbox('vertical_adjustments', 'Vertical shifts', type_control, types_enabled);
 create_checkbox('velocity', 'Velocity grids', type_control, types_enabled);
 create_checkbox('other', 'Other grids', type_control, types_enabled);
-
-var agency_control = document.getElementById('agency_control');
-list_agencies.forEach(function(x){
-    create_checkbox(x, x, agency_control, agencies_enabled);
-});
 
 /**
  * Elements that make up the popup.
@@ -651,7 +633,7 @@ map.on('singleclick', function(evt) {
 <li><a href="conus.tif">conus.tif</a> - USA - Conterminous - NAD27 (EPSG:4267) to NAD83 (EPSG:4269). Last modified: 2019-12-28</li>
 <li><a href="cshpgn.tif">cshpgn.tif</a> - USA - California - South - NAD83 (EPSG:4269) to NAD83(HARN) (EPSG:4152). Last modified: 2019-12-27</li>
 <li><a href="emhpgn.tif">emhpgn.tif</a> - USA - Idaho and Montana East - NAD83 (EPSG:4269) to NAD83(HARN) (EPSG:4152). Last modified: 2019-12-27</li>
-<li><a href="eshpgn.tif">eshpgn.tif</a> - USA - American Samoa - Eastern Islands - American Samoa 1962 (EPSG:4169) to NAD83(HARN) (EPSG:4152). Last modified: 2019-12-27</li>
+<li><a href="eshpgn.tif">eshpgn.tif</a> - USA - American Samoa - Eastern Islands - American Samoa 1962 (EPSG:4169) to NAD83(HARN) (EPSG:4152). Last modified: 2020-01-02</li>
 <li><a href="ethpgn.tif">ethpgn.tif</a> - USA - Texas - Est - NAD83 (EPSG:4269) to NAD83(HARN) (EPSG:4152). Last modified: 2019-12-27</li>
 <li><a href="flhpgn.tif">flhpgn.tif</a> - USA - Florida - NAD83 (EPSG:4269) to NAD83(HARN) (EPSG:4152). Last modified: 2019-12-27</li>
 <li><a href="g1999a01.tif">g1999a01.tif</a> - USA - Alaska - NAD83 (EPSG:4269) to NAVD88 height (EPSG:5703). Size: 2.8 MB. Last modified: 2019-12-27</li>
@@ -733,7 +715,7 @@ map.on('singleclick', function(evt) {
 <li><a href="wihpgn.tif">wihpgn.tif</a> - USA - Wisconsin - NAD83 (EPSG:4269) to NAD83(HARN) (EPSG:4152). Last modified: 2019-12-27</li>
 <li><a href="wmhpgn.tif">wmhpgn.tif</a> - USA - Idaho and Montana West - NAD83 (EPSG:4269) to NAD83(HARN) (EPSG:4152). Last modified: 2019-12-27</li>
 <li><a href="wohpgn.tif">wohpgn.tif</a> - USA - Washington and Oregon - NAD83 (EPSG:4269) to NAD83(HARN) (EPSG:4152). Last modified: 2019-12-27</li>
-<li><a href="wshpgn.tif">wshpgn.tif</a> - USA - American Samoa - Western Islands - American Samoa 1962 (EPSG:4169) to NAD83(HARN) (EPSG:4152). Last modified: 2019-12-27</li>
+<li><a href="wshpgn.tif">wshpgn.tif</a> - USA - American Samoa - Western Islands - American Samoa 1962 (EPSG:4169) to NAD83(HARN) (EPSG:4152). Last modified: 2020-01-02</li>
 <li><a href="wthpgn.tif">wthpgn.tif</a> - USA - Texas - West - NAD83 (EPSG:4269) to NAD83(HARN) (EPSG:4152). Last modified: 2019-12-27</li>
 <li><a href="wvhpgn.tif">wvhpgn.tif</a> - USA - West Virginia - NAD83 (EPSG:4269) to NAD83(HARN) (EPSG:4152). Last modified: 2019-12-27</li>
 <li><a href="wyhpgn.tif">wyhpgn.tif</a> - USA - Wyoming - NAD83 (EPSG:4269) to NAD83(HARN) (EPSG:4152). Last modified: 2019-12-27</li>
