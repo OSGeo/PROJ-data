@@ -1,4 +1,4 @@
-# README.at_bev
+# at_bev_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [Austria Bundesamt für Eich- und Vermessungswessen](www.bev.gv.at)
@@ -11,4 +11,4 @@ from [Austria Bundesamt für Eich- und Vermessungswessen](www.bev.gv.at)
 *Format*: GeoTIFF converted from NTv2  
 *License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
 
-* AT_GIS_GRID.tif
+* at_bev_AT_GIS_GRID.tif

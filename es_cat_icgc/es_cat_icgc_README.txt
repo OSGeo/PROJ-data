@@ -1,4 +1,4 @@
-# README.ec_cat_icgc
+# es_cat_icgc_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [Institut Cartogràfic i Geològic de Catalunya (ICGC)](http://www.icgc.cat/)
@@ -14,4 +14,4 @@ from [Institut Cartogràfic i Geològic de Catalunya (ICGC)](http://www.icgc.cat
 *Target CRS*: EPSG:4258 (ETRS89)  
 *Used by*: [EPSG:5661 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::5661)
 
-* 100800401.tif
+* es_cat_icgc_100800401.tif

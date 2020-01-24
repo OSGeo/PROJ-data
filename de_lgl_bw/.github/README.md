@@ -1,1 +1,1 @@
-../README.de_lgl_bw
+../de_lgl_bw_README.txt

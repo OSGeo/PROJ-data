@@ -1,4 +1,4 @@
-# README.de_lglbw
+# de_lglbw_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [LGL Baden-Württemberg](https://www.lgl-bw.de)
@@ -13,4 +13,4 @@ from [LGL Baden-Württemberg](https://www.lgl-bw.de)
 
 Grid transformation from DE_DHDN to ETRS89 for Baden-Württemberg.
 
-* BWTA2017.tif
+* de_lglbw_BWTA2017.tif

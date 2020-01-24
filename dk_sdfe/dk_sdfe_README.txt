@@ -1,4 +1,4 @@
-# README.dk_sdfe
+# dk_sdfe_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [Agency for Data Supply and Efficiency](https://github.com/NordicGeodesy/NordicTransformations)  
@@ -14,7 +14,7 @@ from [Agency for Data Supply and Efficiency](https://github.com/NordicGeodesy/No
 Transform local height system DVR90 (EPSG:5799) to ETRS89 ellipsoidal heights (EPSG:4937). The horizontal
 grid coordinates are referenced to ETRS89.
 
-* dvr90.tif
+* dk_sdfe_dvr90.tif
 
 ### Denmark: DNN heights -> ETRS89 ellipsoidal heights
 
@@ -25,7 +25,7 @@ grid coordinates are referenced to ETRS89.
 Transform local height system DNN (EPSG:5733) to ETRS89 ellipsoidal heights (EPSG:4937). The horizontal
 grid coordinates are referenced to ETRS89.
 
-* dnn.tif
+* dk_sdfe_dnn.tif
 
 ### Faroe Islands: FVR09 heights -> ETRS89 ellipsoidal heights
 
@@ -36,7 +36,7 @@ grid coordinates are referenced to ETRS89.
 Transform local height system FVR09 (EPSG:5317) to ETRS89 ellipsoidal heights (EPSG:4937). The horizontal
 grid coordinates are referenced to ETRS89.
 
-* fvr09.tif
+* dk_sdfe_fvr09.tif
 
 ## Included init-files
 

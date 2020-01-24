@@ -1,1 +1,1 @@
-../README.nz_linz
+../nz_linz_README.txt

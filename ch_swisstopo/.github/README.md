@@ -1,1 +1,1 @@
-../README.ch_swisstopo
+../ch_swisstopo_README.txt

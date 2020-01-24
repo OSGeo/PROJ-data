@@ -1,1 +1,1 @@
-../README.us_nga
+../us_nga_README.txt

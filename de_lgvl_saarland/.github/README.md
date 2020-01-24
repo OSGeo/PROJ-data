@@ -1,1 +1,1 @@
-../README.de_lgvl_saarland
+../de_lgvl_saarland_README.txt

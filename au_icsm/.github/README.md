@@ -1,1 +1,1 @@
-../README.au_icsm
+../au_icsm_README.txt

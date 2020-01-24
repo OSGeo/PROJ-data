@@ -1,1 +1,1 @@
-../README.ca_nrc
+../ca_nrc_README.txt

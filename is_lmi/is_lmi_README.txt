@@ -1,4 +1,4 @@
-# README.is_lmi
+# is_lmi_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [National Land Survey of Iceland](https://atlas.lmi.is/LmiData/index.php?id=626468364600)
@@ -18,7 +18,7 @@ The transformation is designed so that the ISN2016 points should fit within 1-2 
 
 Recommended to transform from ISN93 2D geodetic (EPSG:4659) to ISN2016 2D geodetic (EPSG:8086), also this transformation has code in EPSG Dataset (EPSG:9232)
 
-* ISN93_ISN2016.tif
+* is_lmi_ISN93_ISN2016.tif
 
 ### Iceland: ISN2004 -> ISN2016
 
@@ -33,7 +33,7 @@ The transformation is designed so that the ISN2016 points should fit within 1-2 
 
 Recommended to transform from ISN2004 2D geodetic (EPSG:5324) to ISN2016 2D geodetic (EPSG:8086), also this transformation has code in EPSG Dataset (EPSG:9233)
 
-* ISN2004_ISN2016.tif
+* is_lmi_ISN2004_ISN2016.tif
 
 ### Iceland: ISN2004 ellipsoidal height  -> ISH2004 vertical datum
 
@@ -51,7 +51,7 @@ The horizontal grid coordinates are referenced to ISN2004
 
 See the `ISL` init-file for examples of use.
 
-* Icegeoid_ISN2004.tif 
+* is_lmi_Icegeoid_ISN2004.tif 
 
 ### Iceland: ISN93 ellipsoidal height  -> ISH2004 vertical datum
 
@@ -67,7 +67,7 @@ The horizontal grid coordinates are referenced to ISN93
 
 See the `ISL` init-file for examples of use.
 
-* Icegeoid_ISN93.tif
+* is_lmi_Icegeoid_ISN93.tif
 
 ### Iceland: ISN2016 ellipsoidal height  -> ISH2004 vertical datum
 
@@ -97,7 +97,7 @@ also transformation between different epochs within ITRF2014 frame.
 
 See the `ISL` init-file for examples of use.
 
-ISN_vel_beta.tif
+* is_lmi_ISN_vel_beta.tif
 
 ## Included init-files
 

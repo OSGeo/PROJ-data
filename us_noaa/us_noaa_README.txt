@@ -1,4 +1,4 @@
-# README.us_nga
+# us_nga_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [US NOAA](https://www.ngs.noaa.gov)
@@ -11,13 +11,13 @@ from [US NOAA](https://www.ngs.noaa.gov)
 *Format*: GeoTIFF converted from CTable2  
 *License*: Public Domain
 
-* alaska - Alaska
-* conus - Conterminous U.S.
-* hawaii - Hawaii. Old Hawaiian (EPSG:4135) to NAD83
-* prvi - Puerto Rico, Virgin Is. Puerto Rico (EPSG:4139) to NAD83
-* stgeorge - St. George Is, Alaska. St. George Island (EPSG:4138) to NAD83
-* stlrnc - St. Lawrence Is., Alaska. St. Lawrence Island (EPSG:4136) to NAD83
-* stpaul - St. Paul Is., Alaska. St. Paul Island (EPSG:4137) to NAD83
+* us_nga_alaska.tif - Alaska
+* us_nga_conus.tif - Conterminous U.S.
+* us_nga_hawaii.tif - Hawaii. Old Hawaiian (EPSG:4135) to NAD83
+* us_nga_prvi.tif - Puerto Rico, Virgin Is. Puerto Rico (EPSG:4139) to NAD83
+* us_nga_stgeorge.tif - St. George Is, Alaska. St. George Island (EPSG:4138) to NAD83
+* us_nga_stlrnc.tif - St. Lawrence Is., Alaska. St. Lawrence Island (EPSG:4136) to NAD83
+* us_nga_stpaul.tif - St. Paul Is., Alaska. St. Paul Island (EPSG:4137) to NAD83
 
 ### USA: NAD83 -> NAD83 (HARN/HPGN)
 
@@ -34,15 +34,15 @@ to 1.0 meter relative to the original NAD 83 (1986) adjustment.
 Those files have been converted to NTv2 grids with the
 [build_nad83_harn.sh](https://raw.githubusercontent.com/OSGeo/proj-datumgrid/master/north-america/build_nad83_harn.sh) script.
 
-* *hpgn.tif (51 files)
+* us_nga_*hpgn.tif (51 files)
 
 Also include a few files which are duplicate of *hpgn.tif files, for historic reasons:
 
-* FL.tif - Florida
-* MD.tif - Maryland
-* TN.tif - Tennessee
-* WI.tif - Wisconsin
-* WO.tif - Washington, Oregon, N. California
+* us_nga_FL.tif - Florida
+* us_nga_MD.tif - Maryland
+* us_nga_TN.tif - Tennessee
+* us_nga_WI.tif - Wisconsin
+* us_nga_WO.tif - Washington, Oregon, N. California
 
 ### Continental USA VERTCON: NGVD (19)29 height to NAVD (19)88 height
 
@@ -56,9 +56,9 @@ the offset to add to NGVD 29 heights to get NAVD 88 heights.
 
 The horizontal grid coordinates may be referenced to NAD27 or NAD83
 
-* vertconc.tif
-* vertcone.tif
-* vertconw.tif
+* us_nga_vertconc.tif
+* us_nga_vertcone.tif
+* us_nga_vertconw.tif
 
 ### USA GEOID1999 model (superseded): NAVD88 height to NAD83
 
@@ -74,10 +74,10 @@ NAD 83 GPS ellipsoidal heights and NAVD 88 orthometric heights.
 
 It is superseded by later GEOIDxx models
 
-* g1999u01.tif to g1999u08.tif : Conterminous US
-* g1999a01.tif to g1999a04.tif : Alaska
-* g1999h01.tif : Hawaii
-* g1999p01.tif : Puerto Rico
+* us_nga_g1999u01.tif to g1999u08.tif : Conterminous US
+* us_nga_g1999a01.tif to g1999a04.tif : Alaska
+* us_nga_g1999h01.tif : Hawaii
+* us_nga_g1999p01.tif : Puerto Rico
 
 ### USA GEOID2003 model (superseded): NAVD88 height to NAD83
 
@@ -93,10 +93,10 @@ NAD 83 GPS ellipsoidal heights and NAVD 88 orthometric heights.
 
 It is superseded by later GEOIDxx models
 
-* geoid03_conus.tif : Conterminous US
-* g2003a01.tif to g2003a04.tif : Alaska
-* g2003h01.tif : Hawaii
-* g2003p01.tif : Puerto Rico
+* us_nga_geoid03_conus.tif : Conterminous US
+* us_nga_g2003a01.tif to g2003a04.tif : Alaska
+* us_nga_g2003h01.tif : Hawaii
+* us_nga_g2003p01.tif : Puerto Rico
 
 ### USA GEOID2006 model (superseded): NAVD88 height to NAD83 (Alaska only)
 
@@ -112,7 +112,7 @@ vertical datum, NAVD 88. GEOID06 is built largely on the USGG2003 gravimetric ge
 
 It is superseded by later GEOIDxx models
 
-* geoid06_ak.tif : Alaska
+* us_nga_geoid06_ak.tif : Alaska
 
 ### USA GEOID2009 model (superseded): NAVD88/PRVD02/VIVD09/GUVD04 height to NAD83
 
@@ -128,12 +128,12 @@ centered at the NAD83 origin.  It supports direct conversion between
 NAD83 GPS ellipsoidal heights and NAVD88, GUVD04 and ASVD03 orthometric heights,
 and will support future vertical datums PRVD02 nad VIVD09.
 
-* geoid09_conus.tif : Conterminous US.
-* geoid09_ak.tif : Alaska.
-* g2009h01.tif : Hawaii
-* g2009g01.tif : Guam and Northern Mariana Islands.
-* g2009s01.tif : American Samoa.
-* g2009p01.tif : Puerto Rico / U.S. Vigin Islands.
+* us_nga_geoid09_conus.tif : Conterminous US.
+* us_nga_geoid09_ak.tif : Alaska.
+* us_nga_g2009h01.tif : Hawaii
+* us_nga_g2009g01.tif : Guam and Northern Mariana Islands.
+* us_nga_g2009s01.tif : American Samoa.
+* us_nga_g2009p01.tif : Puerto Rico / U.S. Vigin Islands.
 
 ### USA GEOID12B model (partial superseded): NAVD88/PRVD02/VIVD09/GUVD04/NMVD03/ASVD02 height to NAD83(2011)/NAD83(MA11)/NAD83(PA11)
 
@@ -146,15 +146,15 @@ GEOID12B is a hybrid geoid height model that can transform between the relevant
 vertical datum for each region to a NAD 83 ellipsoid height
 See https://www.ngs.noaa.gov/GEOID/GEOID12B/faq_2012B.shtml for more details.
 
-* g2012bu0.tif : Conterminous US, referenced to NAD83(2011). Vertical datum: NAVD88
-* g2012ba0.tif : Alaska, referenced to NAD83(2011). Vertical datum: NAVD88
-* g2012bh0.tif : Hawaii, referenced to NAD83(PA11). Vertical datum: identical to that of USGG2012, which is offset by 50-60 cm from some Local Tidal bench mark values. 
-* g2012bg0.tif : Guam and Northern Mariana Islands, referenced to NAD83(PA11). Vertical datum: GUVD04/NMVD03
-* g2012bs0.tif : American Samoa, referenced to NAD83 (PA11). Vertical datum: ASVD02
-* g2012bp0.tif : Puerto Rico / U.S. Vigin Islands, referenced to NAD83(2011). Vertical datum: PRVD02 and VIVD09
+* us_nga_g2012bu0.tif : Conterminous US, referenced to NAD83(2011). Vertical datum: NAVD88
+* us_nga_g2012ba0.tif : Alaska, referenced to NAD83(2011). Vertical datum: NAVD88
+* us_nga_g2012bh0.tif : Hawaii, referenced to NAD83(PA11). Vertical datum: identical to that of USGG2012, which is offset by 50-60 cm from some Local Tidal bench mark values. 
+* us_nga_g2012bg0.tif : Guam and Northern Mariana Islands, referenced to NAD83(PA11). Vertical datum: GUVD04/NMVD03
+* us_nga_g2012bs0.tif : American Samoa, referenced to NAD83 (PA11). Vertical datum: ASVD02
+* us_nga_g2012bp0.tif : Puerto Rico / U.S. Vigin Islands, referenced to NAD83(2011). Vertical datum: PRVD02 and VIVD09
 
-The g2012bu0.tif and g2012bp0.tif grids are superseded by the
-g2018p0.tif and g2018p0.tif grids of GEOID18.
+The us_nga_g2012bu0.tif and us_nga_g2012bp0.tif grids are superseded by the
+us_nga_g2018p0.tif and us_nga_g2018p0.tif grids of GEOID18.
 
 ### USA GEOID18 model: NAVD88/PRVD02 height to NAD83(2011)
 
@@ -173,5 +173,5 @@ GEOID12B in these regions. GEOID18 does NOT cover Alaska, Hawaii, Guam and the
 Commonwealth of the Northern Mariana Islands (CNMI) where users should continue
 to use GEOID12B.
 
-* g2018u0.tif : Conterminous US, referenced to NAD83(2011). Vertical datum: NAVD88
-* g2018p0.tif : Puerto Rico / U.S. Vigin Islands, referenced to NAD83(2011). Vertical datum: PRVD02 and VIVD09
+* us_nga_g2018u0.tif : Conterminous US, referenced to NAD83(2011). Vertical datum: NAVD88
+* us_nga_g2018p0.tif : Puerto Rico / U.S. Vigin Islands, referenced to NAD83(2011). Vertical datum: PRVD02 and VIVD09

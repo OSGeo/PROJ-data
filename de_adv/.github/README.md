@@ -1,1 +1,1 @@
-../README.de_adv
+../de_adv_README.txt

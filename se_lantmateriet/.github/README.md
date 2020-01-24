@@ -1,1 +1,1 @@
-../README.se_lantmateriet
+../se_lantmateriet_README.txt

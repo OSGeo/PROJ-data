@@ -1,4 +1,4 @@
-# README.eur_nkg
+# eur_nkg_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [Nordic Geodetic Commission](https://github.com/NordicGeodesy/NordicTransformations)  
@@ -16,7 +16,7 @@ transformations between global reference frames and the local realisations
 of ETRS89 in the Nordic and Baltic countries. See the `NKG` init-file for
 examples of use.
 
-* nkgrf03vel_realigned.tif
+* eur_nkg_nkgrf03vel_realigned.tif
 
 ## Included init-files
 

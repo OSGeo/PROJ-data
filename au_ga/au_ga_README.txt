@@ -1,4 +1,4 @@
-# README.au_ga
+# au_ga_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [Geoscience Australia](http://www.ga.gov.au)
@@ -10,7 +10,7 @@ from [Geoscience Australia](http://www.ga.gov.au)
 *License*: [Creative Commons Attribution 4.0]  
 *Converter*: gdal_translate -of GTX AUSGeoid98.gsb AUSGeoid98.gtx -b 1 
 
-* AUSGeoid98.tif
+* au_ga_AUSGeoid98.tif
 
 ### Australia: AUSGeoid09: GDA94 -> AHD height
 
@@ -22,7 +22,7 @@ from [Geoscience Australia](http://www.ga.gov.au)
 Uses AusGeoid09 model which uses bi-cubic interpolation; bi-linear interpolation
 of the grid file will give results agreeing to within 1cm 99.97% of the time.
 
-* AUSGeoid09_V1.01.tif
+* au_ga_AUSGeoid09_V1.01.tif
 
 ### Australia: AUSGeoid2020: GDA2020 -> AHD height
 
@@ -33,7 +33,7 @@ of the grid file will give results agreeing to within 1cm 99.97% of the time.
 
 Uses AusGeoid2020 model.
 
-* AUSGeoid2020_20180201.tif
+* au_ga_AUSGeoid2020_20180201.tif
 
 
 [Creative Commons Attribution 4.0]: https://creativecommons.org/licenses/by/4.0/

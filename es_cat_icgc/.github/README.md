@@ -1,1 +1,1 @@
-../README.es_cat_icgc
+../es_cat_icgc_README.txt

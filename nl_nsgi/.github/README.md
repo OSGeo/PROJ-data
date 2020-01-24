@@ -1,1 +1,1 @@
-../README.nl_nsgi
+../nl_nsgi_README.txt

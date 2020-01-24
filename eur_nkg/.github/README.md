@@ -1,1 +1,1 @@
-../README.eur_nkg
+../eur_nkg_README.txt

@@ -1,4 +1,4 @@
-# README.ca_nrc
+# ca_nrc_README.txt
 
 The files in this section result from the conversion of datasets originating
 from  [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod)
@@ -13,7 +13,7 @@ from  [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod)
 
 Transform between NAD27 and NAD83 in Canada.
 
-* ntv2_0.tif
+* ca_nrc_ntv2_0.tif
 
 ### Canada: NAD27(76) -> NAD83
 
@@ -27,7 +27,7 @@ Transform between NAD27 and NAD83 in Canada.
 
 Transform between NAD27(76) and NAD83 in Canada.
 
-* MAY76V20.tif
+* ca_nrc_MAY76V20.tif
 
 ### Canada: Alberta: NAD83(Original) --> NAD83(CSRS) 2002
 
@@ -38,7 +38,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:8246 (NAD83(CSRS)v4)  
 *Used by*: [EPSG:9244 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9244)
 
-* ABCSRSV4.tif
+* ca_nrc_ABCSRSV4.tif
 
 ### Canada: British Columbia (CRD): NAD27 --> NAD83(CSRS) 1997
 
@@ -49,7 +49,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:8240 (NAD83(CSRS)v3)  
 *Used by*: [EPSG:9113 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9113)
 
-* CRD27_00.tif
+* ca_nrc_CRD27_00.tif
 
 ### Canada: British Columbia (CRD): NAD83(Original) --> NAD83(CSRS) 1997
 
@@ -60,7 +60,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:8240 (NAD83(CSRS)v3)  
 *Used by*: [EPSG:9117 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9117)
 
-* CRD93_00.tif
+* ca_nrc_CRD93_00.tif
 
 ### Canada: British Columbia (Vancouver Island): NAD83(Original) --> NAD83(CSRS) 1997
 
@@ -71,7 +71,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:8240 (NAD83(CSRS)v3)  
 *Used by*: [EPSG:9118 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9118)  
 
-* NVI93_05.tif
+* ca_nrc_NVI93_05.tif
 
 ### Canada: British Columbia (CRD): NAD27 --> NAD83(CSRS) 2002
 
@@ -82,7 +82,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:8246 (NAD83(CSRS)v4)  
 *Used by*: [EPSG:9115 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9115)
 
-* BC_27_05.tif
+* ca_nrc_BC_27_05.tif
 
 ### Canada: British Columbia (CRD): NAD83(Original) --> NAD83(CSRS) 2002
 
@@ -93,7 +93,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:8246 (NAD83(CSRS)v4)  
 *Used by*: [EPSG:9119 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9119)
 
-* BC_93_05.tif
+* ca_nrc_BC_93_05.tif
 
 ### Canada: New Brunswick: ATS77 --> NAD83(CSRS) 1997
 
@@ -104,7 +104,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:8237 (NAD83(CSRS)v2)  
 *Used by*: [EPSG:9237 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9237)
 
-* NB7783v2.tif
+* ca_nrc_NB7783v2.tif
 
 ### Canada: New Brunswick: NAD27 --> NAD83(CSRS) 1997
 
@@ -115,7 +115,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:8237 (NAD83(CSRS)v2)  
 *Used by*: [EPSG:9238 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9238)
 
-* NB2783v2.tif
+* ca_nrc_NB2783v2.tif
 
 ### Canada: Nova Scotia: ATS77 --> NAD83(Original)
 
@@ -126,7 +126,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:4269 (NAD83)  
 *Used by*: [EPSG:9105 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9105)
 
-* GS7783.tif
+* ca_nrc_GS7783.tif
 
 ### Canada: Nova Scotia: ATS77 --> NAD83(CSRS) 2010
 
@@ -137,7 +137,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:8252 (NAD83(CSRS)v6)  
 *Used by*: [EPSG:9106 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9106)
 
-* NS778302.tif
+* ca_nrc_NS778302.tif
 
 ### Canada: Ontario: NAD27 --> NAD83(CSRS) 1997
 
@@ -148,7 +148,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:8240 (NAD83(CSRS)v3)  
 *Used by*: [EPSG:9107 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9107)
 
-* ON27CSv1.tif
+* ca_nrc_ON27CSv1.tif
 
 ### Canada: Ontario: NAD27(MAY76) --> NAD83(CSRS) 1997
 
@@ -159,7 +159,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:8240 (NAD83(CSRS)v3)  
 *Used by*: [EPSG:9109 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9109)
 
-* ON76CSv1.tif
+* ca_nrc_ON76CSv1.tif
 
 ### Canada: Ontario: NAD83(Original) --> NAD83(CSRS) 1997
 
@@ -170,7 +170,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:8240 (NAD83(CSRS)v3)  
 *Used by*: [EPSG:9110 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9110)
 
-* ON83CSv1.tif
+* ca_nrc_ON83CSv1.tif
 
 ### Canada: Ontario (Toronto): NAD27 --> NAD83(CSRS) 1997
 
@@ -181,7 +181,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:8240 (NAD83(CSRS)v3)  
 *Used by*: [EPSG:9108 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9108)
 
-* TO27CSv1.tif
+* ca_nrc_TO27CSv1.tif
 
 ### Canada: Prince Edward Island: ATS77 --> NAD83(CSRS) 1997
 
@@ -192,7 +192,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:8237 (NAD83(CSRS)v2)  
 *Used by*: [EPSG:9236 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9236)
 
-* PE7783V2.tif
+* ca_nrc_PE7783V2.tif
 
 ### Canada: Quebec: NAD27 --> NAD83(CSRS) 1997
 
@@ -204,7 +204,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Used by*: [EPSG:9239 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9239)  
 *Used by*: [EPSG:1692 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::1692) for NAD27 -> WGS84
 
-* NA27SCRS.tif (also known as QUE27-98.gsb by EPSG for NAD27 -> WGS84)
+* ca_nrc_NA27SCRS.tif (also known as QUE27-98.gsb by EPSG for NAD27 -> WGS84)
 
 ### Canada: Quebec: NAD27(CGQ77) --> NAD83(CSRS) 1997
 
@@ -215,7 +215,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:8237 (NAD83(CSRS)v2)  
 *Used by*: [EPSG:9240 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9240)  
 
-* CQ77SCRS.tif (also known as CGQ77-98.gsb by EPSG)
+* ca_nrc_CQ77SCRS.tif (also known as CGQ77-98.gsb by EPSG)
 
 ### Canada: Quebec: NAD83(Original) --> NAD83(CSRS) 1997
 
@@ -227,7 +227,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Used by*: [EPSG:9241 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9241)  
 *Used by*: [EPSG:1696 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::1696) for NAD83 -> WGS84
 
-* NA83SCRS.tif (also known as NAD83-98.gsb by EPSG for NAD83 -> WGS84)
+* ca_nrc_NA83SCRS.tif (also known as NAD83-98.gsb by EPSG for NAD83 -> WGS84)
 
 ### Canada: Saskatchewan: NAD27 --> NAD83(CSRS) 1997
 
@@ -239,7 +239,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Used by*: [EPSG:9242 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9242)  
 *Used by*: [EPSG:1703 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::1703) for NAD27 -> WGS84
 
-* SK27-98.tif
+* ca_nrc_SK27-98.tif
 
 ### Canada: Saskatchewan: NAD83(Original) --> NAD83(CSRS) 1997
 
@@ -251,7 +251,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Used by*: [EPSG:9243 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9243)  
 *Used by*: [EPSG:1697 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::1697) for NAD83 -> WGS84
 
-* SK83-98.tif
+* ca_nrc_SK83-98.tif
 
 ### Canada: CGVD28 height --> NAD83(CSRS)
 
@@ -262,7 +262,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:5713 (CGVD28 height)  
 *Used by*: [EPSG:9123 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9123)
 
-* HT2_2010v70.tif
+* ca_nrc_HT2_2010v70.tif
 
 ### Canada: CGVD2013(CGG2013a) height --> NAD83(CSRS)
 
@@ -273,7 +273,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:9245 (CGVD2013(CGG2013a) height)  
 *Used by*: [EPSG:9247 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9247)
 
-* CGG2013an83.tif
+* ca_nrc_CGG2013an83.tif
 
 ### Canada: CGVD2013(CGG2013a) height --> ITRF2008
 
@@ -284,7 +284,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:9245 (CGVD2013(CGG2013a) height)  
 *Used by*: [EPSG:9125 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9125)
 
-* CGG2013ai08.tif
+* ca_nrc_CGG2013ai08.tif
 
 ### Canada: CGVD2013(CGG2013) height --> NAD83(CSRS) (superseded by CGVD2013(CGG2013a) height --> NAD83(CSRS))
 
@@ -295,7 +295,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:6647 (CGVD2013(CGG2013) height)  
 *Used by*: [EPSG:9246 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9246)
 
-* CGG2013n83.tif
+* ca_nrc_CGG2013n83.tif
 
 ### Canada: CGVD2013(CGG2013) height --> ITRF2008 (superseded by CGVD2013(CGG2013a) height --> ITRF2008)
 
@@ -306,7 +306,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:6647 (CGVD2013(CGG2013) height)  
 *Used by*: [EPSG:9124 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9124)
 
-* CGG2013i08.tif
+* ca_nrc_CGG2013i08.tif
 
 ### Canada: NAD83(CSRS)v6 velocity grid
 
@@ -317,7 +317,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Target CRS*: EPSG:8251 (NAD83(CSRS)v6)  
 *Used by*: [EPSG:8676 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::8676)
 
-* NAD83v6VG.tif
+* ca_nrc_NAD83v6VG.tif
 
 ### Canada: NAD83(CSRS)v7 velocity grid
 
@@ -327,4 +327,4 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Source CRS*: EPSG:8254 (NAD83(CSRS)v7)  
 *Target CRS*: EPSG:8254 (NAD83(CSRS)v7)  
 
-* NAD83v70VG.tif
+* ca_nrc_NAD83v70VG.tif
