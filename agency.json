@@ -96,6 +96,12 @@
         "url": "https://atlas.lmi.is/LmiData/index.php?id=626468364600"
     },
     {
+        "id": "nl_nsgi",
+        "country": "Netherlands",
+        "agency":"Nederlandse Samenwerking Geodetische Infrastructuur (NSGI)",
+        "url": "https://www.nsgi.nl/"
+    },
+    {
         "id": "nz_linz",
         "country": "New Zealand",
         "agency":"Land Information New Zealand",
