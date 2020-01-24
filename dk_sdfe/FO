@@ -20,7 +20,7 @@
 #  2018-08-29  Added FK89
 #              Kristian Evers <kreve@sdfe.dk>,Thomas Knudsen <thokn@sdfe.dk>
 #
-<FVR09> +proj=vgridshift +grids=fvr09.gtx
+<FVR09> +proj=vgridshift +grids=dk_sdfe_fvr09.tif
 
 <UTM29N> +proj=utm +zone=29 +ellps=GRS80 +units=m +no_defs
 <UTM29N_FVR09> +proj=pipeline +step +init=FO:FVR09 +step +init=FO:UTM29N
@@ -32,7 +32,7 @@
 
 <FK89>  proj=pipeline
     step proj=utm ellps=GRS80 zone=29
-    step init=FO_fk89.pol:UTM29_FK89
+    step init=dk_sdfe_FO_fk89.pol:UTM29_FK89
 
 <gie>
 operation   init=FO:FK89

@@ -23,18 +23,18 @@
 #  Vertical datum 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<ISH2004> proj=vgridshift grids=Icegeoid_ISN2004.gtx  # current, geoid height calculated using ISN2004 datum
+<ISH2004> proj=vgridshift grids=is_lmi_Icegeoid_ISN2004.tif  # current, geoid height calculated using ISN2004 datum
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<ISN93_ISH2004> proj=vgridshift grids=Icegeoid_ISN93.gtx  # Icegeoid_ISN2004.gtx plus corrections for vertical difference between ISN93 and ISN2004.
-<ISN2016_ISH2004> proj=vgridshift grids=Icegeoid_ISN2016.gtx  # Icegeoid_ISN2004.gtx plus corrections for vertical difference between ISN2016 and ISN2004.
+<ISN93_ISH2004> proj=vgridshift grids=is_lmi_Icegeoid_ISN93.tif  # Icegeoid_ISN2004.tif plus corrections for vertical difference between ISN93 and ISN2004.
+<ISN2016_ISH2004> proj=vgridshift grids=is_lmi_Icegeoid_ISN2016.tif  # Icegeoid_ISN2004.tif plus corrections for vertical difference between ISN2016 and ISN2004.
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #  Deformation grids 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<ISN93_16h> proj=hgridshift grids=ISN93_ISN2016.gsb
+<ISN93_16h> proj=hgridshift grids=ISN93_ISN2016.tif
 <ISN93_16v> proj=vgridshift grids=ISN93_ISN2016.gtx 
 
-<ISN04_16h> proj=hgridshift grids=ISN2004_ISN2016.gsb
+<ISN04_16h> proj=hgridshift grids=ISN2004_ISN2016.tif
 <ISN04_16v> proj=vgridshift grids=ISN2004_ISN2016.gtx
 
 <D_93_16> 
@@ -51,8 +51,7 @@
 #  Velocity model
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #
-# xy_grids=ISN_vel_beta.ct2 
-# z_grids=ISN_vel_beta.gtx
+# grids=ISN_vel_beta.tif
 #
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
