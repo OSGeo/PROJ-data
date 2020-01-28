@@ -14,6 +14,7 @@ before_install:
   - sudo apt-get install cmake make zip unzip pyflakes3 wget
 
 install:
+    - ./travis/check_new_grids.sh
     - cd grid_tools
     - pyflakes3 *.py
     - wget https://github.com/OSGeo/proj-datumgrid/raw/master/north-america/ntv2_0.gsb
