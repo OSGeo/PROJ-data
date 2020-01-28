@@ -75,7 +75,7 @@ provided by the AWS Public Dataset team via <a href="https://aws.amazon.com/clou
 <p>
 The CDN contains <a href="https://www.cogeo.org/">Cloud Optimized GeoTIFF</a> datasets which are mirrored and
 managed by the
-<a href="https://github.com/OSGeo/proj-datumgrid-geotiff/">https://github.com/OSGeo/proj-datumgrid-geotiff/</a>
+<a href="https://github.com/OSGeo/PROJ-data/">https://github.com/OSGeo/PROJ-data/</a>
 GitHub project.  Files in the CDN are designed to be used by <a href="https://proj.org">PROJ</a> 7 or later, but any software
 project wishing to use the CDN for shifting support are encouraged to participate in the project and leverage the CDN.
 </p>
@@ -428,7 +428,7 @@ map.on('singleclick', function(evt) {
 
 <p>The bucket contains the following files:</p>
 <ul>
-<li><a href="README.DATUMGRID">README.DATUMGRID</a></li>
+<li><a href="README.DATA">README.DATA</a></li>
 ${LINKS_WILL_BE_ADDED_HERE_BY_REGENERATE_INDEX_HTML}
 </ul>
 <p>
