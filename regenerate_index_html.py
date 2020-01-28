@@ -51,7 +51,7 @@ lyr.CreateField(ogr.FieldDefn('full_bbox', ogr.OFTRealList))
 total_size = 0
 set_files = set()
 for dirname in sorted(dirnames):
-    if '_' not in dirname:
+    if '_' not in dirname or dirname == 'grid_tools':
         continue
     filenames = []
     readme_filename = None
