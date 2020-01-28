@@ -13,8 +13,8 @@ before_install:
 install:
 # Travis build directory includes /build/, which is a pattern we exclude
 # in our 'make dist' target...
-    - (cd ..; mv proj-datumgrid-geotiff /tmp)
-    - (cd /tmp/proj-datumgrid-geotiff && ./travis/test.sh)
+    - (cd ..; mv PROJ-data /tmp)
+    - (cd /tmp/PROJ-data && ./travis/test.sh)
 
 script:
   - echo "done"
