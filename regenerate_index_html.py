@@ -57,7 +57,7 @@ for dirname in sorted(dirnames):
     readme_filename = None
     for f in glob.glob(dirname + '/*'):
         f = os.path.basename(f)
-        if f.startswith('README'):
+        if f.endswith('README.txt'):
             assert not readme_filename
             readme_filename = f
         else:

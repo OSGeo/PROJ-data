@@ -1,4 +1,4 @@
-# README.dk_sdfe
+# dk_sdfe_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [Agency for Data Supply and Efficiency](https://github.com/NordicGeodesy/NordicTransformations)  
@@ -14,7 +14,7 @@ from [Agency for Data Supply and Efficiency](https://github.com/NordicGeodesy/No
 Transform local height system DVR90 (EPSG:5799) to ETRS89 ellipsoidal heights (EPSG:4937). The horizontal
 grid coordinates are referenced to ETRS89.
 
-* dvr90.tif
+* dk_sdfe_dvr90.tif
 
 ### Denmark: DNN heights -> ETRS89 ellipsoidal heights
 
@@ -25,7 +25,7 @@ grid coordinates are referenced to ETRS89.
 Transform local height system DNN (EPSG:5733) to ETRS89 ellipsoidal heights (EPSG:4937). The horizontal
 grid coordinates are referenced to ETRS89.
 
-* dnn.tif
+* dk_sdfe_dnn.tif
 
 ### Faroe Islands: FVR09 heights -> ETRS89 ellipsoidal heights
 
@@ -36,7 +36,7 @@ grid coordinates are referenced to ETRS89.
 Transform local height system FVR09 (EPSG:5317) to ETRS89 ellipsoidal heights (EPSG:4937). The horizontal
 grid coordinates are referenced to ETRS89.
 
-* fvr09.tif
+* dk_sdfe_fvr09.tif
 
 ## Included init-files
 
@@ -50,16 +50,16 @@ Denmark. All definitions in the init file uses the local ETRS89 reference
 frame as a pivot datum. More information can be found in the
 [NordicTransformations](https://github.com/NordicGeodesy/NordicTransformations)
 repository. While the `.pol` files are init-files they are not supposed to be
-by themselves. The exist purely as helper files for the `DK` init-file.
+by themselves. The exist purely as helper files for the `dk_sdfe_DK` init-file.
 The `.pol` files holds polynomial constants used for transformations between
 Danish legacy coordinate reference systems and ETRS89.
 
 * DK
-* DK_bornholm.pol
-* DK_bridges.pol
-* DK_general.pol
-* DK_jutland.pol
-* DK_zealand.pol
+* dk_sdfe_DK_bornholm.pol
+* dk_sdfe_DK_bridges.pol
+* dk_sdfe_DK_general.pol
+* dk_sdfe_DK_jutland.pol
+* dk_sdfe_DK_zealand.pol
 
 ### The Faroe Islands: System definitions related to ETRS89
 

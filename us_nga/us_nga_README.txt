@@ -1,4 +1,4 @@
-# README.us_nga
+# us_nga_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [US NGA](http://earth-info.nga.mil)
@@ -13,7 +13,7 @@ from [US NGA](http://earth-info.nga.mil)
 
 15 minute worldwide geoid undulation grid that transforms physical heights to WGS84 ellipsoidal heights.
 
-* egm96_15.tif
+* us_nga_egm96_15.tif
 
 ### Vertical grid: EGM2008 geoid model
 
@@ -27,4 +27,4 @@ This file has been produced by [GeographicLib](https://geographiclib.sourceforge
 using the EGM2008 gravity model and can be regenerated with the
 [build_egm08_25_gtx.sh](https://raw.githubusercontent.com/OSGeo/proj-datumgrid/master/world/build_egm08_25_gtx.sh) script.
 
-* egm08_25.tif
+* us_nga_egm08_25.tif

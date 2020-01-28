@@ -1,1 +1,1 @@
-../README.au_ga
+../au_ga_README.txt

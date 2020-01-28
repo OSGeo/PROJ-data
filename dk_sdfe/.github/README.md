@@ -1,1 +1,1 @@
-../README.dk_sdfe
+../dk_sdfe_README.txt

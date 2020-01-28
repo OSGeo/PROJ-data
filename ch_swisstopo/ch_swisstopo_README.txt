@@ -1,4 +1,4 @@
-# README.ch_swisstopo
+# ch_swisstopo_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [Swisstopo](ttps://www.swisstopo.admin.ch)
@@ -21,5 +21,5 @@ Several transformation services are available on https://www.swisstopo.admin.ch/
 using the REFRAME algorithm (finite element transformation).
 The difference between the grid and finite element transformation is on a level of below several millimeters.
 
-* CHENyx06a.tif
-* CHENyx06_ETRS.tif
+* ch_swisstopo_CHENyx06a.tif
+* ch_swisstopo_CHENyx06_ETRS.tif

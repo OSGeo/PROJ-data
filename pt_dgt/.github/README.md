@@ -1,1 +1,1 @@
-../README.pt_dgt
+../pt_dgt_README.txt

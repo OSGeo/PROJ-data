@@ -1,4 +1,4 @@
-# README.ca_que_mern
+# ca_que_mern_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [Ministère de l'Énergie et des Ressources naturelles du Québec](https://mern.gouv.qc.ca/)
@@ -14,7 +14,7 @@ from [Ministère de l'Énergie et des Ressources naturelles du Québec](https://
 *Target CRS*: EPSG:4269 (NAD83)  
 *Used by*: [EPSG:1573 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::1573)  
 
-* na27na83.tif
+* ca_que_mern_na27na83.tif
 
 ### Canada: Quebec: NAD27(CGQ77) --> NAD83(original)
 
@@ -25,4 +25,4 @@ from [Ministère de l'Énergie et des Ressources naturelles du Québec](https://
 *Target CRS*: EPSG:4269 (NAD83)  
 *Used by*: [EPSG:1575 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::1575)  
 
-* cq77na83.tif
+* ca_que_mern_cq77na83.tif

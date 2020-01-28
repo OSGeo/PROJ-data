@@ -41,8 +41,8 @@
 #------------------------------------------------------------------------------------------------------
 #  Vertical datums
 #------------------------------------------------------------------------------------------------------
-<DVR90> proj=vgridshift grids=dvr90.gtx            # current
-<DNN>   proj=vgridshift grids=dnn.gtx              # historical
+<DVR90> proj=vgridshift grids=dk_sdfe_dvr90.tof            # current
+<DNN>   proj=vgridshift grids=dk_sdfe_dnn.tif              # historical
 #------------------------------------------------------------------------------------------------------
 
 
@@ -290,7 +290,7 @@ expect      883653.4932  6111473.4226
 <UTM32_ED50_L>
     proj=pipeline
     step init=DK:_TC32_TD32
-    step init=DK_general.pol:TC32_L inv
+    step init=dk_sdfe_DK_general.pol:TC32_L inv
 #------------------------------------------------------------------------------------------------------
 <gie>
 operation   init=DK:UTM32_ED50_L
@@ -325,7 +325,7 @@ expect      12.001173940  55.000628676      # Authoritative value, obtained from
 #------------------------------------------------------------------------------------------------------
 <UTM32_ED50_B> proj=pipeline  ellps=GRS80
      step init=DK:_TC32_TD32
-     step init=DK_bornholm.pol:UTM32_ED50_B     # no inv here, due to polynomial swap in DK_bornholm.pol
+     step init=dk_sdfe_DK_bornholm.pol:UTM32_ED50_B     # no inv here, due to polynomial swap in DK_bornholm.pol
 #------------------------------------------------------------------------------------------------------
 <gie>
 operation   init=DK:UTM32_ED50_B
@@ -376,7 +376,7 @@ expect      15.001111641   55.000603892    # Authoritative value, obtained from 
 #------------------------------------------------------------------------------------------------------
 <S45B>  proj=pipeline no_defs
         step   init=DK:_TC32_TD32
-        step   init=DK_bornholm.pol:TC32_B inv
+        step   init=dk_sdfe_DK_bornholm.pol:TC32_B inv
 #------------------------------------------------------------------------------------------------------
 <gie>
 operation   init=DK:S45B
@@ -393,7 +393,7 @@ expect      42915.0596  37569.1876    # Authoritative value, obtained from KMSTr
 #------------------------------------------------------------------------------------------------------
 <S34J>  proj=pipeline  ellps=GRS80
         step   init=DK:_TC32_TD32
-        step   init=DK_jutland.pol:TC32_L inv
+        step   init=dk_sdfe_DK_jutland.pol:TC32_L inv
 #------------------------------------------------------------------------------------------------------
 <gie>
 operation   init=DK:S34J
@@ -410,7 +410,7 @@ expect      263190.2497  286078.3847
 #------------------------------------------------------------------------------------------------------
 <S34S>  proj=pipeline  ellps=GRS80
         step   init=DK:_TC32_TD32
-        step   init=DK_zealand.pol:TC32_L inv
+        step   init=dk_sdfe_DK_zealand.pol:TC32_L inv
 #------------------------------------------------------------------------------------------------------
 <gie>
 operation   init=DK:S34S
@@ -429,7 +429,7 @@ expect      76425.6474  143042.0038
 #------------------------------------------------------------------------------------------------------
 <SB> proj=pipeline  no_defs
         step init=DK:UTM32_ED50_L
-        step init=DK_bridges.pol:UTM32_ED50_L inv   # tol = 0.5 mm
+        step init=dk_sdfe_DK_bridges.pol:UTM32_ED50_L inv   # tol = 0.5 mm
 #------------------------------------------------------------------------------------------------------
 <gie>
 operation   init=DK:SB
@@ -456,7 +456,7 @@ expect      10.891109758 55.319726643
 #------------------------------------------------------------------------------------------------------
 <DKS>  proj=pipeline  no_defs
        step   init=DK:S34S
-       step   init=DK_bridges.pol:S34S inv
+       step   init=dk_sdfe_DK_bridges.pol:S34S inv
 #------------------------------------------------------------------------------------------------------
 <gie>
 operation   init=DK:DKS
@@ -473,7 +473,7 @@ expect      112779.7960  275908.0748   # Authoritative value, obtained from KMST
 #------------------------------------------------------------------------------------------------------
 <GS>  proj=pipeline  ellps=GRS80
     step   init=DK:UTM32_ED50_L
-    step   init=DK_general.pol:GS
+    step   init=dk_sdfe_DK_general.pol:GS
 #------------------------------------------------------------------------------------------------------
 <GEO_GS> proj=pipeline  ellps=GRS80
     step   init=DK:GS
@@ -508,7 +508,7 @@ expect      10  57
 #------------------------------------------------------------------------------------------------------
 <GSB>  proj=pipeline  ellps=GRS80
     step   init=DK:UTM33_ED50_B
-    step   init=DK_bornholm.pol:GSB
+    step   init=dk_sdfe_DK_bornholm.pol:GSB
 #------------------------------------------------------------------------------------------------------
 <GEO_GSB> proj=pipeline  ellps=GRS80       #
     step   init=DK:GSB
@@ -534,7 +534,7 @@ expect      15  55
 #------------------------------------------------------------------------------------------------------
 <KK>  proj=pipeline no_defs
       step   init=DK:S34S
-      step   init=DK_zealand.pol:KK
+      step   init=dk_sdfe_DK_zealand.pol:KK
 #------------------------------------------------------------------------------------------------------
 <gie>
 operation   init=DK:KK
@@ -564,7 +564,7 @@ expect      12.5  55.7
 #------------------------------------------------------------------------------------------------------
 <OS>  proj=pipeline ellps=GRS80
     step   init=DK:S34J
-    step   init=DK_jutland.pol:OS
+    step   init=dk_sdfe_DK_jutland.pol:OS
     step   proj=axisswap order=2,1
 #------------------------------------------------------------------------------------------------------
 <gie>

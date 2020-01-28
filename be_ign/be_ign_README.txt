@@ -1,4 +1,4 @@
-# README.be_ign
+# be_ign_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [IGN Belgium](http://www.ngi.be)
@@ -20,4 +20,4 @@ Recommended to transform from Belgian Lambert 72 (EPSG:31370) to Belgian Lambert
 Documentation in French: (http://www.ngi.be/FR/FR2-1-7.shtm)
 Documentation in Dutch:  (http://www.ngi.be/NL/NL2-1-7.shtm)
 
-* bd72lb72_etrs89lb08.tif
+* be_ign_bd72lb72_etrs89lb08.tif

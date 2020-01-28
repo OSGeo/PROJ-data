@@ -1,4 +1,4 @@
-# README.nl_nsgi
+# nl_nsgi_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [NSGI](https://www.nsgi.nl/)
@@ -13,16 +13,16 @@ from [NSGI](https://www.nsgi.nl/)
 
 Variant 1:
 
-* rdcorr2018.tif
-* nlgeo2018.tif
+* nl_nsgi_rdcorr2018.tif
+* nl_nsgi_nlgeo2018.tif
 
 Recommended variant, applies the datum transformation as a separate step using
 a 3D similarity transformation.
 
 Variant 2:
 
-* rdtrans2018.tif
-* naptrans2018.tif
+* nl_nsgi_rdtrans2018.tif
+* nl_nsgi_naptrans2018.tif
 
 Includes the datum transformation in the correction grid and a different
 quasi-geoid grid for the height transformation.

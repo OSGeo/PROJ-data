@@ -1,4 +1,4 @@
-# README.uk_os
+# uk_os_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [Ordnance Survey](https://www.ordnancesurvey.co.uk)
@@ -15,7 +15,7 @@ Vertical transformation for Geoid model OSGM15, Malin head datum (EPSG:5731). Us
 transformation from OSGM15 orthometric heights to WGS84/ETRS89 ellipsoidal heights.
 The Malin Head datum is used in the Republic of Ireland.
 
-* OSGM15_Malin.tif
+* uk_os_OSGM15_Malin.tif
 
 ### Northern Ireland: OSGM15 height, Belfast height -> ETRS89 ellipsoidal heights
 
@@ -27,7 +27,7 @@ Vertical transformation for Geoid model OSGM15, Belfast datum (EPSG:5732). Used 
 transformation from OSGM15 orthometric heights to WGS84/ETRS89 ellipsoidal heights.
 The Belfast datum is used in the Northern Ireland.
 
-* OSGM15_Belfast.tif
+* uk_os_OSGM15_Belfast.tif
 
 ### United Kingdom: OSGB36 -> ETRS89
 
@@ -43,4 +43,4 @@ OSGB36 National Grid coordinates of the point (if different) will be wrong, by d
 two coordinates (new and archived) will agree on average to better than 0.1m (0.1m rmse, 68%
 probability).
 
-* OSTN15_NTv2_OSGBtoETRS.tif
+* uk_os_OSTN15_NTv2_OSGBtoETRS.tif

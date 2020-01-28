@@ -1,4 +1,4 @@
-# README.nz_linz
+# nz_linz_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [Land Information New Zealand]
@@ -17,7 +17,7 @@ The New Zealand grids are published under the
 
 ### NZGD1949 to NZGD2000 transformation  
 
-*Filename*: nzgd2kgrid0005.tif  
+*Filename*: nz_linz_nzgd2kgrid0005.tif  
 *Reference*: https://www.linz.govt.nz/data/geodetic-system/coordinate-conversion/geodetic-datum-conversions/nzgd1949-nzgd2000
 
 Distortion grid to convert New Zealand Geodetic Datum 1949 longitude and latitude  
@@ -39,11 +39,11 @@ EPSG specified coordinate order for coordinate systems (latitude/longitude in th
 Two geoid grid files are included:
 
 *Geoid*: New Zealand Quasigeoid 2009  
-*Filename*: nzgeoid2009.tif  
+*Filename*: nz_linz_nzgeoid2009.tif  
 *Reference*: https://www.linz.govt.nz/data/geodetic-system/datums-projections-and-heights/vertical-datums/new-zealand-quasigeoid-2009-nzgeoid2009
 
 *Geoid*: New Zealand Quasigeoid 2016  
-*Filename*: nzgeoid2016.tif  
+*Filename*: nz_linz_nzgeoid2016.tif  
 *Reference*: https://www.linz.govt.nz/data/geodetic-system/datums-projections-and-heights/vertical-datums/new-zealand-quasigeoid-2016-nzgeoid2016
 
 These grids define the height of the New Zealand Quasigeoid relative to the ellipsoidal  
@@ -91,43 +91,43 @@ the corresponding local vertical datum shift.
 The following grids are available:
 
 *Local vertical datum*: Auckland 1946  
-*Filename*: auckht1946-nzvd2016.tif
+*Filename*: nz_linz_auckht1946-nzvd2016.tif
 
 *Local vertical datum*: Bluff 1955  
-*Filename*: blufht1955-nzvd2016.tif
+*Filename*: nz_linz_blufht1955-nzvd2016.tif
 
 *Local vertical datum*: Dunedin 1958  
-*Filename*: duneht1958-nzvd2016.tif
+*Filename*: nz_linz_duneht1958-nzvd2016.tif
 
 *Local vertical datum*: Dunedin-Bluff 1960  
-*Filename*: dublht1960-nzvd2016.tif
+*Filename*: nz_linz_dublht1960-nzvd2016.tif
 
 *Local vertical datum*: Gisborne 1926  
-*Filename*: gisbht1926-nzvd2016.tif
+*Filename*: nz_linz_gisbht1926-nzvd2016.tif
 
 *Local vertical datum*: Lyttelton 1937  
-*Filename*: lyttht1937-nzvd2016.tif
+*Filename*: nz_linz_lyttht1937-nzvd2016.tif
 
 *Local vertical datum*: Moturiki 1953  
-*Filename*: motuht1953-nzvd2016.tif
+*Filename*: nz_linz_motuht1953-nzvd2016.tif
 
 *Local vertical datum*: Napier 1962  
-*Filename*: napiht1962-nzvd2016.tif
+*Filename*: nz_linz_napiht1962-nzvd2016.tif
 
 *Local vertical datum*: Nelson 1955  
-*Filename*: nelsht1955-nzvd2016.tif
+*Filename*: nz_linz_nelsht1955-nzvd2016.tif
 
 *Local vertical datum*: One Tree Point 1964  
-*Filename*: ontpht1964-nzvd2016.tif
+*Filename*: nz_linz_ontpht1964-nzvd2016.tif
 
 *Local vertical datum*: Stewart Island 1977  
-*Filename*: stisht1977-nzvd2016.tif
+*Filename*: nz_linz_stisht1977-nzvd2016.tif
 
 *Local vertical datum*: Taranaki 1970  
-*Filename*: taraht1970-nzvd2016.tif
+*Filename*: nz_linz_taraht1970-nzvd2016.tif
 
 *Local vertical datum*: Wellington 1953  
-*Filename*: wellht1953-nzvd2016.tif
+*Filename*: nz_linz_wellht1953-nzvd2016.tif
 
 #### Usage
 

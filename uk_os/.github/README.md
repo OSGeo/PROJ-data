@@ -1,1 +1,1 @@
-../README.uk_os
+../uk_os_README.txt

@@ -1,4 +1,4 @@
-# README.de_geosn
+# de_geosn_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [GeoSN](https://www.landesvermessung.sachsen.de)
@@ -11,4 +11,4 @@ from [GeoSN](https://www.landesvermessung.sachsen.de)
 *Format*: GeoTIFF converted from NTv2  
 *License*: [Data licence Germany – attribution – version 2.0](https://www.govdata.de/dl-de/by-2-0)
 
-* NTv2_SN.tif
+* de_geosn_NTv2_SN.tif

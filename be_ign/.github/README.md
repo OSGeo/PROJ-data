@@ -1,1 +1,1 @@
-../README.be_ign
+../be_ign_README.txt

@@ -1,1 +1,1 @@
-../README.de_geosn
+../de_geosn_README.txt

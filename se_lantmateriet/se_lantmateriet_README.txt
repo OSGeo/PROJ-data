@@ -1,4 +1,4 @@
-# README.se_landmateriet
+# se_landmateriet_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [Lantmäteriet](https://www.lantmateriet.se)
@@ -16,4 +16,4 @@ transitions from heights above sea level in RH 2000 (EPSG:5613) to heights above
 ellipsoid in SWEREF 99 (EPSG:4377). The RH 2000 height system is used on Swedish mainland, Öland
 and Gotland islands.
 
-* SWEN17_RH2000.tif
+* se_landmateriet_SWEN17_RH2000.tif

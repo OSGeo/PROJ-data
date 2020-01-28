@@ -1,1 +1,1 @@
-../README.is_lmi
+../is_lmi_README.txt

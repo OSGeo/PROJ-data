@@ -1,1 +1,1 @@
-../README.fr_ign
+../fr_ign_README.txt
