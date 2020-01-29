@@ -29,10 +29,8 @@ Consult [CONTRIBUTING.md](https://github.com/OSGeo/PROJ-data/blob/master/CONTRIB
 
 ## Content Delivery Network
 
-Those grids can be retrieved from cloud storage (AWS Public datasets) as
-described in
-https://github.com/rouault/PROJ/blob/rfc4_remote_and_geotiff_grid/docs/source/community/rfc/rfc-4.rst#network-access-to-grids at
-https://cdn.proj.org
+Those grids can be retrieved from cloud storage (AWS Public datasets) hosted at https://cdn.proj.org as
+described in [PROJ network documentation](https://github.com/OSGeo/PROJ/blob/master/docs/source/usage/network.rst)
 
 ### CDN Access Log Policy
 
