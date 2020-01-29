@@ -73,3 +73,9 @@ For example us_noaa for files originating from US NOAA.
 * [uk_os: UK OS](https://github.com/OSGeo/PROJ-data/blob/master/uk_os/)
 * [us_nga: USA NGA](https://github.com/OSGeo/PROJ-data/blob/master/us_nga/)
 * [us_noaa: USA NOAA](https://github.com/OSGeo/PROJ-data/blob/master/us_noaa/)
+
+## Tools
+
+The [grid_tools](grid_tools) directory contains Python scripts to create and
+validate files following the [Geodetic TIFF grids (GTG)](https://github.com/OSGeo/PROJ/blob/master/docs/source/specifications/geodetictiffgrids.rst),
+specification.
