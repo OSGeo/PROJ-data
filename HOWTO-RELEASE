@@ -1,0 +1,19 @@
+Preparing a PROJ-data Release
+===============================================================================
+
+0. Have cmake installed
+
+1. If index.html is not already up-to-date with latest grid additions,
+    a. Have GDAL (>= 2.4) Python3 bindings installed
+    b. python3 regenerate_index_html.py
+    c. git commit -a -m "Update index.html" && git push
+
+2. Edit CMakeLists.txt to update PROJ_DATA_VERSION_MAJOR and PROJ_DATA_VERSION_MINOR
+
+3. git commit -a -m "Update CMakeLists.txt to vX.Y" && git push
+
+4. mkdir build && cd build && cmake .. && make dist
+
+   ==> proj-data-X.Y.zip and proj-data-X.Y.tar.gz
+
+5. Resynchronize CDN content from repository with ./sync_to_cdn.sh
