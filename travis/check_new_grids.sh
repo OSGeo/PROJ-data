@@ -33,6 +33,6 @@ for f in $FILES; do
     esac
 
     echo "Checking $f"
-    docker run --rm -v /home:/home osgeo/gdal:alpine-normal-latest gdalinfo $PWD/$f
+    docker run --rm -v /home:/home osgeo/gdal:alpine-normal-latest gdalinfo -mm $PWD/$f
     docker run --rm -v /home:/home osgeo/gdal:alpine-normal-latest python3 $PWD/grid_tools/check_gtiff_grid.py $PWD/$f
 done
