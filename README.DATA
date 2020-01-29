@@ -76,6 +76,6 @@ For example us_noaa for files originating from US NOAA.
 
 ## Tools
 
-The [grid_tools](grid_tools) directory contains Python scripts to create and
+The [grid_tools](https://github.com/OSGeo/PROJ-data/blob/master/grid_tools/) directory contains Python scripts to create and
 validate files following the [Geodetic TIFF grids (GTG)](https://github.com/OSGeo/PROJ/blob/master/docs/source/specifications/geodetictiffgrids.rst),
 specification.
