@@ -47,6 +47,7 @@ lyr.CreateField(ogr.FieldDefn('source_id', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('source_url', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('description', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('full_bbox', ogr.OFTRealList))
+lyr.CreateField(ogr.FieldDefn('file_size', ogr.OFTInteger64))
 
 total_size = 0
 set_files = set()
@@ -73,9 +74,13 @@ for dirname in sorted(dirnames):
         set_files.add(f)
 
         full_filename = os.path.join(dirname, f)
-        ds = gdal.OpenEx(full_filename)
         desc = ''
         area_of_use = ''
+        size = os.stat(full_filename).st_size
+
+        feat = ogr.Feature(lyr.GetLayerDefn())
+
+        ds = gdal.OpenEx(full_filename)
         if ds:
             imageDesc = ds.GetMetadataItem('TIFFTAG_IMAGEDESCRIPTION')
             if imageDesc:
@@ -84,19 +89,12 @@ for dirname in sorted(dirnames):
                     imageDesc = imageDesc[0:pos]
                 desc = imageDesc
 
-            feat = ogr.Feature(lyr.GetLayerDefn())
-            feat['url'] = cdn_url + '/' + f
-            feat['name'] = f
             type = ds.GetMetadataItem('TYPE')
             if type:
                 feat['type'] = type
             area_of_use = ds.GetMetadataItem('area_of_use')
             if area_of_use:
                 feat['area_of_use'] = area_of_use
-            feat['source'] = agency['agency']
-            feat['source_country'] = agency['country']
-            feat['source_id'] = agency['id']
-            feat['source_url'] = agency['url']
             if imageDesc:
                 feat['description'] = imageDesc
             gt = ds.GetGeoTransform()
@@ -190,14 +188,21 @@ for dirname in sorted(dirnames):
                 assert ymin < bbox_ymax
                 assert xmax > bbox_xmin
                 assert ymax > bbox_ymin
-                feat['full_bbox'] = [xmin, ymin, xmax, ymax]
+                feat['file_size'] = [xmin, ymin, xmax, ymax]
                 geom = geom.Intersection(polygon_from_bbox(bbox_xmin, bbox_ymin, bbox_xmax, bbox_ymax))
 
             feat.SetGeometry(geom)
-            lyr.CreateFeature(feat)
+
+        feat['url'] = cdn_url + '/' + f
+        feat['name'] = f
+        feat['source'] = agency['agency']
+        feat['source_country'] = agency['country']
+        feat['source_id'] = agency['id']
+        feat['source_url'] = agency['url']
+        feat['file_size'] = size
+        lyr.CreateFeature(feat)
 
         size_str = ''
-        size = os.stat(full_filename).st_size
         total_size += size
         if size > 1024 * 1024:
             size_str = '. Size: %.1f MB' % (size / (1024. * 1024))
