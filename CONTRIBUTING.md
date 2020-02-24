@@ -9,7 +9,7 @@ Preliminary:
 * The grid must be in the
   [Geodetic TIFF grids (GTG)](https://github.com/OSGeo/PROJ/blob/master/docs/source/specifications/geodetictiffgrids.rst) format.
   The [grid_tools](grid_tools) directory contains tools to convert grids in other format such as NTv2 (.gsb) or GTX to GTG)
-* The grid must be freely licensed as mentionned in [README.DATA](README.DATA).
+* The grid must be freely licensed as mentioned in [README.DATA](README.DATA).
 * We consider that you are familiar with the basic [GitHub workflow to submit a pull request](https://help.github.com/en/articles/creating-a-pull-request)
 
 Grids are organized by producing agencies, with a short identifier.
@@ -49,7 +49,7 @@ the grid must be referenced in the PROJ database. Generally, the EPSG database w
 already have an entry for the grid, sometimes with a slightly different name.
 The relevant file to look into is [grid_transformation.sql](https://github.com/OSGeo/PROJ/blob/master/data/sql/grid_transformation.sql). 
 If the gris is not yet registered in the EPSG database, you are *strongly* encouraged to
-engage with EPSG to register it. This will make its addition to PROJ and its later maintainance
+engage with EPSG to register it. This will make its addition to PROJ and its later maintenance
 much easier. http://www.epsg.org/EPSGDataset/Makechangerequest.aspx explains the procedure
 to follow to submit a change request to EPSG.
 
