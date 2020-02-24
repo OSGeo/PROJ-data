@@ -1,4 +1,4 @@
-# CMake build system for proj-datumgrid-geotiff releases.
+# CMake build system for proj-data releases.
 
 cmake_minimum_required(VERSION 2.6)
 
@@ -9,10 +9,11 @@ set(PROJ_DATA_VERSION_MINOR 0)
 set(CPACK_SOURCE_GENERATOR "TGZ;ZIP")
 set(CPACK_INCLUDE_TOPLEVEL_DIRECTORY 0)
 set(CPACK_SOURCE_PACKAGE_FILE_NAME "proj-data-${PROJ_DATA_VERSION_MAJOR}.${PROJ_DATA_VERSION_MINOR}")
-set(CPACK_SOURCE_IGNORE_FILES "/travis/;/.github/;/.git/;.swp$;.*~;.py$;.sh$;/scripts/;.csv$;${CPACK_SOURCE_IGNORE_FILES}")
+set(CPACK_SOURCE_IGNORE_FILES "/travis/;/.github/;/.git/;.swp$;.*~;.py$;.sh$;/scripts/;${CPACK_SOURCE_IGNORE_FILES}")
 set(CPACK_INSTALL_COMMANDS
     "${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/tmp"
     "${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/README.DATA ${CMAKE_BINARY_DIR}/tmp"
+    "${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/copyright_and_licenses.csv ${CMAKE_BINARY_DIR}/tmp"
 )
 set(CPACK_SOURCE_INSTALLED_DIRECTORIES
     "${CMAKE_BINARY_DIR}/tmp/" "."
