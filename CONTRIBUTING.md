@@ -27,19 +27,20 @@ If a new agency has to be created:
 The steps for adding a GeoTIFF grid to an existing subdirectory are:
 1. Make sure the naming convention for the grid is {agency_id}_{some_name}.tif
 2. Add it into the directory
-2. Edit the {agency_id}_README.txt file. You should mention its
+3. Edit the {agency_id}_README.txt file. You should mention its
    source/provenance, its license, its format (GTiff), the source and
    target coordinate reference systems of the grid, its accuracy when known,
    and all other relevant information.
    For a vertical shift grid, mention the horizontal CRS (interpolation CRS)
    to use.
    Replicating an existing entry will be the easiest.
-3. Add the grid name in `travis/expected_main.lst`, sorted alphabetically.
-4. Add to git the new and modified files
-5. git commit
-6. Run the regenerate_index_html.py file (requires Python 3 and GDAL Python bindings)
+4. Add the grid name in `travis/expected_main.lst`, sorted alphabetically.
+5. Mention copyright & license information in copyright_and_licenses.csv
+6. Add to git the new and modified files
 7. git commit
-8. git push and issue the pull request
+8. Run the regenerate_index_html.py file (requires Python 3 and GDAL Python bindings)
+9. git commit
+10. git push and issue the pull request
 
 Adding a grid in a package of grids is not enough to make it directly and transparently
 usable by PROJ. If the source and target coordinate reference systems are known of
