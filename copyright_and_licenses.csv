@@ -1,55 +1,55 @@
 filename,copyright,license
-at_bev_AT_GIS_GRID.tif,"Austria Bundesamt für Eich- und Vermessungswessen (BEV)",Creative Commons Attribution 4.0
+at_bev_AT_GIS_GRID.tif,"Austria Bundesamt für Eich- und Vermessungswessen (BEV)",CC-BY-4.0
 at_bev_README.txt,Disclaimed,Public domain
-au_ga_AUSGeoid09_V1.01.tif,Geoscience Australia,Creative Commons Attribution 4.0
-au_ga_AUSGeoid2020_20180201.tif,Geoscience Australia,Creative Commons Attribution 4.0
-au_ga_AUSGeoid98.tif,Geoscience Australia,Creative Commons Attribution 4.0
+au_ga_AUSGeoid09_V1.01.tif,Geoscience Australia,CC-BY-4.0
+au_ga_AUSGeoid2020_20180201.tif,Geoscience Australia,CC-BY-4.0
+au_ga_AUSGeoid98.tif,Geoscience Australia,CC-BY-4.0
 au_ga_README.txt,Disclaimed,Public domain
-au_icsm_A66_National_13_09_01.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),Creative Commons Attribution 4.0
-au_icsm_GDA94_GDA2020_conformal_and_distortion.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),Creative Commons Attribution 4.0
-au_icsm_GDA94_GDA2020_conformal_christmas_island.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),Creative Commons Attribution 4.0
-au_icsm_GDA94_GDA2020_conformal_cocos_island.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),Creative Commons Attribution 4.0
-au_icsm_GDA94_GDA2020_conformal.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),Creative Commons Attribution 4.0
-au_icsm_National_84_02_07_01.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),Creative Commons Attribution 4.0
+au_icsm_A66_National_13_09_01.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0
+au_icsm_GDA94_GDA2020_conformal_and_distortion.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0
+au_icsm_GDA94_GDA2020_conformal_christmas_island.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0
+au_icsm_GDA94_GDA2020_conformal_cocos_island.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0
+au_icsm_GDA94_GDA2020_conformal.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0
+au_icsm_National_84_02_07_01.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0
 au_icsm_README.txt,Disclaimed,Public domain
-be_ign_bd72lb72_etrs89lb08.tif,Insititut Geographique National (IGN) Belgium,Creative Commons Attribution 4.0
+be_ign_bd72lb72_etrs89lb08.tif,Insititut Geographique National (IGN) Belgium,CC-BY-4.0
 be_ign_README.txt,Disclaimed,Public domain
-ca_nrc_ABCSRSV4.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_BC_27_05.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_BC_93_05.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_CGG2013ai08.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_CGG2013an83.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_CGG2013i08.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_CGG2013n83.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_CQ77SCRS.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_CRD27_00.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_CRD93_00.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_GS7783.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_HT2_2010v70.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_MAY76V20.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_NA27SCRS.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_NA83SCRS.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_NAD83v6VG.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_NAD83v70VG.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_NB2783v2.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_NB7783v2.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_NS778302.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_ntv1_can.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_ntv2_0.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_NVI93_05.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_ON27CSv1.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_ON76CSv1.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_ON83CSv1.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_PE7783V2.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
+ca_nrc_ABCSRSV4.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_BC_27_05.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_BC_93_05.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_CGG2013ai08.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_CGG2013an83.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_CGG2013i08.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_CGG2013n83.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_CQ77SCRS.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_CRD27_00.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_CRD93_00.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_GS7783.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_HT2_2010v70.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_MAY76V20.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_NA27SCRS.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_NA83SCRS.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_NAD83v6VG.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_NAD83v70VG.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_NB2783v2.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_NB7783v2.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_NS778302.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_ntv1_can.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_ntv2_0.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_NVI93_05.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_ON27CSv1.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_ON76CSv1.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_ON83CSv1.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_PE7783V2.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
 ca_nrc_README.txt,Disclaimed,Public domain
-ca_nrc_SK27-98.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_SK83-98.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_nrc_TO27CSv1.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",Open Government Licence - Canada - http://open.canada.ca/en/open-government-licence-canada
-ca_que_mern_cq77na83.tif,Ministère de l'Énergie et des Ressources naturelles (MERN) du Québec,Creative Commons Attribution 4.0
-ca_que_mern_na27na83.tif,Ministère de l'Énergie et des Ressources naturelles (MERN) du Québec,Creative Commons Attribution 4.0
+ca_nrc_SK27-98.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_SK83-98.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_nrc_TO27CSv1.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
+ca_que_mern_cq77na83.tif,Ministère de l'Énergie et des Ressources naturelles (MERN) du Québec,CC-BY-4.0
+ca_que_mern_na27na83.tif,Ministère de l'Énergie et des Ressources naturelles (MERN) du Québec,CC-BY-4.0
 ca_que_mern_README.txt,Disclaimed,Public domain
-ch_swisstopo_CHENyx06a.tif,Copyright 2007 Swisstopo,Creative Commons CC0 1.0 Universal
-ch_swisstopo_CHENyx06_ETRS.tif,Copyright 2007 Swisstopo,Creative Commons CC0 1.0 Universal
+ch_swisstopo_CHENyx06a.tif,Copyright 2007 Swisstopo,CC0-1.0
+ch_swisstopo_CHENyx06_ETRS.tif,Copyright 2007 Swisstopo,CC0-1.0
 ch_swisstopo_README.txt,Disclaimed,Public domain
 de_adv_BETA2007.tif,ADV,Free redistribution is allowed and welcome
 de_adv_README.txt,Disclaimed,Public domain
@@ -58,25 +58,25 @@ de_geosn_README.txt,Disclaimed,Public domain
 de_lgl_bw_BWTA2017.tif,Landesamt für Geoinformation und Landentwicklung (LGL) Baden-Württemberg,Data licence Germany - attribution - version 2.0
 de_lgl_bw_README.txt,Disclaimed,Public domain
 de_lgvl_saarland_README.txt,Disclaimed,Public domain
-de_lgvl_saarland_SeTa2016.tif,"Landesamt für Vermessung, Geoinformation und Landentwicklung (LVGL) Saarland",Creative Commons Attribution 4.0
-DK,Agency for Data Supply and Efficiency (SDFE),Creative Commons Attribution 4.0
-dk_sdfe_DK_bornholm.pol,Agency for Data Supply and Efficiency (SDFE),Creative Commons Attribution 4.0
-dk_sdfe_DK_bridges.pol,Agency for Data Supply and Efficiency (SDFE),Creative Commons Attribution 4.0
-dk_sdfe_DK_general.pol,Agency for Data Supply and Efficiency (SDFE),Creative Commons Attribution 4.0
-dk_sdfe_DK_jutland.pol,Agency for Data Supply and Efficiency (SDFE),Creative Commons Attribution 4.0
-dk_sdfe_DK_zealand.pol,Agency for Data Supply and Efficiency (SDFE),Creative Commons Attribution 4.0
-dk_sdfe_dnn.tif,Agency for Data Supply and Efficiency (SDFE),Creative Commons Attribution 4.0
-dk_sdfe_dvr90.tif,Agency for Data Supply and Efficiency (SDFE),Creative Commons Attribution 4.0
-dk_sdfe_FO_fk89.pol,Agency for Data Supply and Efficiency (SDFE),Creative Commons Attribution 4.0
-dk_sdfe_fvr09.tif,Agency for Data Supply and Efficiency (SDFE),Creative Commons Attribution 4.0
-dk_sdfe_gvr2000.tif,Agency for Data Supply and Efficiency (SDFE),Creative Commons Attribution 4.0
-dk_sdfe_gvr2016.tif,Agency for Data Supply and Efficiency (SDFE),Creative Commons Attribution 4.0
+de_lgvl_saarland_SeTa2016.tif,"Landesamt für Vermessung, Geoinformation und Landentwicklung (LVGL) Saarland",CC-BY-4.0
+DK,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
+dk_sdfe_DK_bornholm.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
+dk_sdfe_DK_bridges.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
+dk_sdfe_DK_general.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
+dk_sdfe_DK_jutland.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
+dk_sdfe_DK_zealand.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
+dk_sdfe_dnn.tif,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
+dk_sdfe_dvr90.tif,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
+dk_sdfe_FO_fk89.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
+dk_sdfe_fvr09.tif,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
+dk_sdfe_gvr2000.tif,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
+dk_sdfe_gvr2016.tif,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
 dk_sdfe_README.txt,Disclaimed,Public domain
-es_cat_icgc_100800401.tif,Institut Cartogràfic i Geològic de Catalunya (ICGC),Creative Commons Attribution 4.0
+es_cat_icgc_100800401.tif,Institut Cartogràfic i Geològic de Catalunya (ICGC),CC-BY-4.0
 es_cat_icgc_README.txt,Disclaimed,Public domain
-eur_nkg_nkgrf03vel_realigned.tif,Nordic Geodetic Commission,Creative Commons Attribution 4.0
+eur_nkg_nkgrf03vel_realigned.tif,Nordic Geodetic Commission,CC-BY-4.0
 eur_nkg_README.txt,Disclaimed,Public domain
-FO,Agency for Data Supply and Efficiency (SDFE),Creative Commons Attribution 4.0
+FO,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
 fr_ign_CGVD2013RGSPM06.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
 fr_ign_gg10_sbv2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
 fr_ign_gg10_smv2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
@@ -124,46 +124,46 @@ fr_ign_RAMG2016.tif,Institut National Geographique (IGN) France,Open License Fra
 fr_ign_RAR07_bl.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
 fr_ign_RASPM2018.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
 fr_ign_README.txt,Disclaimed,Public domain
-ISL,"Copyright 2017-2019, National Land Survey of Iceland",Creative Commons Attribution 4.0
-is_lmi_Icegeoid_ISN2004.tif,"Copyright 2017-2019, National Land Survey of Iceland",Creative Commons Attribution 4.0
-is_lmi_Icegeoid_ISN2016.tif,"Copyright 2017-2019, National Land Survey of Iceland",Creative Commons Attribution 4.0
-is_lmi_Icegeoid_ISN93.tif,"Copyright 2017-2019, National Land Survey of Iceland",Creative Commons Attribution 4.0
-is_lmi_ISN2004_ISN2016.tif,"Copyright 2017-2019, National Land Survey of Iceland",Creative Commons Attribution 4.0
-is_lmi_ISN93_ISN2016.tif,"Copyright 2017-2019, National Land Survey of Iceland",Creative Commons Attribution 4.0
-is_lmi_ISN_vel_beta.tif,"Copyright 2017-2019, National Land Survey of Iceland",Creative Commons Attribution 4.0
+ISL,"Copyright 2017-2019, National Land Survey of Iceland",CC-BY-4.0
+is_lmi_Icegeoid_ISN2004.tif,"Copyright 2017-2019, National Land Survey of Iceland",CC-BY-4.0
+is_lmi_Icegeoid_ISN2016.tif,"Copyright 2017-2019, National Land Survey of Iceland",CC-BY-4.0
+is_lmi_Icegeoid_ISN93.tif,"Copyright 2017-2019, National Land Survey of Iceland",CC-BY-4.0
+is_lmi_ISN2004_ISN2016.tif,"Copyright 2017-2019, National Land Survey of Iceland",CC-BY-4.0
+is_lmi_ISN93_ISN2016.tif,"Copyright 2017-2019, National Land Survey of Iceland",CC-BY-4.0
+is_lmi_ISN_vel_beta.tif,"Copyright 2017-2019, National Land Survey of Iceland",CC-BY-4.0
 is_lmi_README.txt,Disclaimed,Public domain
-NKG,Nordic Geodetic Commission,Creative Commons Attribution 4.0
-nl_nsgi_naptrans2018.tif,Nederlandse Samenwerking Geodetische Infrastructuur (NSGI),Creative Commons Attribution 4.0
-nl_nsgi_nlgeo2018.tif,Nederlandse Samenwerking Geodetische Infrastructuur (NSGI),Creative Commons Attribution 4.0
-nl_nsgi_rdcorr2018.tif,Nederlandse Samenwerking Geodetische Infrastructuur (NSGI),Creative Commons Attribution 4.0
-nl_nsgi_rdtrans2018.tif,Nederlandse Samenwerking Geodetische Infrastructuur (NSGI),Creative Commons Attribution 4.0
+NKG,Nordic Geodetic Commission,CC-BY-4.0
+nl_nsgi_naptrans2018.tif,Nederlandse Samenwerking Geodetische Infrastructuur (NSGI),CC-BY-4.0
+nl_nsgi_nlgeo2018.tif,Nederlandse Samenwerking Geodetische Infrastructuur (NSGI),CC-BY-4.0
+nl_nsgi_rdcorr2018.tif,Nederlandse Samenwerking Geodetische Infrastructuur (NSGI),CC-BY-4.0
+nl_nsgi_rdtrans2018.tif,Nederlandse Samenwerking Geodetische Infrastructuur (NSGI),CC-BY-4.0
 nl_nsgi_README.txt,Disclaimed,Public domain
-nz_linz_auckht1946-nzvd2016.tif,Land Information New Zealand,Creative Commons Attribution 4.0
-nz_linz_blufht1955-nzvd2016.tif,Land Information New Zealand,Creative Commons Attribution 4.0
-nz_linz_dublht1960-nzvd2016.tif,Land Information New Zealand,Creative Commons Attribution 4.0
-nz_linz_duneht1958-nzvd2016.tif,Land Information New Zealand,Creative Commons Attribution 4.0
-nz_linz_gisbht1926-nzvd2016.tif,Land Information New Zealand,Creative Commons Attribution 4.0
-nz_linz_lyttht1937-nzvd2016.tif,Land Information New Zealand,Creative Commons Attribution 4.0
-nz_linz_motuht1953-nzvd2016.tif,Land Information New Zealand,Creative Commons Attribution 4.0
-nz_linz_napiht1962-nzvd2016.tif,Land Information New Zealand,Creative Commons Attribution 4.0
-nz_linz_nelsht1955-nzvd2016.tif,Land Information New Zealand,Creative Commons Attribution 4.0
-nz_linz_nzgd2kgrid0005.tif,Land Information New Zealand,Creative Commons Attribution 4.0
-nz_linz_nzgeoid2009.tif,Land Information New Zealand,Creative Commons Attribution 4.0
-nz_linz_nzgeoid2016.tif,Land Information New Zealand,Creative Commons Attribution 4.0
-nz_linz_ontpht1964-nzvd2016.tif,Land Information New Zealand,Creative Commons Attribution 4.0
+nz_linz_auckht1946-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
+nz_linz_blufht1955-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
+nz_linz_dublht1960-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
+nz_linz_duneht1958-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
+nz_linz_gisbht1926-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
+nz_linz_lyttht1937-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
+nz_linz_motuht1953-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
+nz_linz_napiht1962-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
+nz_linz_nelsht1955-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
+nz_linz_nzgd2kgrid0005.tif,Land Information New Zealand,CC-BY-4.0
+nz_linz_nzgeoid2009.tif,Land Information New Zealand,CC-BY-4.0
+nz_linz_nzgeoid2016.tif,Land Information New Zealand,CC-BY-4.0
+nz_linz_ontpht1964-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
 nz_linz_README.txt,Disclaimed,Public domain
-nz_linz_stisht1977-nzvd2016.tif,Land Information New Zealand,Creative Commons Attribution 4.0
-nz_linz_taraht1970-nzvd2016.tif,Land Information New Zealand,Creative Commons Attribution 4.0
-nz_linz_wellht1953-nzvd2016.tif,Land Information New Zealand,Creative Commons Attribution 4.0
-pt_dgt_D73_ETRS89_geo.tif,Direcao Geral de Territorio,Creative Commons Attribution 4.0
-pt_dgt_DLx_ETRS89_geo.tif,Direcao Geral de Territorio,Creative Commons Attribution 4.0
+nz_linz_stisht1977-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
+nz_linz_taraht1970-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
+nz_linz_wellht1953-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
+pt_dgt_D73_ETRS89_geo.tif,Direcao Geral de Territorio,CC-BY-4.0
+pt_dgt_DLx_ETRS89_geo.tif,Direcao Geral de Territorio,CC-BY-4.0
 pt_dgt_README.txt,Disclaimed,Public domain
 README.DATA,Disclaimed,Public domain
 se_lantmateriet_README.txt,Disclaimed,Public domain
-se_lantmateriet_SWEN17_RH2000.tif,Lantmäteriet,Creative Commons Zero
-uk_os_OSGM15_Belfast.tif,Ordnance Survey UK,The 2-Clause BSD License
-uk_os_OSGM15_Malin.tif,Ordnance Survey UK,The 2-Clause BSD License
-uk_os_OSTN15_NTv2_OSGBtoETRS.tif,Ordnance Survey UK,The 2-Clause BSD License
+se_lantmateriet_SWEN17_RH2000.tif,Lantmäteriet,CC0-1.0
+uk_os_OSGM15_Belfast.tif,Ordnance Survey UK,BSD-2-Clause
+uk_os_OSGM15_Malin.tif,Ordnance Survey UK,BSD-2-Clause
+uk_os_OSTN15_NTv2_OSGBtoETRS.tif,Ordnance Survey UK,BSD-2-Clause
 uk_os_README.txt,Disclaimed,Public domain
 us_nga_egm08_25.tif,Disclaimed,Public domain
 us_nga_egm96_15.tif,Disclaimed,Public domain
