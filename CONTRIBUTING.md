@@ -36,6 +36,7 @@ The steps for adding a GeoTIFF grid to an existing subdirectory are:
    Replicating an existing entry will be the easiest.
 4. Add the grid name in `travis/expected_main.lst`, sorted alphabetically.
 5. Mention copyright & license information in copyright_and_licenses.csv
+   Use [SPDX license identifiers](https://spdx.org/licenses/) where possible.
 6. Add to git the new and modified files
 7. git commit
 8. Run the regenerate_index_html.py file (requires Python 3 and GDAL Python bindings)
