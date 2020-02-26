@@ -1,5 +1,9 @@
 filename,copyright,license
 at_bev_AT_GIS_GRID.tif,"Austria Bundesamt für Eich- und Vermessungswessen (BEV)",CC-BY-4.0
+at_bev_GEOID_BESSEL_Oesterreich.tif,"Austria Bundesamt für Eich- und Vermessungswessen (BEV)",CC-BY-4.0
+at_bev_GEOID_GRS80_Oesterreich.tif,"Austria Bundesamt für Eich- und Vermessungswessen (BEV)",CC-BY-4.0
+at_bev_GV_Hoehengrid_plus_Geoid_V2.tif,"Austria Bundesamt für Eich- und Vermessungswessen (BEV)",CC-BY-4.0
+at_bev_GV_Hoehengrid_V1.tif,"Austria Bundesamt für Eich- und Vermessungswessen (BEV)",CC-BY-4.0
 at_bev_README.txt,Disclaimed,Public domain
 au_ga_AUSGeoid09_V1.01.tif,Geoscience Australia,CC-BY-4.0
 au_ga_AUSGeoid2020_20180201.tif,Geoscience Australia,CC-BY-4.0

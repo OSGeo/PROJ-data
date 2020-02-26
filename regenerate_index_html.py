@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from osgeo import gdal, ogr, osr
 import glob
 import os
@@ -58,6 +60,9 @@ for dirname in sorted(dirnames):
     readme_filename = None
     for f in glob.glob(dirname + '/*'):
         f = os.path.basename(f)
+        if f.endswith('.sh'):
+            continue
+
         if f.endswith('README.txt'):
             assert not readme_filename
             readme_filename = f
