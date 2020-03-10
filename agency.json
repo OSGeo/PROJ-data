@@ -96,6 +96,12 @@
         "url": "https://atlas.lmi.is/LmiData/index.php?id=626468364600"
     },
     {
+        "id": "nc_dittt",
+        "country": "New Caledonia",
+        "agency":"Gouvernement de Nouvelle Calédonie - DITTT",
+        "url": "https://dittt.gouv.nc/circe-pour-la-nouvelle-caledonie"
+    },
+    {
         "id": "nl_nsgi",
         "country": "Netherlands",
         "agency":"Nederlandse Samenwerking Geodetische Infrastructuur (NSGI)",
