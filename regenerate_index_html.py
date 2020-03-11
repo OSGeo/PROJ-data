@@ -60,7 +60,7 @@ for dirname in sorted(dirnames):
     readme_filename = None
     for f in glob.glob(dirname + '/*'):
         f = os.path.basename(f)
-        if f.endswith('.sh'):
+        if f.endswith('.sh') or f.endswith('.py'):
             continue
 
         if f.endswith('README.txt'):

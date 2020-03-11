@@ -68,16 +68,33 @@ with open('gr3dnc01b.mnt', 'rt') as f:
             ds = gdal.GetDriverByName('GTiff').Create(
                 '/vsimem/gr3dnc01b.tif', cols, rows, 3, gdal.GDT_Float32)
             ds.SetMetadataItem(
-                'TIFFTAG_COPYRIGHT', 'Derived from work by Service Topographique, DITTT, GNC. License unclear')
+                'TIFFTAG_COPYRIGHT', 'Derived from work by Service Topographique, DITTT, Government of New Caledonia. Open License https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf')
             ds.SetMetadataItem('TIFFTAG_IMAGEDESCRIPTION',
-                               'Geocentric translation from IGN72 GRANDE TERRE (EPSG:4662) to RGNC91-93 (EPSG:4749). Converted from gr3dnc01b.mnt')
+                               'Geocentric translation from IGN72 GRANDE TERRE (EPSG:4662) to RGNC91-93 (EPSG:4906). Converted from gr3dnc01b.mnt')
             datetime = datetime.date.today().strftime("%Y:%m:%d %H:%M:%S")
             ds.SetMetadataItem('TIFFTAG_DATETIME', datetime)
             ds.SetMetadataItem('AREA_OR_POINT', 'Point')
             ds.SetMetadataItem('TYPE', 'GEOCENTRIC_TRANSLATION')
-            ds.SetMetadataItem('area_of_use', 'France')
-            ds.SetMetadataItem('source_crs_code', '4662')
-            ds.SetMetadataItem('target_crs_epsg_code', '4749')
+            ds.SetMetadataItem('area_of_use', 'New Caledonia')
+            ds.SetMetadataItem('source_crs_wkt', """GEODCRS["IGN72 Grande Terre",
+    DATUM["IGN72 Grande Terre",
+        ELLIPSOID["International 1924",6378388,297,
+            LENGTHUNIT["metre",1]],
+        ID["EPSG",6634]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433],
+        ID["EPSG",8901]],
+    CS[Cartesian,3],
+        AXIS["(X)",geocentricX,
+            ORDER[1],
+            LENGTHUNIT["metre",1]],
+        AXIS["(Y)",geocentricY,
+            ORDER[2],
+            LENGTHUNIT["metre",1]],
+        AXIS["(Z)",geocentricZ,
+            ORDER[3],
+            LENGTHUNIT["metre",1]]]""")
+            ds.SetMetadataItem('target_crs_epsg_code', '4906')
             ds.SetGeoTransform(
                 [minx - resx/2, resx, 0, maxy + resy/2, 0, -resy])
             ds.GetRasterBand(1).SetUnitType('metre')
