@@ -2,6 +2,7 @@
 
 from osgeo import gdal, ogr, osr
 import glob
+import hashlib
 import os
 import json
 import subprocess
@@ -50,6 +51,7 @@ lyr.CreateField(ogr.FieldDefn('source_url', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('description', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('full_bbox', ogr.OFTRealList))
 lyr.CreateField(ogr.FieldDefn('file_size', ogr.OFTInteger64))
+lyr.CreateField(ogr.FieldDefn('sha256sum', ogr.OFTString))
 
 total_size = 0
 set_files = set()
@@ -205,6 +207,11 @@ for dirname in sorted(dirnames):
         feat['source_id'] = agency['id']
         feat['source_url'] = agency['url']
         feat['file_size'] = size
+
+        m = hashlib.sha256()
+        m.update(open(full_filename, 'rb').read())
+        feat['sha256sum'] = m.hexdigest()
+
         lyr.CreateFeature(feat)
 
         size_str = ''
