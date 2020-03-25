@@ -126,6 +126,12 @@
         "url": "https://www.lantmateriet.se/"
     },
     {
+        "id": "sk_gku",
+        "country": "Slovakia",
+        "agency": "Geodetický a kartografický ústav Bratislava (GKU)",
+        "url": "https://www.geoportal.sk/en/"
+    },
+    {
         "id": "uk_os",
         "country": "United Kingdom",
         "agency":"Ordnance Survey",
