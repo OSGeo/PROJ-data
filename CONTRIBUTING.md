@@ -21,7 +21,7 @@ If a new agency has to be created:
 2. Go in that directory
 3. Create a {agency_id}_README.txt file whose content is inspired from similar existing files
 4. Create a .github subdirectory
-5. Create a symbolic link from the file created at 3. as README.md: ln -s ../{agency_id}_README.txt README.md
+5. Create a symbolic link from the file created at 3. as README.md: ln -s ../{agency_id}_README.txt .github/README.md
 6. Edit CMakeLists.txt at the root of the repository to package the new directory
 
 The steps for adding a GeoTIFF grid to an existing subdirectory are:
@@ -49,7 +49,7 @@ the PROJ database (typically they have a EPSG code), a transformation for them u
 the grid must be referenced in the PROJ database. Generally, the EPSG database will
 already have an entry for the grid, sometimes with a slightly different name.
 The relevant file to look into is [grid_transformation.sql](https://github.com/OSGeo/PROJ/blob/master/data/sql/grid_transformation.sql). 
-If the gris is not yet registered in the EPSG database, you are *strongly* encouraged to
+If the grid is not yet registered in the EPSG database, you are *strongly* encouraged to
 engage with EPSG to register it. This will make its addition to PROJ and its later maintenance
 much easier. http://www.epsg.org/EPSGDataset/Makechangerequest.aspx explains the procedure
 to follow to submit a change request to EPSG.
