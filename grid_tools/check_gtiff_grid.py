@@ -392,6 +392,127 @@ def validate_velocity(ds, is_first_subds):
     return infos, warnings, errors
 
 
+def validate_defmodel(ds, is_first_subds, first_subds):
+
+    infos = []
+    warnings = []
+    errors = []
+
+    displacement_type = ds.GetMetadataItem('DISPLACEMENT_TYPE')
+    if not displacement_type:
+        if is_first_subds:
+            warnings.append("Missing DISPLACEMENT_TYPE metadata item")
+        else:
+            displacement_type = first_subds.GetMetadataItem('TYPE')
+    elif displacement_type not in ('NONE',
+                                   'HORIZONTAL',
+                                   'VERTICAL',
+                                   '3D'):
+        warnings.append("DISPLACEMENT_TYPE=%s is not recognize by PROJ" % displacement_type)
+
+    uncertainty_type = ds.GetMetadataItem('UNCERTAINTY_TYPE')
+    if not displacement_type:
+        if is_first_subds:
+            warnings.append("Missing UNCERTAINTY_TYPE metadata item")
+        else:
+            uncertainty_type = first_subds.GetMetadataItem('TYPE')
+    elif uncertainty_type not in ('NONE',
+                                  'HORIZONTAL',
+                                  'VERTICAL',
+                                  '3D'):
+        warnings.append("UNCERTAINTY_TYPE=%s is not recognize by PROJ" % uncertainty_type)
+
+    if displacement_type == 'HORIZONTAL':
+        min_expected_band_count = 2
+    elif displacement_type == 'VERTICAL':
+        min_expected_band_count = 1
+    elif displacement_type == '3D':
+        min_expected_band_count = 3
+    else:
+        return infos, warnings, errors
+
+    if ds.RasterCount < min_expected_band_count:
+        return infos, warnings, ["DISPLACEMENT_TYPE=%s should have at least %d bands" % (displacement_type, min_expected_band_count)]
+
+    x_idx = 0
+    y_idx = 0
+    z_idx = 0
+    for i in range(ds.RasterCount):
+        b = ds.GetRasterBand(i+1)
+        desc = b.GetDescription()
+        if desc == 'east_offset':
+            if x_idx > 0:
+                return infos, warnings, ["At least, 2 bands are tagged with Description = east_offset"]
+            x_idx = i+1
+        elif desc == 'north_offset':
+            if y_idx > 0:
+                return infos, warnings, ["At least, 2 bands are tagged with Description = north_offset"]
+            y_idx = i+1
+        elif desc == 'vertical_offset':
+            if z_idx > 0:
+                return infos, warnings, ["At least, 2 bands are tagged with Description = vertical_offset"]
+            z_idx = i+1
+        elif desc and desc not in ('east_offset', 'north_offset', 'vertical_offset'):
+            infos.append('Band of type %s not recognized by PROJ' % desc)
+
+    if displacement_type == 'HORIZONTAL':
+        if z_idx > 0:
+            warnings.append('Band with Description = vertical_offset unexpectedly found for DISPLACEMENT_TYPE=HORIZONTAL')
+        if x_idx > 0 and y_idx > 0:
+            if x_idx != 1 or y_idx != 2:
+                infos.append(
+                    'Usually the first and second band should be respectively east_offset, north_offset for DISPLACEMENT_TYPE=HORIZONTAL')
+        elif x_idx > 0 or y_idx > 0:
+            errors.append("Part of the bands are tagged with Description = east_offset/north_offset but not all")
+        else:
+            if is_first_subds:
+                warnings.append('No explicit bands tagged with Description = east_offset/north_offset. Assuming the first and second are respectively east_offset, north_offset')
+            x_idx = 1
+            y_idx = 2
+
+    elif displacement_type == 'VERTICAL':
+        if x_idx > 0:
+            warnings.append('Band with Description = east_offset unexpectedly found for DISPLACEMENT_TYPE=VERTICAL')
+        if y_idx > 0:
+            warnings.append('Band with Description = north_offset unexpectedly found for DISPLACEMENT_TYPE=VERTICAL')
+        if z_idx > 0:
+            if z_idx != 1:
+                infos.append(
+                    'Usually the first band should be vertical_offset for DISPLACEMENT_TYPE=VERTICAL')
+        else:
+            if is_first_subds:
+                warnings.append('No explicit bands tagged with Description = vertical_offset. Assuming this is the first band')
+            z_idx = 1
+
+    elif displacement_type == '3D':
+        if x_idx > 0 and y_idx > 0 and z_idx > 0:
+            if x_idx != 1 or y_idx != 2 or z_idx != 3:
+                infos.append(
+                    'Usually the first, second and third band should be respectively east_offset, north_offset, vertical_offset for DISPLACEMENT_TYPE=3D')
+        elif x_idx > 0 or y_idx > 0 or z_idx > 0:
+            return infos, warnings, ["Part of the bands are tagged with Description = east_offset/north_offset/vertical_offset but not all"]
+        else:
+            if is_first_subds:
+                warnings.append('No explicit bands tagged with Description = east_offset/north_offset/vertical_offset. Assuming the first, second and third band are respectively east_velocity, north_velocity, north_offset')
+            x_idx = 1
+            y_idx = 2
+            z_idx = 3
+
+    for idx in (x_idx, y_idx, z_idx):
+        if idx == 0:
+            continue
+        units = ds.GetRasterBand(idx).GetUnitType()
+        if not units:
+            if is_first_subds:
+                warnings.append(
+                    "One of east_offset/north_offset/vertical_offset band is missing units description.")
+        elif units not in ('degree', 'metre'):
+            errors.append(
+                "One of east_offset/north_offset/vertical_offset band is using a unit not supported by PROJ")
+
+    return infos, warnings, errors
+
+
 class GlobalInfo(object):
     def __init__(self):
         self.map_grid_name_to_grid = {}
@@ -424,7 +545,7 @@ def validate_ifd(global_info, ds, is_first_subds, first_subds):
         if is_first_subds:
             errors.append("No CRS found in the GeoTIFF encoding")
     else:
-        if not srs.IsGeographic():
+        if not srs.IsGeographic() and ds.GetMetadataItem('TYPE') != 'DEFORMATION_MODEL':
             errors.append("CRS found, but not a Geographic CRS")
 
     if ds.GetMetadataItem('AREA_OR_POINT') != 'Point':
@@ -457,7 +578,8 @@ def validate_ifd(global_info, ds, is_first_subds, first_subds):
                       'VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL',
                       'VERTICAL_OFFSET_VERTICAL_TO_VERTICAL',
                       'GEOCENTRIC_TRANSLATION',
-                      'VELOCITY'):
+                      'VELOCITY',
+                      'DEFORMATION_MODEL',):
         warnings.append("TYPE=%s is not recognize by PROJ" % type)
 
     if is_first_subds:
@@ -532,6 +654,11 @@ def validate_ifd(global_info, ds, is_first_subds, first_subds):
         infos += i
         warnings += w
         errors += e
+    elif type == 'DEFORMATION_MODEL':
+        i, w, e = validate_defmodel(ds, is_first_subds, first_subds)
+        infos += i
+        warnings += w
+        errors += e
 
     grid_name = ds.GetMetadataItem('grid_name')
     if grid_name:
@@ -577,7 +704,10 @@ def validate_ifd(global_info, ds, is_first_subds, first_subds):
                        'TIFFTAG_COPYRIGHT',
                        'TIFFTAG_DATETIME',
                        'TIFFTAG_IMAGEDESCRIPTION',
-                       'number_of_nested_grids'):
+                       'number_of_nested_grids',
+                       'UNCERTAINTY_TYPE',
+                       'DISPLACEMENT_TYPE',
+                       'UNCERTAINTY_TYPE',):
             infos.append('Metadata %s=%s ignored' % (key, md[key]))
 
     for i in range(ds.RasterCount):
