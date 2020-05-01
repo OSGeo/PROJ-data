@@ -522,10 +522,10 @@ class GlobalInfo(object):
 def get_extent(ds):
     gt = ds.GetGeoTransform()
     xmin = gt[0] + gt[1] / 2
-    ymax = gt[3] + gt[5] / 2
+    ytop = gt[3] + gt[5] / 2
     xmax = gt[0] + gt[1] * ds.RasterXSize - gt[1] / 2
-    ymin = gt[3] + gt[5] * ds.RasterYSize - gt[5] / 2
-    return xmin, ymin, xmax, ymax
+    ybottom = gt[3] + gt[5] * ds.RasterYSize - gt[5] / 2
+    return xmin, min(ytop, ybottom), xmax, max(ytop, ybottom)
 
 
 def validate_ifd(global_info, ds, is_first_subds, first_subds):
