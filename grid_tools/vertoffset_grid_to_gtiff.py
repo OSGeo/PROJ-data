@@ -259,7 +259,7 @@ def create_unoptimized_file(sourcefilename, tmpfilename, args):
 
         else:
             for i in (1,):
-                data = src_ds.GetRasterBand(i).ReadRaster()
+                data = src_ds.GetRasterBand(i).ReadRaster(buf_type = gdal.GDT_Float32)
 
                 nodata = None if args.ignore_nodata else src_ds.GetRasterBand(
                     i).GetNoDataValue()
