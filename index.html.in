@@ -171,6 +171,7 @@ types_enabled['horizontal'] = true;
 types_enabled['geoid'] = true;
 types_enabled['vertical_adjustments'] = true;
 types_enabled['velocity'] = true;
+types_enabled['deformation_model'] = true;
 types_enabled['other'] = true;
 function refresh_source() {
     featureSource.clear();
@@ -194,11 +195,16 @@ function refresh_source() {
                 feature.properties.type == 'VELOCITY') {
                 ok_type = true;
             }
+            if( types_enabled['deformation_model'] &&
+                feature.properties.type == 'DEFORMATION_MODEL') {
+                ok_type = true;
+            }
             if( types_enabled['other'] &&
-            feature.properties.type != 'HORIZONTAL_OFFSET' &&
+                feature.properties.type != 'HORIZONTAL_OFFSET' &&
                 feature.properties.type != 'VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL' &&
                 feature.properties.type != 'VERTICAL_OFFSET_VERTICAL_TO_VERTICAL' &&
-                feature.properties.type != 'VELOCITY') {
+                feature.properties.type != 'VELOCITY' &&
+                feature.properties.type != 'DEFORMATION_MODEL') {
                 ok_type = true;
             }
             var ok_agency = agencies_enabled[feature.properties.source_id];
@@ -239,6 +245,7 @@ create_checkbox('horizontal', 'Horizontal shift grids', type_control, types_enab
 create_checkbox('geoid', 'Geoid models', type_control, types_enabled);
 create_checkbox('vertical_adjustments', 'Vertical shifts', type_control, types_enabled);
 create_checkbox('velocity', 'Velocity grids', type_control, types_enabled);
+create_checkbox('deformation_model', 'Deformation models', type_control, types_enabled);
 create_checkbox('other', 'Other grids', type_control, types_enabled);
 
 /**
@@ -305,6 +312,8 @@ map.on('singleclick', function(evt) {
     requests = [];
     map.forEachFeatureAtPixel(evt.pixel, function(feature, layer) {
         var props = feature.getProperties();
+        if( props.url.indexOf('.tif') < 0 )
+            return;
         count ++;
         //content_innerHTML += '<p><a href="' + props.name + '">' + props.name + '</a></p>';
         details_innerHTML += '<hr>';

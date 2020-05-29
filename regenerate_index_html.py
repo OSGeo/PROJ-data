@@ -53,6 +53,28 @@ lyr.CreateField(ogr.FieldDefn('full_bbox', ogr.OFTRealList))
 lyr.CreateField(ogr.FieldDefn('file_size', ogr.OFTInteger64))
 lyr.CreateField(ogr.FieldDefn('sha256sum', ogr.OFTString))
 
+def polygon_from_bbox(xmin, ymin, xmax, ymax):
+    geom = ogr.Geometry(ogr.wkbPolygon)
+    ring = ogr.Geometry(ogr.wkbLinearRing)
+    # Add small epsilon to help unioning polygons touching by edge
+    eps = 1e-12
+    ring.AddPoint_2D(xmin-eps, ymin-eps)
+    ring.AddPoint_2D(xmin-eps, ymax+eps)
+    ring.AddPoint_2D(xmax+eps, ymax+eps)
+    ring.AddPoint_2D(xmax+eps, ymin+eps)
+    ring.AddPoint_2D(xmin-eps, ymin-eps)
+    geom.AddGeometry(ring)
+    return geom
+
+def normalize_lon(xmin, xmax):
+    if xmin > 180:
+        xmin -= 360
+        xmax -= 360
+    elif xmax < -180:
+        xmin += 360
+        xmax += 360
+    return xmin, xmax
+
 total_size = 0
 set_files = set()
 for dirname in sorted(dirnames):
@@ -89,7 +111,7 @@ for dirname in sorted(dirnames):
 
         ds = gdal.OpenEx(full_filename)
         if ds:
-            imageDesc = ds.GetMetadataItem('TIFFTAG_IMAGEDESCRIPTION')
+            imageDesc = ds.GetMetadataItem('TIFFTAG_IMAGEDESCRIPTION').replace('\r\n', '. ').replace('\n', '. ').replace('. .', '.').replace('  ', ' ')
             if imageDesc:
                 pos = imageDesc.find('. Converted from')
                 if pos >= 0:
@@ -139,32 +161,10 @@ for dirname in sorted(dirnames):
                 sr = osr.SpatialReference()
                 assert sr.SetFromUserInput(target_crs_wkt) == 0
                 feat['target_crs_name'] = sr.GetName()
-            elif ds.GetMetadataItem('TYPE') != 'VELOCITY':
-                assert False
-
-            def normalize_lon(xmin, xmax):
-                if xmin > 180:
-                    xmin -= 360
-                    xmax -= 360
-                elif xmax < -180:
-                    xmin += 360
-                    xmax += 360
-                return xmin, xmax
+            elif ds.GetMetadataItem('TYPE') not in ('VELOCITY', 'DEFORMATION_MODEL'):
+                assert False, (full_filename, target_crs_epsg_code, target_crs_wkt)
 
             xmin, xmax = normalize_lon(xmin, xmax)
-
-            def polygon_from_bbox(xmin, ymin, xmax, ymax):
-                geom = ogr.Geometry(ogr.wkbPolygon)
-                ring = ogr.Geometry(ogr.wkbLinearRing)
-                # Add small epsilon to help unioning polygons touching by edge
-                eps = 1e-12
-                ring.AddPoint_2D(xmin-eps, ymin-eps)
-                ring.AddPoint_2D(xmin-eps, ymax+eps)
-                ring.AddPoint_2D(xmax+eps, ymax+eps)
-                ring.AddPoint_2D(xmax+eps, ymin+eps)
-                ring.AddPoint_2D(xmin-eps, ymin-eps)
-                geom.AddGeometry(ring)
-                return geom
 
             subds_list = ds.GetSubDatasets()
             if subds_list:
@@ -199,6 +199,28 @@ for dirname in sorted(dirnames):
                 geom = geom.Intersection(polygon_from_bbox(bbox_xmin, bbox_ymin, bbox_xmax, bbox_ymax))
 
             feat.SetGeometry(geom)
+
+        elif full_filename.endswith('.json'):
+
+            json_content = json.loads(open(full_filename, 'rb').read().decode('UTF-8'))
+            if 'file_type' in json_content and json_content['file_type'] == 'deformation_model_master_file':
+                feat['type'] = 'DEFORMATION_MODEL'
+
+                feat['source_crs_code'] = json_content['source_crs']
+                sr = osr.SpatialReference()
+                assert sr.SetFromUserInput(feat['source_crs_code']) == 0
+                feat['source_crs_name'] = sr.GetName()
+
+                feat['target_crs_code'] = json_content['target_crs']
+                sr = osr.SpatialReference()
+                assert sr.SetFromUserInput(feat['target_crs_code']) == 0
+                feat['target_crs_name'] = sr.GetName()
+
+                feat['description'] = json_content['description'].replace('\\n', ' ') + ' (version ' + json_content['version'] + ')'
+                desc = feat['description']
+                xmin, ymin, xmax, ymax = json_content['extent']['parameters']['bbox']
+                geom = polygon_from_bbox(xmin, ymin, xmax, ymax)
+                feat.SetGeometry(geom)
 
         feat['url'] = cdn_url + '/' + f
         feat['name'] = f

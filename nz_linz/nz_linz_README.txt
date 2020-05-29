@@ -15,6 +15,23 @@ The New Zealand grids are published under the
 
 ## Included grids
 
+### NZGD2000 to ITRF96 transformation
+
+*Filename*: nz_linz_nzgd2000-(version).json
+*Reference*: https://www.linz.govt.nz/data/geodetic-system/datums-projections-and-heights/geodetic-datums/new-zealand-geodetic-datum-2000-nzgd2000/nzgd2000-deformation-model
+
+This is a set of deformation model files for each of the versions of the NZGD2000 datum.
+Each version is identified by a nominal publication date in yyyymmdd date format (for example nz_linz_nzgd2000-20180701.json. 
+The JSON files define the deformation model using a set of GeoTiff files, each of which is names with the prefix nz_linz_nzgd2000.
+Note that the transformation from ITRF96 to other realisations such as ITRF2008 should use the NZ specific transformations, for example EPSG:9082 to transform
+between between ITRF2008 and ITRF96.  These are documented in 
+https://www.linz.govt.nz/file/itrftonzgd2000pdf.
+
+Example of conversion from NZGD2000 to ITRF96 at epoch 2016.5
+
+  echo '173 -41 0 2016.5' | \
+     cct -t 2016.5 -d 8 +proj=defmodel +model=nz_linz_nzgd2000-20180701.json 
+
 ### NZGD1949 to NZGD2000 transformation  
 
 *Filename*: nz_linz_nzgd2kgrid0005.tif  

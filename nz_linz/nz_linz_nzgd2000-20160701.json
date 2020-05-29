@@ -1,0 +1,589 @@
+{
+  "file_type": "deformation_model_master_file",
+  "format_version": "1.0",
+  "name": "NZGD2000 deformation model",
+  "version": "20160701",
+  "publication_date": "2016-07-01T00:00:00Z",
+  "license": "Creative Commons Attribution 4.0 International",
+  "description": "New Zealand Deformation Model.\nDefines the secular model (National Deformation Model)\nand patches for significant deformation events since 2000.\n",
+  "authority": {
+    "name": "Land Information New Zealand",
+    "url": "http://www.linz.govt.nz",
+    "address": "Level 7, Radio New Zealand House\r\n155 The Terrace\r\nPO Box 5501\r\nWellington 6145",
+    "email": "customersupport@linz.govt.nz"
+  },
+  "links": [
+    {
+      "href": "https://www.linz.govt.nz/nzgd2000",
+      "rel": "about",
+      "type": "text/html",
+      "title": "About the NZGD2000 deformation model"
+    },
+    {
+      "href": "https://www.geodesy.linz.govt.nz/download/nzgd2000_deformation_model",
+      "rel": "source",
+      "type": "application/zip",
+      "title": "Authoritative source of the NZGD2000 deformation model"
+    },
+    {
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "rel": "license",
+      "type": "text/html",
+      "title": "Creative Commons Attribution 4.0 International license"
+    },
+    {
+      "href": "https://www.geodesy.linz.govt.nz/download/nzgd2000/metadata/nzgd2000_deformation_20160701_metadata.xml",
+      "rel": "metadata",
+      "type": "application/xml",
+      "title": " ISO 19115 XML encoded metadata regarding the deformation model"
+    }
+  ],
+  "source_crs": "EPSG:4959",
+  "target_crs": "EPSG:7907",
+  "definition_crs": "EPSG:4959",
+  "reference_epoch": "2001-01-01T00:00:00Z",
+  "uncertainty_reference_epoch": "2018-12-01T00:00:00Z",
+  "horizontal_offset_unit": "metre",
+  "vertical_offset_unit": "metre",
+  "horizontal_uncertainty_type": "circular 95% confidence limit",
+  "horizontal_uncertainty_unit": "metre",
+  "vertical_uncertainty_type": "95% confidence limit",
+  "vertical_uncertainty_unit": "metre",
+  "horizontal_offset_method": "addition",
+  "extent": {
+    "type": "bbox",
+    "parameters": {
+      "bbox": [158.0,-58.0,194.0,-25.0]
+    }
+  },
+  "time_extent": {
+    "first": "1900-01-01T00:00:00Z",
+    "last": "2050-01-01T00:00:00Z"
+  },
+  "components": [
+    {
+      "description": "Secular deformation model derived from NUVEL-1A rotation rates\nSecular deformation model derived from GNS model 2011 V4",
+      "displacement_type": "horizontal",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [158.0,-58.0,194.0,-25.0]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-ndm-grid02.tif",
+        "md5_checksum": "4120882dea2e3c6a878202a6959bb6f3"
+      },
+      "time_function": {
+        "type": "velocity",
+        "parameters": {
+          "reference_epoch": "2000-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "description": "Secretary Island (Fiordland) earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [165.85,-47.625,172.3,-43.5]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-si20030821-grid01.tif",
+        "md5_checksum": "0ec03ecf72777fac34df1719c2fe09f9"
+      },
+      "time_function": {
+        "type": "reverse_step",
+        "parameters": {
+          "step_epoch": "2003-08-21T00:00:00Z"
+        }
+      }
+    },
+    {
+      "description": "Macquarie Plate earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [158.8,-53.0,179.5,-40.125]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-mq20041223-grid011.tif",
+        "md5_checksum": "a71ac362dc67b06968e2090ac0155d60"
+      },
+      "time_function": {
+        "type": "reverse_step",
+        "parameters": {
+          "step_epoch": "2004-12-23T00:00:00Z"
+        }
+      }
+    },
+    {
+      "description": "Macquarie Plate earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [158.8,-53.0,179.5,-40.125]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-mq20041223-grid012.tif",
+        "md5_checksum": "81eaf03295f8cc4682220824f2e34513"
+      },
+      "time_function": {
+        "type": "reverse_step",
+        "parameters": {
+          "step_epoch": "2004-12-23T00:00:00Z"
+        }
+      }
+    },
+    {
+      "description": "Macquarie Plate earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [158.8,-53.0,179.5,-40.125]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-mq20041223-grid013.tif",
+        "md5_checksum": "db45cd6435655ad167fec21390354bc0"
+      },
+      "time_function": {
+        "type": "reverse_step",
+        "parameters": {
+          "step_epoch": "2004-12-23T00:00:00Z"
+        }
+      }
+    },
+    {
+      "description": "Macquarie Plate earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [158.8,-53.0,179.5,-40.125]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-mq20041223-grid014.tif",
+        "md5_checksum": "3d78b71f961b2ea472f37079a7dc9c0e"
+      },
+      "time_function": {
+        "type": "reverse_step",
+        "parameters": {
+          "step_epoch": "2004-12-23T00:00:00Z"
+        }
+      }
+    },
+    {
+      "description": "Macquarie Plate earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [158.8,-53.0,179.5,-40.125]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-mq20041223-grid015.tif",
+        "md5_checksum": "73e8b8976d1ee7f89cd2877fce64733c"
+      },
+      "time_function": {
+        "type": "reverse_step",
+        "parameters": {
+          "step_epoch": "2004-12-23T00:00:00Z"
+        }
+      }
+    },
+    {
+      "description": "Macquarie Plate earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [158.8,-53.0,179.5,-40.125]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-mq20041223-grid016.tif",
+        "md5_checksum": "152a8c97a9237d22fa77c9571ac0f546"
+      },
+      "time_function": {
+        "type": "reverse_step",
+        "parameters": {
+          "step_epoch": "2004-12-23T00:00:00Z"
+        }
+      }
+    },
+    {
+      "description": "Fiordland (George Sound) earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [165.85,-47.0,171.25,-43.75]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-gs20071016-grid01.tif",
+        "md5_checksum": "7fa88760633267e788419dbf41824b8e"
+      },
+      "time_function": {
+        "type": "reverse_step",
+        "parameters": {
+          "step_epoch": "2007-10-16T00:00:00Z"
+        }
+      }
+    },
+    {
+      "description": "Dusky Sound (Fiordland) earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [164.65,-51.375,179.5,-39.625]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-ds20090715-grid011.tif",
+        "md5_checksum": "cfb5dabe570827d64c8e51488722e067"
+      },
+      "time_function": {
+        "type": "piecewise",
+        "parameters": {
+          "before_first": "constant",
+          "after_last": "zero",
+          "model": [
+            {"epoch":"2009-07-15T00:00:00Z","scale_factor":-1.34},
+            {"epoch":"2009-07-15T00:00:00Z","scale_factor":-0.29},
+            {"epoch":"2011-09-01T00:00:00Z","scale_factor":0.0}
+          ]
+        }
+      }
+    },
+    {
+      "description": "Dusky Sound (Fiordland) earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [164.65,-51.375,179.5,-39.625]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-ds20090715-grid012.tif",
+        "md5_checksum": "2cc488f469a5977b65ddf5e365b57269"
+      },
+      "time_function": {
+        "type": "piecewise",
+        "parameters": {
+          "before_first": "constant",
+          "after_last": "zero",
+          "model": [
+            {"epoch":"2009-07-15T00:00:00Z","scale_factor":-1.34},
+            {"epoch":"2009-07-15T00:00:00Z","scale_factor":-0.29},
+            {"epoch":"2011-09-01T00:00:00Z","scale_factor":0.0}
+          ]
+        }
+      }
+    },
+    {
+      "description": "Dusky Sound (Fiordland) earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [164.65,-51.375,179.5,-39.625]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-ds20090715-grid013.tif",
+        "md5_checksum": "65975868bb53148233b65a40a6f1ce5a"
+      },
+      "time_function": {
+        "type": "piecewise",
+        "parameters": {
+          "before_first": "constant",
+          "after_last": "zero",
+          "model": [
+            {"epoch":"2009-07-15T00:00:00Z","scale_factor":-1.34},
+            {"epoch":"2009-07-15T00:00:00Z","scale_factor":-0.29},
+            {"epoch":"2011-09-01T00:00:00Z","scale_factor":0.0}
+          ]
+        }
+      }
+    },
+    {
+      "description": "Dusky Sound (Fiordland) earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [164.65,-51.375,179.5,-39.625]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-ds20090715-grid014.tif",
+        "md5_checksum": "5c157a6632225a3299bf78ec663dab26"
+      },
+      "time_function": {
+        "type": "piecewise",
+        "parameters": {
+          "before_first": "constant",
+          "after_last": "zero",
+          "model": [
+            {"epoch":"2009-07-15T00:00:00Z","scale_factor":-1.34},
+            {"epoch":"2009-07-15T00:00:00Z","scale_factor":-0.29},
+            {"epoch":"2011-09-01T00:00:00Z","scale_factor":0.0}
+          ]
+        }
+      }
+    },
+    {
+      "description": "Darfield earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [168.1,-46.75,176.2,-40.375]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-c120100904-grid01.tif",
+        "md5_checksum": "e585b8230dc8a11917dd6bbf0372e745"
+      },
+      "time_function": {
+        "type": "reverse_step",
+        "parameters": {
+          "step_epoch": "2010-09-04T00:00:00Z"
+        }
+      }
+    },
+    {
+      "description": "Christchurch February earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [170.8,-44.5,173.8,-42.375]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-c220110222-grid01.tif",
+        "md5_checksum": "ba61dca0e88a4fd87c19262bbd3e7450"
+      },
+      "time_function": {
+        "type": "reverse_step",
+        "parameters": {
+          "step_epoch": "2011-02-22T00:00:00Z"
+        }
+      }
+    },
+    {
+      "description": "Christchurch June earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [171.4,-44.375,173.65,-42.625]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-c320110613-grid01.tif",
+        "md5_checksum": "96f18fe3d433bf25f9f57ae722bd7460"
+      },
+      "time_function": {
+        "type": "reverse_step",
+        "parameters": {
+          "step_epoch": "2011-06-13T00:00:00Z"
+        }
+      }
+    },
+    {
+      "description": "Christchurch earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [171.55,-44.25,173.65,-42.75]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-c420111223-grid01.tif",
+        "md5_checksum": "ba3112904f5828722289fa1aa9fd9915"
+      },
+      "time_function": {
+        "type": "reverse_step",
+        "parameters": {
+          "step_epoch": "2011-12-23T00:00:00Z"
+        }
+      }
+    },
+    {
+      "description": "Mw 6.6 Cook Strait earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [171.55,-43.375,176.5,-39.5]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-cs20130721-grid02.tif",
+        "md5_checksum": "a0cb6d7871d5cffc51e121de1b154dfa"
+      },
+      "time_function": {
+        "type": "reverse_step",
+        "parameters": {
+          "step_epoch": "2013-07-21T00:00:00Z"
+        }
+      }
+    },
+    {
+      "description": "Mw 6.6 Lake Grassmere earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [170.95,-44.0,176.65,-39.25]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-lg20130816-grid02.tif",
+        "md5_checksum": "9531a13d493c005f4102770f75118d92"
+      },
+      "time_function": {
+        "type": "reverse_step",
+        "parameters": {
+          "step_epoch": "2013-08-16T00:00:00Z"
+        }
+      }
+    },
+    {
+      "description": "Christchurch Valentines Day earthquake",
+      "displacement_type": "3d",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [171.7,-44.125,173.65,-42.875]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-ch20160214-grid01.tif",
+        "md5_checksum": "3e51d726576358ec9fd1a0c20bd02e85"
+      },
+      "time_function": {
+        "type": "reverse_step",
+        "parameters": {
+          "step_epoch": "2016-02-14T00:00:00Z"
+        }
+      }
+    }
+  ]
+}

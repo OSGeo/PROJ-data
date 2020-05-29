@@ -1,0 +1,90 @@
+{
+  "file_type": "deformation_model_master_file",
+  "format_version": "1.0",
+  "name": "NZGD2000 deformation model",
+  "version": "20000101",
+  "publication_date": "2000-01-01T00:00:00Z",
+  "license": "Creative Commons Attribution 4.0 International",
+  "description": "New Zealand Deformation Model.\nDefines the secular model (National Deformation Model)\nand patches for significant deformation events since 2000.\n",
+  "authority": {
+    "name": "Land Information New Zealand",
+    "url": "http://www.linz.govt.nz",
+    "address": "Level 7, Radio New Zealand House\r\n155 The Terrace\r\nPO Box 5501\r\nWellington 6145",
+    "email": "customersupport@linz.govt.nz"
+  },
+  "links": [
+    {
+      "href": "https://www.linz.govt.nz/nzgd2000",
+      "rel": "about",
+      "type": "text/html",
+      "title": "About the NZGD2000 deformation model"
+    },
+    {
+      "href": "https://www.geodesy.linz.govt.nz/download/nzgd2000_deformation_model",
+      "rel": "source",
+      "type": "application/zip",
+      "title": "Authoritative source of the NZGD2000 deformation model"
+    },
+    {
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "rel": "license",
+      "type": "text/html",
+      "title": "Creative Commons Attribution 4.0 International license"
+    },
+    {
+      "href": "https://www.geodesy.linz.govt.nz/download/nzgd2000/metadata/nzgd2000_deformation_20000101_metadata.xml",
+      "rel": "metadata",
+      "type": "application/xml",
+      "title": " ISO 19115 XML encoded metadata regarding the deformation model"
+    }
+  ],
+  "source_crs": "EPSG:4959",
+  "target_crs": "EPSG:7907",
+  "definition_crs": "EPSG:4959",
+  "reference_epoch": "2001-01-01T00:00:00Z",
+  "uncertainty_reference_epoch": "2018-12-01T00:00:00Z",
+  "horizontal_offset_unit": "metre",
+  "vertical_offset_unit": "metre",
+  "horizontal_uncertainty_type": "circular 95% confidence limit",
+  "horizontal_uncertainty_unit": "metre",
+  "vertical_uncertainty_type": "95% confidence limit",
+  "vertical_uncertainty_unit": "metre",
+  "horizontal_offset_method": "addition",
+  "extent": {
+    "type": "bbox",
+    "parameters": {
+      "bbox": [165.0,-48.0,180.0,-32.0]
+    }
+  },
+  "time_extent": {
+    "first": "1900-01-01T00:00:00Z",
+    "last": "2050-01-01T00:00:00Z"
+  },
+  "components": [
+    {
+      "description": "Secular deformation model derived from GNS model 1998b",
+      "displacement_type": "horizontal",
+      "uncertainty_type": "none",
+      "horizontal_uncertainty": 0.01,
+      "vertical_uncertainty": 0.01,
+      "extent": {
+        "type": "bbox",
+        "parameters": {
+          "bbox": [165.0,-48.0,180.0,-32.0]
+        }
+      },
+      "spatial_model": {
+        "type": "GeoTIFF",
+        "interpolation_method": "bilinear",
+        "filename": "nz_linz_nzgd2000-ndm-grid01.tif",
+        "md5_checksum": "86262382059a2ab6005558ee644642c8"
+      },
+      "time_function": {
+        "type": "velocity",
+        "parameters": {
+          "reference_epoch": "2000-01-01T00:00:00Z"
+        }
+      }
+    }
+  ]
+}
