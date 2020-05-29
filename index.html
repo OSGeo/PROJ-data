@@ -173,6 +173,7 @@ types_enabled['horizontal'] = true;
 types_enabled['geoid'] = true;
 types_enabled['vertical_adjustments'] = true;
 types_enabled['velocity'] = true;
+types_enabled['deformation_model'] = true;
 types_enabled['other'] = true;
 function refresh_source() {
     featureSource.clear();
@@ -196,11 +197,16 @@ function refresh_source() {
                 feature.properties.type == 'VELOCITY') {
                 ok_type = true;
             }
+            if( types_enabled['deformation_model'] &&
+                feature.properties.type == 'DEFORMATION_MODEL') {
+                ok_type = true;
+            }
             if( types_enabled['other'] &&
-            feature.properties.type != 'HORIZONTAL_OFFSET' &&
+                feature.properties.type != 'HORIZONTAL_OFFSET' &&
                 feature.properties.type != 'VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL' &&
                 feature.properties.type != 'VERTICAL_OFFSET_VERTICAL_TO_VERTICAL' &&
-                feature.properties.type != 'VELOCITY') {
+                feature.properties.type != 'VELOCITY' &&
+                feature.properties.type != 'DEFORMATION_MODEL') {
                 ok_type = true;
             }
             var ok_agency = agencies_enabled[feature.properties.source_id];
@@ -241,6 +247,7 @@ create_checkbox('horizontal', 'Horizontal shift grids', type_control, types_enab
 create_checkbox('geoid', 'Geoid models', type_control, types_enabled);
 create_checkbox('vertical_adjustments', 'Vertical shifts', type_control, types_enabled);
 create_checkbox('velocity', 'Velocity grids', type_control, types_enabled);
+create_checkbox('deformation_model', 'Deformation models', type_control, types_enabled);
 create_checkbox('other', 'Other grids', type_control, types_enabled);
 
 /**
@@ -307,6 +314,8 @@ map.on('singleclick', function(evt) {
     requests = [];
     map.forEachFeatureAtPixel(evt.pixel, function(feature, layer) {
         var props = feature.getProperties();
+        if( props.url.indexOf('.tif') < 0 )
+            return;
         count ++;
         //content_innerHTML += '<p><a href="' + props.name + '">' + props.name + '</a></p>';
         details_innerHTML += '<hr>';
@@ -598,7 +607,7 @@ map.on('singleclick', function(evt) {
 <li><a href="nl_nsgi_rdcorr2018.tif">nl_nsgi_rdcorr2018.tif</a> - Netherlands - Amersfoort (EPSG:4289) to ETRS89 (EPSG:4258). Last modified: 2020-01-24</li>
 <li><a href="nl_nsgi_rdtrans2018.tif">nl_nsgi_rdtrans2018.tif</a> - Netherlands - Amersfoort (EPSG:4289) to ETRS89 (EPSG:4258). Last modified: 2020-01-24</li>
 </ul><hr><h3><a href="https://www.linz.govt.nz/">Land Information New Zealand</a></h3><ul>
-<li><a href="nz_linz_README.txt">nz_linz_README.txt</a>. Last modified: 2020-01-24</li>
+<li><a href="nz_linz_README.txt">nz_linz_README.txt</a>. Last modified: 2020-05-29</li>
 <li><a href="nz_linz_auckht1946-nzvd2016.tif">nz_linz_auckht1946-nzvd2016.tif</a> - New Zealand - Auckland - NZVD2016 height (EPSG:7839) to Auckland 1946 height (EPSG:5759). Last modified: 2020-02-02</li>
 <li><a href="nz_linz_blufht1955-nzvd2016.tif">nz_linz_blufht1955-nzvd2016.tif</a> - New Zealand - Bluff - NZVD2016 height (EPSG:7839) to Bluff 1955 height (EPSG:5760). Last modified: 2020-02-02</li>
 <li><a href="nz_linz_dublht1960-nzvd2016.tif">nz_linz_dublht1960-nzvd2016.tif</a> - New Zealand - Dunedin-Bluff - NZVD2016 height (EPSG:7839) to Dunedin-Bluff 1960 height (EPSG:4458). Last modified: 2020-02-02</li>
@@ -608,6 +617,69 @@ map.on('singleclick', function(evt) {
 <li><a href="nz_linz_motuht1953-nzvd2016.tif">nz_linz_motuht1953-nzvd2016.tif</a> - New Zealand - Moturiki - NZVD2016 height (EPSG:7839) to Moturiki 1953 height (EPSG:5764). Last modified: 2020-02-02</li>
 <li><a href="nz_linz_napiht1962-nzvd2016.tif">nz_linz_napiht1962-nzvd2016.tif</a> - New Zealand - Napier - NZVD2016 height (EPSG:7839) to Napier 1962 height (EPSG:5765). Last modified: 2020-02-02</li>
 <li><a href="nz_linz_nelsht1955-nzvd2016.tif">nz_linz_nelsht1955-nzvd2016.tif</a> - New Zealand - Nelson - NZVD2016 height (EPSG:7839) to Nelson 1955 height (EPSG:5766). Last modified: 2020-02-02</li>
+<li><a href="nz_linz_nzgd2000-20000101.json">nz_linz_nzgd2000-20000101.json</a> - New Zealand Deformation Model.
+Defines the secular model (National Deformation Model)
+and patches for significant deformation events since 2000.
+ (version 20000101). Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-20130801.json">nz_linz_nzgd2000-20130801.json</a> - New Zealand Deformation Model.
+Defines the secular model (National Deformation Model)
+and patches for significant deformation events since 2000.
+ (version 20130801). Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-20140201.json">nz_linz_nzgd2000-20140201.json</a> - New Zealand Deformation Model.
+Defines the secular model (National Deformation Model)
+and patches for significant deformation events since 2000.
+ (version 20140201). Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-20150101.json">nz_linz_nzgd2000-20150101.json</a> - New Zealand Deformation Model.
+Defines the secular model (National Deformation Model)
+and patches for significant deformation events since 2000.
+ (version 20150101). Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-20160701.json">nz_linz_nzgd2000-20160701.json</a> - New Zealand Deformation Model.
+Defines the secular model (National Deformation Model)
+and patches for significant deformation events since 2000.
+ (version 20160701). Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-20171201.json">nz_linz_nzgd2000-20171201.json</a> - New Zealand Deformation Model.
+Defines the secular model (National Deformation Model)
+and patches for significant deformation events since 2000.
+ (version 20171201). Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-20180701.json">nz_linz_nzgd2000-20180701.json</a> - New Zealand Deformation Model.
+Defines the secular model (National Deformation Model)
+and patches for significant deformation events since 2000.
+ (version 20180701). Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-c120100904-grid01.tif">nz_linz_nzgd2000-c120100904-grid01.tif</a> - NZGD2000 deformation model - Darfield earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-c220110222-grid01.tif">nz_linz_nzgd2000-c220110222-grid01.tif</a> - NZGD2000 deformation model - Christchurch February earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-c320110613-grid01.tif">nz_linz_nzgd2000-c320110613-grid01.tif</a> - NZGD2000 deformation model - Christchurch June earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-c420111223-grid01.tif">nz_linz_nzgd2000-c420111223-grid01.tif</a> - NZGD2000 deformation model - Christchurch earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ch20160214-grid01.tif">nz_linz_nzgd2000-ch20160214-grid01.tif</a> - NZGD2000 deformation model - Christchurch Valentines Day earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-cs20130721-grid01.tif">nz_linz_nzgd2000-cs20130721-grid01.tif</a> - NZGD2000 deformation model - Mw 6.6 Cook Strait earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-cs20130721-grid02.tif">nz_linz_nzgd2000-cs20130721-grid02.tif</a> - NZGD2000 deformation model - Mw 6.6 Cook Strait earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ds20090715-grid011.tif">nz_linz_nzgd2000-ds20090715-grid011.tif</a> - NZGD2000 deformation model - Dusky Sound (Fiordland) earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ds20090715-grid012.tif">nz_linz_nzgd2000-ds20090715-grid012.tif</a> - NZGD2000 deformation model - Dusky Sound (Fiordland) earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ds20090715-grid013.tif">nz_linz_nzgd2000-ds20090715-grid013.tif</a> - NZGD2000 deformation model - Dusky Sound (Fiordland) earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ds20090715-grid014.tif">nz_linz_nzgd2000-ds20090715-grid014.tif</a> - NZGD2000 deformation model - Dusky Sound (Fiordland) earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-gs20071016-grid01.tif">nz_linz_nzgd2000-gs20071016-grid01.tif</a> - NZGD2000 deformation model - Fiordland (George Sound) earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ka20161114-grid01.tif">nz_linz_nzgd2000-ka20161114-grid01.tif</a> - NZGD2000 deformation model - Event: Kaikoura earthquake, 14 November 2016. Source model: Geodetic source model, based on GPS, InSAR, and LiDAR data; elastic half-space assumption; . Version: Model 002, 23 June 2017. . Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ka20161114-grid02.tif">nz_linz_nzgd2000-ka20161114-grid02.tif</a> - NZGD2000 deformation model - Event: Kaikoura earthquake, 14 November 2016. Source model: Geodetic source model, based on GPS, InSAR, and LiDAR data; elastic half-space assumption; . Version: Model 002, 23 June 2017. . Size: 1.0 MB. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ka20161114-grid03.tif">nz_linz_nzgd2000-ka20161114-grid03.tif</a> - NZGD2000 deformation model - Event: Kaikoura earthquake, 14 November 2016. Source model: Geodetic source model, based on GPS, InSAR, and LiDAR data; elastic half-space assumption; . Version: Model 002, 23 June 2017. . Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ka20161114-grid04.tif">nz_linz_nzgd2000-ka20161114-grid04.tif</a> - NZGD2000 deformation model - Event: Kaikoura earthquake postearthquake month 0-1, 14 November 2016. Source model: Geodetic source model, based on GPS, InSAR, and LiDAR data; elastic half-space assumption; . Version: Model 002, 23 June 2017. . Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ka20161114-grid05.tif">nz_linz_nzgd2000-ka20161114-grid05.tif</a> - NZGD2000 deformation model - Event: Kaikoura earthquake postearthquake month 0-1, 14 November 2016. Source model: Geodetic source model, based on GPS, InSAR, and LiDAR data; elastic half-space assumption; . Version: Model 002, 23 June 2017. . Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ka20161114-grid06.tif">nz_linz_nzgd2000-ka20161114-grid06.tif</a> - NZGD2000 deformation model - Event: Kaikoura earthquake postearthquake month 0-1, 14 November 2016. Source model: Geodetic source model, based on GPS, InSAR, and LiDAR data; elastic half-space assumption; . Version: Model 002, 23 June 2017. . Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ka20161114-grid07.tif">nz_linz_nzgd2000-ka20161114-grid07.tif</a> - NZGD2000 deformation model - Event: Kaikoura earthquake months1-3 post-earthquake, 14 November 2016. Source model: Geodetic source model, based on GPS, InSAR, and LiDAR data; elastic half-space assumption; . Version: Model 002, 23 June 2017. . Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ka20161114-grid08.tif">nz_linz_nzgd2000-ka20161114-grid08.tif</a> - NZGD2000 deformation model - Event: Kaikoura earthquake months1-3 post-earthquake, 14 November 2016. Source model: Geodetic source model, based on GPS, InSAR, and LiDAR data; elastic half-space assumption; . Version: Model 002, 23 June 2017. . Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ka20161114-grid09.tif">nz_linz_nzgd2000-ka20161114-grid09.tif</a> - NZGD2000 deformation model - Event: Kaikoura earthquake months1-3 post-earthquake, 14 November 2016. Source model: Geodetic source model, based on GPS, InSAR, and LiDAR data; elastic half-space assumption; . Version: Model 002, 23 June 2017. . Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ka20161114-grid10.tif">nz_linz_nzgd2000-ka20161114-grid10.tif</a> - NZGD2000 deformation model - Event: Kaikoura earthquake, 14 November 2016. Refinement for horizontal difference between observations and model. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ka20161114-grid11.tif">nz_linz_nzgd2000-ka20161114-grid11.tif</a> - NZGD2000 deformation model - Kaikoura earthquake second refinement grid - horizontal. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ka20161114-grid12.tif">nz_linz_nzgd2000-ka20161114-grid12.tif</a> - NZGD2000 deformation model - Kaikoura earthquake second refinement grid -vertical. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-lg20130816-grid01.tif">nz_linz_nzgd2000-lg20130816-grid01.tif</a> - NZGD2000 deformation model - Mw 6.6 Lake Grassmere earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-lg20130816-grid02.tif">nz_linz_nzgd2000-lg20130816-grid02.tif</a> - NZGD2000 deformation model - Mw 6.6 Lake Grassmere earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-mq20041223-grid011.tif">nz_linz_nzgd2000-mq20041223-grid011.tif</a> - NZGD2000 deformation model - Macquarie Plate earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-mq20041223-grid012.tif">nz_linz_nzgd2000-mq20041223-grid012.tif</a> - NZGD2000 deformation model - Macquarie Plate earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-mq20041223-grid013.tif">nz_linz_nzgd2000-mq20041223-grid013.tif</a> - NZGD2000 deformation model - Macquarie Plate earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-mq20041223-grid014.tif">nz_linz_nzgd2000-mq20041223-grid014.tif</a> - NZGD2000 deformation model - Macquarie Plate earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-mq20041223-grid015.tif">nz_linz_nzgd2000-mq20041223-grid015.tif</a> - NZGD2000 deformation model - Macquarie Plate earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-mq20041223-grid016.tif">nz_linz_nzgd2000-mq20041223-grid016.tif</a> - NZGD2000 deformation model - Macquarie Plate earthquake. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ndm-grid01.tif">nz_linz_nzgd2000-ndm-grid01.tif</a> - NZGD2000 deformation model - Secular deformation model derived from GNS model 1998b. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-ndm-grid02.tif">nz_linz_nzgd2000-ndm-grid02.tif</a> - NZGD2000 deformation model - Secular deformation model derived from NUVEL-1A rotation rates. Last modified: 2020-05-29</li>
+<li><a href="nz_linz_nzgd2000-si20030821-grid01.tif">nz_linz_nzgd2000-si20030821-grid01.tif</a> - NZGD2000 deformation model - Secretary Island (Fiordland) earthquake. Last modified: 2020-05-29</li>
 <li><a href="nz_linz_nzgd2kgrid0005.tif">nz_linz_nzgd2kgrid0005.tif</a> - New Zealand - NZGD49 (EPSG:4272) to NZGD2000 (EPSG:4167). Last modified: 2020-01-24</li>
 <li><a href="nz_linz_nzgeoid2009.tif">nz_linz_nzgeoid2009.tif</a> - New Zealand - NZGD2000 (EPSG:4959) to NZVD2009 height (EPSG:4440). Size: 4.1 MB. Last modified: 2020-01-24</li>
 <li><a href="nz_linz_nzgeoid2016.tif">nz_linz_nzgeoid2016.tif</a> - New Zealand - NZGD2000 (EPSG:4959) to NZVD2016 height (EPSG:7839). Size: 5.0 MB. Last modified: 2020-01-24</li>
@@ -740,7 +812,7 @@ map.on('singleclick', function(evt) {
 <li><a href="us_noaa_wyhpgn.tif">us_noaa_wyhpgn.tif</a> - USA - Wyoming - NAD83 (EPSG:4269) to NAD83(HARN) (EPSG:4152). Last modified: 2020-01-24</li>
 </ul>
 <p>
-Total size of content: 491 MB
+Total size of content: 495 MB
 </p>
 
 <h2>Logs</h2>
