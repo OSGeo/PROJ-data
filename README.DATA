@@ -60,6 +60,7 @@ For example us_noaa for files originating from US NOAA.
 * [de_lgl_bw: Germany LGL Baden-Württemberg](https://github.com/OSGeo/PROJ-data/blob/master/de_lgl_bw/)
 * [de_lgvl_saarland: Germany LGVL Saarland](https://github.com/OSGeo/PROJ-data/blob/master/de_lgvl_saarland/)
 * [dk_sdfe: Denmark SDFE](https://github.com/OSGeo/PROJ-data/blob/master/dk_sdfe/)
+* [es_ign: Spain IGN](https://github.com/OSGeo/PROJ-data/blob/master/es_ign/)
 * [es_cat_icgc: Spain Catalonia ICGC](https://github.com/OSGeo/PROJ-data/blob/master/es_cat_icgc/)
 * [eur_nkg: Nordic Geodetic Commission](https://github.com/OSGeo/PROJ-data/blob/master/eur_nkg/)
 * [fr_ign: France IGN](https://github.com/OSGeo/PROJ-data/blob/master/fr_ign/)
