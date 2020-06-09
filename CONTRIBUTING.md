@@ -23,6 +23,7 @@ If a new agency has to be created:
 4. Create a .github subdirectory
 5. Create a symbolic link from the file created at 3. as README.md: ln -s ../{agency_id}_README.txt .github/README.md
 6. Edit CMakeLists.txt at the root of the repository to package the new directory
+7. Edit agency.json at the root of the repository to add the new agency (optionally also in README.DATA)
 
 The steps for adding a GeoTIFF grid to an existing subdirectory are:
 1. Make sure the naming convention for the grid is {agency_id}_{some_name}.tif
