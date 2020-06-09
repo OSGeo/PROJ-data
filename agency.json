@@ -72,6 +72,12 @@
         "url": "https://github.com/NordicGeodesy/NordicTransformations"
     },
     {
+        "id": "es_ign",
+        "country": "Spain",
+        "agency":"Instituto Geográfico Nacional (IGN)",
+        "url": "https://www.ign.es/"
+    },
+    {
         "id": "es_cat_icgc",
         "country": "Spain",
         "agency":"Institut Cartogràfic i Geològic de Catalunya (ICGC)",
