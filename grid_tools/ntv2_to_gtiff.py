@@ -132,7 +132,8 @@ def get_year_month_day(src_date, src_basename):
                             'A66_National_13_09_01.gsb',
                             'National_84_02_07_01.gsb',
                             'AT_GIS_GRID.gsb',
-                            '100800401.gsb') or \
+                            '100800401.gsb',
+                            'SPED2ETV2.gsb') or \
                 src_basename.startswith('GDA94_GDA2020'):
             # nzgd2kgrid0005 has 20111999, hence D-M-Y
             day = int(src_date[0:2])
