@@ -8,7 +8,7 @@ from [IGN](https://www.ign.es/)
 ### Spanish (Spain - mainland and Balearic Islands) horizontal ED50 to ETRS89 grid: 
 
 *Source*: [IGN Spain](https://www.fomento.gob.es/recursos_mfom/gridshift1.zip), actually retrieved from https://github.com/oscarfonts/geocalc/blob/master/src/main/resources/org/geotools/referencing/factory/gridshift/SPED2ETV2.gsb?raw=true  
-*Format*: GeoTIFF convered from NTv2  
+*Format*: GeoTIFF converted from NTv2 (with Baleares grid put first to be used in priority for points falling into it)  
 *License*: Derivated from Original IGN Data www.ign.es CC-BY 4.0. [Politica de datos](https://www.ign.es/web/ign/portal/politica-datos)  
 *Source CRS*: EPSG:4230 (ED50)  
 *Target CRS*: EPSG:4258 (ETRS89)  
