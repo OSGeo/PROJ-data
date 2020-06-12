@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v6.1.1/css/ol.css">
 -->
 <script src="ol.js"></script>
+<link rel="shortcut icon" href="favicon.png">
 <link rel="stylesheet" href="ol.css">
 <!-- corresponding to https://github.com/rouault/geotiff.js/pull/new/cumulative_fixes -->
 <script src="geotiff.bundle.min.js"></script>
