@@ -4,6 +4,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PROJ Datumgrid CDN</title>
 <!--
 <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v6.1.1/build/ol.js"></script>
@@ -18,6 +19,9 @@
     .map {
         width: 50%;
         height: 600px;
+    }
+    label {
+        white-space: nowrap;
     }
     .ol-popup {
         position: absolute;
@@ -89,16 +93,21 @@ the data: </p>
 <pre>wget --mirror https://cdn.proj.org/</pre>
 
 <h2>Content</h2>
-<div id="type_control" style="height:20px">
+<div id="type_control">
     <label>Types:</label>
 </div>
 <br>
-<div id="agency_control" style="height:80px">
-    <label>Agencies:</label>
+<div id="agency_control_div" style="margin-bottom: 20px">
+    <span id="agency_control">
+        <label>Agencies:</label>
+    </span>
+    <br>
+    <button type="button" style="margin: 5px;" onclick="agencies_selector(true)">Select all</button>
+    <button type="button" style="margin: 5px;" onclick="agencies_selector(false)">Deselect all</button>
 </div>
 <div>
     <div id="map" class="map" style="float: left;"></div>
-    <div id="details" style="height: 600px; overflow-y: scroll;">
+    <div id="details" style="height: 600px; overflow-y: scroll; padding: 0 5px">
         Click on the map to display the names of the files under the pointer,
         and get the values of the shift(s).
     </div>
@@ -167,6 +176,14 @@ var featureLayer = new ol.layer.Vector({
   style: style
 });
 
+function agencies_selector(checked) {
+    list_agencies.forEach(function(id){
+        document.getElementById('id_checkbox_' + id).checked = checked;
+        agencies_enabled[id] = checked;
+    });
+    refresh_source();
+}
+
 var types_enabled = {};
 types_enabled['horizontal'] = true;
 types_enabled['geoid'] = true;
@@ -229,10 +246,9 @@ function create_checkbox(id, label_name, group, map) {
     checkbox.checked = true;
 
     var label = document.createElement('label');
-    label.htmlFor = id_checkbox;
+    label.appendChild(checkbox);
     label.appendChild(document.createTextNode(label_name));
 
-    group.appendChild(checkbox);
     group.appendChild(label);
 
     document.getElementById(id_checkbox).addEventListener('change', function() {
