@@ -259,7 +259,7 @@ for dirname in sorted(dirnames):
         else:
             desc = ''
 
-        links.append('<li><a href="%s">%s</a>%s%s%s%s</li>' % (f, f, area_of_use, desc, size_str, last_modified))
+        links.append('<li><a style="word-break: break-word" href="%s">%s</a>%s%s%s%s</li>' % (f, f, area_of_use, desc, size_str, last_modified))
 
 total_size_str = '%d MB' % (total_size // (1024 * 1024))
 
