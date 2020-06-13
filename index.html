@@ -252,6 +252,7 @@ function create_checkbox(id, label_name, group, map) {
     label.appendChild(document.createTextNode(label_name));
 
     group.appendChild(label);
+    group.appendChild(document.createTextNode(' '));
 
     document.getElementById(id_checkbox).addEventListener('change', function() {
         map[id] = this.checked;
