@@ -29,6 +29,23 @@ The Belfast datum is used in the Northern Ireland.
 
 * uk_os_OSGM15_Belfast.tif
 
+### United Kingdom: OSGM15 height, ODN height -> ETRS89 ellipsoidal heights
+
+*Source*: [Ordnance Survey](https://www.ordnancesurvey.co.uk/business-and-government/help-and-support/navigation-technology/os-net/formats-for-developers.html)
+*Format*: GeoTIFF converted by `OSGM15_GB.sh`
+*License*: [The 2-Clause BSD License](https://opensource.org/licenses/bsd-license.php)
+
+Vertical transformation for Geoid model OSGM15, ODN height (EPSG:5701). Used in
+transformation from OSGM15 orthometric heights to ETRS89 ellipsoidal heights.
+The Belfast datum is used in the Great Britain mainland onshore.
+
+Since the original transformation should have applied to projected coordinates, this geoid model
+was reprojected to suit PROJ requirements in order to be able to apply it to geographic coordinates.
+Due to this fact slight inaccuracy can appear. In accordance to the Ordnance Survey developer pack
+test data max error is up to 0.02 m and RMSE is up to 0.00076 m.
+
+* uk_os_OSGM15_GB.tif
+
 ### United Kingdom: OSGB36 -> ETRS89
 
 *Source*: [Ordnance Survey](https://www.ordnancesurvey.co.uk/business-and-government/help-and-support/navigation-technology/os-net/formats-for-developers.html)  
