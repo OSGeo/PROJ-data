@@ -52,7 +52,7 @@ already have an entry for the grid, sometimes with a slightly different name.
 The relevant file to look into is [grid_transformation.sql](https://github.com/OSGeo/PROJ/blob/master/data/sql/grid_transformation.sql). 
 If the grid is not yet registered in the EPSG database, you are *strongly* encouraged to
 engage with EPSG to register it. This will make its addition to PROJ and its later maintenance
-much easier. http://www.epsg.org/EPSGDataset/Makechangerequest.aspx explains the procedure
+much easier. https://epsg.org/dataset-change-requests.html explains the procedure
 to follow to submit a change request to EPSG.
 
 You may find an entry like the following one:
