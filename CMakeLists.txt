@@ -21,6 +21,7 @@ set(CPACK_SOURCE_INSTALLED_DIRECTORIES
     "${CMAKE_CURRENT_SOURCE_DIR}/au_ga/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/au_icsm/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/be_ign/" "."
+    "${CMAKE_CURRENT_SOURCE_DIR}/br_ibge/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/ca_nrc/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/ca_que_mern/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/ch_swisstopo/" "."

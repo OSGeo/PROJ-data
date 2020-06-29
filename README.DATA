@@ -52,6 +52,7 @@ For example us_noaa for files originating from US NOAA.
 * [au_ga: Australia Geoscience Australia](https://github.com/OSGeo/PROJ-data/blob/master/au_ga/)
 * [au_icsm: Australia ICSM](https://github.com/OSGeo/PROJ-data/blob/master/au_icsm/)
 * [be_ign: Belgium IGN](https://github.com/OSGeo/PROJ-data/blob/master/be_ign/)
+* [br_ibge: IBGE](https://github.com/OSGeo/PROJ-data/blob/master/br_ibge/)
 * [ca_nrc: Canada NRC](https://github.com/OSGeo/PROJ-data/blob/master/ca_nrc/)
 * [ca_que_mern: Canada Quebec MERN](https://github.com/OSGeo/PROJ-data/blob/master/ca_que_mern/)
 * [ch_swisstopo: Switzerland Swissstopo](https://github.com/OSGeo/PROJ-data/blob/master/ch_swisstopo/)

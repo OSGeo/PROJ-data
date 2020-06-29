@@ -24,6 +24,12 @@
         "url": "http://www.ngi.be"
     },
     {
+        "id": "br_ibge",
+        "country": "Brazil",
+        "agency": "Instituto Brasileiro de Geografia e Estatistica (IBGE)",
+        "url": "https://www.ibge.gov.br"
+    },
+    {
         "id": "ca_nrc",
         "country": "Canada",
         "agency": "Natural Resources Canada",
