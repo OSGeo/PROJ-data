@@ -57,8 +57,8 @@ ca_nrc_TO27CSv1.tif,"Her Majesty the Queen in right of Canada as represented by 
 ca_que_mern_cq77na83.tif,Ministère de l'Énergie et des Ressources naturelles (MERN) du Québec,CC-BY-4.0
 ca_que_mern_na27na83.tif,Ministère de l'Énergie et des Ressources naturelles (MERN) du Québec,CC-BY-4.0
 ca_que_mern_README.txt,Disclaimed,Public domain
-ch_swisstopo_CHENyx06a.tif,Copyright 2007 Swisstopo,CC0-1.0
-ch_swisstopo_CHENyx06_ETRS.tif,Copyright 2007 Swisstopo,CC0-1.0
+ch_swisstopo_CHENyx06a.tif,"2007, Swisstopo",CC0-1.0
+ch_swisstopo_CHENyx06_ETRS.tif,"2007, Swisstopo",CC0-1.0
 ch_swisstopo_README.txt,Disclaimed,Public domain
 de_adv_BETA2007.tif,ADV,Free redistribution is allowed and welcome
 de_adv_README.txt,Disclaimed,Public domain
@@ -85,7 +85,7 @@ es_cat_icgc_100800401.tif,Institut Cartogràfic i Geològic de Catalunya (ICGC),
 es_cat_icgc_README.txt,Disclaimed,Public domain
 es_ign_egm08-rednap.tif,Instituto Geográfico Nacional (IGN) Spain,CC-BY-4.0
 es_ign_README.txt,Disclaimed,Public domain
-es_ign_SPED2ETV2.tif,Copyright 2009 Instituto Geográfico Nacional (IGN) Spain,CC-BY-4.0
+es_ign_SPED2ETV2.tif,"2009, Instituto Geográfico Nacional (IGN) Spain",CC-BY-4.0
 eur_nkg_nkgrf03vel_realigned.tif,Nordic Geodetic Commission,CC-BY-4.0
 eur_nkg_README.txt,Disclaimed,Public domain
 FO,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
@@ -136,13 +136,13 @@ fr_ign_RAMG2016.tif,Institut National Geographique (IGN) France,Open License Fra
 fr_ign_RAR07_bl.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
 fr_ign_RASPM2018.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
 fr_ign_README.txt,Disclaimed,Public domain
-ISL,"Copyright 2017-2019, National Land Survey of Iceland",CC-BY-4.0
-is_lmi_Icegeoid_ISN2004.tif,"Copyright 2017-2019, National Land Survey of Iceland",CC-BY-4.0
-is_lmi_Icegeoid_ISN2016.tif,"Copyright 2017-2019, National Land Survey of Iceland",CC-BY-4.0
-is_lmi_Icegeoid_ISN93.tif,"Copyright 2017-2019, National Land Survey of Iceland",CC-BY-4.0
-is_lmi_ISN2004_ISN2016.tif,"Copyright 2017-2019, National Land Survey of Iceland",CC-BY-4.0
-is_lmi_ISN93_ISN2016.tif,"Copyright 2017-2019, National Land Survey of Iceland",CC-BY-4.0
-is_lmi_ISN_vel_beta.tif,"Copyright 2017-2019, National Land Survey of Iceland",CC-BY-4.0
+ISL,"2017-2019, National Land Survey of Iceland",CC-BY-4.0
+is_lmi_Icegeoid_ISN2004.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0
+is_lmi_Icegeoid_ISN2016.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0
+is_lmi_Icegeoid_ISN93.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0
+is_lmi_ISN2004_ISN2016.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0
+is_lmi_ISN93_ISN2016.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0
+is_lmi_ISN_vel_beta.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0
 is_lmi_README.txt,Disclaimed,Public domain
 NKG,Nordic Geodetic Commission,CC-BY-4.0
 nc_dittt_gr3dnc01b.tif,Gouvernement de Nouvelle Calédonie - DITTT,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
@@ -220,9 +220,9 @@ pt_dgt_README.txt,Disclaimed,Public domain
 README.DATA,Disclaimed,Public domain
 se_lantmateriet_README.txt,Disclaimed,Public domain
 se_lantmateriet_SWEN17_RH2000.tif,Lantmäteriet,CC0-1.0
-sk_gku_JTSK03_to_JTSK.tif,Copyright 2013 - GKU Slovakia,CC-BY-4.0
-sk_gku_Slovakia_ETRS89h_to_Baltic1957.tif,Copyright 2005 - GKU Slovakia,CC-BY-4.0
-sk_gku_Slovakia_ETRS89h_to_EVRF2007.tif,Copyright 2014 - GKU Slovakia,CC-BY-4.0
+sk_gku_JTSK03_to_JTSK.tif,"2013, GKU Slovakia",CC-BY-4.0
+sk_gku_Slovakia_ETRS89h_to_Baltic1957.tif,"2005, GKU Slovakia",CC-BY-4.0
+sk_gku_Slovakia_ETRS89h_to_EVRF2007.tif,"2014, GKU Slovakia",CC-BY-4.0
 uk_os_OSGM15_Belfast.tif,Ordnance Survey UK,BSD-2-Clause
 uk_os_OSGM15_GB.tif,Ordnance Survey UK,BSD-2-Clause
 uk_os_OSGM15_Malin.tif,Ordnance Survey UK,BSD-2-Clause
