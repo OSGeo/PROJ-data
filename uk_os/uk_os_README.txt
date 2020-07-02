@@ -41,8 +41,10 @@ The Belfast datum is used in the Great Britain mainland onshore.
 
 Since the original transformation should have applied to projected coordinates, this geoid model
 was reprojected to suit PROJ requirements in order to be able to apply it to geographic coordinates.
-Due to this fact slight inaccuracy can appear. In accordance to the Ordnance Survey developer pack
-test data max error is up to 0.02 m and RMSE is up to 0.00076 m.
+Due to this reprojection, slight inaccuracy in addition to the existing transformation inaccuracy can
+appear.
+Compared to the Ordnance Survey developer pack test data, the additional error is up to 0.002m
+and RMSE is up to 0.00076m.
 
 * uk_os_OSGM15_GB.tif
 
