@@ -28,3 +28,17 @@ Vertical transformation for Geoid model EGM08-REDNAP. Used to make the transitio
 from heights in vertical CRS (EPSG:5782) to heights above the ellipsoid in ETRS89 (EPSG:4937).
 
 * es_ign_egm08-rednap.tif
+
+### Spanish (Spain - Canary Islands) vertical grid: 
+
+*Source*: [IGN Spain](ftp://ftp.geodesia.ign.es/geoide/ascii/)  
+*Converter*: vertoffset_grid_to_gtiff.py  
+*Format*: GeoTIFF convered from 'Arc/Info ASCII Grid'  
+*License*: Derivated from Original IGN Data www.ign.es CC-BY 4.0. [Politica de datos](https://www.ign.es/web/ign/portal/politica-datos)  
+*Horizontal CRS*: EPSG:4080 (REGCAN95)  
+
+Vertical transformation for Geoid model EGM08-REDNAP_Canarias. Used to make the transitions 
+from heights in vertical CRS (EPSG:9397 -Gran Canaria- and also the other Canary islands) 
+to heights above the ellipsoid in REGCAN95 (EPSG:4080).
+
+* es_ign_egm08-rednap-canarias.tif
