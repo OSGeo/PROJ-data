@@ -110,7 +110,8 @@ def get_year_month_day(src_date, src_basename):
                 src_basename.startswith('BWTA2017') or \
                 src_basename.startswith('BETA2007') or \
                 src_basename.startswith('D73_ETRS89_geo') or \
-                src_basename.startswith('DLx_ETRS89_geo'):
+                src_basename.startswith('DLx_ETRS89_geo') or \
+                src_basename.startswith('kanu_ntv2_'):
             # rdtrans2018.gsb has 22-11-18 &
             # ntf_r93.gsb has 31/10/07, hence D-M-Y
             day = int(src_date[0:2])
@@ -244,7 +245,10 @@ def create_unoptimized_file(sourcefilename, tmpfilename, args):
                                                       nbands,
                                                       gdal.GDT_Float32 if not args.uint16_encoding else gdal.GDT_UInt16)
         src_crs = osr.SpatialReference()
-        src_crs.SetFromUserInput(args.source_crs)
+        if src_crs.SetFromUserInput(args.source_crs) != 0:
+            raise Exception('Invalid source crs')
+        if not src_crs.IsGeographic():
+            raise Exception('Source crs should be a geographic CRS')
         tmp_ds.SetSpatialRef(src_crs)
         tmp_ds.SetGeoTransform(src_ds.GetGeoTransform())
         tmp_ds.SetMetadataItem('AREA_OR_POINT', 'Point')
@@ -310,19 +314,11 @@ def create_unoptimized_file(sourcefilename, tmpfilename, args):
 
                 if src_ds.GetDriver().ShortName == 'CTable2':
                     nvalues = src_ds.RasterXSize * src_ds.RasterYSize
-                    out_data = b''
                     # From radian to arc-seconds
-                    for v in struct.unpack('f' * nvalues, data):
-                        out_data += struct.pack('f',
-                                                v / math.pi * 180.0 * 3600)
-                    data = out_data
-
+                    data = b''.join(struct.pack('f', v / math.pi * 180.0 * 3600) for v in struct.unpack('f' * nvalues, data))
                 if i == 2 and args.positive_longitude_shift_value == 'east':
                     nvalues = src_ds.RasterXSize * src_ds.RasterYSize
-                    out_data = b''
-                    for v in struct.unpack('f' * nvalues, data):
-                        out_data += struct.pack('f', -v)
-                    data = out_data
+                    data = b''.join(struct.pack('f', -v) for v in struct.unpack('f' * nvalues, data))
                 tmp_ds.GetRasterBand(i).WriteRaster(0, 0, src_ds.RasterXSize, src_ds.RasterYSize,
                                                     data)
                 if idx_ifd == 0 or not compact_md:
@@ -341,7 +337,10 @@ def create_unoptimized_file(sourcefilename, tmpfilename, args):
                         tmp_ds.GetRasterBand(i).SetUnitType(args.accuracy_unit)
 
         dst_crs = osr.SpatialReference()
-        dst_crs.SetFromUserInput(args.target_crs)
+        if dst_crs.SetFromUserInput(args.target_crs) != 0:
+            raise Exception('Invalid target crs')
+        if not dst_crs.IsGeographic():
+            raise Exception('Target crs should be a geographic CRS')
         dst_auth_name = dst_crs.GetAuthorityName(None)
         dst_auth_code = dst_crs.GetAuthorityCode(None)
         if idx_ifd == 0 or not compact_md:
@@ -473,19 +472,12 @@ def check(sourcefilename, destfilename, args):
 
                 if src_ds.GetDriver().ShortName == 'CTable2':
                     nvalues = src_ds.RasterXSize * src_ds.RasterYSize
-                    out_data = b''
                     # From radian to arc-seconds
-                    for v in struct.unpack('f' * nvalues, data):
-                        out_data += struct.pack('f',
-                                                v / math.pi * 180.0 * 3600)
-                    data = out_data
+                    data = b''.join(struct.pack('f', v / math.pi * 180.0 * 3600) for v in struct.unpack('f' * nvalues, data))
 
                 if i+1 == 2 and args.positive_longitude_shift_value == 'east':
                     nvalues = src_ds.RasterXSize * src_ds.RasterYSize
-                    out_data = b''
-                    for v in struct.unpack('f' * nvalues, data):
-                        out_data += struct.pack('f', -v)
-                    data = out_data
+                    data = b''.join(struct.pack('f', -v) for v in struct.unpack('f' * nvalues, data))
                 assert dst_ds.GetRasterBand(i+1).ReadRaster() == data
         else:
             import numpy as np
