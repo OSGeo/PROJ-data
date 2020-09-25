@@ -67,6 +67,7 @@ For example us_noaa for files originating from US NOAA.
 * [fr_ign: France IGN](https://github.com/OSGeo/PROJ-data/blob/master/fr_ign/)
 * [is_lmi: Iceland LMI](https://github.com/OSGeo/PROJ-data/blob/master/is_lmi/)
 * [nl_nsgi: Nederlandse Samenwerking Geodetische Infrastructuur (NSGI)](https://github.com/OSGeo/PROJ-data/blob/master/nl_nsgi/)
+* [no_kv: Kartverket (SK)](https://github.com/OSGeo/PROJ-data/blob/master/no_kv/)
 * [nz_linz: New Zealand LINZ](https://github.com/OSGeo/PROJ-data/blob/master/nz_linz/)
 * [pt_dgt: Portugal DGT](https://github.com/OSGeo/PROJ-data/blob/master/pt_dgt/)
 * [se_lantmateriet: Sweden Lantmateriet](https://github.com/OSGeo/PROJ-data/blob/master/se_lantmateriet/)

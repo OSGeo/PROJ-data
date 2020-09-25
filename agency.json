@@ -120,6 +120,12 @@
         "url": "https://www.nsgi.nl/"
     },
     {
+        "id": "no_kv",
+        "country": "Norway",
+        "agency": "Kartverket (SK)",
+        "url": "https://www.kartverket.no/"
+    },
+    {
         "id": "nz_linz",
         "country": "New Zealand",
         "agency":"Land Information New Zealand",
