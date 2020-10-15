@@ -1,7 +1,7 @@
 # ch_swisstopo_README.txt
 
 The files in this section result from the conversion of datasets originating
-from [Swisstopo](ttps://www.swisstopo.admin.ch)
+from [Swisstopo](https://www.swisstopo.admin.ch)
 
 ## Included grids
 
