@@ -33,6 +33,7 @@ set(CPACK_SOURCE_INSTALLED_DIRECTORIES
     "${CMAKE_CURRENT_SOURCE_DIR}/es_ign/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/es_cat_icgc/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/eur_nkg/" "."
+    "${CMAKE_CURRENT_SOURCE_DIR}/fi_nls/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/fr_ign/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/is_lmi/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/nc_dittt/" "."
