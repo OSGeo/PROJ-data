@@ -96,6 +96,12 @@
         "url": "http://www.nordicgeodeticcommission.com/"
     },
     {
+        "id": "fi_nls",
+        "country": "Finland",
+        "agency":"National Land Survey of Finland (MML)",
+        "url": "https://www.maanmittauslaitos.fi"
+    },
+    {
         "id": "fr_ign",
         "country": "France",
         "agency":"IGN France",
