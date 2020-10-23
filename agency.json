@@ -114,6 +114,12 @@
         "url": "https://atlas.lmi.is/LmiData/index.php?id=626468364600"
     },
     {
+        "id": "jp_gsi",
+        "country": "Japan",
+        "agency": "Geospatial Information Authority of Japan",
+        "url": "https://www.gsi.go.jp/"
+    },
+    {
         "id": "nc_dittt",
         "country": "New Caledonia",
         "agency":"Gouvernement de Nouvelle Calédonie - DITTT",
