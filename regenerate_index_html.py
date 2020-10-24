@@ -230,6 +230,8 @@ for dirname in sorted(dirnames):
                 geom = polygon_from_bbox(xmin, ymin, xmax, ymax)
                 feat.SetGeometry(geom)
 
+            if 'extent' in json_content and 'name' in json_content['extent']:
+                feat['area_of_use'] = json_content['extent']['name']
 
         feat['url'] = cdn_url + '/' + f
         feat['name'] = f
