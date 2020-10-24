@@ -221,6 +221,15 @@ for dirname in sorted(dirnames):
                 xmin, ymin, xmax, ymax = json_content['extent']['parameters']['bbox']
                 geom = polygon_from_bbox(xmin, ymin, xmax, ymax)
                 feat.SetGeometry(geom)
+            elif 'file_type' in json_content and json_content['file_type'] == 'triangulation_file':
+                feat['type'] = 'TRIANGULATION'
+
+                feat['description'] = json_content['description'].replace('\\n', ' ') + ' (version ' + json_content['version'] + ')'
+                desc = feat['description']
+                xmin, ymin, xmax, ymax = json_content['extent']['parameters']['bbox']
+                geom = polygon_from_bbox(xmin, ymin, xmax, ymax)
+                feat.SetGeometry(geom)
+
 
         feat['url'] = cdn_url + '/' + f
         feat['name'] = f
