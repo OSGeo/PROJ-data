@@ -48,7 +48,7 @@ fi
 
 SOURCE_FILE=$1
 
-RES_LAT=0.0166667
+RES_LAT=0.0166666666667
 RES_LONG=0.0250
 
 NO_DATA_VALUE="999.0000"
@@ -56,23 +56,24 @@ NO_DATA_VALUE="999.0000"
 function generate_grid
 {
     TARGET_FILE=$1
-    SOUTH=$2
-    WEST=$3
-    NORTH=$4
-    EAST=$5
+    SOUTH=${2:--90}
+    WEST=${3:--180}
+    NORTH=${4:-90}
+    EAST=${5:-180}
 
     cat $SOURCE_FILE |
     python -c "$SCRIPT" $SOUTH $WEST $NORTH $EAST > input
 
     gdal_translate -mo "AREA_OR_POINT=Point" -r nearest -strict -a_nodata ${NO_DATA_VALUE} \
-                   -tr ${RES_LONG} ${RES_LAT} -a_srs EPSG:8994 input ${TARGET_FILE}
-
+                   -tr ${RES_LONG} ${RES_LAT} -a_srs EPSG:6667 input ${TARGET_FILE}
     rm input
 }
 
-# Grid file for JGD2011 (vertical) height, Japan - onshore mainland, bounding box 30.94, 129.3, 45.54, 145.87
-# Area of use code 3263
-generate_grid jp_gsi_gsigeo2011_mainland.tif 30.94 129.3 45.54 145.87
+# Grid file for JGD2011 (vertical) height, Japan - onshore mainland, extended bounding box 20, 120, 50, 150
+generate_grid jp_gsi_gsigeo2011_tmp.tif
+
+gdalwarp jp_gsi_gsigeo2011_tmp.tif jp_gsi_gsigeo2011.tif -overwrite -tr $RES_LONG $RES_LAT
+rm jp_gsi_gsigeo2011_tmp.tif
 
 # Add metadata with grid_tools of PROJ-data repository
 $SCRIPT_PATH/../grid_tools/vertoffset_grid_to_gtiff.py \
@@ -82,5 +83,5 @@ $SCRIPT_PATH/../grid_tools/vertoffset_grid_to_gtiff.py \
  --area-of-use "Japan - onshore mainland" \
  --source-crs "EPSG:6667" \
  --target-crs "EPSG:6695" \
- jp_gsi_gsigeo2011_mainland.tif jp_gsi_gsigeo2011_mainland.tif
+ jp_gsi_gsigeo2011.tif jp_gsi_gsigeo2011.tif
 
