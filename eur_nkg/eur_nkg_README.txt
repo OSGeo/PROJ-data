@@ -5,7 +5,7 @@ from [Nordic Geodetic Commission](https://github.com/NordicGeodesy/NordicTransfo
 
 ## Included grids
 
-### Nordic+Baltic countries: Deformation model
+### Nordic+Baltic countries: 2003 Deformation model
 
 *Source*: [The Nordic Geodetic Commission](https://github.com/NordicGeodesy/NordicTransformations)  
 *Format*: GeoTIFF file converted from CTable2 and GTX  
@@ -17,6 +17,18 @@ of ETRS89 in the Nordic and Baltic countries. See the `NKG` init-file for
 examples of use.
 
 * eur_nkg_nkgrf03vel_realigned.tif
+
+### Nordic+Baltic countries: 2017 Deformation model
+
+*Source*: [The Nordic Geodetic Commission](https://http://www.nordicgeodeticcommission.com/)
+*Format*: GeoTIFF file
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+Deformation model covering the Nordic and Baltic countries. Used in
+transformations between global reference frames and the local realisations
+of ETRS89 in the Nordic and Baltic countries.
+
+* eur_nkg_nkgrf17vel.tif
 
 ## Included init-files
 
