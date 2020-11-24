@@ -58,19 +58,24 @@ to follow to submit a change request to EPSG.
 You may find an entry like the following one:
 ```
 INSERT INTO "grid_transformation" VALUES(
-    'EPSG','15958',             -- transformation code
-    'RGF93 to NTF (2)',         -- transformation name
-    NULL,NULL,
-    'EPSG','9615','NTv2',       -- transformation method
-    'EPSG','4171',              -- source CRS
-    'EPSG','4275',              -- target CRS
-    'EPSG','3694',              -- area of use
-    1.0,                        -- accuracy
+    'EPSG','15958',              -- transformation code
+    'RGF93 to NTF (2)',          -- transformation name
+    'Emulation using NTv2 method of transformation NTF to RGF93 (1), code 9327. Note that grid file parameters are of opposite sign. May be taken as approximate transformation to ETRS89 or WGS 84 - see tfm codes 15959 and 15960.', -- remarks
+    'EPSG','9615','NTv2',        -- transformation method  
+    'EPSG','4171',               -- source CRS
+    'EPSG','4275',               -- target CRS
+    1.0,                         -- accuracy
     'EPSG','8656','Latitude and longitude difference file','rgf93_ntf.gsb', -- grid name
     NULL,NULL,NULL,NULL,
-    NULL,NULL,                  -- interpolation CRS
-    'ESRI-Fra 1m emulation',
-    0);
+    NULL,NULL,                   -- interpolation CRS 
+    'ESRI-Fra 1m emulation',0);
+    
+INSERT INTO "usage" VALUES('EPSG','11969',             -- usage code
+                           'grid_transformation',
+                           'EPSG','15958',             -- transformation code
+                           'EPSG','3694',              -- extent code (reference an entry in the "extent" table) 
+                           'EPSG','1041'               -- scope code (reference an entry in the "scope" table) 
+);
 ```
 This is a transformation from EPSG:4171 (RGF93) to EPSG:4275 (NTF) using the rgf93_ntf.gsb grid.
 
@@ -78,16 +83,22 @@ Or for a vertical transformation
 ```
 INSERT INTO "grid_transformation" VALUES(
     'EPSG','7001','ETRS89 to NAP height (1)',
-    NULL,NULL,
+    'Alternative to vertical component of official 3D RDNAPTRANS(TM)2008. The naptrans2008 correction grid incorporates the NLGEO2004 geoid model plus a fixed offset.',
     'EPSG','9665','Geographic3D to GravityRelatedHeight (US .gtx)',
     'EPSG','4937',
     'EPSG','5709',
-    'EPSG','1275',
     0.01,
     'EPSG','8666','Geoid (height correction) model file','naptrans2008.gtx',
     NULL,NULL,NULL,NULL,
     'EPSG','4289',              -- interpolation CRS has been manually added
     'RDNAP-Nld 2008',0);
+    
+INSERT INTO "usage" VALUES(
+    'EPSG','9882',
+    'grid_transformation',
+    'EPSG','7001',
+    'EPSG','1275',
+    'EPSG','1133');
 ```
 
 If the EPSG dataset does not include an entry, a custom entry may be added in the [grid_transformation_custom.sql](https://github.com/OSGeo/PROJ/blob/master/data/sql/grid_transformation_custom.sql) file.
