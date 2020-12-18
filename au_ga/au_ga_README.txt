@@ -35,5 +35,13 @@ Uses AusGeoid2020 model.
 
 * au_ga_AUSGeoid2020_20180201.tif
 
+### Australia: AGQG (version 20191107): GDA2020 -> AVWS height
+
+*Source*: [Geoscience Australia](https://www.icsm.gov.au/sites/default/files/2020-08/AVWS%20Technical%20Implementation%20Plan_V1.2.pdf)  
+*Format*: GeoTIFF converted from source GeoTIFF  
+*License*: [Creative Commons Attribution 4.0]  
+
+* au_ga_AGQG_20191107.tif
+
 
 [Creative Commons Attribution 4.0]: https://creativecommons.org/licenses/by/4.0/
