@@ -20,8 +20,8 @@ examples of use.
 
 ### Nordic+Baltic countries: 2017 Deformation model
 
-*Source*: [The Nordic Geodetic Commission](https://http://www.nordicgeodeticcommission.com/)
-*Format*: GeoTIFF file
+*Source*: [The Nordic Geodetic Commission](https://http://www.nordicgeodeticcommission.com/)  
+*Format*: GeoTIFF file  
 *License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 Deformation model covering the Nordic and Baltic countries. Used in
