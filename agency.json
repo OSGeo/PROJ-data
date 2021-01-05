@@ -96,6 +96,12 @@
         "url": "http://www.nordicgeodeticcommission.com/"
     },
     {
+        "id": "fi_nls",
+        "country": "Finland",
+        "agency":"National Land Survey of Finland (MML)",
+        "url": "https://www.maanmittauslaitos.fi"
+    },
+    {
         "id": "fr_ign",
         "country": "France",
         "agency":"IGN France",
@@ -106,6 +112,12 @@
         "country": "Iceland",
         "agency":"National Land Survey of Iceland",
         "url": "https://atlas.lmi.is/LmiData/index.php?id=626468364600"
+    },
+    {
+        "id": "jp_gsi",
+        "country": "Japan",
+        "agency": "Geospatial Information Authority of Japan",
+        "url": "https://www.gsi.go.jp/"
     },
     {
         "id": "nc_dittt",

@@ -264,7 +264,7 @@ create_checkbox('geoid', 'Geoid models', type_control, types_enabled);
 create_checkbox('vertical_adjustments', 'Vertical shifts', type_control, types_enabled);
 create_checkbox('velocity', 'Velocity grids', type_control, types_enabled);
 create_checkbox('deformation_model', 'Deformation models', type_control, types_enabled);
-create_checkbox('other', 'Other grids', type_control, types_enabled);
+create_checkbox('other', 'Other datasets', type_control, types_enabled);
 
 /**
  * Elements that make up the popup.
@@ -330,10 +330,7 @@ map.on('singleclick', function(evt) {
     requests = [];
     map.forEachFeatureAtPixel(evt.pixel, function(feature, layer) {
         var props = feature.getProperties();
-        if( props.url.indexOf('.tif') < 0 )
-            return;
-        count ++;
-        //content_innerHTML += '<p><a href="' + props.name + '">' + props.name + '</a></p>';
+
         details_innerHTML += '<hr>';
         details_innerHTML += '<p><a href="' + props.name + '">' + props.name + '</a>: '
         if( props.area_of_use ) {
@@ -341,6 +338,14 @@ map.on('singleclick', function(evt) {
         }
         details_innerHTML += props.source;
         details_innerHTML += ', ' + props.description;
+
+        if( props.url.indexOf('.tif') < 0 )
+        {
+            details_innerHTML += '</p>';
+            return;
+        }
+
+        count ++;
         const div_id = 'value_' + count + '_' + coordinate;
         details_innerHTML += '<div id="' + div_id + '"><p>Loading in progress...</p></div>';
         details_innerHTML += '</p>';

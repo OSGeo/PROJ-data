@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.6)
 
 project(PROJ_DATA)
 set(PROJ_DATA_VERSION_MAJOR 1)
-set(PROJ_DATA_VERSION_MINOR 2)
+set(PROJ_DATA_VERSION_MINOR 4)
 
 set(CPACK_SOURCE_GENERATOR "TGZ;ZIP")
 set(CPACK_INCLUDE_TOPLEVEL_DIRECTORY 0)
@@ -33,8 +33,10 @@ set(CPACK_SOURCE_INSTALLED_DIRECTORIES
     "${CMAKE_CURRENT_SOURCE_DIR}/es_ign/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/es_cat_icgc/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/eur_nkg/" "."
+    "${CMAKE_CURRENT_SOURCE_DIR}/fi_nls/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/fr_ign/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/is_lmi/" "."
+    "${CMAKE_CURRENT_SOURCE_DIR}/jp_gsi/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/nc_dittt/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/nl_nsgi/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/no_kv/" "."

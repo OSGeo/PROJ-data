@@ -4,6 +4,7 @@ at_bev_GEOID_GRS80_Oesterreich.tif
 at_bev_GV_Hoehengrid_plus_Geoid_V2.tif
 at_bev_GV_Hoehengrid_V1.tif
 at_bev_README.txt
+au_ga_AGQG_20191107.tif
 au_ga_AUSGeoid09_V1.01.tif
 au_ga_AUSGeoid2020_20180201.tif
 au_ga_AUSGeoid98.tif
@@ -88,7 +89,12 @@ es_ign_egm08-rednap.tif
 es_ign_README.txt
 es_ign_SPED2ETV2.tif
 eur_nkg_nkgrf03vel_realigned.tif
+eur_nkg_nkgrf17vel.tif
 eur_nkg_README.txt
+fi_nls_n43_n60.json
+fi_nls_n60_n2000.json
+fi_nls_README.txt
+fi_nls_ykj_etrs35fin.json
 FO
 fr_ign_CGVD2013RGSPM06.tif
 fr_ign_gg10_sbv2.tif
@@ -145,6 +151,8 @@ is_lmi_ISN2004_ISN2016.tif
 is_lmi_ISN93_ISN2016.tif
 is_lmi_ISN_vel_beta.tif
 is_lmi_README.txt
+jp_gsi_gsigeo2011.tif
+jp_gsi_README.txt
 nc_dittt_gr3dnc01b.tif
 nc_dittt_gr3dnc02b.tif
 nc_dittt_gr3dnc03a.tif

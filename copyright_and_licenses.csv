@@ -5,6 +5,7 @@ at_bev_GEOID_GRS80_Oesterreich.tif,"Austria Bundesamt für Eich- und Vermessungs
 at_bev_GV_Hoehengrid_plus_Geoid_V2.tif,"Austria Bundesamt für Eich- und Vermessungswessen (BEV)",CC-BY-4.0
 at_bev_GV_Hoehengrid_V1.tif,"Austria Bundesamt für Eich- und Vermessungswessen (BEV)",CC-BY-4.0
 at_bev_README.txt,Disclaimed,Public domain
+au_ga_AGQG_20191107.tif,Geoscience Australia,CC-BY-4.0
 au_ga_AUSGeoid09_V1.01.tif,Geoscience Australia,CC-BY-4.0
 au_ga_AUSGeoid2020_20180201.tif,Geoscience Australia,CC-BY-4.0
 au_ga_AUSGeoid98.tif,Geoscience Australia,CC-BY-4.0
@@ -88,7 +89,12 @@ es_ign_egm08-rednap-canarias.tif,Instituto Geográfico Nacional (IGN) Spain,CC-B
 es_ign_README.txt,Disclaimed,Public domain
 es_ign_SPED2ETV2.tif,"2009, Instituto Geográfico Nacional (IGN) Spain",CC-BY-4.0
 eur_nkg_nkgrf03vel_realigned.tif,Nordic Geodetic Commission,CC-BY-4.0
+eur_nkg_nkgrf17vel.tif,Nordic Geodetic Commission,CC-BY-4.0
 eur_nkg_README.txt,Disclaimed,Public domain
+fi_nls_n43_n60.json,National Land Survey of Finland,CC-BY-4.0
+fi_nls_n60_n2000.json,National Land Survey of Finland,CC-BY-4.0
+fi_nls_README.txt,Disclaimed,Public domain
+fi_nls_ykj_etrs35fin.json,National Land Survey of Finland,CC-BY-4.0
 FO,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
 fr_ign_CGVD2013RGSPM06.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
 fr_ign_gg10_sbv2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
@@ -145,6 +151,8 @@ is_lmi_ISN2004_ISN2016.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.
 is_lmi_ISN93_ISN2016.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0
 is_lmi_ISN_vel_beta.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0
 is_lmi_README.txt,Disclaimed,Public domain
+jp_gsi_gsigeo2011.tif,Geospatial Information Authority of Japan,CC-BY-4.0
+jp_gsi_README.txt,Disclaimed,Public domain
 NKG,Nordic Geodetic Commission,CC-BY-4.0
 nc_dittt_gr3dnc01b.tif,Gouvernement de Nouvelle Calédonie - DITTT,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
 nc_dittt_gr3dnc02b.tif,Gouvernement de Nouvelle Calédonie - DITTT,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
