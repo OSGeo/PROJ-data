@@ -26,3 +26,13 @@ Transform local height system NN1954 (EPSG:5776) to ETRS89 ellipsoidal heights (
 The horizontal grid coordinates are referenced to ETRS89.
 
 * no_kv_href2008a.tif
+
+### Norway: ETRS89 -> NGO1948
+
+*Source*: [Kartverket](https://kartkatalog.geonorge.no/metadata/transformasjoner/352fba08-f25e-499d-8a80-a1f78e526641/)  
+*Format*: JSON converted from text files  
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+Horizontal triangulation to transform coordinates from ETRS89 (EPSG:4258) to NGO1948 (EPSG:4273), with longitude/latitude order.
+
+* no_kv_ETRS89NO_NGO48_TIN.json
