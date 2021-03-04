@@ -41,3 +41,13 @@ EPSG:4936 (Extent EPSG:1352). The grid contains x-, y- and z-shifts between NKG:
 and EPSG:7922 at epoch 2000.0, which are computed based on 7 parameter Helmert smoothed with 
 Least Squares Collocation. Input to the computation is 189 points in the norwegian CORS network 
 referred in NKG:ETRF14 and EPSG:7922.
+
+### Norway: ETRS89 -> NGO1948
+
+*Source*: [Kartverket](https://kartkatalog.geonorge.no/metadata/transformasjoner/352fba08-f25e-499d-8a80-a1f78e526641/)  
+*Format*: JSON converted from text files  
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+Horizontal triangulation to transform coordinates from ETRS89 (EPSG:4258) to NGO1948 (EPSG:4273), with longitude/latitude order.
+
+* no_kv_ETRS89NO_NGO48_TIN.json
