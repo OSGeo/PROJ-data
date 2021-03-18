@@ -23,3 +23,18 @@ The difference between the grid and finite element transformation is on a level 
 
 * ch_swisstopo_CHENyx06a.tif
 * ch_swisstopo_CHENyx06_ETRS.tif
+
+### Switzerland vertical grid:
+
+*Source*: [swisstopo](https://www.swisstopo.admin.ch/en/knowledge-facts/surveying-geodesy/geoid.html)
+*Format*: GeoTIFF converted from 'Arc/Info ASCII Grid'
+*License*: [Creative Commons CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode)  
+*Credit*: (c) swisstopo
+*Horizontal CRS*: EPSG:4937 (ETRS89)  
+
+Two vertical transformations based on CHTRF95 for Geoid model CHGeo2004. Used to make the transitions 
+from heights in vertical CRS (EPSG:5729 - LHN95 heigh) or (EPSG:5728 - LN02 height) 
+to heights above the ellipsoid in ETRS89 (EPSG:4937).
+
+* ch_swisstopo_chgeo2004_ETRS89_LHN95.tif
+* ch_swisstopo_chgeo2004_ETRS89_LN02.tif
