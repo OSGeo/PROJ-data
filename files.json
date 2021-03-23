@@ -1,9 +1,9 @@
 [
-    { "name": "CGG2013n83.tif","area_code": "EPSG:1061" },
-    { "name": "CGG2013i08.tif","area_code": "EPSG:1061" },
-    { "name": "CGG2013an83.tif","area_code": "EPSG:1061" },
-    { "name": "CGG2013ai08.tif","area_code": "EPSG:1061" },
-    { "name": "HT2_2010v70.tif","area_code": "EPSG:1061" },
-    { "name": "conus.tif","area_code": "EPSG:2374" },
-    { "name": "AUSGeoid2020_20180201.tif","area_code": "EPSG:4493" }
+    { "name": "ca_nrc_CGG2013n83.tif","area_code": "EPSG:1061" },
+    { "name": "ca_nrc_CGG2013i08.tif","area_code": "EPSG:1061" },
+    { "name": "ca_nrc_CGG2013an83.tif","area_code": "EPSG:1061" },
+    { "name": "ca_nrc_CGG2013ai08.tif","area_code": "EPSG:1061" },
+    { "name": "ca_nrc_HT2_2010v70.tif","area_code": "EPSG:1061" },
+    { "name": "us_noaa_conus.tif","area_code": "EPSG:2374" },
+    { "name": "au_ga_AUSGeoid2020_20180201.tif","area_code": "EPSG:4493" }
 ]
