@@ -27,6 +27,21 @@ The horizontal grid coordinates are referenced to ETRS89.
 
 * no_kv_href2008a.tif
 
+### Norway: Geocentric translation correction grid NKG_ETRF14 epoch 2000.0 -> ETRF93 epoch 2000.0
+
+*Format*: GeoTIFF  
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)  
+*Source CRS*: NKG:ETRF14  
+*Target CRS*: EPSG:7922 (ETRF93)
+
+* no_kv_NKGETRF14_EPSG7922_2000.tif
+
+The correction grid is one of the steps in the transformation from EPSG:7789 to the norwegian 
+EPSG:4936 (Extent EPSG:1352). The grid contains x-, y- and z-shifts between NKG:ETRF14 
+and EPSG:7922 at epoch 2000.0, which are computed based on 7 parameter Helmert smoothed with 
+Least Squares Collocation. Input to the computation is 189 points in the norwegian CORS network 
+referred in NKG:ETRF14 and EPSG:7922.
+
 ### Norway: ETRS89 -> NGO1948
 
 *Source*: [Kartverket](https://kartkatalog.geonorge.no/metadata/transformasjoner/352fba08-f25e-499d-8a80-a1f78e526641/)  
