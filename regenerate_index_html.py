@@ -16,6 +16,7 @@ for item in agency_list:
 
 area_list = json.loads(open('area.json','rt').read())
 area_dict = {}
+area_used_dict = {}
 for item in area_list:
     area_dict[item['code']] = item
 
@@ -190,13 +191,16 @@ for dirname in sorted(dirnames):
 
             # Enforce stricter EPSG based bbox limitation for a few files
             if f in files_dict:
-                bbox_xmin, bbox_ymin, bbox_xmax, bbox_ymax = area_dict[files_dict[f]['area_code']]['bbox']
+                area_code = files_dict[f]['area_code']
+                bbox_xmin, bbox_ymin, bbox_xmax, bbox_ymax = area_dict[area_code]['bbox']
+                area_used_dict[area_code] = area_dict[area_code]
                 assert xmin < bbox_xmax
                 assert ymin < bbox_ymax
                 assert xmax > bbox_xmin
                 assert ymax > bbox_ymin
-                feat['file_size'] = [xmin, ymin, xmax, ymax]
+                feat['full_bbox'] = [xmin, ymin, xmax, ymax]
                 geom = geom.Intersection(polygon_from_bbox(bbox_xmin, bbox_ymin, bbox_xmax, bbox_ymax))
+                del files_dict[f]
 
             feat.SetGeometry(geom)
 
@@ -277,3 +281,8 @@ total_size_str = '%d MB' % (total_size // (1024 * 1024))
 content = '<!-- This is a generated file by regenerate_index_html.py. Do not modify !!!! Modify index.html.in instead if you need to make changes-->\n\n'
 content += open('index.html.in', 'rt').read().replace('${LINKS_WILL_BE_ADDED_HERE_BY_REGENERATE_INDEX_HTML}', '\n'.join(links)).replace('${TOTAL_SIZE}', total_size_str)
 open('index.html', 'wt').write(content)
+
+if files_dict:
+    raise Exception("unused files in files.json: " + str(files_dict))
+if area_used_dict != area_dict:
+    raise Exception("unused areas in area.json")
