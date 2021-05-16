@@ -1,0 +1,43 @@
+name: checks
+
+on: [push, pull_request]
+
+jobs:
+
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+            fetch-depth: 0
+        env:
+            GIT_LFS_SKIP_SMUDGE: 1
+
+      - name: Run
+        run: |
+            if [ "${GITHUB_EVENT_NAME}" = "pull_request" ]; then
+                echo "This is a pull request build"
+                export TRAVIS_BRANCH=origin/${GITHUB_BASE_REF}
+                export TRAVIS_PULL_REQUEST_BRANCH=${GITHUB_HEAD_REF}
+                export TRAVIS_COMMIT_RANGE=unused
+                git merge-base HEAD ${TRAVIS_BRANCH}
+            else
+                echo "This is a branch build"
+                git fetch --depth=50 origin ${{ github.ref }}
+                export TRAVIS_COMMIT_RANGE=$(git log --format="%H" | tail -n1)...${{ github.ref }}
+                export TRAVIS_PULL_REQUEST_BRANCH=
+            fi
+            sudo apt-get update
+            sudo apt-get install cmake make zip unzip pyflakes3 wget
+            ./travis/check_new_grids.sh
+            cd grid_tools
+            pyflakes3 *.py
+            wget https://github.com/OSGeo/proj-datumgrid/raw/master/north-america/ntv2_0.gsb
+            docker run --rm -v /home:/home osgeo/gdal:alpine-normal-latest python3 $PWD/ntv2_to_gtiff.py --copyright "Derived from work by Natural Resources Canada. Open Government Licence - Canada" --source-crs EPSG:4267 --target-crs EPSG:4269 $PWD/ntv2_0.gsb $PWD/ca_nrc_ntv2_0.tif
+            docker run --rm -v /home:/home osgeo/gdal:alpine-normal-latest python3 $PWD/check_gtiff_grid.py $PWD/ca_nrc_ntv2_0.tif
+            wget https://github.com/OSGeo/proj-datumgrid/raw/master/egm96_15.gtx
+            docker run --rm -v /home:/home osgeo/gdal:alpine-normal-latest python3 $PWD/vertoffset_grid_to_gtiff.py --type GEOGRAPHIC_TO_VERTICAL --source-crs EPSG:4326 --target-crs EPSG:5773 --copyright "Public Domain. Derived from work from NGA" $PWD/egm96_15.gtx $PWD/us_nga_egm96_15.tif
+            docker run --rm -v /home:/home osgeo/gdal:alpine-normal-latest python3 $PWD/check_gtiff_grid.py $PWD/us_nga_egm96_15.tif
+            cd ..
+            ./travis/test.sh
