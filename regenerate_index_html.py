@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from osgeo import gdal, ogr, osr
+import csv
 import glob
 import hashlib
 import os
@@ -53,6 +54,8 @@ lyr.CreateField(ogr.FieldDefn('description', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('full_bbox', ogr.OFTRealList))
 lyr.CreateField(ogr.FieldDefn('file_size', ogr.OFTInteger64))
 lyr.CreateField(ogr.FieldDefn('sha256sum', ogr.OFTString))
+lyr.CreateField(ogr.FieldDefn('version_added', ogr.OFTString))
+lyr.CreateField(ogr.FieldDefn('version_removed', ogr.OFTString))
 
 def polygon_from_bbox(xmin, ymin, xmax, ymax):
     geom = ogr.Geometry(ogr.wkbPolygon)
@@ -75,6 +78,30 @@ def normalize_lon(xmin, xmax):
         xmin += 360
         xmax += 360
     return xmin, xmax
+
+class InfoFromCSV:
+    def __init__(self):
+        self.version_added = None
+        self.version_removed = None
+
+info_csv = {}
+with open('copyright_and_licenses.csv') as f:
+    reader = csv.reader(f)
+    first_line = True
+    for row in reader:
+        if first_line:
+            assert row == ['filename', 'copyright', 'license', 'version_added', 'version_removed']
+            first_line = False
+            continue
+        filename, copyright, license, version_added, version_removed = row
+        if version_added == '':
+            version_added = None
+        if version_removed == '':
+            version_removed = None
+        info = InfoFromCSV()
+        info.version_added = version_added
+        info.version_removed = version_removed
+        info_csv[filename] = info
 
 total_size = 0
 set_files = set()
@@ -245,6 +272,11 @@ for dirname in sorted(dirnames):
         feat['source_url'] = agency['url']
         feat['file_size'] = size
 
+        if f in info_csv:
+            info = info_csv[f]
+            if info.version_added:
+                feat['version_added'] = info.version_added
+
         m = hashlib.sha256()
         m.update(open(full_filename, 'rb').read())
         feat['sha256sum'] = m.hexdigest()
@@ -286,3 +318,10 @@ if files_dict:
     raise Exception("unused files in files.json: " + str(files_dict))
 if area_used_dict != area_dict:
     raise Exception("unused areas in area.json")
+
+files_removed = ogr.Open('files_removed.geojson')
+files_removed_lyr = files_removed.GetLayer(0)
+for src_entry in files_removed_lyr:
+    new_entry = ogr.Feature(lyr.GetLayerDefn())
+    new_entry.SetFrom(src_entry)
+    lyr.CreateFeature(new_entry)
