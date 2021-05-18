@@ -1,354 +1,354 @@
-filename,copyright,license
-at_bev_AT_GIS_GRID.tif,"Austria Bundesamt für Eich- und Vermessungswessen (BEV)",CC-BY-4.0
-at_bev_GEOID_BESSEL_Oesterreich.tif,"Austria Bundesamt für Eich- und Vermessungswessen (BEV)",CC-BY-4.0
-at_bev_GEOID_GRS80_Oesterreich.tif,"Austria Bundesamt für Eich- und Vermessungswessen (BEV)",CC-BY-4.0
-at_bev_GV_Hoehengrid_plus_Geoid_V2.tif,"Austria Bundesamt für Eich- und Vermessungswessen (BEV)",CC-BY-4.0
-at_bev_GV_Hoehengrid_V1.tif,"Austria Bundesamt für Eich- und Vermessungswessen (BEV)",CC-BY-4.0
-at_bev_README.txt,Disclaimed,Public domain
-au_ga_AGQG_20191107.tif,Geoscience Australia,CC-BY-4.0
-au_ga_AGQG_20201120.tif,Geoscience Australia,CC-BY-4.0
-au_ga_AUSGeoid09_V1.01.tif,Geoscience Australia,CC-BY-4.0
-au_ga_AUSGeoid2020_20180201.tif,Geoscience Australia,CC-BY-4.0
-au_ga_AUSGeoid98.tif,Geoscience Australia,CC-BY-4.0
-au_ga_README.txt,Disclaimed,Public domain
-au_icsm_A66_National_13_09_01.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0
-au_icsm_GDA94_GDA2020_conformal_and_distortion.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0
-au_icsm_GDA94_GDA2020_conformal_christmas_island.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0
-au_icsm_GDA94_GDA2020_conformal_cocos_island.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0
-au_icsm_GDA94_GDA2020_conformal.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0
-au_icsm_National_84_02_07_01.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0
-au_icsm_README.txt,Disclaimed,Public domain
-be_ign_bd72lb72_etrs89lb08.tif,Insititut Geographique National (IGN) Belgium,CC-BY-4.0
-be_ign_README.txt,Disclaimed,Public domain
-br_ibge_CA61_003.tif,Instituto Brasileiro de Geografia e Estatistica - IBGE,CC-BY-SA-4.0
-br_ibge_CA7072_003.tif,Instituto Brasileiro de Geografia e Estatistica - IBGE,CC-BY-SA-4.0
-br_ibge_README.txt,Disclaimed,Public domain
-br_ibge_SAD69_003.tif,Instituto Brasileiro de Geografia e Estatistica - IBGE,CC-BY-SA-4.0
-br_ibge_SAD96_003.tif,Instituto Brasileiro de Geografia e Estatistica - IBGE,CC-BY-SA-4.0
-ca_nrc_ABCSRSV4.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_BC_27_05.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_BC_93_05.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_CGG2013ai08.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_CGG2013an83.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_CGG2013i08.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_CGG2013n83.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_CQ77SCRS.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_CRD27_00.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_CRD93_00.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_GS7783.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_HT2_2010v70.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_MAY76V20.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_NA27SCRS.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_NA83SCRS.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_NAD83v6VG.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_NAD83v70VG.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_NB2783v2.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_NB7783v2.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_NS778302.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_ntv1_can.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_ntv2_0.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_NVI93_05.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_ON27CSv1.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_ON76CSv1.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_ON83CSv1.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_PE7783V2.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_README.txt,Disclaimed,Public domain
-ca_nrc_SK27-98.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_SK83-98.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_nrc_TO27CSv1.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0
-ca_que_mern_cq77na83.tif,Ministère de l'Énergie et des Ressources naturelles (MERN) du Québec,CC-BY-4.0
-ca_que_mern_na27na83.tif,Ministère de l'Énergie et des Ressources naturelles (MERN) du Québec,CC-BY-4.0
-ca_que_mern_README.txt,Disclaimed,Public domain
-ch_swisstopo_CHENyx06a.tif,"2007, Swisstopo",CC0-1.0
-ch_swisstopo_CHENyx06_ETRS.tif,"2007, Swisstopo",CC0-1.0
-ch_swisstopo_chgeo2004_ETRS89_LHN95.tif,"Swisstopo",CC0-1.0
-ch_swisstopo_chgeo2004_ETRS89_LN02.tif,"Swisstopo",CC0-1.0
-ch_swisstopo_README.txt,Disclaimed,Public domain
-de_adv_BETA2007.tif,ADV,Free redistribution is allowed and welcome
-de_adv_README.txt,Disclaimed,Public domain
-de_geosn_NTv2_SN.tif,Staatsbetrieb Geobasisinformation und Vermessung Sachsen (GEOSN),Data licence Germany - attribution - version 2.0
-de_geosn_README.txt,Disclaimed,Public domain
-de_lgl_bw_BWTA2017.tif,Landesamt für Geoinformation und Landentwicklung (LGL) Baden-Württemberg,Data licence Germany - attribution - version 2.0
-de_lgl_bw_README.txt,Disclaimed,Public domain
-de_lgvl_saarland_README.txt,Disclaimed,Public domain
-de_lgvl_saarland_SeTa2016.tif,"Landesamt für Vermessung, Geoinformation und Landentwicklung (LVGL) Saarland",CC-BY-4.0
-DK,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
-dk_sdfe_DK_bornholm.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
-dk_sdfe_DK_bridges.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
-dk_sdfe_DK_general.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
-dk_sdfe_DK_jutland.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
-dk_sdfe_DK_zealand.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
-dk_sdfe_dnn.tif,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
-dk_sdfe_dvr90.tif,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
-dk_sdfe_FO_fk89.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
-dk_sdfe_fvr09.tif,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
-dk_sdfe_gvr2000.tif,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
-dk_sdfe_gvr2016.tif,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
-dk_sdfe_README.txt,Disclaimed,Public domain
-es_cat_icgc_100800401.tif,Institut Cartogràfic i Geològic de Catalunya (ICGC),CC-BY-4.0
-es_cat_icgc_README.txt,Disclaimed,Public domain
-es_ign_egm08-rednap.tif,Instituto Geográfico Nacional (IGN) Spain,CC-BY-4.0
-es_ign_egm08-rednap-canarias.tif,Instituto Geográfico Nacional (IGN) Spain,CC-BY-4.0
-es_ign_README.txt,Disclaimed,Public domain
-es_ign_SPED2ETV2.tif,"2009, Instituto Geográfico Nacional (IGN) Spain",CC-BY-4.0
-eur_nkg_nkgrf03vel_realigned.tif,Nordic Geodetic Commission,CC-BY-4.0
-eur_nkg_nkgrf17vel.tif,Nordic Geodetic Commission,CC-BY-4.0
-eur_nkg_README.txt,Disclaimed,Public domain
-fi_nls_n43_n60.json,National Land Survey of Finland,CC-BY-4.0
-fi_nls_n60_n2000.json,National Land Survey of Finland,CC-BY-4.0
-fi_nls_README.txt,Disclaimed,Public domain
-fi_nls_ykj_etrs35fin.json,National Land Survey of Finland,CC-BY-4.0
-FO,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0
-fr_ign_CGVD2013RGSPM06.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_gg10_sbv2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_gg10_smv2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggg00_lsv2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggg00_mgv2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggg00_sbv2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggg00_smv2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggg00v2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggguy15.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggker08v2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggm00v2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggm04v1.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf02-Bora.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf02-Huahine.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf02-Maiao.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf02-Maupiti.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf02-Raiatea.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf02-Tahaa.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf02-Tupai.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf05-HivaOa.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf05-Nuku.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf08-Fakarava.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf08-Gambier.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf08-Hao.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf08-Mataiva.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf08-Raivavae.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf08-Reao.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf08-Rurutu.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf08-Tikehau.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf08-Tubuai.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf10-Moorea.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggpf10-Tahiti.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ggspm06v1.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_gr3df97a.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_ntf_r93.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_RAC09.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_RAF09.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_RAF18.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_RAF18b.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_RAGTBT2016.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_RALD2016.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_RALDW842016.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_RALS2016.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_RAMART2016.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_RAMG2016.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_RAR07_bl.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_RASPM2018.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-fr_ign_README.txt,Disclaimed,Public domain
-ISL,"2017-2019, National Land Survey of Iceland",CC-BY-4.0
-is_lmi_Icegeoid_ISN2004.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0
-is_lmi_Icegeoid_ISN2016.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0
-is_lmi_Icegeoid_ISN93.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0
-is_lmi_ISN2004_ISN2016.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0
-is_lmi_ISN93_ISN2016.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0
-is_lmi_ISN_vel_beta.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0
-is_lmi_README.txt,Disclaimed,Public domain
-jp_gsi_gsigeo2011.tif,Geospatial Information Authority of Japan,CC-BY-4.0
-jp_gsi_README.txt,Disclaimed,Public domain
-NKG,Nordic Geodetic Commission,CC-BY-4.0
-nc_dittt_gr3dnc01b.tif,Gouvernement de Nouvelle Calédonie - DITTT,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-nc_dittt_gr3dnc02b.tif,Gouvernement de Nouvelle Calédonie - DITTT,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-nc_dittt_gr3dnc03a.tif,Gouvernement de Nouvelle Calédonie - DITTT,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-nc_dittt_Ranc08_Circe.tif,Gouvernement de Nouvelle Calédonie - DITTT,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf
-nc_dittt_README.txt,Disclaimed,Public domain
-nl_nsgi_naptrans2018.tif,Nederlandse Samenwerking Geodetische Infrastructuur (NSGI),CC-BY-4.0
-nl_nsgi_nlgeo2018.tif,Nederlandse Samenwerking Geodetische Infrastructuur (NSGI),CC-BY-4.0
-nl_nsgi_rdcorr2018.tif,Nederlandse Samenwerking Geodetische Infrastructuur (NSGI),CC-BY-4.0
-nl_nsgi_rdtrans2018.tif,Nederlandse Samenwerking Geodetische Infrastructuur (NSGI),CC-BY-4.0
-nl_nsgi_README.txt,Disclaimed,Public domain
-no_kv_ETRS89NO_NGO48_TIN.json,Kartverket (SK),CC-BY-4.0
-no_kv_href2008a.tif,Kartverket (SK),CC-BY-4.0
-no_kv_HREF2018B_NN2000_EUREF89.tif,Kartverket (SK),CC-BY-4.0
-no_kv_NKGETRF14_EPSG7922_2000.tif,Kartverket (SK),CC-BY-4.0
-no_kv_README.txt,Kartverket (SK),CC-BY-4.0
-nz_linz_auckht1946-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_blufht1955-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_dublht1960-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_duneht1958-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_gisbht1926-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_lyttht1937-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_motuht1953-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_napiht1962-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nelsht1955-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-20000101.json,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-20130801.json,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-20140201.json,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-20150101.json,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-20160701.json,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-20171201.json,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-20180701.json,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-c120100904-grid01.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-c220110222-grid01.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-c320110613-grid01.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-c420111223-grid01.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ch20160214-grid01.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-cs20130721-grid01.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-cs20130721-grid02.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ds20090715-grid011.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ds20090715-grid012.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ds20090715-grid013.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ds20090715-grid014.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-gs20071016-grid01.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ka20161114-grid01.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ka20161114-grid02.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ka20161114-grid03.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ka20161114-grid04.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ka20161114-grid05.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ka20161114-grid06.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ka20161114-grid07.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ka20161114-grid08.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ka20161114-grid09.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ka20161114-grid10.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ka20161114-grid11.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ka20161114-grid12.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-lg20130816-grid01.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-lg20130816-grid02.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-mq20041223-grid011.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-mq20041223-grid012.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-mq20041223-grid013.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-mq20041223-grid014.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-mq20041223-grid015.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-mq20041223-grid016.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ndm-grid01.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-ndm-grid02.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2000-si20030821-grid01.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgd2kgrid0005.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgeoid2009.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_nzgeoid2016.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_ontpht1964-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_README.txt,Disclaimed,Public domain
-nz_linz_stisht1977-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_taraht1970-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
-nz_linz_wellht1953-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0
-pt_dgt_D73_ETRS89_geo.tif,Direcao Geral de Territorio,CC-BY-4.0
-pt_dgt_DLx_ETRS89_geo.tif,Direcao Geral de Territorio,CC-BY-4.0
-pt_dgt_README.txt,Disclaimed,Public domain
-README.DATA,Disclaimed,Public domain
-se_lantmateriet_README.txt,Disclaimed,Public domain
-se_lantmateriet_SWEN17_RH2000.tif,Lantmäteriet,CC0-1.0
-sk_gku_JTSK03_to_JTSK.tif,"2013, GKU Slovakia",CC-BY-4.0
-sk_gku_Slovakia_ETRS89h_to_Baltic1957.tif,"2005, GKU Slovakia",CC-BY-4.0
-sk_gku_Slovakia_ETRS89h_to_EVRF2007.tif,"2014, GKU Slovakia",CC-BY-4.0
-uk_os_OSGM15_Belfast.tif,Ordnance Survey UK,BSD-2-Clause
-uk_os_OSGM15_GB.tif,Ordnance Survey UK,BSD-2-Clause
-uk_os_OSGM15_Malin.tif,Ordnance Survey UK,BSD-2-Clause
-uk_os_OSTN15_NTv2_OSGBtoETRS.tif,Ordnance Survey UK,BSD-2-Clause
-uk_os_README.txt,Disclaimed,Public domain
-us_nga_egm08_25.tif,Disclaimed,Public domain
-us_nga_egm96_15.tif,Disclaimed,Public domain
-us_nga_README.txt,Disclaimed,Public domain
-us_noaa_alaska.tif,Disclaimed,Public domain
-us_noaa_alhpgn.tif,Disclaimed,Public domain
-us_noaa_arhpgn.tif,Disclaimed,Public domain
-us_noaa_azhpgn.tif,Disclaimed,Public domain
-us_noaa_c1hpgn.tif,Disclaimed,Public domain
-us_noaa_c2hpgn.tif,Disclaimed,Public domain
-us_noaa_cnhpgn.tif,Disclaimed,Public domain
-us_noaa_cohpgn.tif,Disclaimed,Public domain
-us_noaa_conus.tif,Disclaimed,Public domain
-us_noaa_cshpgn.tif,Disclaimed,Public domain
-us_noaa_emhpgn.tif,Disclaimed,Public domain
-us_noaa_eshpgn.tif,Disclaimed,Public domain
-us_noaa_ethpgn.tif,Disclaimed,Public domain
-us_noaa_flhpgn.tif,Disclaimed,Public domain
-us_noaa_FL.tif,Disclaimed,Public domain
-us_noaa_g1999a01.tif,Disclaimed,Public domain
-us_noaa_g1999a02.tif,Disclaimed,Public domain
-us_noaa_g1999a03.tif,Disclaimed,Public domain
-us_noaa_g1999a04.tif,Disclaimed,Public domain
-us_noaa_g1999h01.tif,Disclaimed,Public domain
-us_noaa_g1999p01.tif,Disclaimed,Public domain
-us_noaa_g1999u01.tif,Disclaimed,Public domain
-us_noaa_g1999u02.tif,Disclaimed,Public domain
-us_noaa_g1999u03.tif,Disclaimed,Public domain
-us_noaa_g1999u04.tif,Disclaimed,Public domain
-us_noaa_g1999u05.tif,Disclaimed,Public domain
-us_noaa_g1999u06.tif,Disclaimed,Public domain
-us_noaa_g1999u07.tif,Disclaimed,Public domain
-us_noaa_g1999u08.tif,Disclaimed,Public domain
-us_noaa_g2003a01.tif,Disclaimed,Public domain
-us_noaa_g2003a02.tif,Disclaimed,Public domain
-us_noaa_g2003a03.tif,Disclaimed,Public domain
-us_noaa_g2003a04.tif,Disclaimed,Public domain
-us_noaa_g2003h01.tif,Disclaimed,Public domain
-us_noaa_g2003p01.tif,Disclaimed,Public domain
-us_noaa_g2009g01.tif,Disclaimed,Public domain
-us_noaa_g2009h01.tif,Disclaimed,Public domain
-us_noaa_g2009p01.tif,Disclaimed,Public domain
-us_noaa_g2009s01.tif,Disclaimed,Public domain
-us_noaa_g2012ba0.tif,Disclaimed,Public domain
-us_noaa_g2012bg0.tif,Disclaimed,Public domain
-us_noaa_g2012bh0.tif,Disclaimed,Public domain
-us_noaa_g2012bp0.tif,Disclaimed,Public domain
-us_noaa_g2012bs0.tif,Disclaimed,Public domain
-us_noaa_g2012bu0.tif,Disclaimed,Public domain
-us_noaa_g2018p0.tif,Disclaimed,Public domain
-us_noaa_g2018u0.tif,Disclaimed,Public domain
-us_noaa_gahpgn.tif,Disclaimed,Public domain
-us_noaa_geoid03_conus.tif,Disclaimed,Public domain
-us_noaa_geoid06_ak.tif,Disclaimed,Public domain
-us_noaa_geoid09_ak.tif,Disclaimed,Public domain
-us_noaa_geoid09_conus.tif,Disclaimed,Public domain
-us_noaa_guhpgn.tif,Disclaimed,Public domain
-us_noaa_hawaii.tif,Disclaimed,Public domain
-us_noaa_hihpgn.tif,Disclaimed,Public domain
-us_noaa_iahpgn.tif,Disclaimed,Public domain
-us_noaa_ilhpgn.tif,Disclaimed,Public domain
-us_noaa_inhpgn.tif,Disclaimed,Public domain
-us_noaa_kshpgn.tif,Disclaimed,Public domain
-us_noaa_kyhpgn.tif,Disclaimed,Public domain
-us_noaa_lahpgn.tif,Disclaimed,Public domain
-us_noaa_mdhpgn.tif,Disclaimed,Public domain
-us_noaa_MD.tif,Disclaimed,Public domain
-us_noaa_mehpgn.tif,Disclaimed,Public domain
-us_noaa_mihpgn.tif,Disclaimed,Public domain
-us_noaa_mnhpgn.tif,Disclaimed,Public domain
-us_noaa_mohpgn.tif,Disclaimed,Public domain
-us_noaa_mshpgn.tif,Disclaimed,Public domain
-us_noaa_nbhpgn.tif,Disclaimed,Public domain
-us_noaa_nchpgn.tif,Disclaimed,Public domain
-us_noaa_ndhpgn.tif,Disclaimed,Public domain
-us_noaa_nehpgn.tif,Disclaimed,Public domain
-us_noaa_njhpgn.tif,Disclaimed,Public domain
-us_noaa_nmhpgn.tif,Disclaimed,Public domain
-us_noaa_nvhpgn.tif,Disclaimed,Public domain
-us_noaa_nyhpgn.tif,Disclaimed,Public domain
-us_noaa_ohhpgn.tif,Disclaimed,Public domain
-us_noaa_okhpgn.tif,Disclaimed,Public domain
-us_noaa_pahpgn.tif,Disclaimed,Public domain
-us_noaa_prvi.tif,Disclaimed,Public domain
-us_noaa_pvhpgn.tif,Disclaimed,Public domain
-us_noaa_README.txt,Disclaimed,Public domain
-us_noaa_schpgn.tif,Disclaimed,Public domain
-us_noaa_sdhpgn.tif,Disclaimed,Public domain
-us_noaa_stgeorge.tif,Disclaimed,Public domain
-us_noaa_stlrnc.tif,Disclaimed,Public domain
-us_noaa_stpaul.tif,Disclaimed,Public domain
-us_noaa_tnhpgn.tif,Disclaimed,Public domain
-us_noaa_TN.tif,Disclaimed,Public domain
-us_noaa_uthpgn.tif,Disclaimed,Public domain
-us_noaa_vahpgn.tif,Disclaimed,Public domain
-us_noaa_vertconc.tif,Disclaimed,Public domain
-us_noaa_vertcone.tif,Disclaimed,Public domain
-us_noaa_vertconw.tif,Disclaimed,Public domain
-us_noaa_wihpgn.tif,Disclaimed,Public domain
-us_noaa_WI.tif,Disclaimed,Public domain
-us_noaa_wmhpgn.tif,Disclaimed,Public domain
-us_noaa_wohpgn.tif,Disclaimed,Public domain
-us_noaa_WO.tif,Disclaimed,Public domain
-us_noaa_wshpgn.tif,Disclaimed,Public domain
-us_noaa_wthpgn.tif,Disclaimed,Public domain
-us_noaa_wvhpgn.tif,Disclaimed,Public domain
-us_noaa_wyhpgn.tif,Disclaimed,Public domain
+filename,copyright,license,version_added,version_removed
+at_bev_AT_GIS_GRID.tif,Austria Bundesamt für Eich- und Vermessungswessen (BEV),CC-BY-4.0,,
+at_bev_GEOID_BESSEL_Oesterreich.tif,Austria Bundesamt für Eich- und Vermessungswessen (BEV),CC-BY-4.0,,
+at_bev_GEOID_GRS80_Oesterreich.tif,Austria Bundesamt für Eich- und Vermessungswessen (BEV),CC-BY-4.0,,
+at_bev_GV_Hoehengrid_plus_Geoid_V2.tif,Austria Bundesamt für Eich- und Vermessungswessen (BEV),CC-BY-4.0,,
+at_bev_GV_Hoehengrid_V1.tif,Austria Bundesamt für Eich- und Vermessungswessen (BEV),CC-BY-4.0,,
+at_bev_README.txt,Disclaimed,Public domain,,
+au_ga_AGQG_20191107.tif,Geoscience Australia,CC-BY-4.0,,1.7
+au_ga_AGQG_20201120.tif,Geoscience Australia,CC-BY-4.0,1.7,
+au_ga_AUSGeoid09_V1.01.tif,Geoscience Australia,CC-BY-4.0,,
+au_ga_AUSGeoid2020_20180201.tif,Geoscience Australia,CC-BY-4.0,,
+au_ga_AUSGeoid98.tif,Geoscience Australia,CC-BY-4.0,,
+au_ga_README.txt,Disclaimed,Public domain,,
+au_icsm_A66_National_13_09_01.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0,,
+au_icsm_GDA94_GDA2020_conformal_and_distortion.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0,,
+au_icsm_GDA94_GDA2020_conformal_christmas_island.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0,,
+au_icsm_GDA94_GDA2020_conformal_cocos_island.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0,,
+au_icsm_GDA94_GDA2020_conformal.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0,,
+au_icsm_National_84_02_07_01.tif,Intergovernmental Committee on Surveying and Mapping (ICSM),CC-BY-4.0,,
+au_icsm_README.txt,Disclaimed,Public domain,,
+be_ign_bd72lb72_etrs89lb08.tif,Insititut Geographique National (IGN) Belgium,CC-BY-4.0,,
+be_ign_README.txt,Disclaimed,Public domain,,
+br_ibge_CA61_003.tif,Instituto Brasileiro de Geografia e Estatistica - IBGE,CC-BY-SA-4.0,,
+br_ibge_CA7072_003.tif,Instituto Brasileiro de Geografia e Estatistica - IBGE,CC-BY-SA-4.0,,
+br_ibge_README.txt,Disclaimed,Public domain,,
+br_ibge_SAD69_003.tif,Instituto Brasileiro de Geografia e Estatistica - IBGE,CC-BY-SA-4.0,,
+br_ibge_SAD96_003.tif,Instituto Brasileiro de Geografia e Estatistica - IBGE,CC-BY-SA-4.0,,
+ca_nrc_ABCSRSV4.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_BC_27_05.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_BC_93_05.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_CGG2013ai08.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_CGG2013an83.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_CGG2013i08.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_CGG2013n83.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_CQ77SCRS.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_CRD27_00.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_CRD93_00.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_GS7783.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_HT2_2010v70.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_MAY76V20.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_NA27SCRS.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_NA83SCRS.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_NAD83v6VG.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_NAD83v70VG.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_NB2783v2.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_NB7783v2.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_NS778302.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_ntv1_can.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_ntv2_0.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_NVI93_05.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_ON27CSv1.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_ON76CSv1.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_ON83CSv1.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_PE7783V2.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_README.txt,Disclaimed,Public domain,,
+ca_nrc_SK27-98.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_SK83-98.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_nrc_TO27CSv1.tif,"Her Majesty the Queen in right of Canada as represented by the Canadian Geodetic Survey, Natural Resources Canada",OGL-Canada-2.0,,
+ca_que_mern_cq77na83.tif,Ministère de l'Énergie et des Ressources naturelles (MERN) du Québec,CC-BY-4.0,,
+ca_que_mern_na27na83.tif,Ministère de l'Énergie et des Ressources naturelles (MERN) du Québec,CC-BY-4.0,,
+ca_que_mern_README.txt,Disclaimed,Public domain,,
+ch_swisstopo_CHENyx06a.tif,"2007, Swisstopo",CC0-1.0,,
+ch_swisstopo_CHENyx06_ETRS.tif,"2007, Swisstopo",CC0-1.0,,
+ch_swisstopo_chgeo2004_ETRS89_LHN95.tif,Swisstopo,CC0-1.0,,
+ch_swisstopo_chgeo2004_ETRS89_LN02.tif,Swisstopo,CC0-1.0,,
+ch_swisstopo_README.txt,Disclaimed,Public domain,,
+de_adv_BETA2007.tif,ADV,Free redistribution is allowed and welcome,,
+de_adv_README.txt,Disclaimed,Public domain,,
+de_geosn_NTv2_SN.tif,Staatsbetrieb Geobasisinformation und Vermessung Sachsen (GEOSN),Data licence Germany - attribution - version 2.0,,
+de_geosn_README.txt,Disclaimed,Public domain,,
+de_lgl_bw_BWTA2017.tif,Landesamt für Geoinformation und Landentwicklung (LGL) Baden-Württemberg,Data licence Germany - attribution - version 2.0,,
+de_lgl_bw_README.txt,Disclaimed,Public domain,,
+de_lgvl_saarland_README.txt,Disclaimed,Public domain,,
+de_lgvl_saarland_SeTa2016.tif,"Landesamt für Vermessung, Geoinformation und Landentwicklung (LVGL) Saarland",CC-BY-4.0,,
+DK,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0,,
+dk_sdfe_DK_bornholm.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0,,
+dk_sdfe_DK_bridges.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0,,
+dk_sdfe_DK_general.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0,,
+dk_sdfe_DK_jutland.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0,,
+dk_sdfe_DK_zealand.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0,,
+dk_sdfe_dnn.tif,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0,,
+dk_sdfe_dvr90.tif,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0,,
+dk_sdfe_FO_fk89.pol,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0,,
+dk_sdfe_fvr09.tif,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0,,
+dk_sdfe_gvr2000.tif,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0,,
+dk_sdfe_gvr2016.tif,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0,,
+dk_sdfe_README.txt,Disclaimed,Public domain,,
+es_cat_icgc_100800401.tif,Institut Cartogràfic i Geològic de Catalunya (ICGC),CC-BY-4.0,,
+es_cat_icgc_README.txt,Disclaimed,Public domain,,
+es_ign_egm08-rednap.tif,Instituto Geográfico Nacional (IGN) Spain,CC-BY-4.0,,
+es_ign_egm08-rednap-canarias.tif,Instituto Geográfico Nacional (IGN) Spain,CC-BY-4.0,,
+es_ign_README.txt,Disclaimed,Public domain,,
+es_ign_SPED2ETV2.tif,"2009, Instituto Geográfico Nacional (IGN) Spain",CC-BY-4.0,,
+eur_nkg_nkgrf03vel_realigned.tif,Nordic Geodetic Commission,CC-BY-4.0,,
+eur_nkg_nkgrf17vel.tif,Nordic Geodetic Commission,CC-BY-4.0,,
+eur_nkg_README.txt,Disclaimed,Public domain,,
+fi_nls_n43_n60.json,National Land Survey of Finland,CC-BY-4.0,,
+fi_nls_n60_n2000.json,National Land Survey of Finland,CC-BY-4.0,,
+fi_nls_README.txt,Disclaimed,Public domain,,
+fi_nls_ykj_etrs35fin.json,National Land Survey of Finland,CC-BY-4.0,,
+FO,Agency for Data Supply and Efficiency (SDFE),CC-BY-4.0,,
+fr_ign_CGVD2013RGSPM06.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_gg10_sbv2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_gg10_smv2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggg00_lsv2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggg00_mgv2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggg00_sbv2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggg00_smv2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggg00v2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggguy15.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggker08v2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggm00v2.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggm04v1.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf02-Bora.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf02-Huahine.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf02-Maiao.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf02-Maupiti.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf02-Raiatea.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf02-Tahaa.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf02-Tupai.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf05-HivaOa.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf05-Nuku.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf08-Fakarava.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf08-Gambier.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf08-Hao.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf08-Mataiva.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf08-Raivavae.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf08-Reao.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf08-Rurutu.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf08-Tikehau.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf08-Tubuai.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf10-Moorea.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggpf10-Tahiti.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ggspm06v1.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_gr3df97a.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_ntf_r93.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_RAC09.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_RAF09.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_RAF18.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_RAF18b.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,1.7,
+fr_ign_RAGTBT2016.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_RALD2016.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_RALDW842016.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_RALS2016.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_RAMART2016.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_RAMG2016.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_RAR07_bl.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_RASPM2018.tif,Institut National Geographique (IGN) France,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+fr_ign_README.txt,Disclaimed,Public domain,,
+ISL,"2017-2019, National Land Survey of Iceland",CC-BY-4.0,,
+is_lmi_Icegeoid_ISN2004.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0,,
+is_lmi_Icegeoid_ISN2016.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0,,
+is_lmi_Icegeoid_ISN93.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0,,
+is_lmi_ISN2004_ISN2016.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0,,
+is_lmi_ISN93_ISN2016.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0,,
+is_lmi_ISN_vel_beta.tif,"2017-2019, National Land Survey of Iceland",CC-BY-4.0,,
+is_lmi_README.txt,Disclaimed,Public domain,,
+jp_gsi_gsigeo2011.tif,Geospatial Information Authority of Japan,CC-BY-4.0,,
+jp_gsi_README.txt,Disclaimed,Public domain,,
+NKG,Nordic Geodetic Commission,CC-BY-4.0,,
+nc_dittt_gr3dnc01b.tif,Gouvernement de Nouvelle Calédonie - DITTT,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+nc_dittt_gr3dnc02b.tif,Gouvernement de Nouvelle Calédonie - DITTT,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+nc_dittt_gr3dnc03a.tif,Gouvernement de Nouvelle Calédonie - DITTT,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+nc_dittt_Ranc08_Circe.tif,Gouvernement de Nouvelle Calédonie - DITTT,Open License France - https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf,,
+nc_dittt_README.txt,Disclaimed,Public domain,,
+nl_nsgi_naptrans2018.tif,Nederlandse Samenwerking Geodetische Infrastructuur (NSGI),CC-BY-4.0,,
+nl_nsgi_nlgeo2018.tif,Nederlandse Samenwerking Geodetische Infrastructuur (NSGI),CC-BY-4.0,,
+nl_nsgi_rdcorr2018.tif,Nederlandse Samenwerking Geodetische Infrastructuur (NSGI),CC-BY-4.0,,
+nl_nsgi_rdtrans2018.tif,Nederlandse Samenwerking Geodetische Infrastructuur (NSGI),CC-BY-4.0,,
+nl_nsgi_README.txt,Disclaimed,Public domain,,
+no_kv_ETRS89NO_NGO48_TIN.json,Kartverket (SK),CC-BY-4.0,,
+no_kv_href2008a.tif,Kartverket (SK),CC-BY-4.0,,
+no_kv_HREF2018B_NN2000_EUREF89.tif,Kartverket (SK),CC-BY-4.0,,
+no_kv_NKGETRF14_EPSG7922_2000.tif,Kartverket (SK),CC-BY-4.0,,
+no_kv_README.txt,Kartverket (SK),CC-BY-4.0,,
+nz_linz_auckht1946-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_blufht1955-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_dublht1960-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_duneht1958-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_gisbht1926-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_lyttht1937-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_motuht1953-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_napiht1962-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nelsht1955-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-20000101.json,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-20130801.json,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-20140201.json,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-20150101.json,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-20160701.json,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-20171201.json,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-20180701.json,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-c120100904-grid01.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-c220110222-grid01.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-c320110613-grid01.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-c420111223-grid01.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ch20160214-grid01.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-cs20130721-grid01.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-cs20130721-grid02.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ds20090715-grid011.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ds20090715-grid012.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ds20090715-grid013.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ds20090715-grid014.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-gs20071016-grid01.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ka20161114-grid01.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ka20161114-grid02.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ka20161114-grid03.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ka20161114-grid04.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ka20161114-grid05.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ka20161114-grid06.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ka20161114-grid07.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ka20161114-grid08.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ka20161114-grid09.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ka20161114-grid10.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ka20161114-grid11.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ka20161114-grid12.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-lg20130816-grid01.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-lg20130816-grid02.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-mq20041223-grid011.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-mq20041223-grid012.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-mq20041223-grid013.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-mq20041223-grid014.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-mq20041223-grid015.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-mq20041223-grid016.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ndm-grid01.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-ndm-grid02.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2000-si20030821-grid01.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgd2kgrid0005.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgeoid2009.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_nzgeoid2016.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_ontpht1964-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_README.txt,Disclaimed,Public domain,,
+nz_linz_stisht1977-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_taraht1970-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0,,
+nz_linz_wellht1953-nzvd2016.tif,Land Information New Zealand,CC-BY-4.0,,
+pt_dgt_D73_ETRS89_geo.tif,Direcao Geral de Territorio,CC-BY-4.0,,
+pt_dgt_DLx_ETRS89_geo.tif,Direcao Geral de Territorio,CC-BY-4.0,,
+pt_dgt_README.txt,Disclaimed,Public domain,,
+README.DATA,Disclaimed,Public domain,,
+se_lantmateriet_README.txt,Disclaimed,Public domain,,
+se_lantmateriet_SWEN17_RH2000.tif,Lantmäteriet,CC0-1.0,,
+sk_gku_JTSK03_to_JTSK.tif,"2013, GKU Slovakia",CC-BY-4.0,,
+sk_gku_Slovakia_ETRS89h_to_Baltic1957.tif,"2005, GKU Slovakia",CC-BY-4.0,,
+sk_gku_Slovakia_ETRS89h_to_EVRF2007.tif,"2014, GKU Slovakia",CC-BY-4.0,,
+uk_os_OSGM15_Belfast.tif,Ordnance Survey UK,BSD-2-Clause,,
+uk_os_OSGM15_GB.tif,Ordnance Survey UK,BSD-2-Clause,,
+uk_os_OSGM15_Malin.tif,Ordnance Survey UK,BSD-2-Clause,,
+uk_os_OSTN15_NTv2_OSGBtoETRS.tif,Ordnance Survey UK,BSD-2-Clause,,
+uk_os_README.txt,Disclaimed,Public domain,,
+us_nga_egm08_25.tif,Disclaimed,Public domain,,
+us_nga_egm96_15.tif,Disclaimed,Public domain,,
+us_nga_README.txt,Disclaimed,Public domain,,
+us_noaa_alaska.tif,Disclaimed,Public domain,,
+us_noaa_alhpgn.tif,Disclaimed,Public domain,,
+us_noaa_arhpgn.tif,Disclaimed,Public domain,,
+us_noaa_azhpgn.tif,Disclaimed,Public domain,,
+us_noaa_c1hpgn.tif,Disclaimed,Public domain,,
+us_noaa_c2hpgn.tif,Disclaimed,Public domain,,
+us_noaa_cnhpgn.tif,Disclaimed,Public domain,,
+us_noaa_cohpgn.tif,Disclaimed,Public domain,,
+us_noaa_conus.tif,Disclaimed,Public domain,,
+us_noaa_cshpgn.tif,Disclaimed,Public domain,,
+us_noaa_emhpgn.tif,Disclaimed,Public domain,,
+us_noaa_eshpgn.tif,Disclaimed,Public domain,,
+us_noaa_ethpgn.tif,Disclaimed,Public domain,,
+us_noaa_flhpgn.tif,Disclaimed,Public domain,,
+us_noaa_FL.tif,Disclaimed,Public domain,,
+us_noaa_g1999a01.tif,Disclaimed,Public domain,,
+us_noaa_g1999a02.tif,Disclaimed,Public domain,,
+us_noaa_g1999a03.tif,Disclaimed,Public domain,,
+us_noaa_g1999a04.tif,Disclaimed,Public domain,,
+us_noaa_g1999h01.tif,Disclaimed,Public domain,,
+us_noaa_g1999p01.tif,Disclaimed,Public domain,,
+us_noaa_g1999u01.tif,Disclaimed,Public domain,,
+us_noaa_g1999u02.tif,Disclaimed,Public domain,,
+us_noaa_g1999u03.tif,Disclaimed,Public domain,,
+us_noaa_g1999u04.tif,Disclaimed,Public domain,,
+us_noaa_g1999u05.tif,Disclaimed,Public domain,,
+us_noaa_g1999u06.tif,Disclaimed,Public domain,,
+us_noaa_g1999u07.tif,Disclaimed,Public domain,,
+us_noaa_g1999u08.tif,Disclaimed,Public domain,,
+us_noaa_g2003a01.tif,Disclaimed,Public domain,,
+us_noaa_g2003a02.tif,Disclaimed,Public domain,,
+us_noaa_g2003a03.tif,Disclaimed,Public domain,,
+us_noaa_g2003a04.tif,Disclaimed,Public domain,,
+us_noaa_g2003h01.tif,Disclaimed,Public domain,,
+us_noaa_g2003p01.tif,Disclaimed,Public domain,,
+us_noaa_g2009g01.tif,Disclaimed,Public domain,,
+us_noaa_g2009h01.tif,Disclaimed,Public domain,,
+us_noaa_g2009p01.tif,Disclaimed,Public domain,,
+us_noaa_g2009s01.tif,Disclaimed,Public domain,,
+us_noaa_g2012ba0.tif,Disclaimed,Public domain,,
+us_noaa_g2012bg0.tif,Disclaimed,Public domain,,
+us_noaa_g2012bh0.tif,Disclaimed,Public domain,,
+us_noaa_g2012bp0.tif,Disclaimed,Public domain,,
+us_noaa_g2012bs0.tif,Disclaimed,Public domain,,
+us_noaa_g2012bu0.tif,Disclaimed,Public domain,,
+us_noaa_g2018p0.tif,Disclaimed,Public domain,,
+us_noaa_g2018u0.tif,Disclaimed,Public domain,,
+us_noaa_gahpgn.tif,Disclaimed,Public domain,,
+us_noaa_geoid03_conus.tif,Disclaimed,Public domain,,
+us_noaa_geoid06_ak.tif,Disclaimed,Public domain,,
+us_noaa_geoid09_ak.tif,Disclaimed,Public domain,,
+us_noaa_geoid09_conus.tif,Disclaimed,Public domain,,
+us_noaa_guhpgn.tif,Disclaimed,Public domain,,
+us_noaa_hawaii.tif,Disclaimed,Public domain,,
+us_noaa_hihpgn.tif,Disclaimed,Public domain,,
+us_noaa_iahpgn.tif,Disclaimed,Public domain,,
+us_noaa_ilhpgn.tif,Disclaimed,Public domain,,
+us_noaa_inhpgn.tif,Disclaimed,Public domain,,
+us_noaa_kshpgn.tif,Disclaimed,Public domain,,
+us_noaa_kyhpgn.tif,Disclaimed,Public domain,,
+us_noaa_lahpgn.tif,Disclaimed,Public domain,,
+us_noaa_mdhpgn.tif,Disclaimed,Public domain,,
+us_noaa_MD.tif,Disclaimed,Public domain,,
+us_noaa_mehpgn.tif,Disclaimed,Public domain,,
+us_noaa_mihpgn.tif,Disclaimed,Public domain,,
+us_noaa_mnhpgn.tif,Disclaimed,Public domain,,
+us_noaa_mohpgn.tif,Disclaimed,Public domain,,
+us_noaa_mshpgn.tif,Disclaimed,Public domain,,
+us_noaa_nbhpgn.tif,Disclaimed,Public domain,,
+us_noaa_nchpgn.tif,Disclaimed,Public domain,,
+us_noaa_ndhpgn.tif,Disclaimed,Public domain,,
+us_noaa_nehpgn.tif,Disclaimed,Public domain,,
+us_noaa_njhpgn.tif,Disclaimed,Public domain,,
+us_noaa_nmhpgn.tif,Disclaimed,Public domain,,
+us_noaa_nvhpgn.tif,Disclaimed,Public domain,,
+us_noaa_nyhpgn.tif,Disclaimed,Public domain,,
+us_noaa_ohhpgn.tif,Disclaimed,Public domain,,
+us_noaa_okhpgn.tif,Disclaimed,Public domain,,
+us_noaa_pahpgn.tif,Disclaimed,Public domain,,
+us_noaa_prvi.tif,Disclaimed,Public domain,,
+us_noaa_pvhpgn.tif,Disclaimed,Public domain,,
+us_noaa_README.txt,Disclaimed,Public domain,,
+us_noaa_schpgn.tif,Disclaimed,Public domain,,
+us_noaa_sdhpgn.tif,Disclaimed,Public domain,,
+us_noaa_stgeorge.tif,Disclaimed,Public domain,,
+us_noaa_stlrnc.tif,Disclaimed,Public domain,,
+us_noaa_stpaul.tif,Disclaimed,Public domain,,
+us_noaa_tnhpgn.tif,Disclaimed,Public domain,,
+us_noaa_TN.tif,Disclaimed,Public domain,,
+us_noaa_uthpgn.tif,Disclaimed,Public domain,,
+us_noaa_vahpgn.tif,Disclaimed,Public domain,,
+us_noaa_vertconc.tif,Disclaimed,Public domain,,
+us_noaa_vertcone.tif,Disclaimed,Public domain,,
+us_noaa_vertconw.tif,Disclaimed,Public domain,,
+us_noaa_wihpgn.tif,Disclaimed,Public domain,,
+us_noaa_WI.tif,Disclaimed,Public domain,,
+us_noaa_wmhpgn.tif,Disclaimed,Public domain,,
+us_noaa_wohpgn.tif,Disclaimed,Public domain,,
+us_noaa_WO.tif,Disclaimed,Public domain,,
+us_noaa_wshpgn.tif,Disclaimed,Public domain,,
+us_noaa_wthpgn.tif,Disclaimed,Public domain,,
+us_noaa_wvhpgn.tif,Disclaimed,Public domain,,
+us_noaa_wyhpgn.tif,Disclaimed,Public domain,,

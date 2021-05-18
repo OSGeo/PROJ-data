@@ -17,3 +17,5 @@ Preparing a PROJ-data Release
    ==> proj-data-X.Y.zip and proj-data-X.Y.tar.gz
 
 5. Resynchronize CDN content from repository with ./sync_to_cdn.sh
+
+6. Close the previous milestone and open a new one
