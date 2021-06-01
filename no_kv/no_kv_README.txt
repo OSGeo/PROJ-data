@@ -51,3 +51,13 @@ referred in NKG:ETRF14 and EPSG:7922.
 Horizontal triangulation to transform coordinates from ETRS89 (EPSG:4258) to NGO1948 (EPSG:4273), with longitude/latitude order.
 
 * no_kv_ETRS89NO_NGO48_TIN.json
+
+### Norway: ETRS89 ellipsoidal heights -> CD Norway heights
+
+*Format*: GeoTIFF converted from BIN  
+*Source*: [Kartverket](https://kartkatalog.geonorge.no/metadata/middelvann-over-ellipsoiden/e857e50c-fce4-49dc-abf5-a135bad8f727)  
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)  
+*Source CRS*: EPSG:4937 (ETRS89 ellipsoidal heights)  
+*Target CRS*: PROJ:CDNORWAYSIGNED
+
+* no_kv_CD_above_Ell_ETRS89_v2021a.tif
