@@ -108,6 +108,12 @@
         "url": "http://www.ign.fr/"
     },
     {
+        "id": "hu_bme_geod",
+        "country": "Hungary",
+        "agency":"Budapest University of Technology and Economics – Faculty of Civil Engineering",
+        "url": "https://geod.bme.hu"
+    },
+    {
         "id": "is_lmi",
         "country": "Iceland",
         "agency":"National Land Survey of Iceland",

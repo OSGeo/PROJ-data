@@ -66,6 +66,7 @@ For example us_noaa for files originating from US NOAA.
 * [eur_nkg: Nordic Geodetic Commission](https://github.com/OSGeo/PROJ-data/blob/master/eur_nkg/)
 * [fi_nls: National Land Survey](https://github.com/OSGeo/PROJ-data/blob/master/fi_nls/)
 * [fr_ign: France IGN](https://github.com/OSGeo/PROJ-data/blob/master/fr_ign/)
+* [hu_bme_geod: Budapest University of Technology and Economics – Faculty of Civil Engineering](https://geod.bme.hu)
 * [is_lmi: Iceland LMI](https://github.com/OSGeo/PROJ-data/blob/master/is_lmi/)
 * [jp_gsi: Japan GSI](https://github.com/OSGeo/PROJ-data/blob/master/jp_gsi/)
 * [nl_nsgi: Nederlandse Samenwerking Geodetische Infrastructuur (NSGI)](https://github.com/OSGeo/PROJ-data/blob/master/nl_nsgi/)
