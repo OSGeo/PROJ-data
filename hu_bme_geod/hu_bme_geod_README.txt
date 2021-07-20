@@ -17,3 +17,15 @@ Grid transformation from HD72 to ETRS89 (typically applied for transformations f
 
 * hu_bme_geod_etrs2eov_notowgs.tif
 
+### Hungary: ETRS89 heights -> Baltic heights
+
+*Source*: [Department of Geodesy and Surveying of Budapest University of Technology and Economics](https://github.com/OSGeoLabBp/eov2etrs)
+*Format*: GeoTIFF converted from GTX
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
+*Source CRS*: EPSG:4937 (ETRS89)
+*Target CRS*: EPSG:8357 (Baltic 1957 height)
+
+ETRS89 ellipsoidal heights to baltic height system transformation.
+The horizontal grid coordinates are referenced to ETRS89.
+
+* hu_bme_geod_geoid_eht2014.tif
