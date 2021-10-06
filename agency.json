@@ -120,6 +120,12 @@
         "url": "https://www.gsi.go.jp/"
     },
     {
+        "id": "mx_inegi",
+        "country": "Mexico",
+        "agency": "Instituto Nacional de Estadística, Geografía e Informática (INEGI)",
+        "url": "https://www.inegi.org.mx/"
+    },
+    {
         "id": "nc_dittt",
         "country": "New Caledonia",
         "agency":"Gouvernement de Nouvelle Calédonie - DITTT",
