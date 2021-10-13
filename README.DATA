@@ -76,6 +76,7 @@ For example us_noaa for files originating from US NOAA.
 * [uk_os: UK OS](https://github.com/OSGeo/PROJ-data/blob/master/uk_os/)
 * [us_nga: USA NGA](https://github.com/OSGeo/PROJ-data/blob/master/us_nga/)
 * [us_noaa: USA NOAA](https://github.com/OSGeo/PROJ-data/blob/master/us_noaa/)
+* [za_cdngi: South Africa CD:NGI](https://github.com/OSGeo/PROJ-data/blob/master/za_cdngi/)
 
 ## Tools
 
