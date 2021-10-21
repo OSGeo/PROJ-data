@@ -184,5 +184,11 @@
         "country": "USA",
         "agency":"US National Geospatial Intelligence Agency (NGA)",
         "url": "http://earth-info.nga.mil/"
+    },
+    {
+        "id": "za_cdngi",
+        "country": "South Africa",
+        "agency":"Chief Directorate: National Geospatial Information (CD:NGI)",
+        "url": "http://www.ngi.gov.za/"
     }
 ]
