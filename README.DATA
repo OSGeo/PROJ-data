@@ -71,6 +71,7 @@ For example us_noaa for files originating from US NOAA.
 * [nl_nsgi: Nederlandse Samenwerking Geodetische Infrastructuur (NSGI)](https://github.com/OSGeo/PROJ-data/blob/master/nl_nsgi/)
 * [no_kv: Kartverket (SK)](https://github.com/OSGeo/PROJ-data/blob/master/no_kv/)
 * [nz_linz: New Zealand LINZ](https://github.com/OSGeo/PROJ-data/blob/master/nz_linz/)
+* [pt_gugik: Poland GUGiK](https://github.com/OSGeo/PROJ-data/blob/master/pl_gugik/)
 * [pt_dgt: Portugal DGT](https://github.com/OSGeo/PROJ-data/blob/master/pt_dgt/)
 * [se_lantmateriet: Sweden Lantmateriet](https://github.com/OSGeo/PROJ-data/blob/master/se_lantmateriet/)
 * [uk_os: UK OS](https://github.com/OSGeo/PROJ-data/blob/master/uk_os/)
