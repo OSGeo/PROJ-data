@@ -7,10 +7,10 @@ from [GUGiK](http://www.gugik.gov.pl)
 
 ### Poland vertical grid:
 
-*Source*: [GUGiK](http://www.gugik.gov.pl/bip/prawo/modele-danych)
-*Format*: GeoTIFF converted from 'XYZ ASCII Grid'
-*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
-*Credit*: (c) Główny Urząd Geodezji i Kartografii
+*Source*: [GUGiK](http://www.gugik.gov.pl/bip/prawo/modele-danych)  
+*Format*: GeoTIFF converted from 'XYZ ASCII Grid'  
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)  
+*Credit*: (c) Główny Urząd Geodezji i Kartografii  
 *Horizontal CRS*: EPSG:9701 (ETRF2000-PL)
 
 Two vertical transformations for Geoid model PL-geoid-2011. Used to make the transitions
