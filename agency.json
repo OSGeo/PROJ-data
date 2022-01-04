@@ -120,6 +120,12 @@
         "url": "https://www.gsi.go.jp/"
     },
     {
+        "id": "mx_inegi",
+        "country": "Mexico",
+        "agency": "Instituto Nacional de Estadística, Geografía e Informática (INEGI)",
+        "url": "https://www.inegi.org.mx/"
+    },
+    {
         "id": "nc_dittt",
         "country": "New Caledonia",
         "agency":"Gouvernement de Nouvelle Calédonie - DITTT",
@@ -142,6 +148,12 @@
         "country": "New Zealand",
         "agency":"Land Information New Zealand",
         "url": "https://www.linz.govt.nz/"
+    },
+    {
+        "id": "pl_gugik",
+        "country": "Poland",
+        "agency":"Główny Urząd Geodezji i Kartografii (GUGiK)",
+        "url": "https://www.gov.pl/web/gugik/"
     },
     {
         "id": "pt_dgt",
@@ -178,5 +190,11 @@
         "country": "USA",
         "agency":"US National Geospatial Intelligence Agency (NGA)",
         "url": "http://earth-info.nga.mil/"
+    },
+    {
+        "id": "za_cdngi",
+        "country": "South Africa",
+        "agency":"Chief Directorate: National Geospatial Information (CD:NGI)",
+        "url": "http://www.ngi.gov.za/"
     }
 ]

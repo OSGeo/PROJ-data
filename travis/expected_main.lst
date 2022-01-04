@@ -156,6 +156,8 @@ is_lmi_ISN_vel_beta.tif
 is_lmi_README.txt
 jp_gsi_gsigeo2011.tif
 jp_gsi_README.txt
+mx_inegi_ggm10.tif
+mx_inegi_README.txt
 nc_dittt_gr3dnc01b.tif
 nc_dittt_gr3dnc02b.tif
 nc_dittt_gr3dnc03a.tif
@@ -232,6 +234,9 @@ nz_linz_README.txt
 nz_linz_stisht1977-nzvd2016.tif
 nz_linz_taraht1970-nzvd2016.tif
 nz_linz_wellht1953-nzvd2016.tif
+pl_gugik_geoid2011-PL-EVRF2007-NH.tif
+pl_gugik_geoid2011-PL-KRON86-NH.tif
+pl_gugik_README.txt
 pt_dgt_D73_ETRS89_geo.tif
 pt_dgt_DLx_ETRS89_geo.tif
 pt_dgt_README.txt
@@ -353,3 +358,5 @@ us_noaa_wshpgn.tif
 us_noaa_wthpgn.tif
 us_noaa_wvhpgn.tif
 us_noaa_wyhpgn.tif
+za_cdngi_README.txt
+za_cdngi_sageoid2010.tif

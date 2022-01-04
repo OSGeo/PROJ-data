@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.6)
 
 project(PROJ_DATA)
 set(PROJ_DATA_VERSION_MAJOR 1)
-set(PROJ_DATA_VERSION_MINOR 6)
+set(PROJ_DATA_VERSION_MINOR 8)
 
 set(CPACK_SOURCE_GENERATOR "TGZ;ZIP")
 set(CPACK_INCLUDE_TOPLEVEL_DIRECTORY 0)
@@ -37,16 +37,19 @@ set(CPACK_SOURCE_INSTALLED_DIRECTORIES
     "${CMAKE_CURRENT_SOURCE_DIR}/fr_ign/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/is_lmi/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/jp_gsi/" "."
+    "${CMAKE_CURRENT_SOURCE_DIR}/mx_inegi/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/nc_dittt/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/nl_nsgi/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/no_kv/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/nz_linz/" "."
+    "${CMAKE_CURRENT_SOURCE_DIR}/pl_gugik/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/pt_dgt/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/se_lantmateriet/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/sk_gku/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/uk_os/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/us_nga/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/us_noaa/" "."
+    "${CMAKE_CURRENT_SOURCE_DIR}/za_cdngi/" "."
 )
 
 include(CPack)
