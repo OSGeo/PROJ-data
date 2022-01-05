@@ -58,6 +58,6 @@ Horizontal triangulation to transform coordinates from ETRS89 (EPSG:4258) to NGO
 *Source*: [Kartverket](https://kartkatalog.geonorge.no/metadata/middelvann-over-ellipsoiden/e857e50c-fce4-49dc-abf5-a135bad8f727)  
 *License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)  
 *Source CRS*: EPSG:4937 (ETRS89 ellipsoidal heights)  
-*Target CRS*: PROJ:CDNORWAYSIGNED
+*Target CRS*: EPSG:9672 (Chart datum Norway heights)
 
 * no_kv_CD_above_Ell_ETRS89_v2021a.tif
