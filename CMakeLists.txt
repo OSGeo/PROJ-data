@@ -42,6 +42,7 @@ set(CPACK_SOURCE_INSTALLED_DIRECTORIES
     "${CMAKE_CURRENT_SOURCE_DIR}/nl_nsgi/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/no_kv/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/nz_linz/" "."
+    "${CMAKE_CURRENT_SOURCE_DIR}/pl_gugik/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/pt_dgt/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/se_lantmateriet/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/sk_gku/" "."

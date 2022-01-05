@@ -150,6 +150,12 @@
         "url": "https://www.linz.govt.nz/"
     },
     {
+        "id": "pl_gugik",
+        "country": "Poland",
+        "agency":"Główny Urząd Geodezji i Kartografii (GUGiK)",
+        "url": "https://www.gov.pl/web/gugik/"
+    },
+    {
         "id": "pt_dgt",
         "country": "Portugal",
         "agency":"DG Territorio",
