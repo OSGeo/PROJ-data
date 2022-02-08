@@ -138,3 +138,4 @@ After rebuilding the PROJ database (`make`), you can check the output of `src/pr
 
 * Edit copyright_and_licenses.csv to indicate the version in which it is removed
 * Open files.geojson and move the corresponding entry to files_removed.geojson
+* Remove the grid name in `travis/expected_main.lst`
