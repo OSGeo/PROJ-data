@@ -21,3 +21,16 @@ Documentation in French: (http://www.ngi.be/FR/FR2-1-7.shtm)
 Documentation in Dutch:  (http://www.ngi.be/NL/NL2-1-7.shtm)
 
 * be_ign_bd72lb72_etrs89lb08.tif
+
+### Belgium vertical grid:
+
+*Source*: [IGN](https://www.ngi.be/website/wp-content/uploads/2020/07/hBG18_fr.zip)
+*Format*: GeoTIFF converted from 'XYZ ASCII Grid'
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
+*Credit*: C. Slobbe, R. Klees, H.H. Farahani, L. Huisman, B. Alberts, P. Voet, F. De Doncker (2018). The Belgian hybrid quasi-geoid: hBG18. V. 1.0. GFZ Data Services. http://doi.org/10.5880/isg.2018.003  
+*Horizontal CRS*: EPSG:4937 (ETRS89)
+
+Vertical transformation for Geoid model hGB18. Used to make the transitions 
+from heights in vertical CRS (EPSG:5710 - Ostend height) to heights above the ellipsoid in ETRS89 (EPSG:4937).
+
+* be_ign_hBG18.tif
