@@ -17,6 +17,7 @@ au_icsm_GDA94_GDA2020_conformal.tif
 au_icsm_National_84_02_07_01.tif
 au_icsm_README.txt
 be_ign_bd72lb72_etrs89lb08.tif
+be_ign_hBG18.tif
 be_ign_README.txt
 br_ibge_CA61_003.tif
 br_ibge_CA7072_003.tif
@@ -169,6 +170,7 @@ nl_nsgi_nlgeo2018.tif
 nl_nsgi_rdcorr2018.tif
 nl_nsgi_rdtrans2018.tif
 nl_nsgi_README.txt
+no_kv_CD_above_Ell_ETRS89_v2021a.tif
 no_kv_ETRS89NO_NGO48_TIN.json
 no_kv_href2008a.tif
 no_kv_HREF2018B_NN2000_EUREF89.tif
