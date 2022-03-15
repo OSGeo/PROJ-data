@@ -1,13 +1,13 @@
 # nl_nsgi_README.txt
 
-The files in this section result from the conversion of datasets originating
-from [NSGI](https://www.nsgi.nl/)
+The files in this section originate from [NSGI](https://www.nsgi.nl/) with corrected metadata.
+
 
 ## Included grids
 
 ### Netherlands: RD and NAP -> ETRS89
 
-*Source*: [NSGI](https://www.nsgi.nl/geodetische-infrastructuur/producten/coordinatentransformatie)  
+*Source*: [NSGI](https://www.nsgi.nl/rdnaptrans)  
 *Format*: GeoTIFF converted from NTv2 & GTX  
 *License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)  
 
@@ -22,11 +22,7 @@ a 3D similarity transformation.
 Variant 2:
 
 * nl_nsgi_rdtrans2018.tif
-* nl_nsgi_naptrans2018.tif
 
-Includes the datum transformation in the correction grid and a different
-quasi-geoid grid for the height transformation.
+Includes the datum transformation in the correction grid.
 
-Refer to the
-[RDNAPTRANS™2018 documentation](https://salsa.debian.org/debian-gis-team/proj-rdnap/raw/upstream/2008+2018/RDNAPTRANS2018.pdf)
-for details.
+Refer to the [RDNAPTRANS™2018 documentation](https://www.nsgi.nl/rdnaptrans) for details.
