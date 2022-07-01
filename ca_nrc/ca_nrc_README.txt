@@ -308,6 +308,17 @@ Transform between NAD27(76) and NAD83 in Canada.
 
 * ca_nrc_CGG2013i08.tif
 
+### Canada: CGVD28 height --> CGVD2013a(2010) height
+
+*Source*: [Natural Resources Canada](https://webapp.csrs-scrs.nrcan-rncan.gc.ca/geod/process/download-helper.php?file_id=HT2_2010_CGG2013a_tif)  
+*Format*: GeoTIFF converted from GeoTIFF  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:5713 (CGVD28 height)  
+*Target CRS*: EPSG:9245 (CGVD2013a(2010) height)  
+*Used by*: [EPSG:10115 Transformation](https://epsg.org/transformation_10115/CGVD28-height-to-CGVD2013a-2010-height-1.html)
+
+* ca_nrc_HT2_2010v70_CGG2013a.tif
+
 ### Canada: NAD83(CSRS)v6 velocity grid
 
 *Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=NAD83v6VG)  
