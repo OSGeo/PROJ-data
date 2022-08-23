@@ -61,3 +61,17 @@ Horizontal triangulation to transform coordinates from ETRS89 (EPSG:4258) to NGO
 *Target CRS*: EPSG:9672 (Chart datum Norway heights)
 
 * no_kv_CD_above_Ell_ETRS89_v2021a.tif
+
+### Norway: ETRS89 ellipsoidal heights -> Svalbard 2006 heights
+
+*Format*: GeoTIFF converted from GravSoft BIN  
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)  
+*Source CRS*: EPSG:4937 (ETRS89 ellipsoidal heights)  
+*Target CRS*: EPSG:20000 (SVD2006 heights)
+
+The grid transforms from ETRS89 ellipsoidal heights to SVD2006 heights (Svalbard heights).
+The SVD2006 surface (arcgp-2006-sk) is the Arctic Gravity Project 2006
+(arcgp-2006) surface adjusted to two benchmarks tied to the Ny-Ålesund tide gauge (arcgp-2006-sk = arcgp-2006 - 0.8986m).
+The SVD2006 surface is defined by Mean Sea Level (MSL) at Ny-Ålesund.
+
+* no_kv_arcgp-2006-sk.tif
