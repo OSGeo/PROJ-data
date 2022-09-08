@@ -135,7 +135,7 @@ def validate_horizontal_offset(ds, is_first_subds):
             if is_first_subds:
                 warnings.append(
                     "One of latitude_offset/longitude_offset band is missing units description. arc-second will be assumed")
-        elif units not in ('arc-second', 'degree', 'radians'):
+        elif units not in ('arc-second', 'arc-seconds per year', 'degree', 'radians'):
             errors.append(
                 "One of latitude_offset/longitude_offset band is using a unit not supported by PROJ")
 
@@ -169,7 +169,7 @@ def validate_horizontal_offset(ds, is_first_subds):
                 if is_first_subds:
                     warnings.append(
                         "One of latitude_offset_accuracy/longitude_offset_accuracy band is missing units description.")
-            elif units not in ('arc-second', 'degree', 'radians', 'metre', 'unknown'):
+            elif units not in ('arc-second', 'arc-seconds per year', 'degree', 'radians', 'metre', 'unknown'):
                 errors.append(
                     "One of latitude_offset_accuracy/longitude_offset_accuracy band is using a unit not supported by PROJ")
 
