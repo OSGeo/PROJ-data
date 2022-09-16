@@ -37,7 +37,7 @@ gj_ds = ogr.GetDriverByName('GeoJSON').CreateDataSource('files.geojson')
 sr = osr.SpatialReference()
 sr.SetAxisMappingStrategy(osr.OAMS_TRADITIONAL_GIS_ORDER)
 sr.ImportFromEPSG(4326)
-lyr = gj_ds.CreateLayer('files', srs = sr, options = ['RFC7946=YES'])
+lyr = gj_ds.CreateLayer('files', srs = sr, options = ['RFC7946=YES', 'WRAPDATELINE=NO'])
 lyr.CreateField(ogr.FieldDefn('url', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('name', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('area_of_use', ogr.OFTString))
@@ -58,15 +58,33 @@ lyr.CreateField(ogr.FieldDefn('version_added', ogr.OFTString))
 lyr.CreateField(ogr.FieldDefn('version_removed', ogr.OFTString))
 
 def polygon_from_bbox(xmin, ymin, xmax, ymax):
+
+    # Split geometries crossing anti-meridian
+    if xmin < -180:
+        g = ogr.Geometry(ogr.wkbMultiPolygon)
+        g.AddGeometry(polygon_from_bbox(-180, ymin, xmax, ymax))
+        g.AddGeometry(polygon_from_bbox(xmin + 360, ymin, 180, ymax))
+        return g
+
+    if xmax > 180:
+        g = ogr.Geometry(ogr.wkbMultiPolygon)
+        g.AddGeometry(polygon_from_bbox(xmin, ymin, 180, ymax))
+        g.AddGeometry(polygon_from_bbox(-180, ymin, xmax - 360, ymax))
+        return g
+
     geom = ogr.Geometry(ogr.wkbPolygon)
     ring = ogr.Geometry(ogr.wkbLinearRing)
     # Add small epsilon to help unioning polygons touching by edge
     eps = 1e-12
-    ring.AddPoint_2D(xmin-eps, ymin-eps)
-    ring.AddPoint_2D(xmin-eps, ymax+eps)
-    ring.AddPoint_2D(xmax+eps, ymax+eps)
-    ring.AddPoint_2D(xmax+eps, ymin+eps)
-    ring.AddPoint_2D(xmin-eps, ymin-eps)
+    xmin = max(xmin-eps,-180)
+    ymin = max(ymin-eps,-90)
+    xmax = min(xmax+eps,180)
+    ymax = min(ymax+eps,90)
+    ring.AddPoint_2D(xmin, ymin)
+    ring.AddPoint_2D(xmin, ymax)
+    ring.AddPoint_2D(xmax, ymax)
+    ring.AddPoint_2D(xmax, ymin)
+    ring.AddPoint_2D(xmin, ymin)
     geom.AddGeometry(ring)
     return geom
 
