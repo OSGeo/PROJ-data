@@ -11,7 +11,11 @@ from [Austria Bundesamt für Eich- und Vermessungswessen](www.bev.gv.at)
 *Format*: GeoTIFF converted from NTv2  
 *License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
 
+Grid from 2014 with 0.0125 x 0.0083333 degree resolution:
 * at_bev_AT_GIS_GRID.tif
+
+Grid from 2021 with 0.00194444 x 0.00138889 degree resolution:
+* at_bev_AT_GIS_GRID_2021_09_28.tif
 
 ### Austria :GHA height -> EVRF2000 Austria height
 
