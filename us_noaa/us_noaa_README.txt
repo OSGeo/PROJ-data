@@ -44,6 +44,304 @@ Also include a few files which are duplicate of *hpgn.tif files, for historic re
 * us_noaa_WI.tif - Wisconsin
 * us_noaa_WO.tif - Washington, Oregon, N. California
 
+### USA - American Samoa: NADCON5: American Samoa 1962 -> NAD83(HARN)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/as62.nad83_1993.as)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: American Samoa 1962 (EPSG:4169)  
+*Target CRS*: NAD83(HARN) (EPSG:4152)
+
+* us_noaa_nadcon5_as62_nad83_1993_as.tif
+
+### USA - Guam and the Commonwealth of the Northern Mariana Islands: NADCON5: Guam 1963 -> NAD83(HARN)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/gu63.nad83_1993.guamcnmi)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: Guam 1963 (EPSG:4675)  
+*Target CRS*: NAD83(HARN) (EPSG:4152)
+
+* us_noaa_nadcon5_gu63_nad83_1993_guamcnmi.tif
+
+### USA - Alaska: NADCON5: NAD27 -> NAD83
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad27.nad83_1986.alaska)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD27 (EPSG:4267)  
+*Target CRS*: NAD83 (EPSG:4269)
+
+* us_noaa_nadcon5_nad27_nad83_1986_alaska.tif
+
+### USA - Conterminous: NADCON5: NAD27 -> NAD83
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad27.nad83_1986.conus)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD27 (EPSG:4267)  
+*Target CRS*: NAD83 (EPSG:4269)
+
+* us_noaa_nadcon5_nad27_nad83_1986_conus.tif
+
+### USA - Alaska: NADCON5: NAD83 -> NAD83(HARN)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_1986.nad83_1992.alaska)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83 (EPSG:4269)  
+*Target CRS*: NAD83(HARN) (EPSG:4152)
+
+* us_noaa_nadcon5_nad83_1986_nad83_1992_alaska.tif
+
+### USA - Hawaii: NADCON5: NAD83 -> NAD83(HARN)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_1986.nad83_1993.hawaii)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83 (EPSG:4269)  
+*Target CRS*: NAD83(HARN) (EPSG:4152)
+
+* us_noaa_nadcon5_nad83_1986_nad83_1993_hawaii.tif
+
+### USA - Puerto Rico and the Virgin Islands: NADCON5: NAD83 -> NAD83(HARN)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_1986.nad83_1993.prvi)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83 (EPSG:4269)  
+*Target CRS*: NAD83(HARN) (EPSG:4152)
+
+* us_noaa_nadcon5_nad83_1986_nad83_1993_prvi.tif
+
+### USA - Conterminous: NADCON5: NAD83 -> NAD83(HARN)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_1986.nad83_harn.conus)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83 (EPSG:4269)  
+*Target CRS*: NAD83(HARN) (EPSG:4152)
+
+* us_noaa_nadcon5_nad83_1986_nad83_harn_conus.tif
+
+### USA - Alaska: NADCON5: NAD83(HARN) -> NAD83(NSRS2007)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_1992.nad83_2007.alaska)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83(HARN) (EPSG:4152)  
+*Target CRS*: NAD83(NSRS2007) (EPSG:4893)
+
+Includes ellipsoidal height offsets.
+
+* us_noaa_nadcon5_nad83_1992_nad83_2007_alaska.tif
+
+### USA - Puerto Rico and the Virgin Islands: NADCON5: NAD83(HARN) -> NAD83(HARN Corrected)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_1993.nad83_1997.prvi)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83(HARN) (EPSG:4152)  
+*Target CRS*: NAD83(HARN Corrected) (EPSG:8544)
+
+Includes ellipsoidal height offsets.
+
+* us_noaa_nadcon5_nad83_1993_nad83_1997_prvi.tif
+
+### USA - American Samoa: NADCON5: NAD83(HARN) -> NAD83(FBN)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_1993.nad83_2002.as)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83(HARN) (EPSG:4152)  
+*Target CRS*: NAD83(FBN) (EPSG:8542)
+
+Includes ellipsoidal height offsets.
+
+* us_noaa_nadcon5_nad83_1993_nad83_2002_as.tif
+
+### USA - Guam and the Commonwealth of the Northern Mariana Islands: NADCON5: NAD83(HARN) -> NAD83(FBN)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_1993.nad83_2002.guamcnmi)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83(HARN) (EPSG:4152)  
+*Target CRS*: NAD83(FBN) (EPSG:8542)
+
+Includes ellipsoidal height offsets.
+
+* us_noaa_nadcon5_nad83_1993_nad83_2002_guamcnmi.tif
+
+### USA - Hawaii: NADCON5: NAD83(HARN) -> NAD83(PA11)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_1993.nad83_pa11.hawaii)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83(HARN) (EPSG:4152)  
+*Target CRS*: NAD83(PA11) (EPSG:6321)
+
+Includes ellipsoidal height offsets.
+
+* us_noaa_nadcon5_nad83_1993_nad83_pa11_hawaii.tif
+
+### USA - Puerto Rico and the Virgin Islands: NADCON5: NAD83(HARN Corrected) -> NAD83(FBN)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_1997.nad83_2002.prvi)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83(HARN Corrected) (EPSG:8545)  
+*Target CRS*: NAD83(FBN) (EPSG:8542)
+
+Includes ellipsoidal height offsets.
+
+* us_noaa_nadcon5_nad83_1997_nad83_2002_prvi.tif
+
+### USA - Puerto Rico and the Virgin Islands: NADCON5: NAD83(FBN) -> NAD83(NSRS2007)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_2002.nad83_2007.prvi)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83(FBN) (EPSG:8860)  
+*Target CRS*: NAD83(NSRS2007) (EPSG:4893)
+
+Includes ellipsoidal height offsets.
+
+* us_noaa_nadcon5_nad83_2002_nad83_2007_prvi.tif
+
+### USA - Guam and the Commonwealth of the Northern Mariana Islands: NADCON5: NAD83(FBN) -> NAD83(MA11)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_2002.nad83_ma11.guamcnmi)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83(FBN) (EPSG:8860)  
+*Target CRS*: NAD83(MA11) (EPSG:6324)
+
+Includes ellipsoidal height offsets.
+
+* us_noaa_nadcon5_nad83_2002_nad83_ma11_guamcnmi.tif
+
+### USA - American Samoaa: NADCON5: NAD83(FBN) -> NAD83(PA11)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_2002.nad83_pa11.as)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83(FBN) (EPSG:8860)  
+*Target CRS*: NAD83(PA11) (EPSG:6321)
+
+Includes ellipsoidal height offsets.
+
+* us_noaa_nadcon5_nad83_2002_nad83_pa11_as.tif
+
+### USA - Alaska: NADCON5: NAD83(NSRS2007) -> NAD83(2011)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_2007.nad83_2011.alaska)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83(NSRS2007) (EPSG:4759)  
+*Target CRS*: NAD83(2011) (EPSG:6319)
+
+Includes ellipsoidal height offsets.
+
+* us_noaa_nadcon5_nad83_2007_nad83_2011_alaska.tif
+
+### USA - Conterminous: NADCON5: NAD83(NSRS2007) -> NAD83(2011)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_2007.nad83_2011.conus)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83(NSRS2007) (EPSG:4759)  
+*Target CRS*: NAD83(2011) (EPSG:6319)
+
+Includes ellipsoidal height offsets.
+
+* us_noaa_nadcon5_nad83_2007_nad83_2011_conus.tif
+
+### USA - Puerto Rico and the Virgin Islands: NADCON5: NAD83(NSRS2007) -> NAD83(2011)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_2007.nad83_2011.prvi)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83(NSRS2007) (EPSG:4759)  
+*Target CRS*: NAD83(2011) (EPSG:6319)
+
+Includes ellipsoidal height offsets.
+
+* us_noaa_nadcon5_nad83_2007_nad83_2011_prvi.tif
+
+### USA - Conterminous: NADCON5: NAD83(FBN) -> NAD83(NSRS2007)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_fbn.nad83_2007.conus)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83(FBN) (EPSG:8860)  
+*Target CRS*: NAD83(NSRS2007) (EPSG:4893)
+
+Includes ellipsoidal height offsets.
+
+* us_noaa_nadcon5_nad83_fbn_nad83_2007_conus.tif
+
+### USA - Conterminous: NADCON5: NAD83(HARN) -> NAD83(FBN)
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/nad83_harn.nad83_fbn.conus)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: NAD83(HARN) (EPSG:4152)  
+*Target CRS*: NAD83(FBN) (EPSG:8542)
+
+Includes ellipsoidal height offsets.
+
+* us_noaa_nadcon5_nad83_harn_nad83_fbn_conus.tif
+
+### USA - Hawaii: NADCON5: Old Hawaiian -> NAD83
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/ohd.nad83_1986.hawaii)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: Old Hawaiian (EPSG:4135)  
+*Target CRS*: NAD83 (EPSG:4269)
+
+* us_noaa_nadcon5_ohd_nad83_1986_hawaii.tif
+
+### USA - Puerto Rico and the Virgin Islands: NADCON5: Puerto Rico -> NAD83
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/pr40.nad83_1986.prvi)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: Puerto Rico (EPSG:4139)  
+*Target CRS*: NAD83 (EPSG:4269)
+
+* us_noaa_nadcon5_pr40_nad83_1986_prvi.tif
+
+### USA - Saint George Island: NADCON5: St. George Island -> NAD83
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/sg1952.nad83_1986.stgeorge)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: St. George Island (EPSG:4138)  
+*Target CRS*: NAD83 (EPSG:4269)
+
+* us_noaa_nadcon5_sg1952_nad83_1986_stgeorge.tif
+
+### USA - Saint Lawrence Island: NADCON5: St. Lawrence Island -> NAD83
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/sl1952.nad83_1986.stlawrence)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: St. Lawrence Island (EPSG:4136)  
+*Target CRS*: NAD83 (EPSG:4269)
+
+* us_noaa_nadcon5_sl1952_nad83_1986_stlawrence.tif
+
+### USA - Saint Lawrence Island: NADCON5: St. Paul Island -> NAD83
+
+*Source*: [NADCON5 .b files coming from NOAA](https://geodesy.noaa.gov/pub/nadcon5/20160901release/Builds/sp1952.nad83_1986.stpaul)  
+*Format*: GeoTIFF converted with build_nadcon5.py script  
+*License*: Public Domain  
+*Source CRS*: St. Paul Island (EPSG:4137)  
+*Target CRS*: NAD83 (EPSG:4269)
+
+* us_noaa_nadcon5_sp1952_nad83_1986_stpaul.tif
+
 ### Continental USA VERTCON: NGVD (19)29 height to NAVD (19)88 height
 
 *Source*: converted from [NOAA VERTCON .94 grids](https://www.ngs.noaa.gov/PC_PROD/VERTCON/)  
