@@ -200,7 +200,8 @@ function refresh_source() {
         "features": fullGeoJSON.features.filter(function(feature){
             var ok_type = false;
             if( types_enabled['horizontal'] &&
-                feature.properties.type == 'HORIZONTAL_OFFSET') {
+                (feature.properties.type == 'HORIZONTAL_OFFSET' ||
+                 feature.properties.type == 'GEOGRAPHIC_3D_OFFSET') ) {
                 ok_type = true;
             }
             if( types_enabled['geoid'] &&
