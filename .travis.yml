@@ -1,6 +1,7 @@
 # This is the config file for Travis-ci.org
 
 sudo: required
+dist: focal
 
 # Avoid consuming our GitHub LFS quota
 git:
