@@ -75,7 +75,7 @@ def get_srs(ds, epsg_code_key, wkt_key, is_first_subds, infos, warnings, errors)
     return srs
 
 
-def validate_horizontal_offset(ds, is_first_subds):
+def validate_horizontal_offset(type, ds, is_first_subds):
 
     infos = []
     warnings = []
@@ -88,10 +88,16 @@ def validate_horizontal_offset(ds, is_first_subds):
             warnings.append("target_crs found, but not a Geographic CRS")
 
     if ds.RasterCount < 2:
-        return infos, warnings, ["TYPE=HORIZONTAL_OFFSET should have at least 2 bands"]
+        return infos, warnings, [f"TYPE={type} should have at least 2 bands"]
+    if type == "GEOGRAPHIC_3D_OFFSET":
+        if ds.RasterCount < 3:
+            return infos, warnings, [f"TYPE={type} should have at least 3 bands"]
+        if target_crs.GetAxesCount() != 3:
+            warnings.append("target_crs found, but not a Geographic 3D CRS")
 
     lat_offset_idx = 0
     lon_offset_idx = 0
+    eht_offset_idx = 0
     lat_accuracy_idx = 0
     lon_accuracy_idx = 0
     for i in range(ds.RasterCount):
@@ -105,6 +111,10 @@ def validate_horizontal_offset(ds, is_first_subds):
             if lon_offset_idx > 0:
                 return infos, warnings, ["At least, 2 bands are tagged with Description = longitude_offset"]
             lon_offset_idx = i+1
+        elif desc == 'ellipsoidal_height_offset':
+            if eht_offset_idx > 0:
+                return infos, warnings, ["At least, 3 bands are tagged with Description = ellipsoidal_height_offset"]
+            eht_offset_idx = i+1
         elif desc == 'latitude_offset_accuracy':
             lat_accuracy_idx = i+1
         elif desc == 'longitude_offset_accuracy':
@@ -124,6 +134,16 @@ def validate_horizontal_offset(ds, is_first_subds):
                 'No explicit bands tagged with Description = latitude_offset and longitude_offset. Assuming first one is latitude_offset and second one longitude_offset')
         lat_offset_idx = 1
         lon_offset_idx = 2
+
+    if type == "GEOGRAPHIC_3D_OFFSET":
+        if eht_offset_idx == 0:
+            return infos, warnings, ["No band with Description = ellipsoidal_height_offset"]
+        if eht_offset_idx != 3:
+            infos.append(
+                'Usually the 3rd band should be ellipsoidal_height_offset.')
+    else:
+        if eht_offset_idx != 0:
+            return infos, warnings, ["Band with Description = ellipsoidal_height_offset found, but not expected"]
 
     for idx in (lat_offset_idx, lon_offset_idx):
         band = ds.GetRasterBand(idx)
@@ -148,6 +168,19 @@ def validate_horizontal_offset(ds, is_first_subds):
     elif positive_value not in ('west', 'east'):
         errors.append("positive_value=%s not supported by PROJ" %
                       positive_value)
+
+    if eht_offset_idx > 0:
+        band = ds.GetRasterBand(eht_offset_idx)
+        if band.GetNoDataValue():
+            warnings.append(
+                "ellipsoidal_height_offset band has a nodata setting. Nodata for horizontal shift grids is ignored by PROJ")
+        units = band.GetUnitType()
+        if not units:
+            warnings.append(
+                "ellipsoidal_height_offset band is missing units description. metre will be assumed")
+        elif units not in ('metre',):
+            errors.append(
+                "ellipsoidal_height_offset band is using a unit not supported by PROJ")
 
     if lat_accuracy_idx > 0 and lon_accuracy_idx > 0:
         if lat_accuracy_idx != 3 or lon_accuracy_idx != 4:
@@ -260,6 +293,56 @@ def validate_vertical_offset_vertical_to_vertical(ds, is_first_subds):
     elif units not in ('metre', ):
         errors.append(
             "vertical_offset band is using a unit not supported by PROJ")
+
+    return infos, warnings, errors
+
+
+def validate_ellipsoidal_height_offset(ds, is_first_subds):
+
+    infos = []
+    warnings = []
+    errors = []
+
+    source_crs = ds.GetSpatialRef()
+    if source_crs:
+        if not source_crs.IsGeographic():
+            errors.append("source_crs found, but not a Geographic CRS")
+
+    target_crs = get_srs(ds, 'target_crs_epsg_code', 'target_crs_wkt',
+                         is_first_subds, infos, warnings, errors)
+    if target_crs:
+        if not target_crs.IsGeographic():
+            errors.append("target_crs found, but not a Geographic CRS")
+
+    offset_idx = 0
+    for i in range(ds.RasterCount):
+        b = ds.GetRasterBand(i+1)
+        desc = b.GetDescription()
+        if desc == 'ellipsoidal_height_offset':
+            if offset_idx > 0:
+                return infos, warnings, ["At least, 2 bands are tagged with Description = ellipsoidal_height_offset"]
+            offset_idx = i+1
+        elif desc:
+            infos.append('Band of type %s not recognized by PROJ' % desc)
+
+    if offset_idx == 0:
+        if is_first_subds:
+            warnings.append(
+                'No explicit band tagged with Description = ellipsoidal_height_offset. Assuming first one')
+        offset_idx = 1
+
+    if offset_idx != 1:
+        infos.append(
+            'Usually the first band should be ellipsoidal_height_offset.')
+
+    units = ds.GetRasterBand(offset_idx).GetUnitType()
+    if not units:
+        if is_first_subds:
+            warnings.append(
+                "ellipsoidal_height_offset band is missing units description. Metre will be assumed")
+    elif units not in ('metre', ):
+        errors.append(
+            "ellipsoidal_height_offset band is using a unit not supported by PROJ")
 
     return infos, warnings, errors
 
@@ -408,7 +491,7 @@ def validate_defmodel(ds, is_first_subds, first_subds):
                                    'HORIZONTAL',
                                    'VERTICAL',
                                    '3D'):
-        warnings.append("DISPLACEMENT_TYPE=%s is not recognize by PROJ" % displacement_type)
+        warnings.append("DISPLACEMENT_TYPE=%s is not recognized by PROJ" % displacement_type)
 
     uncertainty_type = ds.GetMetadataItem('UNCERTAINTY_TYPE')
     if not displacement_type:
@@ -420,7 +503,7 @@ def validate_defmodel(ds, is_first_subds, first_subds):
                                   'HORIZONTAL',
                                   'VERTICAL',
                                   '3D'):
-        warnings.append("UNCERTAINTY_TYPE=%s is not recognize by PROJ" % uncertainty_type)
+        warnings.append("UNCERTAINTY_TYPE=%s is not recognized by PROJ" % uncertainty_type)
 
     if displacement_type == 'HORIZONTAL':
         min_expected_band_count = 2
@@ -577,10 +660,12 @@ def validate_ifd(global_info, ds, is_first_subds, first_subds):
     elif type not in ('HORIZONTAL_OFFSET',
                       'VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL',
                       'VERTICAL_OFFSET_VERTICAL_TO_VERTICAL',
+                      'GEOGRAPHIC_3D_OFFSET',
+                      'ELLIPSOIDAL_HEIGHT_OFFSET',
                       'GEOCENTRIC_TRANSLATION',
                       'VELOCITY',
                       'DEFORMATION_MODEL',):
-        warnings.append("TYPE=%s is not recognize by PROJ" % type)
+        warnings.append("TYPE=%s is not recognized by PROJ" % type)
 
     if is_first_subds:
         if not ds.GetMetadataItem('area_of_use'):
@@ -627,8 +712,8 @@ def validate_ifd(global_info, ds, is_first_subds, first_subds):
         warnings.append(
             'Image uses %s compression. Might cause compatibility problems' % compression)
 
-    if type == 'HORIZONTAL_OFFSET':
-        i, w, e = validate_horizontal_offset(ds, is_first_subds)
+    if type in ('HORIZONTAL_OFFSET', 'GEOGRAPHIC_3D_OFFSET'):
+        i, w, e = validate_horizontal_offset(type, ds, is_first_subds)
         infos += i
         warnings += w
         errors += e
@@ -656,6 +741,11 @@ def validate_ifd(global_info, ds, is_first_subds, first_subds):
         errors += e
     elif type == 'DEFORMATION_MODEL':
         i, w, e = validate_defmodel(ds, is_first_subds, first_subds)
+        infos += i
+        warnings += w
+        errors += e
+    elif type == 'ELLIPSOIDAL_HEIGHT_OFFSET':
+        i, w, e = validate_ellipsoidal_height_offset(ds, is_first_subds)
         infos += i
         warnings += w
         errors += e
@@ -707,7 +797,9 @@ def validate_ifd(global_info, ds, is_first_subds, first_subds):
                        'number_of_nested_grids',
                        'UNCERTAINTY_TYPE',
                        'DISPLACEMENT_TYPE',
-                       'UNCERTAINTY_TYPE',):
+                       'UNCERTAINTY_TYPE',
+                       'interpolation_method',
+                       'auxiliary_data',):
             infos.append('Metadata %s=%s ignored' % (key, md[key]))
 
     for i in range(ds.RasterCount):
