@@ -45,6 +45,7 @@ set(CPACK_SOURCE_INSTALLED_DIRECTORIES
     "${CMAKE_CURRENT_SOURCE_DIR}/pl_gugik/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/pt_dgt/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/se_lantmateriet/" "."
+    "${CMAKE_CURRENT_SOURCE_DIR}/si_gurs/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/sk_gku/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/uk_os/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/us_nga/" "."
