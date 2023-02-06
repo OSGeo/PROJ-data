@@ -7,10 +7,10 @@ from [GURS](http://www.gu.gov.si)
 
 ### Slovenia vertical grid:
 
-*Source*: [GURS](https://www.e-prostor.gov.si/podrocja/drzavni-koordinatni-sistem/vertikalna-sestavina/?acitem=1257-1258)
-*Format*: GeoTIFF converted from 'XYZ ASCII Grid'
-*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
-*Credit*: (c) Geodetska uprava Republika Slovenija
+*Source*: [GURS](https://www.e-prostor.gov.si/podrocja/drzavni-koordinatni-sistem/vertikalna-sestavina/?acitem=1257-1258)  
+*Format*: GeoTIFF converted from 'XYZ ASCII Grid'  
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)  
+*Credit*: (c) Geodetska uprava Republika Slovenija  
 *Horizontal CRS*: EPSG:4883 (Slovenia 1996)
 
 Vertical transformation for hybrid quasi-geoid model SLO-VRP2016/Koper. Used to make the
