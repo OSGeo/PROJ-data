@@ -168,6 +168,12 @@
         "url": "https://www.lantmateriet.se/"
     },
     {
+        "id": "si_gurs",
+        "country": "Slovenia",
+        "agency": "Geodetska uprava Republika Slovenija (GURS)",
+        "url": "http://www.gu.gov.si"
+    },
+    {
         "id": "sk_gku",
         "country": "Slovakia",
         "agency": "Geodetický a kartografický ústav Bratislava (GKU)",
