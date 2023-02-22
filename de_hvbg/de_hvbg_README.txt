@@ -8,7 +8,6 @@ The files in this section result from the conversion of datasets originating fro
 
 *Source*: 
 [HVBG Downloadcenter]
-
 *Format*: GeoTIFF converted from NTv2                                                                                                                    
 *License*: Free redistribution is allowed and welcome
 
