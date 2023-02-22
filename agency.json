@@ -60,6 +60,12 @@
         "url": "https://www.landesvermessung.sachsen.de/download-5608.html?_cp=%7B%22accordion-content-4389%22%3A%7B%222%22%3Atrue%7D%2C%22previousOpen%22%3A%7B%22group%22%3A%22accordion-content-4389%22%2C%22idx%22%3A2%7D%7D"
     },
     {
+        "id": "de_hvbg",
+        "country": "Germany",
+        "agency":"Hessisches Landesamt für Bodenmanagement und Geoinformation",
+        "url": "https://www.hvbg.hessen.de/"
+    },
+    {
         "id": "de_lgl_bw",
         "country": "Germany",
         "agency":"LGL Baden-Württemberg",
