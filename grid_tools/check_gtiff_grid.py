@@ -225,9 +225,9 @@ def validate_vertical_offset_geographic_to_vertical(ds, is_first_subds):
     for i in range(ds.RasterCount):
         b = ds.GetRasterBand(i+1)
         desc = b.GetDescription()
-        if desc == 'geoid_undulation':
+        if desc in ('geoid_undulation', 'hydroid_height'):
             if offset_idx > 0:
-                return infos, warnings, ["At least, 2 bands are tagged with Description = geoid_undulation"]
+                return infos, warnings, ["At least, 2 bands are tagged with Description = geoid_undulation/hydroid_height"]
             offset_idx = i+1
         elif desc:
             infos.append('Band of type %s not recognized by PROJ' % desc)
@@ -235,17 +235,17 @@ def validate_vertical_offset_geographic_to_vertical(ds, is_first_subds):
     if offset_idx == 0:
         if is_first_subds:
             warnings.append(
-                'No explicit band tagged with Description = geoid_undulation. Assuming first one')
+                'No explicit band tagged with Description = geoid_undulation/hydroid_height. Assuming first one')
         offset_idx = 1
 
     units = ds.GetRasterBand(offset_idx).GetUnitType()
     if not units:
         if is_first_subds:
             warnings.append(
-                "geoid_undulation band is missing units description. Metre will be assumed")
+                f"{desc} band is missing units description. Metre will be assumed")
     elif units not in ('metre', ):
         errors.append(
-            "geoid_undulation band is using a unit not supported by PROJ")
+            f"{desc} band is using a unit not supported by PROJ")
 
     return infos, warnings, errors
 

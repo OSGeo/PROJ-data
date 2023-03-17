@@ -80,6 +80,8 @@ Usage:
 ```
 usage: vertoffset_grid_to_gtiff.py [-h] --type
                                    {GEOGRAPHIC_TO_VERTICAL,VERTICAL_TO_VERTICAL}
+                                   [--parameter-name
+                                   {geoid_undulation,hydroid_height,vertical_offset}]
                                    --source-crs SOURCE_CRS
                                    [--interpolation-crs INTERPOLATION_CRS]
                                    --target-crs TARGET_CRS --copyright
@@ -93,6 +95,9 @@ usage: vertoffset_grid_to_gtiff.py [-h] --type
 
 Options:
 * --type {GEOGRAPHIC_TO_VERTICAL,VERTICAL_TO_VERTICAL}: specify the type of the grid. GEOGRAPHIC_TO_VERTICAL is for geoid-like grids transforming between a vertical CRS and ellipsoid heights. The value in the grid must be the offset to add to the height in the vertical CRS to get an ellipsoidal height. VERTICAL_TO_VERTICAL is for transformations between 2 vertical CRS: the value in the grid must be the offset to add to heights in the source CRS to get heights in the target CRS.
+* --parameter-name {geoid_undulation,hydroid_height,vertical_offset}: semantics of the offset value.
+  For type=GEOGRAPHIC_TO_VERTICAL, this option is mandatory, and the only valid choices are ``geoid_undulation`` and ``hydroid_height``.
+  For type=VERTICAL_TO_VERTICAL, ``vertical_offset`` is the only valid choice.`
 * --source-crs SOURCE_CRS: the source CRS, as a "EPSG:XXXX" value or a CRS WKT string. Mandatory. For type=GEOGRAPHIC_TO_VERTICAL, this must be a Geographic 3D CRS. For type=VERTICAL_TO_VERTICAL, this must be a Vertical CRS.
 * --interpolation-crs INTERPOLATION_CRS: the geographic CRS in which the grid is referenced to. This is ignored for type=GEOGRAPHIC_TO_VERTICAL (the interpolation CRS is the source CRS), but mandatory for type=VERTICAL_TO_VERTICAL
 * --target-crs SOURCE_CRS: the target CRS, as a "EPSG:XXXX" value or a CRS WKT string. Mandatory. Must be a vertical CRS.
@@ -108,6 +113,7 @@ Example:
 ```
 python3 vertoffset_grid_to_gtiff.py \
     --type GEOGRAPHIC_TO_VERTICAL \
+    --parameter-name geoid_undulation \
     --area-of-use "World" \
     --source-crs EPSG:4326 \
     --target-crs EPSG:5773 \
@@ -120,6 +126,7 @@ Using the Docker image:
 ```
 docker run --rm -v /home:/home osgeo/gdal:alpine-normal-latest python3 $PWD/vertoffset_grid_to_gtiff.py \
     --type GEOGRAPHIC_TO_VERTICAL \
+    --parameter-name geoid_undulation \
     --area-of-use "World" \
     --source-crs EPSG:4326 \
     --target-crs EPSG:5773 \
