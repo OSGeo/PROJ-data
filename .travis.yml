@@ -22,7 +22,7 @@ install:
     - docker run --rm -v /home:/home osgeo/gdal:alpine-normal-latest python3 $PWD/ntv2_to_gtiff.py --copyright "Derived from work by Natural Resources Canada. Open Government Licence - Canada" --source-crs EPSG:4267 --target-crs EPSG:4269 $PWD/ntv2_0.gsb $PWD/ca_nrc_ntv2_0.tif
     - docker run --rm -v /home:/home osgeo/gdal:alpine-normal-latest python3 $PWD/check_gtiff_grid.py $PWD/ca_nrc_ntv2_0.tif
     - wget https://github.com/OSGeo/proj-datumgrid/raw/master/egm96_15.gtx
-    - docker run --rm -v /home:/home osgeo/gdal:alpine-normal-latest python3 $PWD/vertoffset_grid_to_gtiff.py --type GEOGRAPHIC_TO_VERTICAL --source-crs EPSG:4326 --target-crs EPSG:5773 --copyright "Public Domain. Derived from work from NGA" $PWD/egm96_15.gtx $PWD/us_nga_egm96_15.tif
+    - docker run --rm -v /home:/home osgeo/gdal:alpine-normal-latest python3 $PWD/vertoffset_grid_to_gtiff.py --type GEOGRAPHIC_TO_VERTICAL --parameter-name geoid_undulation --source-crs EPSG:4326 --target-crs EPSG:5773 --copyright "Public Domain. Derived from work from NGA" $PWD/egm96_15.gtx $PWD/us_nga_egm96_15.tif
     - docker run --rm -v /home:/home osgeo/gdal:alpine-normal-latest python3 $PWD/check_gtiff_grid.py $PWD/us_nga_egm96_15.tif
     - cd ..
 # Travis build directory includes /build/, which is a pattern we exclude

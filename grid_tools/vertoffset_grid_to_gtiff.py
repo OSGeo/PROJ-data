@@ -28,8 +28,8 @@
 #  DEALINGS IN THE SOFTWARE.
 ###############################################################################
 
-# python vertoffset_grid_to_gtiff.py $HOME/proj/proj-datumgrid/egm96_15.gtx egm96_15.tif --type GEOGRAPHIC_TO_VERTICAL --source-crs EPSG:4326 --target-crs EPSG:5773 --copyright "Public Domain. Derived from work at http://earth-info.nga.mil/GandG/wgs84/gravitymod/egm96/egm96.html"
-# python vertoffset_grid_to_gtiff.py $HOME/proj/proj-datumgrid/world/egm08_25.gtx egm08_25.tif --type GEOGRAPHIC_TO_VERTICAL --source-crs EPSG:4326 --target-crs EPSG:3855  --copyright "Public Domain. Derived from work at http://earth-info.nga.mil/GandG/wgs84/gravitymod/egm2008/egm08_wgs84.html"
+# python vertoffset_grid_to_gtiff.py $HOME/proj/proj-datumgrid/egm96_15.gtx egm96_15.tif --type GEOGRAPHIC_TO_VERTICAL --parameter-name geoid_undulation --source-crs EPSG:4326 --target-crs EPSG:5773 --copyright "Public Domain. Derived from work at http://earth-info.nga.mil/GandG/wgs84/gravitymod/egm96/egm96.html"
+# python vertoffset_grid_to_gtiff.py $HOME/proj/proj-datumgrid/world/egm08_25.gtx egm08_25.tif --type GEOGRAPHIC_TO_VERTICAL --parameter-name geoid_undulation --source-crs EPSG:4326 --target-crs EPSG:3855  --copyright "Public Domain. Derived from work at http://earth-info.nga.mil/GandG/wgs84/gravitymod/egm2008/egm08_wgs84.html"
 # python vertoffset_grid_to_gtiff.py $HOME/proj/proj-datumgrid/north-america/vertcone.gtx vertcone.tif --type VERTICAL_TO_VERTICAL --source-crs EPSG:7968 --target-crs EPSG:5703 --interpolation-crs EPSG:4267 --copyright "Public Domain. Derived from work at https://www.ngs.noaa.gov/PC_PROD/VERTCON/"
 
 from osgeo import gdal
@@ -59,6 +59,12 @@ def get_args():
 
     parser.add_argument('--interpolation-crs', dest='interpolation_crs',
                         help='Interpolation CRS as EPSG:XXXX or WKT. Required for type=VERTICAL_TO_VERTICAL')
+
+    parser.add_argument('--parameter-name', dest='parameter_name',
+                        choices=['geoid_undulation',
+                                 'hydroid_height',
+                                 'vertical_offset'],
+                        help='geoid_undulation and hydroid_height valid for type=GEOGRAPHIC_TO_VERTICAL. vertical_offset valid for VERTICAL_TO_VERTICAL')
 
     parser.add_argument('--target-crs', dest='target_crs', required=True,
                         help='Target CRS as EPSG:XXXX or WKT')
@@ -199,8 +205,7 @@ def create_unoptimized_file(sourcefilename, tmpfilename, args):
             tmp_ds.GetRasterBand(1).SetOffset(0)
             tmp_ds.GetRasterBand(1).SetScale(scale)
             if idx_ifd == 0 or not compact_md:
-                tmp_ds.GetRasterBand(1).SetDescription(
-                    'geoid_undulation' if args.type == 'GEOGRAPHIC_TO_VERTICAL' else 'vertical_offset')
+                tmp_ds.GetRasterBand(1).SetDescription(args.parameter_name)
                 tmp_ds.GetRasterBand(1).SetUnitType('metre')
 
         elif args.encoding == 'uint16':
@@ -253,8 +258,7 @@ def create_unoptimized_file(sourcefilename, tmpfilename, args):
                 tmp_ds.GetRasterBand(i).SetOffset(min)
                 tmp_ds.GetRasterBand(i).SetScale(scale)
                 if idx_ifd == 0 or not compact_md:
-                    tmp_ds.GetRasterBand(i).SetDescription(
-                        'geoid_undulation' if args.type == 'GEOGRAPHIC_TO_VERTICAL' else 'vertical_offset')
+                    tmp_ds.GetRasterBand(i).SetDescription(args.parameter_name)
                     tmp_ds.GetRasterBand(i).SetUnitType('metre')
 
         else:
@@ -306,8 +310,7 @@ def create_unoptimized_file(sourcefilename, tmpfilename, args):
                 tmp_ds.GetRasterBand(i).WriteRaster(0, 0, src_ds.RasterXSize, src_ds.RasterYSize,
                                                     data)
                 if idx_ifd == 0 or not compact_md:
-                    tmp_ds.GetRasterBand(i).SetDescription(
-                        'geoid_undulation' if args.type == 'GEOGRAPHIC_TO_VERTICAL' else 'vertical_offset')
+                    tmp_ds.GetRasterBand(i).SetDescription(args.parameter_name)
                     tmp_ds.GetRasterBand(i).SetUnitType('metre')
 
         if idx_ifd == 0:
@@ -375,6 +378,15 @@ def check(sourcefilename, destfilename, args):
 if __name__ == '__main__':
 
     args = get_args()
+
+    if args.type == "GEOGRAPHIC_TO_VERTICAL":
+        if args.parameter_name is None:
+            raise Exception("For type=GEOGRAPHIC_TO_VERTICAL, --parameter-name=geoid_undulation/hydroid_height is required")
+        assert args.parameter_name in ("geoid_undulation", "hydroid_height")
+    else:
+        if args.parameter_name is None:
+            args.parameter_name = "vertical_offset"
+        assert args.parameter_name == "vertical_offset"
 
     tmpfilename = args.dest + '.tmp'
     gdal.Unlink(tmpfilename)
