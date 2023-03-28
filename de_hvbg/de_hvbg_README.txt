@@ -8,7 +8,6 @@ The files in this section result from the conversion of datasets originating fro
 
 *Source*: [HVBG Downloadcenter](https://www.gds.hessen.de/INTERSHOP/web/WFS/HLBG-Geodaten-Site/de_DE/-/EUR/ViewData-Start/1394640044?JumpTarget=ViewRequisitionProcess-Restart&IsOnlineBasket=false&ProductUUID=B9MKFwNVKxMAAAF.AeJVXZuMhttps://www.gds.hessen.de/INTERSHOP/web/WFS/HLBG-Geodaten-Site/de_DE/-/EUR/ViewData-Start/1394640044?JumpTarget=ViewRequisitionProcess-Restart&IsOnlineBasket=false&ProductUUID=B9MKFwNVKxMAAAF.AeJVXZuM)
 
-*Source*: [HVBG Downloadcenter](https://gds.hessen.de/)
 *Format*: GeoTIFF converted from NTv2
 *License*: [Data licence Germany – attribution – version 2.0](https://www.govdata.de/dl-de/by-2-0)
 
