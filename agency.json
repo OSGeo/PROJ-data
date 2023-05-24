@@ -84,6 +84,12 @@
         "url": "https://github.com/NordicGeodesy/NordicTransformations"
     },
     {
+        "id": "dk_sdfi",
+        "country": "Denmark",
+        "agency":"Danish Agency for Data Supply and Infrastructure",
+        "url": "https://sdfi.dk"
+    },
+    {
         "id": "es_ign",
         "country": "Spain",
         "agency":"Instituto Geográfico Nacional (IGN)",
