@@ -1,7 +1,7 @@
 #!/bin/bash -e 
 
 # Usage:
-# PROJ_DATA_DIR=/path/to/PROJ-data ./build.sh 
+# PROJ_DATA_DIR=/path/to/PROJ-data ./build_GEOIDE-Ar16.sh 
 
 # Setup build directory
 mkdir -p build
@@ -22,7 +22,7 @@ awk '/^ .*$/ {print "NCOLS "($4-$3)/$6+1 "\nNROWS "($2-$1)/$5+1 "\nXLLCENTER "$3
 head ./build/$input
 
 docker run --user $(id -u):$(id -g) --workdir $PWD \
-            --rm -v /home:/home osgeo/gdal:alpine-normal-latest \
+            --rm -v /home:/home ghcr.io/osgeo/gdal:alpine-normal-latest \
             sh -c " \
             # Call vertoffset_grid_to_gtiff-script 
             python3 ${PROJ_DATA_DIR}/grid_tools/vertoffset_grid_to_gtiff.py \
