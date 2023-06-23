@@ -17,6 +17,7 @@ set(CPACK_INSTALL_COMMANDS
 )
 set(CPACK_SOURCE_INSTALLED_DIRECTORIES
     "${CMAKE_BINARY_DIR}/tmp/" "."
+    "${CMAKE_CURRENT_SOURCE_DIR}/ar_ign/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/at_bev/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/au_ga/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/au_icsm/" "."
