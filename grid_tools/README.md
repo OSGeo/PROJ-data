@@ -10,10 +10,10 @@ GDAL >= 3.1 (currently master) is required to write geoid models with GeoTIFF 1.
 encoding of Geographic 3D CRS. Otherwise, GDAL 2.4/3.0 can be used to produce
 horizontal shift grids.
 
-The "osgeo/gdal:alpine-normal-latest" docker image documented at
+The "ghcr.io/osgeo/gdal:alpine-normal-latest" docker image documented at
 https://github.com/OSGeo/gdal/tree/master/gdal/docker can be used for that purpose
-(the default "osgeo/gdal" can also be used. It is larger, using a Ubuntu base, whereas
-"osgeo/gdal" uses a smaller Alpine Linux base)
+(the default "ghcr.io/osgeo/gdal" can also be used. It is larger, using a Ubuntu base, whereas
+"ghcr.io/osgeo/gdal:alpine-normal-latest" uses a smaller Alpine Linux base)
 
 For Windows, the development version of [GisInternals builds](http://gisinternals.com/development.php)
 can also be used. Or the "gdal-dev-python" package of [OSGeo4W](https://trac.osgeo.org/osgeo4w/)
@@ -64,7 +64,7 @@ python3 ntv2_to_gtiff.py \
 Using the Docker image:
 
 ```
-docker run --rm -v /home:/home osgeo/gdal:alpine-normal-latest python3 $PWD/ntv2_to_gtiff.py  \
+docker run --rm -v /home:/home ghcr.io/osgeo/gdal:alpine-normal-latest python3 $PWD/ntv2_to_gtiff.py  \
     --area-of-use "Canada" \
     --copyright "Derived from work by Natural Resources Canada. Open Government Licence - Canada: http://open.canada.ca/en/open-government-licence-canada" \
     --source-crs EPSG:4267 \
@@ -124,7 +124,7 @@ python3 vertoffset_grid_to_gtiff.py \
 Using the Docker image:
 
 ```
-docker run --rm -v /home:/home osgeo/gdal:alpine-normal-latest python3 $PWD/vertoffset_grid_to_gtiff.py \
+docker run --rm -v /home:/home ghcr.io/osgeo/gdal:alpine-normal-latest python3 $PWD/vertoffset_grid_to_gtiff.py \
     --type GEOGRAPHIC_TO_VERTICAL \
     --parameter-name geoid_undulation \
     --area-of-use "World" \
