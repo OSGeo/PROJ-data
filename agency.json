@@ -1,5 +1,11 @@
 [
     {
+        "id": "ar_ign",
+        "country": "Argentina",
+        "agency": "Instituto Geográfico Nacional (IGN)",
+        "url": "https://www.ign.gob.ar"
+    },
+    {
         "id": "at_bev",
         "country": "Austria",
         "agency": "Austria Bundesamt für Eich- und Vermessungswessen",

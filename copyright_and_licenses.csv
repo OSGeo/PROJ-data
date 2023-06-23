@@ -1,4 +1,6 @@
 filename,copyright,license,version_added,version_removed
+ar_ign_GEOIDE-Ar16.tif,Instituto Geográfico Nacional (IGN) Argentina,CC-BY-4.0,1.15,
+ar_ign_README.txt,Disclaimed,Public domain,1.15,
 at_bev_AT_GIS_GRID.tif,Austria Bundesamt für Eich- und Vermessungswessen (BEV),CC-BY-4.0,,
 at_bev_AT_GIS_GRID_2021_09_28.tif,Austria Bundesamt für Eich- und Vermessungswessen (BEV),CC-BY-4.0,1.12,
 at_bev_GEOID_BESSEL_Oesterreich.tif,Austria Bundesamt für Eich- und Vermessungswessen (BEV),CC-BY-4.0,,
