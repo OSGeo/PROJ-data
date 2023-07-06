@@ -19,3 +19,9 @@ to heights above the ellipsoid in ETRF2000-PL (EPSG:9701).
 
 * pl_gugik_geoid2011-PL-EVRF2007-NH.tif
 * pl_gugik_geoid2011-PL-KRON86-NH.tif
+
+Vertical transformation for Geoid model PL-geoid-2021. Used to make the transitions
+from heights in vertical CRS (EPSG:9651 - EVRF2007-PL height) to heights above the ellipsoid
+in ETRF2000-PL (EPSG:9701).
+
+* pl_gugik_geoid2021-PL-EVRF2007-NH.tif
