@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Usage:
-# PROJ_DATA_DIR=/path/to/PROJ-data ./build.sh gugik-geoid2011-PL-EVRF2007-NH.txt EPSG:9651 "EVRF2007-PL height" pl_gugik_geoid2011-PL-EVRF2007-NH.tif
-# PROJ_DATA_DIR=/path/to/PROJ-data ./build.sh gugik-geoid2011-PL-KRON86-NH.txt EPSG:9650 "Baltic 1986 height" pl_gugik_geoid2011-PL-KRON86-NH.tif
+# PROJ_DATA_DIR=/path/to/PROJ-data ./build_geoid2011.sh gugik-geoid2011-PL-EVRF2007-NH.txt EPSG:9651 "EVRF2007-PL height" pl_gugik_geoid2011-PL-EVRF2007-NH.tif
+# PROJ_DATA_DIR=/path/to/PROJ-data ./build_geoid2011.sh gugik-geoid2011-PL-KRON86-NH.txt EPSG:9650 "Baltic 1986 height" pl_gugik_geoid2011-PL-KRON86-NH.tif
 
 # Setup build directory
 mkdir build
