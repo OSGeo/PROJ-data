@@ -26,6 +26,7 @@ set(CPACK_SOURCE_INSTALLED_DIRECTORIES
     "${CMAKE_CURRENT_SOURCE_DIR}/ca_nrc/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/ca_que_mern/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/ch_swisstopo/" "."
+    "${CMAKE_CURRENT_SOURCE_DIR}/cz_cuzk/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/de_adv/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/de_geosn/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/de_hvbg/" "."

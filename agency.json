@@ -54,6 +54,12 @@
         "url": "https://www.swisstopo.admin.ch/en/knowledge-facts/surveying-geodesy/reference-frames/transformations-position.html"
     },
     {
+        "id": "cz_cuzk",
+        "country": "Czech Republic",
+        "agency":"ČÚZK",
+        "url": "https://geoportal.cuzk.cz/"
+    },
+    {
         "id": "de_adv",
         "country": "Germany",
         "agency":"Arbeitsgemeinschaft der Vermessungsverwaltungender der Länder der Bundesrepublik Deutschland (AdV)",
