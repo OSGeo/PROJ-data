@@ -253,7 +253,29 @@ Transform between NAD27(76) and NAD83 in Canada.
 
 * ca_nrc_SK83-98.tif
 
-### Canada: CGVD28 height --> NAD83(CSRS)
+### Canada: CGVD28 height --> NAD83(CSRS)v2 / NAD83(CRS)v3 (epoch 1997)
+
+*Source*: [Natural Resources Canada](https://webapp.csrs-scrs.nrcan-rncan.gc.ca/geod/process/download-helper.php?file_id=HT2_1997)  
+*Format*: GeoTIFF converted from BYN  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:8235 (NAD83(CSRS)v2)  
+*Target CRS*: EPSG:5713 (CGVD28 height)  
+*Used by*: [EPSG:9984 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9984)
+
+* ca_nrc_HT2_1997.tif
+
+### Canada: CGVD28 height --> NAD83(CSRS)v4 (epoch 2002)
+
+*Source*: [Natural Resources Canada](https://webapp.csrs-scrs.nrcan-rncan.gc.ca/geod/process/download-helper.php?file_id=HT2_2002)  
+*Format*: GeoTIFF converted from BYN  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:8244 (NAD83(CSRS)v4)  
+*Target CRS*: EPSG:5713 (CGVD28 height)  
+*Used by*: [EPSG:9985 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9985)
+
+* ca_nrc_HT2_2002v70.tif
+
+### Canada: CGVD28 height --> NAD83(CSRS)v6 / NAD83(CRS)v7 / NAD83(CSRS)v8 (epoch 2010)
 
 *Source*: [Natural Resources Canada](https://webapp.geod.nrcan.gc.ca/geod/process/download-helper.php?file_id=HT2_2010)  
 *Format*: GeoTIFF converted from GTX  
@@ -307,6 +329,28 @@ Transform between NAD27(76) and NAD83 in Canada.
 *Used by*: [EPSG:9124 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9124)
 
 * ca_nrc_CGG2013i08.tif
+
+### Canada: CGVD28 height --> CGVD2013a(1997) height
+
+*Source*: [Natural Resources Canada](https://webapp.csrs-scrs.nrcan-rncan.gc.ca/geod/process/download-helper.php?file_id=HT2_1997_CGG2013a)  
+*Format*: GeoTIFF converted from GeoTIFF  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:5713 (CGVD28 height)  
+*Target CRS*: EPSG:20035 (CGVD2013a(1997) height)  
+*Used by*: [EPSG:10113 Transformation](https://epsg.org/transformation_10113/CGVD28-height-to-CGVD2013a-1997-height-1.html)
+
+* ca_nrc_HT2_1997_CGG2013a.tif
+
+### Canada: CGVD28 height --> CGVD2013a(2002) height
+
+*Source*: [Natural Resources Canada](https://webapp.csrs-scrs.nrcan-rncan.gc.ca/geod/process/download-helper.php?file_id=HT2_1997_CGG2013a)  
+*Format*: GeoTIFF converted from GeoTIFF  
+*License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
+*Source CRS*: EPSG:5713 (CGVD28 height)  
+*Target CRS*: EPSG:20034 (CGVD2013a(2002) height)  
+*Used by*: [EPSG:10113 Transformation](https://epsg.org/transformation_10114/CGVD28-height-to-CGVD2013a-2002-height-1.html)
+
+* ca_nrc_HT2_2002v70_CGG2013a.tif
 
 ### Canada: CGVD28 height --> CGVD2013a(2010) height
 
