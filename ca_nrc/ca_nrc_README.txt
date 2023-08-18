@@ -271,7 +271,7 @@ Transform between NAD27(76) and NAD83 in Canada.
 *License*: [Open Government Licence - Canada](http://open.canada.ca/en/open-government-licence-canada)  
 *Source CRS*: EPSG:8244 (NAD83(CSRS)v4)  
 *Target CRS*: EPSG:5713 (CGVD28 height)  
-*Used by*: [EPSG:9985 Transformation](https://www.epsg-registry.org/export.htm?gml=urn:ogc:def:coordinateOperation:EPSG::9985)
+*Used by*: [EPSG:9985 Transformation](https://epsg.org/transformation_9985/NAD83-CSRS-v4-to-CGVD28-height-1.html)
 
 * ca_nrc_HT2_2002v70.tif
 
