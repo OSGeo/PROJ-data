@@ -174,32 +174,38 @@ def create_unoptimized_file(sourcefilename, tmpfilename, args):
             nodata = None if args.ignore_nodata else src_ds.GetRasterBand(
                 1).GetNoDataValue()
             data = src_ds.GetRasterBand(1).ReadAsArray()
-            if nodata is None:
-                data = data / scale
-            else:
-                dst_nodata = 9999000
-                nodata_as_f = struct.pack('f', nodata)
-                has_warned_nodata = False
-                for y in range(src_ds.RasterYSize):
-                    for x in range(src_ds.RasterXSize):
-                        is_nodata = False
-                        if struct.pack('f', data[y][x]) == nodata_as_f:
-                            if is_false_positive_nodata(y, x):
-                                pass
-                            elif not has_warned_nodata:
-                                print(
-                                    'At least one value matches nodata (at %d,%d). Setting it' % (y, x))
-                                tmp_ds.GetRasterBand(
-                                    1).SetNoDataValue(dst_nodata)
-                                has_warned_nodata = True
-                                is_nodata = True
-                            else:
-                                is_nodata = True
+            if src_ds.GetRasterBand(1).DataType == gdal.GDT_Int32 and \
+               src_ds.GetRasterBand(1).GetScale() == 0.001:
+                tmp_ds.GetRasterBand(1).SetNoDataValue(nodata)
+            elif src_ds.GetRasterBand(1).GetScale() == 1:
+                if nodata is None:
+                    data = data / scale
+                else:
+                    dst_nodata = 9999000
+                    nodata_as_f = struct.pack('f', nodata)
+                    has_warned_nodata = False
+                    for y in range(src_ds.RasterYSize):
+                        for x in range(src_ds.RasterXSize):
+                            is_nodata = False
+                            if struct.pack('f', data[y][x]) == nodata_as_f:
+                                if is_false_positive_nodata(y, x):
+                                    pass
+                                elif not has_warned_nodata:
+                                    print(
+                                        'At least one value matches nodata (at %d,%d). Setting it' % (y, x))
+                                    tmp_ds.GetRasterBand(
+                                        1).SetNoDataValue(dst_nodata)
+                                    has_warned_nodata = True
+                                    is_nodata = True
+                                else:
+                                    is_nodata = True
 
-                        if is_nodata:
-                            data[y][x] = dst_nodata
-                        else:
-                            data[y][x] = data[y][x] / scale
+                            if is_nodata:
+                                data[y][x] = dst_nodata
+                            else:
+                                data[y][x] = data[y][x] / scale
+            else:
+                assert False
 
             tmp_ds.GetRasterBand(1).WriteArray(data)
             tmp_ds.GetRasterBand(1).SetOffset(0)
