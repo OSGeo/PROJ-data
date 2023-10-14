@@ -60,6 +60,12 @@
         "url": "http://www.adv-online.de/icc/extdeu/nav/9ae/9ae594bb-a094-311a-3b21-718a438ad1b2&sel_uCon=3c10e056-7955-311a-3b21-718a438ad1b2&uTem=73d607d6-b048-65f1-80fa-29f08a07b51a.htm"
     },
     {
+        "id": "de_bkg",
+        "country": "Germany",
+        "agency":"Bundesamt für Kartographie und Geodäsie (BKG)",
+        "url": "https://gdz.bkg.bund.de/index.php/default/digitale-geodaten.html"
+    },
+    {
         "id": "de_geosn",
         "country": "Germany",
         "agency":"Staatsbetrieb Geobasisinformation und Vermessung Sachsen GeoSN",
