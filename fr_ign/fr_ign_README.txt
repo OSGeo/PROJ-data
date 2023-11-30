@@ -40,6 +40,7 @@ Continental France an Corsica:
 * fr_ign_RAF18b.tif: Continental France, NGF-IGN 1969 to RGF93 (ETRS89) (2018b version)
 * fr_ign_RAF20.tif: Continental France, NGF-IGN 1969 to RGF93 (ETRS89) (2021 v2b version)
 * fr_ign_RAC09.tif: Corsica, NGF-IGN 1978 to RGF93 (ETRS89)
+* fr_ign_RAC23.tif: Corsica, NGF-IGN 1978 to RGF93-2b (ETRS89)
 
 French Antilles to RGAF09 (Réseau Géodésique des Antilles Françaises 2009):
 * fr_ign_RAGTBT2016.tif: Guadeloupe, IGN 1988 (GUADELOUPE) to RGAF09
