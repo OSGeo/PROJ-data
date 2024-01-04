@@ -4,9 +4,10 @@
 #
 #------------------------------------------------------------------------------------------------------
 #
-#  This file is Work-In-Progress, and should not be used without great testing care. It is
-#  currently provided for informational and testing purposes, but will in due course become
-#  the official definition and implementation of transformations to and from Danish systems.
+#  This file is legacy Work-In-Progress, and should not be used. It is has previously
+#  been provided for informational and testing purposes.
+#
+#  WARNING: THIS FILE WILL BE REMOVED IN THE NEAR FUTURE!
 #
 #  Revision history:
 #  -----------------
@@ -32,16 +33,21 @@
 #              for PROJ 5.0.0 release.
 #              Thomas Knudsen <thokn@sdfe.dk>
 #
+#  2023-01-04  Removed DVR90 as it is now fully implemented in
+#              the EPSG registry. In general this file should
+#              not be used anymore and it will be removed in the
+#              near future.
+#              Kristian Evers <kreve@sdfi.dk>
+#
 #------------------------------------------------------------------------------------------------------
 
 
-<metadata> +version=1.0.0 +origin=SDFE +lastupdate=2018-02-26
+<metadata> +version=2.0.0 +origin=SDFI +lastupdate=2023-01-04
 
 
 #------------------------------------------------------------------------------------------------------
 #  Vertical datums
 #------------------------------------------------------------------------------------------------------
-<DVR90> proj=vgridshift grids=dk_sdfe_dvr90.tif            # current
 <DNN>   proj=vgridshift grids=dk_sdfe_dnn.tif              # historical
 #------------------------------------------------------------------------------------------------------
 
@@ -52,9 +58,6 @@
 #------------------------------------------------------------------------------------------------------
 <UTM32N> proj=utm zone=32 ellps=GRS80 units=m no_defs
 <UTM33N> proj=utm zone=33 ellps=GRS80 units=m no_defs
-
-<UTM32N_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:UTM32N
-<UTM33N_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:UTM33N
 
 <UTM32N_DNN> proj=pipeline step init=DK:DNN step init=DK:UTM32N
 <UTM33N_DNN> proj=pipeline step init=DK:DNN step init=DK:UTM33N
@@ -76,11 +79,6 @@ expect      691875.6321 6098907.8250
 <DKTM3> proj=etmerc lat_0=0 lon_0=11.75 k=0.99998 x_0=600000 y_0=-5000000 ellps=GRS80 units=m no_defs
 <DKTM4> proj=etmerc lat_0=0 lon_0=15    k=1       x_0=800000 y_0=-5000000 ellps=GRS80 units=m no_defs
 
-<DKTM1_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:DKTM1
-<DKTM2_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:DKTM2
-<DKTM3_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:DKTM3
-<DKTM4_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:DKTM4
-
 <DKTM1_DNN> proj=pipeline step init=DK:DNN step init=DK:DKTM1
 <DKTM2_DNN> proj=pipeline step init=DK:DNN step init=DK:DKTM2
 <DKTM3_DNN> proj=pipeline step init=DK:DNN step init=DK:DKTM3
@@ -96,10 +94,6 @@ expect      691875.6321 6098907.8250
 <KP2000B> proj=etmerc lat_0=0 lon_0=15  k=1       x_0=900000 y_0=0 ellps=GRS80 units=m no_defs
 <KP2000J> proj=etmerc lat_0=0 lon_0=9.5 k=0.99995 x_0=200000 y_0=0 ellps=GRS80 units=m no_defs
 <KP2000S> proj=etmerc lat_0=0 lon_0=12  k=0.99995 x_0=500000 y_0=0 ellps=GRS80 units=m no_defs
-
-<KP2000B_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:KP2000B
-<KP2000J_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:KP2000J
-<KP2000S_DVR90> proj=pipeline step init=DK:DVR90 step init=DK:KP2000S
 
 <KP2000B_DNN> proj=pipeline step init=DK:DNN step init=DK:KP2000B
 <KP2000J_DNN> proj=pipeline step init=DK:DNN step init=DK:KP2000J
