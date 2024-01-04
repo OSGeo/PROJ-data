@@ -88,3 +88,20 @@ reference frame (EPSG:1346), which is used as a stepping stone in the transforma
 between ETRS89 and S45B.
 
 * dk_sdfi_s45b_2022.tif
+
+### ETRS89 -> DVR90
+
+*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)
+*Format*: GTG
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+Transform ETRS89 ellipsoidal heights (EPSG:4937) to DVR90. The DVR90 ensemble (EPSG:5799) includes
+three realizations which have a related grid transformation:
+
+1. DVR90(2002), EPSG:10483
+2. DVR90(2013), EPSG:10484
+3. DVR90(2023), EPSG:10485
+
+* dk_sdfi_dvr90_2002.tif
+* dk_sdfi_dvr90_2013.tif
+* dk_sdfi_dvr90_2023.tif
