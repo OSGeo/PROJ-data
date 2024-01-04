@@ -7,8 +7,8 @@ from [Agency for Data Supply and Infrastructure](https://sdfi.dk) (previously kn
 
 ### ETRS89 -> GS-IRF
 
-*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)
-*Format*: GTG
+*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)  
+*Format*: GTG  
 *License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 Transform ETRS89 coordinates (EPSG:4258) to Generalstabens Systems intermediate reference
@@ -19,8 +19,8 @@ and GS.
 
 ### ETRS89 -> GSB-IRF
 
-*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)
-*Format*: GTG
+*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)  
+*Format*: GTG  
 *License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 Transform ETRS89 coordinates (EPSG:4258) to Generalstabens Systems Bornholm intermediate
@@ -31,8 +31,8 @@ between ETRS89 and GSB.
 
 ### ETRS89 -> KK-IRF
 
-*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)
-*Format*: GTG
+*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)  
+*Format*: GTG  
 *License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 Transform ETRS89 coordinates (EPSG:4258) to Københavns Kommunes System intermediate
@@ -43,8 +43,8 @@ between ETRS89 and KK.
 
 ### ETRS89 -> OS-IRF
 
-*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)
-*Format*: GTG
+*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)  
+*Format*: GTG  
 *License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 Transform ETRS89 coordinates (EPSG:4258) to System Ostenfeld (OS) intermediate
@@ -55,8 +55,8 @@ between ETRS89 and OS.
 
 ### ETRS89 -> S34J-IRF
 
-*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)
-*Format*: GTG
+*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)  
+*Format*: GTG  
 *License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 Transform ETRS89 coordinates (EPSG:4258) to System 34 Jylland intermediate
@@ -67,8 +67,8 @@ between ETRS89 and S34J.
 
 ### ETRS89 -> S34S-IRF
 
-*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)
-*Format*: GTG
+*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)  
+*Format*: GTG  
 *License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 Transform ETRS89 coordinates (EPSG:4258) to System 34 Sjælland intermediate
@@ -79,8 +79,8 @@ between ETRS89 and S34S.
 
 ### ETRS89 -> S45B-IRF
 
-*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)
-*Format*: GTG
+*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)  
+*Format*: GTG  
 *License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 Transform ETRS89 coordinates (EPSG:4258) to System 45 Bornholm intermediate
@@ -91,8 +91,8 @@ between ETRS89 and S45B.
 
 ### ETRS89 -> DVR90
 
-*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)
-*Format*: GTG
+*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)  
+*Format*: GTG  
 *License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 Transform ETRS89 ellipsoidal heights (EPSG:4937) to DVR90. The DVR90 ensemble (EPSG:5799) includes
