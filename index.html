@@ -178,6 +178,37 @@ var featureLayer = new ol.layer.Vector({
   style: style
 });
 
+var singleFeatureSource = new ol.source.Vector({});
+
+var styleSingleFeature = new ol.style.Style({
+    stroke : new ol.style.Stroke(
+    {
+        color : 'rgba(255, 0, 0, 1)',
+        width : 3
+    }),
+    fill : new ol.style.Fill(
+    {
+        color :  'rgba(255, 0, 0, 0.1)'
+    })
+});
+
+var singleFeatureLayer = new ol.layer.Vector({
+  source: singleFeatureSource,
+  style: styleSingleFeature
+});
+
+function updateSingleFeatureLayer(geometry) {
+    singleFeatureSource.clear();
+
+    if (geometry) {
+        var json = new ol.format.GeoJSON();
+        var feature = new ol.Feature({
+            geometry: json.readGeometry(geometry)
+        });
+        singleFeatureSource.addFeature(feature);
+    }
+}
+
 function agencies_selector(checked) {
     list_agencies.forEach(function(id){
         document.getElementById('id_checkbox_' + id).checked = checked;
@@ -303,7 +334,8 @@ closer.onclick = function() {
 var map = new ol.Map({
   layers: [
     new ol.layer.Tile({source: new ol.source.OSM()}),
-    featureLayer],
+    featureLayer,
+    singleFeatureLayer],
   renderer: 'canvas',
   target: 'map',
   overlays: [overlay],
@@ -335,7 +367,11 @@ map.on('singleclick', function(evt) {
         var props = feature.getProperties();
 
         details_innerHTML += '<hr>';
-        details_innerHTML += '<p><a href="' + props.name + '">' + props.name + '</a>: '
+        var writer = new ol.format.GeoJSON();
+        var geoJson = props.geometry ? writer.writeGeometry(props.geometry) : '';
+        details_innerHTML += '<p onmouseout="updateSingleFeatureLayer()" ';
+        details_innerHTML += " onmouseover='updateSingleFeatureLayer(" + geoJson + ")'>"; // geoJson contains double quotes
+        details_innerHTML += '<a href="' + props.name + '">' + props.name + '</a>: '
         if( props.area_of_use ) {
             details_innerHTML += props.area_of_use + ', ';
         }
