@@ -75,7 +75,7 @@ def get_srs(ds, epsg_code_key, wkt_key, is_first_subds, infos, warnings, errors)
     return srs
 
 
-def validate_horizontal_offset(type, ds, is_first_subds):
+def validate_horizontal_offset(type, ds, src_crs, is_first_subds):
 
     infos = []
     warnings = []
@@ -84,8 +84,12 @@ def validate_horizontal_offset(type, ds, is_first_subds):
     target_crs = get_srs(ds, 'target_crs_epsg_code', 'target_crs_wkt',
                          is_first_subds, infos, warnings, errors)
     if target_crs:
-        if not target_crs.IsGeographic():
-            warnings.append("target_crs found, but not a Geographic CRS")
+        if not src_crs or src_crs.IsGeographic():
+            if not target_crs.IsGeographic():
+                warnings.append("target_crs found, but not a Geographic CRS")
+        elif src_crs.IsProjected():
+            if not target_crs.IsProjected():
+                warnings.append("target_crs found, but not a Projected CRS")
 
     if ds.RasterCount < 2:
         return infos, warnings, [f"TYPE={type} should have at least 2 bands"]
@@ -100,6 +104,8 @@ def validate_horizontal_offset(type, ds, is_first_subds):
     eht_offset_idx = 0
     lat_accuracy_idx = 0
     lon_accuracy_idx = 0
+    easting_offset_idx = 0
+    northing_offset_idx = 0
     for i in range(ds.RasterCount):
         b = ds.GetRasterBand(i+1)
         desc = b.GetDescription()
@@ -111,6 +117,14 @@ def validate_horizontal_offset(type, ds, is_first_subds):
             if lon_offset_idx > 0:
                 return infos, warnings, ["At least, 2 bands are tagged with Description = longitude_offset"]
             lon_offset_idx = i+1
+        elif desc == 'easting_offset':
+            if easting_offset_idx > 0:
+                return infos, warnings, ["At least, 2 bands are tagged with Description = easting_offset"]
+            easting_offset_idx = i+1
+        elif desc == 'northing_offset':
+            if northing_offset_idx > 0:
+                return infos, warnings, ["At least, 2 bands are tagged with Description = northing_offset"]
+            northing_offset_idx = i+1
         elif desc == 'ellipsoidal_height_offset':
             if eht_offset_idx > 0:
                 return infos, warnings, ["At least, 3 bands are tagged with Description = ellipsoidal_height_offset"]
@@ -128,12 +142,25 @@ def validate_horizontal_offset(type, ds, is_first_subds):
                 'Usually the first band should be latitude_offset and the second longitude_offset.')
     elif lat_offset_idx > 0 or lon_offset_idx > 0:
         return infos, warnings, ["One of the band is tagged with Description = latitude_offset/longitude_offset but not the other one"]
+    elif easting_offset_idx > 0 and northing_offset_idx > 0:
+        if easting_offset_idx != 1 or northing_offset_idx != 2:
+            infos.append(
+                'Usually the first band should be easting_offset and the second northing_offset.')
+    elif easting_offset_idx > 0 or northing_offset_idx > 0:
+        return infos, warnings, ["One of the band is tagged with Description = easting_offset/northing_offset but not the other one"]
     else:
-        if is_first_subds:
-            warnings.append(
-                'No explicit bands tagged with Description = latitude_offset and longitude_offset. Assuming first one is latitude_offset and second one longitude_offset')
-        lat_offset_idx = 1
-        lon_offset_idx = 2
+        if src_crs and src_crs.IsProjected():
+            if is_first_subds:
+                warnings.append(
+                    'No explicit bands tagged with Description = easting_offset and northing_offset. Assuming first one is easting_offset and second one northing_offset')
+            easting_offset_idx = 1
+            northing_offset_idx = 2
+        else:
+            if is_first_subds:
+                warnings.append(
+                    'No explicit bands tagged with Description = latitude_offset and longitude_offset. Assuming first one is latitude_offset and second one longitude_offset')
+            lat_offset_idx = 1
+            lon_offset_idx = 2
 
     if type == "GEOGRAPHIC_3D_OFFSET":
         if eht_offset_idx == 0:
@@ -145,29 +172,42 @@ def validate_horizontal_offset(type, ds, is_first_subds):
         if eht_offset_idx != 0:
             return infos, warnings, ["Band with Description = ellipsoidal_height_offset found, but not expected"]
 
-    for idx in (lat_offset_idx, lon_offset_idx):
-        band = ds.GetRasterBand(idx)
-        if band.GetNoDataValue():
-            warnings.append(
-                "One of latitude_offset/longitude_offset band has a nodata setting. Nodata for horizontal shift grids is ignored by PROJ")
-        units = band.GetUnitType()
-        if not units:
+    if lat_offset_idx:
+        for idx in (lat_offset_idx, lon_offset_idx):
+            band = ds.GetRasterBand(idx)
+            if band.GetNoDataValue():
+                warnings.append(
+                    "One of latitude_offset/longitude_offset band has a nodata setting. Nodata for horizontal shift grids is ignored by PROJ")
+            units = band.GetUnitType()
+            if not units:
+                if is_first_subds:
+                    warnings.append(
+                        "One of latitude_offset/longitude_offset band is missing units description. arc-second will be assumed")
+            elif units not in ('arc-second', 'arc-seconds per year', 'degree', 'radians'):
+                errors.append(
+                    "One of latitude_offset/longitude_offset band is using a unit not supported by PROJ")
+    else:
+        for idx in (easting_offset_idx, northing_offset_idx):
+            band = ds.GetRasterBand(idx)
+            units = band.GetUnitType()
+            if not units:
+                if is_first_subds:
+                    warnings.append(
+                        "One of easting_offset/northing_offset band is missing units description.metre will be assumed")
+            elif units not in ('metre'):
+                errors.append(
+                    "One of easting_offset/northing_offset band is using a unit not supported by PROJ")
+
+    if lon_offset_idx:
+        positive_value = ds.GetRasterBand(
+            lon_offset_idx).GetMetadataItem('positive_value')
+        if not positive_value:
             if is_first_subds:
                 warnings.append(
-                    "One of latitude_offset/longitude_offset band is missing units description. arc-second will be assumed")
-        elif units not in ('arc-second', 'arc-seconds per year', 'degree', 'radians'):
-            errors.append(
-                "One of latitude_offset/longitude_offset band is using a unit not supported by PROJ")
-
-    positive_value = ds.GetRasterBand(
-        lon_offset_idx).GetMetadataItem('positive_value')
-    if not positive_value:
-        if is_first_subds:
-            warnings.append(
-                "The latitude_offset band should include a positive_value=west/east metadata item, to avoid any ambiguity w.r.t NTv2 original convention. 'east' will be assumed")
-    elif positive_value not in ('west', 'east'):
-        errors.append("positive_value=%s not supported by PROJ" %
-                      positive_value)
+                    "The latitude_offset band should include a positive_value=west/east metadata item, to avoid any ambiguity w.r.t NTv2 original convention. 'east' will be assumed")
+        elif positive_value not in ('west', 'east'):
+            errors.append("positive_value=%s not supported by PROJ" %
+                          positive_value)
 
     if eht_offset_idx > 0:
         band = ds.GetRasterBand(eht_offset_idx)
@@ -628,7 +668,7 @@ def validate_ifd(global_info, ds, is_first_subds, first_subds):
         if is_first_subds:
             errors.append("No CRS found in the GeoTIFF encoding")
     else:
-        if not srs.IsGeographic() and ds.GetMetadataItem('TYPE') != 'DEFORMATION_MODEL':
+        if not srs.IsGeographic() and ds.GetMetadataItem('TYPE') not in ('DEFORMATION_MODEL', 'HORIZONTAL_OFFSET'):
             errors.append("CRS found, but not a Geographic CRS")
 
     if ds.GetMetadataItem('AREA_OR_POINT') != 'Point':
@@ -713,7 +753,7 @@ def validate_ifd(global_info, ds, is_first_subds, first_subds):
             'Image uses %s compression. Might cause compatibility problems' % compression)
 
     if type in ('HORIZONTAL_OFFSET', 'GEOGRAPHIC_3D_OFFSET'):
-        i, w, e = validate_horizontal_offset(type, ds, is_first_subds)
+        i, w, e = validate_horizontal_offset(type, ds, srs, is_first_subds)
         infos += i
         warnings += w
         errors += e
@@ -807,7 +847,7 @@ def validate_ifd(global_info, ds, is_first_subds, first_subds):
         md = b.GetMetadata_Dict()
         md_keys = md.keys()
         for key in md_keys:
-            if key not in ('positive_value'):
+            if key not in ('positive_value', 'constant_offset'):
                 infos.append('Metadata %s=%s on band %d ignored' %
                              (key, md[key], i+1))
 
