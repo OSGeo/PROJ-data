@@ -137,5 +137,8 @@ After rebuilding the PROJ database (`make`), you can check the output of `src/pr
 ## How to remove a file
 
 * Edit copyright_and_licenses.csv to indicate the version in which it is removed
-* Open files.geojson and move the corresponding entry to files_removed.geojson
+  in the "version_removed" column
+* Open files.geojson, move the corresponding entry to files_removed.geojson,
+  and add a "version_removed" property to the entry (identical to the one added
+  in the "version_removed" column of the .csv file)
 * Remove the grid name in `travis/expected_main.lst`

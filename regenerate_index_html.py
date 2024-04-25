@@ -119,6 +119,7 @@ with open('copyright_and_licenses.csv') as f:
         info = InfoFromCSV()
         info.version_added = version_added
         info.version_removed = version_removed
+        assert filename not in info_csv
         info_csv[filename] = info
 
 total_size = 0
@@ -342,4 +343,8 @@ files_removed_lyr = files_removed.GetLayer(0)
 for src_entry in files_removed_lyr:
     new_entry = ogr.Feature(lyr.GetLayerDefn())
     new_entry.SetFrom(src_entry)
+    filename = new_entry["name"]
+    assert new_entry.IsFieldSetAndNotNull("version_removed"), filename
+    assert filename in info_csv
+    assert new_entry["version_removed"] == info_csv[filename].version_removed, (filename, new_entry["version_removed"], info_csv[filename].version_removed)
     lyr.CreateFeature(new_entry)
