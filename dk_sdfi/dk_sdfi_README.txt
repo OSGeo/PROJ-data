@@ -105,3 +105,47 @@ three realizations which have a related grid transformation:
 * dk_sdfi_dvr90_2002.tif
 * dk_sdfi_dvr90_2013.tif
 * dk_sdfi_dvr90_2023.tif
+
+### ETRS89 -> DKLAT
+
+*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)  
+*Format*: GTG  
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+Transform ETRS89 ellipsoidal heights (EPSG:4937) to DKLAT. The DKLAT ensemble (EPSG:10552) includes
+two realizations which have a related grid transformation:
+
+1. DKLAT(2022), EPSG:10548
+2. DKLAT(2023), EPSG:10550
+
+* dk_sdfi_dklat_2022.tif
+* dk_sdfi_dklat_2023.tif
+
+
+### ETRS89 -> DKMSL
+
+*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)  
+*Format*: GTG  
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+Transform ETRS89 ellipsoidal heights (EPSG:4937) to DKMSL. The DKMSL ensemble (EPSG:10551) includes
+two realizations which have a related grid transformation:
+
+1. DKMSL(2022), EPSG:10547
+2. DKMSL(2023), EPSG:10549
+
+* dk_sdfi_dkmsl_2022.tif
+* dk_sdfi_dkmsl_2023.tif
+
+
+### GLLMSL -> GVR2016
+
+*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)  
+*Format*: GTG  
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+Transform local mean sea level (EPSG:10565) to GVR2016 (EPSG:8267).
+
+* dk_sdfi_gllmsl_2022.tif
+
+
