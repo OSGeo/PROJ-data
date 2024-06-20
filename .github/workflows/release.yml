@@ -1,0 +1,79 @@
+#
+# GitHub Actions for automated PROJ-data release
+#
+# Only run on tags matching x.y.z or x.y.zRCn
+#
+# Automatically opens a draft release and uploads the packages build with CMake
+# as well as various checksum files. Manual steps includes adding release notes
+# and changes the release status from draft to final. Release candidates are
+# automatically set a pre-releases.
+
+name: 'Release'
+
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+      - '[0-9]+.[0-9]+.[0-9]+RC[0-9]+'
+
+jobs:
+  release:
+    name: 'Release on Tag'
+    runs-on: ubuntu-latest
+
+    # Only run docbuild on central repo
+    if: github.repository == 'OSGeo/PROJ-data'
+    steps:
+
+    - name: 'Install'
+      run: |
+        pwd
+        uname -a
+        sudo -E apt-get -yq --no-install-suggests --no-install-recommends install cmake
+
+    - name: 'Check Out'
+      uses: actions/checkout@v4
+
+    - name: 'Final release?'
+      id: release_type
+      run: |
+        echo "final_release=false" >> $GITHUB_OUTPUT
+        echo tag=${{github.ref_name}}
+        if [[ ${{ github.ref_name }} =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+              echo "final_release=true" >> $GITHUB_OUTPUT
+        fi
+        cat $GITHUB_OUTPUT
+
+
+    - name: 'Bundle & Check Package'
+      id: bundle
+      run: |
+        pwd
+        set -e
+        
+        mkdir _build && cd _build
+        cmake --version
+        cmake ..
+        cmake --build . --target dist
+        
+        extensions=".tar.gz .zip"
+        for ext in $extensions
+        do
+            for filename in $(ls *$ext)
+            do
+                `md5sum $filename > $filename.md5`
+                `sha256sum $filename > $filename.sha256sum`
+                `sha512sum $filename > $filename.sha512sum`
+            done
+        done
+
+    - name: Create Release
+      id: create_release
+      uses: softprops/action-gh-release@v2
+      with:
+        generate_release_notes: false
+        draft: true
+        name: PROJ-data ${{ github.ref_name }}
+        prerelease: ${{ steps.release_type.outputs.final_release == 'false' }}
+        files: |
+          ./_build/proj-data-*
