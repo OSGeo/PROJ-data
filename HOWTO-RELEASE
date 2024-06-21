@@ -1,21 +1,24 @@
 Preparing a PROJ-data Release
 ===============================================================================
 
-0. Have cmake installed
-
 1. If index.html is not already up-to-date with latest grid additions,
     a. Have GDAL (>= 2.4) Python3 bindings installed
     b. python3 regenerate_index_html.py
     c. git commit -a -m "Update index.html" && git push
 
 2. Edit CMakeLists.txt to update PROJ_DATA_VERSION_MAJOR and PROJ_DATA_VERSION_MINOR
+    a. Add RCn to PROJ_DATA_VERSION_MINOR if this is a release candidate
 
 3. git commit -a -m "Update CMakeLists.txt to vX.Y" && git push
 
-4. mkdir build && cd build && cmake .. && make dist
+4. Tag commit with version number (including release candidate number when relevant).
+   Push tag to GitHub where the packages for distribution will be automatically generated
+   and a draft release will be prepared.
+   
+5. Publish release on GitHub
 
-   ==> proj-data-X.Y.zip and proj-data-X.Y.tar.gz
+6. Upload the generated `proj-data-*`- files to download.osgeo.org
 
-5. Resynchronize CDN content from repository with ./sync_to_cdn.sh
+7. Resynchronize CDN content from repository with ./sync_to_cdn.sh
 
-6. Close the previous milestone and open a new one
+8. Close the previous milestone and open a new one
