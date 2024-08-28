@@ -155,7 +155,7 @@ Transform local mean sea level (EPSG:10565) to GVR2016 (EPSG:8267).
 *Format*: GTG  
 *License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
 
-Transform GR966 ellipsoidal heights (EPSG:4909) to GR96+GLLAT (EPSG:10652)
+Transform GR96 ellipsoidal heights (EPSG:4909) to GR96+GLLAT (EPSG:10652)
 
 ### GR96 -> GLMSL
 
