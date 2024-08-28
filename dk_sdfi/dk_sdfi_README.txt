@@ -149,3 +149,18 @@ Transform local mean sea level (EPSG:10565) to GVR2016 (EPSG:8267).
 * dk_sdfi_gllmsl_2022.tif
 
 
+### GR96 -> GLLAT
+
+*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)  
+*Format*: GTG  
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+Transform GR96 ellipsoidal heights (EPSG:4909) to GR96+GLLAT (EPSG:10652)
+
+### GR96 -> GLMSL
+
+*Source*: [Agency for Data Supply and Infrastructure](https://sdfi.dki/vores-opgaver/geodaesi/koordinattransformation)  
+*Format*: GTG  
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+Transform GR96 ellipsoidal heights (EPSG:4909) to GR96+GLMSL (EPSG:10651)
