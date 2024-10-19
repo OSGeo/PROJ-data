@@ -9,7 +9,7 @@ from [Department of Geodesy and Surveying of Budapest University of Technology a
 
 *Source*: [Department of Geodesy and Surveying of Budapest University of Technology and Economics](https://geod.bme.hu/geod/onlineszolgaltatasok)
 *Format*: GeoTIFF converted from NTv2  
-*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)  
+*License*: [Creative Commons Attribution 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)  
 *Source CRS*: EPSG:4237 (HD72)  
 *Target CRS*: EPSG:4258 (ETRS89)  
 *Used by*: [EPSG:10668 Transformation](https://???:EPSG::10668)  
@@ -23,7 +23,7 @@ to Hungarian reference frame HD72/EOV (EPSG:23700).
 
 *Source*: [Department of Geodesy and Surveying of Budapest University of Technology and Economics](https://geod.bme.hu/geod/onlineszolgaltatasok)
 *Format*: GeoTIFF converted from NTv2  
-*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)  
+*License*: [Creative Commons Attribution 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)  
 *Source CRS*: EPSG:4937 (ETRS89)  
 *Target CRS*: EPSG:5787 (EOMA)  
 *Used by*: [EPSG:10666 Transformation](https://???:EPSG::10666)  
