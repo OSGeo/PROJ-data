@@ -40,6 +40,7 @@ set(CPACK_SOURCE_INSTALLED_DIRECTORIES
     "${CMAKE_CURRENT_SOURCE_DIR}/eur_nkg/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/fi_nls/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/fr_ign/" "."
+    "${CMAKE_CURRENT_SOURCE_DIR}/hu_bme/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/is_lmi/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/jp_gsi/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/mx_inegi/" "."
