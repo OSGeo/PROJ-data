@@ -96,6 +96,12 @@
         "url": "https://www.saarland.de/"
     },
     {
+        "id": "de_tlbg_thueringen",
+        "country": "Germany",
+        "agency":"Thüringer Landesamt für Bodenmanagement und Geoinformation",
+        "url": "https://tlbg.thueringen.de/"
+    },
+    {
         "id": "dk_sdfe",
         "country": "Denmark",
         "agency":"Danish Agency for Data Supply and Efficiency",
