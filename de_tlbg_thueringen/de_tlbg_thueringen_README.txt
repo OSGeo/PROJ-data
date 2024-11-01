@@ -1,4 +1,4 @@
-# de_tlbg_thueringen__README.txt
+# de_tlbg_thueringen_README.txt
 
 The files in this section result from the conversion of datasets originating
 from [TLGB Thüringen](https://tlbg.thueringen.de/)
