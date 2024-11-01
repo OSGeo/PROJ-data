@@ -33,6 +33,7 @@ set(CPACK_SOURCE_INSTALLED_DIRECTORIES
     "${CMAKE_CURRENT_SOURCE_DIR}/de_hvbg/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/de_lgl_bw/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/de_lgvl_saarland/" "."
+    "${CMAKE_CURRENT_SOURCE_DIR}/de_tlbg_thueringen/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/dk_sdfe/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/dk_sdfi/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/es_ign/" "."
