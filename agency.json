@@ -144,6 +144,12 @@
         "url": "http://www.ign.fr/"
     },
     {
+        "id": "hu_bme",
+        "country": "Hungary",
+        "agency":"Budapest University of Technology and Economics, Department of Geodesy and Surveying",
+        "url": "https://geod.bme.hu/geod/hirek?language=en"
+    },
+    {
         "id": "is_lmi",
         "country": "Iceland",
         "agency":"National Land Survey of Iceland",
