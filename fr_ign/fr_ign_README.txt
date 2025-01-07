@@ -25,6 +25,16 @@ Grid transformation from NTF to RGF93 in France.
 
 * fr_ign_gr3df97a.tif
 
+### Mayotte: RGM04 -> RGM23 (using Geocentric correction)
+
+Grid transformation from RGM04 to RGM23 in Mayotte.
+
+*Source*: [IGN](http://www.ign.fr/)  
+*Format*: GeoTIFF converted from https://geodesie.ign.fr/contenu/fichiers/documentation/RGM04versRGM23.txt  
+*License*: [License Ouverte (in French)](https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf) / [Open License (English translation)](https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf)
+
+* fr_ign_RGM04versRGM23.tif
+
 ### French vertical grids
 
 *Source*: [IGN France](https://geodesie.ign.fr/index.php?page=grilles)  
