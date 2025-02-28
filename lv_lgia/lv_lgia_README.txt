@@ -5,12 +5,12 @@ from [Latvian Geospatial Information Agency](https://www.lgia.gov.lv/)
 
 ## Included grids
 
-### LKS92 (EPSG:4661) -> Latvia 2000 height (EPSG:7700)
+### LKS92 (EPSG:4949) -> Latvia 2000 height (EPSG:7700)
 
 *Source*: [Latvian Geospatial Information Agency](https://www.lgia.gov.lv/en/latvian-quasi-geoid-model)
 *Format*: GeoTIFF converted by standard GDAL functions and optimized by grid_tools scripts
 *License*: CC-BY 4.0.
-*Horizontal CRS*: LKS92 (EPSG:4661)
+*Horizontal CRS*: LKS92 (EPSG:4949)
 
 As of December 1, 2014, the Latvian Geospatial Information Agency (LGIA) released the new quasi-geoid model, LV′14.
 
