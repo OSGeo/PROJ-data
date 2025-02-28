@@ -1,1 +1,1 @@
-../lgia_README.txt
+../lv_lgia_README.txt
