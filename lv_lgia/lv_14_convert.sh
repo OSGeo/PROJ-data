@@ -22,11 +22,12 @@ TEMP_FILE="temp_grid.dat"
 awk '{print $2, $1, $3}' "$SOURCE_FILE" > "$TEMP_FILE"
 
 # Convert the corrected grid to a GeoTIFF
-OUTPUT_TIF="lv_lgia_lv14.tif"
-gdal_translate -of GTiff -a_nodata 9999 "$TEMP_FILE" "$OUTPUT_TIF"
+TEMP_FILE2="temp_grid.tif"
+gdal_translate -of GTiff -a_nodata 9999 "$TEMP_FILE" "$TEMP_FILE2"
 
 # Run the vertoffset grid conversion
-../grid_tools/vertoffset_grid_to_gtiff.py \
+OUTPUT_TIF="lv_lgia_lv14.tif"
+python3 ../grid_tools/vertoffset_grid_to_gtiff.py \
   --description "LKS92 (EPSG:4949) to Latvia 2000 height (EPSG:7700). Converted from $SOURCE_FILE" \
   --type "GEOGRAPHIC_TO_VERTICAL" \
   --copyright "Derived from work by Latvian Geospatial Information Agency. CC-BY 4.0" \
@@ -34,11 +35,12 @@ gdal_translate -of GTiff -a_nodata 9999 "$TEMP_FILE" "$OUTPUT_TIF"
   --parameter-name "geoid_undulation" \
   --source-crs "EPSG:4949" \
   --target-crs "EPSG:7700" \
-  "$OUTPUT_TIF" "$OUTPUT_TIF"
+  "$TEMP_FILE2" "$OUTPUT_TIF"
 
 python3 ../grid_tools/check_gtiff_grid.py "$OUTPUT_TIF"
 
-# Cleanup temporary file
+# Cleanup temporary files
 rm -f "$TEMP_FILE"
+rm -f "$TEMP_FILE2"
 
 echo "Processing complete. Output saved to $OUTPUT_TIF"
