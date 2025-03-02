@@ -44,6 +44,7 @@ set(CPACK_SOURCE_INSTALLED_DIRECTORIES
     "${CMAKE_CURRENT_SOURCE_DIR}/hu_bme/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/is_lmi/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/jp_gsi/" "."
+    "${CMAKE_CURRENT_SOURCE_DIR}/lv_lgia/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/mx_inegi/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/nc_dittt/" "."
     "${CMAKE_CURRENT_SOURCE_DIR}/nl_nsgi/" "."

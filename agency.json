@@ -162,6 +162,12 @@
         "url": "https://www.gsi.go.jp/"
     },
     {
+        "id": "lv_lgia",
+        "country": "Latvia",
+        "agency": "Latvian Geospatial Information Agency",
+        "url": "https://www.lgia.gov.lv/"
+    },
+    {
         "id": "mx_inegi",
         "country": "Mexico",
         "agency": "Instituto Nacional de Estadística, Geografía e Informática (INEGI)",
