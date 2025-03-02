@@ -19,7 +19,7 @@ fi
 TEMP_FILE="temp_grid.dat"
 
 # Swap latitude and longitude using awk and create a temporary file
-awk '{print $2, $1, $3}' "$SOURCE_FILE" > "$TEMP_FILE"
+awk '{print $2, $1, $3}' "$SOURCE_FILE" | sort -s -n -k1,1 -k2,2r > "$TEMP_FILE"
 
 # Convert the corrected grid to a GeoTIFF
 TEMP_FILE2="temp_grid.tif"
