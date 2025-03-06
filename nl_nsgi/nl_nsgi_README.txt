@@ -11,18 +11,18 @@ The files in this section originate from [NSGI](https://www.nsgi.nl/) with corre
 *Format*: GeoTIFF converted from NTv2 & GTX  
 *License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)  
 
-Variant 1:
+#### Variant 1:
 
 * nl_nsgi_rdcorr2018.tif
 * nl_nsgi_nlgeo2018.tif
 
 Recommended variant, applies the datum transformation as a separate step using a 3D similarity transformation.
 
-Variant 2:
+#### Variant 2:
 
 N.A. only relevant for PROJ 4
 
-Hybrid variant:
+#### Hybrid variant:
 
 * nl_nsgi_rdtrans2018.tif
 * nl_nsgi_nlgeo2018.tif
