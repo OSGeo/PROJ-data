@@ -36,7 +36,7 @@ Refer to the [RDNAPTRANS™2018 documentation](https://www.nsgi.nl/rdnaptrans) f
 
 *Source*: [NSGI](https://www.nsgi.nl/coordinatenstelsels-en-transformaties/coordinatentransformaties/nllat-nap-etrs89)  
 *Format*: GeoTIFF converted from GTX  
-*License*: [???]()  
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)  
 
 * nl_nsgi_rdcorr2018.tif
 
