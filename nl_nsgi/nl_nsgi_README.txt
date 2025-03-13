@@ -38,7 +38,7 @@ Refer to the [RDNAPTRANS™2018 documentation](https://www.nsgi.nl/rdnaptrans) f
 *Format*: GeoTIFF converted from GTX  
 *License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)  
 
-* nl_nsgi_rdcorr2018.tif
+* nl_nsgi_nllat2018.tif
 
 Refer to the [NLLAT2018 documentation](https://www.defensie.nl/downloads/applicaties/2020/06/12/nllat2018) for details.
 
