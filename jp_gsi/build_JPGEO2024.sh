@@ -1,21 +1,21 @@
 #!/bin/bash -e
 
-# Download https://www.gsi.go.jp/butsuri/data/GSIGEO2024beta.zip
+# Download JPGEO2024_isg.zip from https://www.gsi.go.jp Login needed
 
 # Usage:
-# PROJ_DATA_DIR=/path/to/PROJ-data ./build_GSIGEO2024.sh
+# PROJ_DATA_DIR=/path/to/PROJ-data ./build_JPGEO2024.sh
 
 def_data_dir=$(dirname $0)/..
 
 PROJ_DATA_DIR="${PROJ_DATA_DIR:-$def_data_dir}"
 
-orig=GSIGEO2024beta.isg
+orig=JPGEO2024+Hrefconv2024.isg
 input=$orig
 
 # Setup build directory
 mkdir -p build
 
-output=jp_gsi_gsigeo2024.tif
+output=jp_gsi_jpgeo2024_hrefconv.tif
 
 docker run --user $(id -u):$(id -g) --workdir $PWD \
             --rm -v /home:/home ghcr.io/osgeo/gdal:alpine-normal-latest \
