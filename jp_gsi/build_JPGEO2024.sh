@@ -9,13 +9,13 @@ def_data_dir=$(dirname $0)/..
 
 PROJ_DATA_DIR="${PROJ_DATA_DIR:-$def_data_dir}"
 
-orig=JPGEO2024+Hrefconv2024.isg
+orig=JPGEO2024.isg
 input=$orig
 
 # Setup build directory
 mkdir -p build
 
-output=jp_gsi_jpgeo2024_hrefconv.tif
+output=jp_gsi_jpgeo2024.tif
 
 docker run --user $(id -u):$(id -g) --workdir $PWD \
             --rm -v /home:/home ghcr.io/osgeo/gdal:alpine-normal-latest \
