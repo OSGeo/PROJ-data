@@ -5,7 +5,7 @@ from [Geospatial Information Authority of Japan](http://www.gsi.go.jp/)
 
 ## Included grids
 
-### JDG2011 (EPSG:6667) -> JDG2011 (vertical) height (EPSG:6695)
+### JDG2011 (EPSG:6667) -> JDG2011 (vertical) height (EPSG:6695) - GSIGEO2011
 
 *Source*: [Geospatial Information Authority of Japan](https://fgd.gsi.go.jp/download/geoid.php)
 *Format*: GeoTIFF converted by `GSIGGEO2011.sh`
@@ -34,3 +34,22 @@ The RMS of the error is 0.088 mm.
 Derivative work based on gsigeo2011_ver2_1.asc, created with permission:「測量法に基づく国土地理院長承認(使用)R 2JHs 501」
 
 *  jp_gsi_gsigeo2011.tif
+
+
+### JDG2011 (EPSG:6667) -> JDG2011 (vertical) height (EPSG:6695) - JPGEO2024
+
+*Source*: [Geospatial Information Authority of Japan](https://www.gsi.go.jp)
+*Format*: GeoTIFF converted by `build_JPGEO2024.sh`
+*License*: CC-BY 4.0.
+*Horizontal CRS*: JDG2011 (EPSG:6667)
+
+Vertical transformation for Geoid model JPGEO2024. Used to make the transitions
+from heights in vertical CRS JDG2011 (vertical) height (EPSG:6695)
+to heights above the ellipsoid in JDG2011 (EPSG:6667).
+Official in Japan on 2025-04-01
+
+The accuracy mentioned on the documentation is 3 cm.
+
+Derivative work based on JPGEO2024.isg, created with permission: 測量法に基づく国土地理院長承認（使用）R 7JHs 5
+
+*   jp_gsi_jpgeo2024.tif

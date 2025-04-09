@@ -28,7 +28,7 @@ docker run --user $(id -u):$(id -g) --workdir $PWD \
             --target-crs \"EPSG:6695\" \
             --description \"JDG2011 (EPSG:6667) to JGD2011 (vertical) height (EPSG:6695). Converted from $orig\" \
             --area-of-use \"Japan.\" \
-            --copyright \"Derived from work by the Geospatial Information Authority of Japan.\" \
+            --copyright \"Derived from work by the Geospatial Information Authority of Japan. CC-BY 4.0\" \
             ./$input ./$output && \
             # Run check_gtiff_grid-script
             python3 ${PROJ_DATA_DIR}/grid_tools/check_gtiff_grid.py ./$output \
