@@ -25,3 +25,13 @@ For the leveling points in the validation network, where real-time global positi
 The validation results in both post-processing and real-time modes indicate that the accuracy of the LV′14 quasi-geoid model is sufficient for acquiring fundamental geospatial data needed to support state and municipal functions and tasks.
 
 *  lv_lgia_lv14.tif
+
+### LKS-92 (EPSG:4661) -> LKS-2020 (EPSG:10305)
+
+*Source*: [Latvian Geospatial Information Agency](https://www.lgia.gov.lv/en/node/1384)
+*Format*: GTG converted using PROJ-data grid grid_tools
+*License*: CC-BY 4.0
+
+Transform coordinates from LKS-92 to LKS-2020.
+
+*  lv_lgia_lks92to2020.tif
