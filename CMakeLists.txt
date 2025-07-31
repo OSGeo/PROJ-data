@@ -1,6 +1,6 @@
 # CMake build system for proj-data releases.
 
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.16)
 
 project(PROJ_DATA)
 set(PROJ_DATA_VERSION_MAJOR 1)
