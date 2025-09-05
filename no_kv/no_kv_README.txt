@@ -75,3 +75,15 @@ The SVD2006 surface (arcgp-2006-sk) is the Arctic Gravity Project 2006
 The SVD2006 surface is defined by Mean Sea Level (MSL) at Ny-Ålesund.
 
 * no_kv_arcgp-2006-sk.tif
+
+### Norway: ETRS89 ellipsoidal heights -> Svalbard 2024 heights
+
+*Format*: GeoTIFF converted from GravSoft BIN  
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)  
+*Source CRS*: EPSG:4937 (ETRS89 ellipsoidal heights)  
+*Target CRS*: EPSG:10999 (SVD2024 heights)
+
+The grid transforms from ETRS89 ellipsoidal heights to SVD2024 heights (Svalbard heights).
+Mean Sea Level (MSL) 1995-2014 at Ny-Ålesund and Longyearbyen propagated through the Svalbard_EGG2015_2024 quasi-geoid model.
+
+* no_kv_Svalbard_EUREF89_SVD2024.tif
