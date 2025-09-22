@@ -197,6 +197,13 @@ for dirname in sorted(dirnames):
                     feat['source_crs_code'] = 'EPSG:' + sr.GetAuthorityCode(None)
                 feat['source_crs_name'] = sr.GetName()
 
+                if not sr.IsGeographic():
+                    wgs84_longlat = osr.SpatialReference()
+                    wgs84_longlat.SetAxisMappingStrategy(osr.OAMS_TRADITIONAL_GIS_ORDER)
+                    wgs84_longlat.ImportFromEPSG(4326)
+                    ct = osr.CoordinateTransformation(sr, wgs84_longlat)
+                    xmin, ymin, xmax, ymax = ct.TransformBounds(xmin, ymin, xmax, ymax, 21)
+
             target_crs_epsg_code = ds.GetMetadataItem('target_crs_epsg_code')
             target_crs_wkt = ds.GetMetadataItem('target_crs_wkt')
             if target_crs_epsg_code:
