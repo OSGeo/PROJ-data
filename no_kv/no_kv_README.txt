@@ -75,3 +75,13 @@ The SVD2006 surface (arcgp-2006-sk) is the Arctic Gravity Project 2006
 The SVD2006 surface is defined by Mean Sea Level (MSL) at Ny-Ålesund.
 
 * no_kv_arcgp-2006-sk.tif
+
+
+### Norway: NN1954 heights -> NN2000 heights
+
+*Format*: GeoTIFF converted from GravSoft BIN  
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)  
+*Source CRS*: EPSG:4937 (NN1954 heights)  
+*Target CRS*: EPSG:5941 (SVD2006 heights)
+
+* no_kv_HREF2018B_NN54_NN2000.tif
