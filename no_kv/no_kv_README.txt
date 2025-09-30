@@ -87,3 +87,12 @@ The grid transforms from ETRS89 ellipsoidal heights to SVD2024 heights (Svalbard
 Mean Sea Level (MSL) 1995-2014 at Ny-Ålesund and Longyearbyen propagated through the Svalbard_EGG2015_2024 quasi-geoid model.
 
 * no_kv_Svalbard_EUREF89_SVD2024.tif
+
+### Norway: NN54 heights -> NN2000 heights
+
+*Format*: GeoTIFF converted from GravSoft BIN  
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)  
+*Source CRS*: EPSG:5776 (NN54 height)  
+*Target CRS*: EPSG:5941 (NN2000 height)
+
+* no_kv_HREF2018B_NN54_NN2000.tif
