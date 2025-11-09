@@ -190,3 +190,18 @@ such as [gdal_translate](https://gdal.org/programs/gdal_translate.html) or
 [gdal_edit.py](https://gdal.org/programs/gdal_edit.html)
 
 Note: this script will not compress data. This must be done in a prior step.
+
+## Converting a TIN JSON file to a TIN GeoPackage file
+
+With the [tin_json_to_tin_gpkg.py](tin_json_to_tin_gpkg.py) script.
+
+Both formats may be used by the +proj=tinshift operation.
+
+Usage:
+```
+usage: tin_json_to_tin_gpkg.py [-h] source dest
+```
+
+See https://proj.org/en/latest/specifications/tin_json.html and
+https://proj.org/en/latest/specifications/tin_gpkg.html for the specification
+of both format.
