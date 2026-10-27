@@ -62,6 +62,16 @@ Horizontal triangulation to transform coordinates from ETRS89 (EPSG:4258) to NGO
 
 * no_kv_CD_above_Ell_ETRS89_v2023b.tif
 
+### Norway: ETRS89-NOR ellipsoidal heights -> CD Norway heights
+
+*Format*: GeoTIFF converted from BIN  
+*Source*: [Kartverket](https://kartkatalog.geonorge.no/metadata/middelvann-over-ellipsoiden/e857e50c-fce4-49dc-abf5-a135bad8f727)  
+*License*: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)  
+*Source CRS*: EPSG:10874 (ETRS89-NOR ellipsoidal heights)  
+*Target CRS*: EPSG:9672 (Chart datum Norway heights)
+
+* no_kv_CD_above_Ell_ETRS89_v2026b.tif
+
 ### Norway: ETRS89 ellipsoidal heights -> Svalbard 2006 heights
 
 *Format*: GeoTIFF converted from GravSoft BIN  
